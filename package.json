@@ -1,0 +1,18 @@
+{
+  "name": "trinity-2e",
+  "version": "2.0.0",
+  "description": "CSS compiler for the TrinitySecondEdition system",
+  "scripts": {
+    "build": "sass src/scss/trinity-2e.scss css/trinity-2e.css --style=expanded --no-source-map",
+    "watch": "sass src/scss/trinity-2e.scss css/trinity-2e.css --style=expanded --source-map --watch"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "author": "Asacolips",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "sass": "^1.53.0"
+  }
+}
