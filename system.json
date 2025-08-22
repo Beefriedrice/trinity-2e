@@ -20,7 +20,7 @@
       "thumbnail": "systems/trinity-2e/assets/TrinityContinuumLogo.png"
     }
   ],
-  "version": "0.0.1a",
+  "version": "0.0.2",
   "compatibility": {
     "minimum": 11,
     "verified": "13.347"
@@ -40,8 +40,8 @@
   "manifest": "https://raw.githubusercontent.com/beefriedrice/trinity-2e/master/system.json",
   "download": "https://github.com/Beefriedrice/trinity-2e/archive/refs/heads/master.zip",
   "background": "systems/trinity-2e/assets/anvil-impact.png",
-  "gridDistance": 5,
-  "gridUnits": "ft",
+  "grid.Distance": 5,
+  "grid.Units": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power"
 }
