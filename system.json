@@ -4,30 +4,26 @@
   "description": "The Trinity Second Edition (Storypath System) system for FoundryVTT!",
   "authors": [
     {
-      "name": "Asacolips",
-      "discord": "asacolips"
-    },
-    {
-      "name": "Lee Talman",
-      "discord": ".pizzaWizard"
+      "name": "Beefriedrice",
+      "discord": "beefriedrice"
     }
   ],
-  "url": "Replace this with a link to your public repository",
+  "url": "https://github.com/Beefriedrice/trinity-2e",
   "license": "LICENSE.txt",
   "readme": "README.md",
-  "bugs": "Replace this with a link to file issues or tickets",
+  "bugs": "bugs.txt",
   "changelog": "CHANGELOG.md",
   "media": [
     {
       "type": "setup",
-      "url": "systems/trinity-2e/assets/anvil-impact.png",
-      "thumbnail": "systems/trinity-2e/assets/anvil-impact.png"
+      "url": "systems/trinity-2e/assets/TrinityContinuumLogo.png",
+      "thumbnail": "systems/trinity-2e/assets/TrinityContinuumLogo.png"
     }
   ],
-  "version": "2.0.0",
+  "version": "0.0.1",
   "compatibility": {
     "minimum": 11,
-    "verified": "11.315"
+    "verified": "13.347"
   },
   "esmodules": ["module/trinity-2e.mjs"],
   "styles": ["css/trinity-2e.css"],
@@ -41,8 +37,8 @@
   "packs": [],
   "packFolders": [],
   "socket": false,
-  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
-  "download": "This must link to a .zip file of the current version",
+  "manifest": "https://raw.githubusercontent.com/beefriedrice/trinity-2e/master/system.json",
+  "download": "https://github.com/Beefriedrice/trinity-2e/archive/refs/heads/master.zip",
   "background": "systems/trinity-2e/assets/anvil-impact.png",
   "gridDistance": 5,
   "gridUnits": "ft",
