@@ -12,14 +12,19 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['trinity-2e', 'sheet', 'actor'],
-      width: 600,
-      height: 600,
+      width: 800,
+      height: 800,
       tabs: [
         {
           navSelector: '.sheet-tabs',
           contentSelector: '.sheet-body',
-          initial: 'features',
+          initial: 'stats',
         },
+        { 
+          navSelector: '.secondary-sheet-tabs',
+          contentSelector: '.secondary-sheet-body',
+          intiial: 'attributes'
+        }
       ],
     });
   }
@@ -53,6 +58,12 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     if (actorData.type == 'character') {
       this._prepareItems(context);
       this._prepareCharacterData(context);
+    }
+
+    // Prepare nova data and items.
+    if (actorData.type == 'nova') {
+      this._prepareItems(context);
+      this._prepareNovaData(context);
     }
 
     // Prepare NPC data and items.
@@ -94,6 +105,12 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
   _prepareCharacterData(context) {
     // This is where you can enrich character-specific editor fields
     // or setup anything else that's specific to this type
+  }
+
+  _prepareNovaData(context) {
+    // This is where you can enrich character-specific editor fields
+    // or setup anything else that's specific to this type
+    context.system.traits.quantumpoints.max = context.system.traits.quantum.value * 5 + 10;
   }
 
   /**
@@ -239,6 +256,11 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
         const item = this.actor.items.get(itemId);
         if (item) return item.roll();
       }
+    }
+
+    //If the caller is an attribute
+    if (dataset.attribute) {
+      dataset.roll = dataset.attribute + "d10x=10cs>=8";
     }
 
     // Handle rolls that supply the formula directly.

@@ -18,29 +18,183 @@
     },
     "nova": {
       "templates": ["base"],
-      "attributes": {
-        "level": {
+      "traits": {
+        "quantum": {
           "value": 1
+        },
+        "quantumpoints": {
+          "value": 0,
+          "min": 0,
+          "max": 15
+        },
+        "flux": {
+          "value": 0,
+          "min": 0,
+          "max": 20
+        },
+        "transcendence": {
+          "value": 0,
+          "min": 0,
+          "max": 10
         }
       },
-      "abilities": {
-        "str": {
-          "value": 10
+      "attributes":  {
+        "int": {
+          "value": 1,
+          "megavalue": 0,
+          "arena": "Mental",
+          "approach": "Force",
+          "row": true
+        },
+        "mig": {
+          "value": 1,
+          "megavalue": 0,
+          "arena": "Physical",
+          "approach": "Force"
+        },
+        "pre": {
+          "value": 1,
+          "megavalue": 0,
+          "arena": "Social",
+          "approach": "Force"
+        },
+        "cun": {
+          "value": 1,
+          "megavalue": 0,
+          "arena": "Mental",
+          "approach": "Finesse",
+          "row": true
         },
         "dex": {
-          "value": 10
+          "value": 1,
+          "megavalue": 0,
+          "arena": "Physical",
+          "approach": "Finesse"
         },
-        "con": {
-          "value": 10
+        "man": {
+          "value": 1,
+          "megavalue": 0,
+          "arena": "Social",
+          "approach": "Finesse"
+        },
+        "res": {
+          "value": 1,
+          "megavalue": 0,
+          "arena": "Mental",
+          "approach": "Resilience",
+          "row": true
+        },
+        "sta": {
+          "value": 1,
+          "megavalue": 0,
+          "arena": "Physical",
+          "approach": "Resilience"
+        },
+        "com": {
+          "value": 1,
+          "megavalue": 0,
+          "arena": "Social",
+          "approach": "Resilience"
+        }
+      },
+      "megaattributes": {
+        "int": {
+          "value": 0,
+          "arena": "Mental",
+          "approach": "Force",
+          "row": true
+        },
+        "mig": {
+          "value": 0,
+          "arena": "Physical",
+          "approach": "Force"
+        },
+        "pre": {
+          "value": 0,
+          "arena": "Social",
+          "approach": "Force"
+        },
+        "cun": {
+          "value": 0,
+          "arena": "Mental",
+          "approach": "Finesse",
+          "row": true
+        },
+        "dex": {
+          "value": 0,
+          "arena": "Physical",
+          "approach": "Finesse"
+        },
+        "man": {
+          "value": 0,
+          "arena": "Social",
+          "approach": "Finesse"
+        },
+        "res": {
+          "value": 0,
+          "arena": "Mental",
+          "approach": "Resilience",
+          "row": true
+        },
+        "sta": {
+          "value": 0,
+          "arena": "Physical",
+          "approach": "Resilience"
+        },
+        "com": {
+          "value": 0,
+          "arena": "Social",
+          "approach": "Resilience"
+        }
+      },
+      "skills": {
+        "aim": {
+          "value": 0
+        },
+        "ath": {
+          "value": 0
+        },
+        "clo": {
+          "value": 0
+        },
+        "com": {
+          "value": 0
+        },
+        "cul": {
+          "value": 0
+        },
+        "emp": {
+          "value": 0
+        },
+        "eni": {
+          "value": 0
+        },
+        "hum": {
+          "value": 0
         },
         "int": {
-          "value": 10
+          "value": 0
         },
-        "wis": {
-          "value": 10
+        "lar": {
+          "value": 0
         },
-        "cha": {
-          "value": 10
+        "med": {
+          "value": 0
+        },
+        "per": {
+          "value": 0
+        },
+        "pil": {
+          "value": 0
+        },
+        "sci": {
+          "value": 0
+        },
+        "sur": {
+          "value": 0
+        },
+        "tec": {
+          "value": 0
         }
       }
     },

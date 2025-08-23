@@ -8,6 +8,46 @@
       "Wis": { "long": "Wisdom", "abbr": "wis" },
       "Cha": { "long": "Charisma", "abbr": "cha" }
     },
+    "Attribute": {
+      "Int": { "long": "Intelligence", "abbr": "int" },
+      "Cun": { "long": "Cunning", "abbr": "cun" },
+      "Res": { "long": "Resilience", "abbr": "res" },
+      "Mig": { "long": "Might", "abbr": "mig" },
+      "Dex": { "long": "Dexterity", "abbr": "dex" },
+      "Sta": { "long": "Stamina", "abbr": "sta" },
+      "Pre": { "long": "Presence", "abbr": "pre" },
+      "Man": { "long": "Manipulation", "abbr": "man" },
+      "Com": { "long": "Composure", "abbr": "com" }
+    },
+    "MegaAttribute": {
+      "Int": { "long": "Mega-Intelligence", "abbr": "m-int" },
+      "Cun": { "long": "Mega-Cunning", "abbr": "m-cun" },
+      "Res": { "long": "Mega-Resilience", "abbr": "m-res" },
+      "Mig": { "long": "Mega-Might", "abbr": "m-mig" },
+      "Dex": { "long": "Mega-Dexterity", "abbr": "m-dex" },
+      "Sta": { "long": "Mega-Stamina", "abbr": "m-sta" },
+      "Pre": { "long": "Mega-Presence", "abbr": "m-pre" },
+      "Man": { "long": "Mega-Manipulation", "abbr": "m-man" },
+      "Com": { "long": "Mega-Composure", "abbr": "m-com" }
+    },
+    "Skill": {
+      "Aim": { "long": "Aim", "abbr": "aim" },
+      "Ath": { "long": "Athletics", "abbr": "ath" },
+      "Clo": { "long": "Close Combat", "abbr": "clo" },
+      "Com": { "long": "Command", "abbr": "com" },
+      "Cul": { "long": "Culture", "abbr": "cul" },
+      "Emp": { "long": "Empathy", "abbr": "emp" },
+      "Eni": { "long": "Enigmas", "abbr": "eni" },
+      "Hum": { "long": "Humanities", "abbr": "hum" },
+      "Int": { "long": "Integrity", "abbr": "int" },
+      "Lar": { "long": "Larceny", "abbr": "lar" },
+      "Med": { "long": "Medicine", "abbr": "med" },
+      "Per": { "long": "Persuasion", "abbr": "per" },
+      "Pil": { "long": "Pilot", "abbr": "pil" },
+      "Sci": { "long": "Science", "abbr": "sci" },
+      "Sur": { "long": "Survival", "abbr": "sur" },
+      "Tec": { "long": "Technology", "abbr": "tec" }
+    },
     "SheetLabels": {
       "Actor": "TrinitySecondEdition Actor Sheet",
       "Item": "TrinitySecondEdition Item Sheet"
@@ -29,6 +69,7 @@
 
   "TYPES": {
     "Actor": {
+      "nova": "Nova",
       "character": "Character",
       "npc": "NPC"
     },
