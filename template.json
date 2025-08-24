@@ -3,24 +3,184 @@
     "types": ["nova", "character", "npc"],
     "templates": {
       "base": {
+        "concept": "",
+        "momentofinsp": "",
+        "favoredapproach": "",
+        "codename": "",
         "health": {
-          "value": 10,
-          "min": 0,
-          "max": 10
+          "bruised": {
+            "filled": 0,
+            "quantity": 2,
+            "mod": 1
+          },
+          "injured": {
+            "filled": 0,
+            "quantity": 2,
+            "mod": 2
+          },
+          "maimed": {
+            "filled": 0,
+            "quantity": 1,
+            "mod": 4
+          },
+          "takenout": {
+            "isfilled": false
+          }
         },
-        "power": {
-          "value": 5,
+        "source": {
+          "value": 1,
           "min": 0,
-          "max": 5
+          "max": 7,
+          "name": "psi"
         },
-        "biography": ""
+        "scale": {
+          "dur": {
+            "value": 1,
+            "conditional": ""
+          },
+          "lea": {
+            "value": 1,
+            "conditional": ""
+          },
+          "men": {
+            "value": 1,
+            "conditional": ""
+          },
+          "mig": {
+            "value": 1,
+            "conditional": ""
+          },
+          "pow": {
+            "value": 1,
+            "conditional": ""
+          },
+          "siz": {
+            "value": 1,
+            "conditional": ""
+          },
+          "spe": {
+            "value": 1,
+            "conditional": ""
+          }
+        },
+        "biography": "",
+        "attributes":  {
+          "int": {
+            "value": 1,
+            "megavalue": 0,
+            "arena": "Mental",
+            "approach": "Force",
+            "row": true
+          },
+          "mig": {
+            "value": 1,
+            "megavalue": 0,
+            "arena": "Physical",
+            "approach": "Force"
+          },
+          "pre": {
+            "value": 1,
+            "megavalue": 0,
+            "arena": "Social",
+            "approach": "Force"
+          },
+          "cun": {
+            "value": 1,
+            "megavalue": 0,
+            "arena": "Mental",
+            "approach": "Finesse",
+            "row": true
+          },
+          "dex": {
+            "value": 1,
+            "megavalue": 0,
+            "arena": "Physical",
+            "approach": "Finesse"
+          },
+          "man": {
+            "value": 1,
+            "megavalue": 0,
+            "arena": "Social",
+            "approach": "Finesse"
+          },
+          "res": {
+            "value": 1,
+            "megavalue": 0,
+            "arena": "Mental",
+            "approach": "Resilience",
+            "row": true
+          },
+          "sta": {
+            "value": 1,
+            "megavalue": 0,
+            "arena": "Physical",
+            "approach": "Resilience"
+          },
+          "com": {
+            "value": 1,
+            "megavalue": 0,
+            "arena": "Social",
+            "approach": "Resilience"
+          }
+        },
+        "skills": {
+          "aim": {
+            "value": 0
+          },
+          "ath": {
+            "value": 0
+          },
+          "clo": {
+            "value": 0
+          },
+          "com": {
+            "value": 0
+          },
+          "cul": {
+            "value": 0
+          },
+          "emp": {
+            "value": 0
+          },
+          "eni": {
+            "value": 0
+          },
+          "hum": {
+            "value": 0
+          },
+          "int": {
+            "value": 0
+          },
+          "lar": {
+            "value": 0
+          },
+          "med": {
+            "value": 0
+          },
+          "per": {
+            "value": 0
+          },
+          "pil": {
+            "value": 0
+          },
+          "sci": {
+            "value": 0
+          },
+          "sur": {
+            "value": 0
+          },
+          "tec": {
+            "value": 0
+          }
+        }
       }
     },
     "nova": {
       "templates": ["base"],
       "traits": {
         "quantum": {
-          "value": 1
+          "value": 1,
+          "maxedout": 1
         },
         "quantumpoints": {
           "value": 0,
@@ -36,165 +196,6 @@
           "value": 0,
           "min": 0,
           "max": 10
-        }
-      },
-      "attributes":  {
-        "int": {
-          "value": 1,
-          "megavalue": 0,
-          "arena": "Mental",
-          "approach": "Force",
-          "row": true
-        },
-        "mig": {
-          "value": 1,
-          "megavalue": 0,
-          "arena": "Physical",
-          "approach": "Force"
-        },
-        "pre": {
-          "value": 1,
-          "megavalue": 0,
-          "arena": "Social",
-          "approach": "Force"
-        },
-        "cun": {
-          "value": 1,
-          "megavalue": 0,
-          "arena": "Mental",
-          "approach": "Finesse",
-          "row": true
-        },
-        "dex": {
-          "value": 1,
-          "megavalue": 0,
-          "arena": "Physical",
-          "approach": "Finesse"
-        },
-        "man": {
-          "value": 1,
-          "megavalue": 0,
-          "arena": "Social",
-          "approach": "Finesse"
-        },
-        "res": {
-          "value": 1,
-          "megavalue": 0,
-          "arena": "Mental",
-          "approach": "Resilience",
-          "row": true
-        },
-        "sta": {
-          "value": 1,
-          "megavalue": 0,
-          "arena": "Physical",
-          "approach": "Resilience"
-        },
-        "com": {
-          "value": 1,
-          "megavalue": 0,
-          "arena": "Social",
-          "approach": "Resilience"
-        }
-      },
-      "megaattributes": {
-        "int": {
-          "value": 0,
-          "arena": "Mental",
-          "approach": "Force",
-          "row": true
-        },
-        "mig": {
-          "value": 0,
-          "arena": "Physical",
-          "approach": "Force"
-        },
-        "pre": {
-          "value": 0,
-          "arena": "Social",
-          "approach": "Force"
-        },
-        "cun": {
-          "value": 0,
-          "arena": "Mental",
-          "approach": "Finesse",
-          "row": true
-        },
-        "dex": {
-          "value": 0,
-          "arena": "Physical",
-          "approach": "Finesse"
-        },
-        "man": {
-          "value": 0,
-          "arena": "Social",
-          "approach": "Finesse"
-        },
-        "res": {
-          "value": 0,
-          "arena": "Mental",
-          "approach": "Resilience",
-          "row": true
-        },
-        "sta": {
-          "value": 0,
-          "arena": "Physical",
-          "approach": "Resilience"
-        },
-        "com": {
-          "value": 0,
-          "arena": "Social",
-          "approach": "Resilience"
-        }
-      },
-      "skills": {
-        "aim": {
-          "value": 0
-        },
-        "ath": {
-          "value": 0
-        },
-        "clo": {
-          "value": 0
-        },
-        "com": {
-          "value": 0
-        },
-        "cul": {
-          "value": 0
-        },
-        "emp": {
-          "value": 0
-        },
-        "eni": {
-          "value": 0
-        },
-        "hum": {
-          "value": 0
-        },
-        "int": {
-          "value": 0
-        },
-        "lar": {
-          "value": 0
-        },
-        "med": {
-          "value": 0
-        },
-        "per": {
-          "value": 0
-        },
-        "pil": {
-          "value": 0
-        },
-        "sci": {
-          "value": 0
-        },
-        "sur": {
-          "value": 0
-        },
-        "tec": {
-          "value": 0
         }
       }
     },
@@ -232,7 +233,7 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": ["item", "feature", "spell", "weapon", "armor", "vehicle", "object", "module", "edge", "injury", "status", "field", "stunt", "gift", "skilltrick", "path", "contact", "megaedge", "powertag", "quantumpower"],
     "templates": {
       "base": {
         "description": ""
@@ -250,6 +251,162 @@
     "spell": {
       "templates": ["base"],
       "spellLevel": 1
+    },
+    "weapon": {
+      "templates": ["base"],
+      "enhancements": 0,
+      "tags": "",
+      "description": "",
+      "formula": "",
+      "techscale": 0,
+      "size": 0,
+      "cost": 0,
+      "inventiontype": "Mundane Tech"
+    },
+    "armor": {
+      "templates": ["base"],
+      "enhancements": 0,
+      "soft": 0,
+      "hard": 0,
+      "base": "",
+      "tags": "",
+      "description": "",
+      "formula": "",
+      "techscale": 0,
+      "size": 0,
+      "cost": 0,
+      "inventiontype": "Mundane Tech"
+    },
+    "vehicle": {
+      "templates": ["base"],
+      "enhancements": 0,
+      "handling": 0,
+      "speed": 0,
+      "weapons": "",
+      "tags": "",
+      "description": "",
+      "formula": "",
+      "techscale": 0,
+      "size": 0,
+      "cost": 0,
+      "inventiontype": "Mundane Tech"
+    },
+    "object": {
+      "templates": ["base"],
+      "enhancements": 0,
+      "tags": "",
+      "description": "",
+      "formula": "",
+      "techscale": 0,
+      "size": 0,
+      "cost": 0,
+      "inventiontype": "Mundane Tech"
+    },
+    "module": {
+      "templates": ["base"],
+      "enhancements": 0,
+      "power": "",
+      "tags": "",
+      "description": "",
+      "formula": "",
+      "techscale": 0,
+      "size": 0,
+      "cost": 0,
+      "inventiontype": "Mundane Tech"
+    },
+    "edge": {
+      "templates": ["base"],
+      "category": ["mental", "physical", "social", "style", "combat", "maneuver", "powered", "enhanced"],
+      "rating": "1",
+      "prereq": "",
+      "description": ""
+    },
+    "injury": {
+      "templates": ["base"],
+      "level": ["bruised", "injured", "maimed"],
+      "effect": "",
+      "description": "",
+      "source": "",
+      "firstaid": false
+    },
+    "status": {
+      "templates": ["base"],
+      "effect": "",
+      "resolution": ""
+    },
+    "field": {
+      "templates": ["base"],
+      "description": "",
+      "complication": "",
+      "effect": ""
+    },
+    "stunt": {
+      "templates": ["base"],
+      "rating": "",
+      "effect": ""
+    },
+    "gift": {
+      "templates": ["base"],
+      "keywords": "",
+      "description": "",
+      "system": "",
+      "type": ""
+    },
+    "skilltrick": {
+      "templates": ["base"],
+      "skill": "",
+      "description": ""
+    },
+    "path": {
+      "templates": ["base"],
+      "type": ["origin", "role", "society"],
+      "rating": {
+        "value": 0,
+        "current": 0
+      },
+      "suspended": false,
+      "revoked": false,
+      "skills": "",
+      "edges": "",
+      "description": "",
+      "community": "",
+      "access": ""
+    },
+    "contact": {
+      "templates": ["base"],
+      "rating": {
+        "value": 0,
+        "current": 0
+      },
+      "path": "",
+      "tags": ""
+    },
+    "megaedge": {
+      "templates": ["base"],
+      "rating": 0,
+      "prereq": "",
+      "attribute": "",
+      "description": "",
+      "powertags": "",
+      "maxedout": false
+    },
+    "powertag": {
+      "templates": ["base"],
+      "rating": 0,
+      "description": ""
+    },
+    "quantumpower": {
+      "templates": ["base"],
+      "minimum": "",
+      "action": "",
+      "cost": "",
+      "dicepool": "",
+      "range": "",
+      "duration": "",
+      "rating": "",
+      "description": "",
+      "maxedout": false,
+      "customtags": ""
     }
   }
 }

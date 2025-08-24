@@ -50,7 +50,8 @@
     },
     "SheetLabels": {
       "Actor": "TrinitySecondEdition Actor Sheet",
-      "Item": "TrinitySecondEdition Item Sheet"
+      "Item": "TrinitySecondEdition Item Sheet",
+      "Health": "Health"
     },
     "Item": {
       "Spell": {
@@ -64,6 +65,10 @@
       "Temporary": "Temporary Effects",
       "Passive": "Passive Effects",
       "Inactive": "Inactive Effects"
+    },
+    "Source": {
+      "Psi": "PSI",
+      "Quantum": "Quantum"
     }
   },
 
@@ -76,7 +81,23 @@
     "Item": {
       "item": "Item",
       "feature": "Feature",
-      "spell": "Spell"
+      "spell": "Spell",
+      "armor": "Armor",
+      "weapon": "Weapon",
+      "vehicle": "Vehicle",
+      "object": "Object",
+      "module": "Module",
+      "edge": "Edge",
+      "injury": "Injury Condition",
+      "status": "Status Condition",
+      "field": "Field Condition",
+      "gift": "Gift",
+      "skilltrick": "Skill Trick",
+      "path": "Path",
+      "contact": "Contact",
+      "megaedge": "Mega-Edge",
+      "powertag": "Power Tag",
+      "quantumpower": "Quantum Power"
     }
   }
 }

@@ -35,6 +35,7 @@ export class TrinitySecondEditionActor extends Actor {
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     this._prepareCharacterData(actorData);
+    this._prepareNovaData(actorData);
     this._prepareNpcData(actorData);
   }
 
@@ -52,6 +53,15 @@ export class TrinitySecondEditionActor extends Actor {
       // Calculate the modifier using d20 rules.
       ability.mod = Math.floor((ability.value - 10) / 2);
     }
+  }
+
+  _prepareNovaData(actorData) {
+    if (actorData.type !== 'nova') return;
+
+    // Make modifications to data here. For example:
+    const systemData = actorData.system;
+
+    systemData.traits.quantumpoints.max = systemData.traits.quantum.value * 5 + 10;
   }
 
   /**
@@ -101,15 +111,15 @@ export class TrinitySecondEditionActor extends Actor {
   }
 
   /**
-   * Prepare character roll data.
+   * Prepare Nova roll data.
    */
   _getNovaRollData(data) {
     if (this.type !== 'nova') return;
 
     // Copy the ability scores to the top level, so that rolls can use
     // formulas like `@str.mod + 4`.
-    if (data.abilities) {
-      for (let [k, v] of Object.entries(data.abilities)) {
+    if (data.attributes) {
+      for (let [k, v] of Object.entries(data.attributes)) {
         data[k] = foundry.utils.deepClone(v);
       }
     }

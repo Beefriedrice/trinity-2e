@@ -8,8 +8,12 @@ export const preloadHandlebarsTemplates = async function () {
     // Actor partials.
     'systems/trinity-2e/templates/actor/parts/actor-features.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-items.hbs',
+    'systems/trinity-2e/templates/actor/parts/actor-skills.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-spells.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-effects.hbs',
+    'systems/trinity-2e/templates/actor/parts/actor-edges.hbs',
+    'systems/trinity-2e/templates/actor/parts/actor-equipment.hbs',
+    'systems/trinity-2e/templates/actor/parts/actor-powers.hbs',
     // Item partials
     'systems/trinity-2e/templates/item/parts/item-effects.hbs',
   ]);

@@ -110,7 +110,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
   _prepareNovaData(context) {
     // This is where you can enrich character-specific editor fields
     // or setup anything else that's specific to this type
-    context.system.traits.quantumpoints.max = context.system.traits.quantum.value * 5 + 10;
+    
   }
 
   /**

@@ -107,3 +107,12 @@ TRINITY_SECOND.skillAbbreviations = {
   sur: 'TRINITY_SECOND.Skill.Sur.abbr',
   tec: 'TRINITY_SECOND.Skill.Tec.abbr',
 }
+
+TRINITY_SECOND.sources = {
+  psi: 'TRINITY_SECOND.Source.Psi',
+  qua: 'TRINITY_SECOND.Source.Quantum'
+}
+
+TRINITY_SECOND.terminology = {
+  hea: 'TRINITY_SECOND.SheetLabels.Health'
+}
