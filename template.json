@@ -233,7 +233,7 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell", "weapon", "armor", "vehicle", "object", "module", "edge", "injury", "status", "field", "stunt", "gift", "skilltrick", "path", "contact", "megaedge", "powertag", "quantumpower"],
+    "types": ["item", "feature", "spell", "weapon", "armor", "vehicle", "equipment", "module", "edge", "injury", "status", "field", "stunt", "gift", "skilltrick", "path", "contact", "megaedge", "powertag", "quantumpower"],
     "templates": {
       "base": {
         "description": ""
@@ -291,7 +291,7 @@
       "cost": 0,
       "inventiontype": "Mundane Tech"
     },
-    "object": {
+    "equipment": {
       "templates": ["base"],
       "enhancements": 0,
       "tags": "",

@@ -68,7 +68,8 @@
     },
     "Source": {
       "Psi": "PSI",
-      "Quantum": "Quantum"
+      "Quantum": "Quantum",
+      "Inspiration": "Inspiration"
     }
   },
 
@@ -85,7 +86,7 @@
       "armor": "Armor",
       "weapon": "Weapon",
       "vehicle": "Vehicle",
-      "object": "Object",
+      "equipment": "Equipment",
       "module": "Module",
       "edge": "Edge",
       "injury": "Injury Condition",
@@ -97,7 +98,8 @@
       "contact": "Contact",
       "megaedge": "Mega-Edge",
       "powertag": "Power Tag",
-      "quantumpower": "Quantum Power"
+      "quantumpower": "Quantum Power",
+      "stunt": "Stunt"
     }
   }
 }

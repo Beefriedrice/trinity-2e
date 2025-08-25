@@ -122,6 +122,20 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     // Initialize containers.
     const gear = [];
     const features = [];
+    const armor = [];
+    const weapon = [];
+    const vehicle = [];
+    const equipment = [];
+    const module = [];
+    const edge = [];
+    const injury = [];
+    const status = [];
+    const gift = [];
+    const skilltrick = [];
+    const path = [];
+    const contact = [];
+    const megaedge = [];
+    const quantumpower = [];
     const spells = {
       0: [],
       1: [],
@@ -146,6 +160,62 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       else if (i.type === 'feature') {
         features.push(i);
       }
+      // Append to armor.
+      else if (i.type === 'armor') {
+        armor.push(i);
+      }
+      // Append to weapon.
+      else if (i.type === 'weapon') {
+        weapon.push(i);
+      }
+      // Append to vehicle.
+      else if (i.type === 'vehicle') {
+        vehicle.push(i);
+      }
+      // Append to equipment.
+      else if (i.type === 'equipment') {
+        equipment.push(i);
+      }
+      // Append to modules.
+      else if (i.type === 'module') {
+        module.push(i);
+      }
+      // Append to edges.
+      else if (i.type === 'edge') {
+        edge.push(i);
+      }
+      // Append to injury.
+      else if (i.type === 'injury') {
+        injury.push(i);
+      }
+      // Append to status.
+      else if (i.type === 'status') {
+        status.push(i);
+      }
+      // Append to gift.
+      else if (i.type === 'gift') {
+        gift.push(i);
+      }
+      // Append to skill tricks.
+      else if (i.type === 'skilltrick') {
+        skilltrick.push(i);
+      }
+      // Append to paths.
+      else if (i.type === 'path') {
+        path.push(i);
+      }
+      // Append to contacts.
+      else if (i.type === 'contact') {
+        contact.push(i);
+      }
+      // Append to mega-edges.
+      else if (i.type === 'megaedge') {
+        megaedge.push(i);
+      }
+      // Append to quantum powers.
+      else if (i.type === 'quantumpower') {
+        quantumpower.push(i);
+      }
       // Append to spells.
       else if (i.type === 'spell') {
         if (i.system.spellLevel != undefined) {
@@ -157,6 +227,20 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     // Assign and return
     context.gear = gear;
     context.features = features;
+    context.armor = armor;
+    context.weapon = weapon;
+    context.vehicle = vehicle;
+    context.equipment = equipment;
+    context.module = module;
+    context.edge = edge;
+    context.injury = injury;
+    context.status = status;
+    context.gift = gift;
+    context.skilltrick = skilltrick;
+    context.path = path;
+    context.contact = contact;
+    context.megaedge = megaedge;
+    context.quantumpower = quantumpower;
     context.spells = spells;
   }
 

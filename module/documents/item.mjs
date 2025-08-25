@@ -10,6 +10,64 @@ export class TrinitySecondEditionItem extends Item {
     // As with the actor class, items are documents that can have their data
     // preparation methods overridden (such as prepareBaseData()).
     super.prepareData();
+    
+    if (!this.img || this.img === 'icons/svg/item-bag.svg') {
+      let type = this.type;
+      let img = 'icons/svg/item-bag.svg';
+      
+      if(type === "armor"){
+        img = 'icons/svg/statue.svg';
+      }
+      else if(type === "contact"){
+        img = 'icons/svg/mystery-man.svg';
+      }
+      else if(type === "edge"){
+        img = 'icons/svg/up.svg';
+      }
+      else if(type === "equipment"){
+        img = 'icons/svg/chest.svg';
+      }
+      else if(type === "field"){
+        img = 'icons/svg/fire.svg';
+      }
+      else if(type === "gift"){
+        img = 'icons/svg/aura.svg';
+      }
+      else if(type === "injury"){
+        img = 'icons/svg/bones.svg';
+      }
+      else if(type === "megaedge"){
+        img = 'icons/svg/upgrade.svg';
+      }
+      else if(type === "module"){
+        img = 'icons/commodities/tech/plug.svg';
+      }
+      else if(type === "path"){
+        img = 'icons/svg/walk.svg';
+      }
+      else if(type === "powertag"){
+        img = 'icons/svg/explosion.svg';
+      }
+      else if(type === "quantumpower"){
+        img = 'icons/svg/lightning.svg';
+      }
+      else if(type === "skilltrick"){
+        img = 'icons/svg/card-hand.svg';
+      }
+      else if(type === "status"){
+        img = 'icons/svg/stoned.svg';
+      }
+      else if(type === "stunt"){
+        img = 'icons/svg/jump.svg';
+      }
+      else if(type === "vehicle"){
+        img = 'icons/svg/anchor.svg';
+      }
+      else if(type === "weapon"){
+        img = 'icons/svg/sword.svg';
+      }
+      this.img = img;
+    }
   }
 
   /**
