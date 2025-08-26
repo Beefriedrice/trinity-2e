@@ -12,8 +12,8 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['trinity-2e', 'sheet', 'actor'],
-      width: 800,
-      height: 800,
+      width: 750,
+      height: 850,
       tabs: [
         {
           navSelector: '.sheet-tabs',

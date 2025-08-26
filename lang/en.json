@@ -57,7 +57,8 @@
       "Collateral": "Collateral",
       "Rating": "Rating",
       "Description": "Description",
-      "Attributes": "Attributes"
+      "Attributes": "Attributes",
+      "Category": "Category"
     },
     "Item": {
       "Spell": {

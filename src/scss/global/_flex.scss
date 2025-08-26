@@ -44,3 +44,24 @@
   justify-content: center;
   text-align: center;
 }
+
+// Vertical Alignment
+.valign-top {
+  align-items: flex-start;
+}
+
+.valign-bottom {
+  align-items: flex-end;
+}
+
+.valign-center {
+  align-items: center;
+}
+
+.valign-baseline {
+  align-items: baseline;
+}
+
+.valign-stretch {
+  align-items: stretch;
+}
