@@ -4,8 +4,10 @@ import { TrinitySecondEditionItem } from './documents/item.mjs';
 // Import sheet classes.
 import { TrinitySecondEditionActorSheet } from './sheets/actor-sheet.mjs';
 import { TrinitySecondEditionItemSheet } from './sheets/item-sheet.mjs';
+import TrinitySecondEditionResourceSheet from './sheets/resource-sheet.mjs';
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
+import { registerSettings } from './helpers/settings.mjs';
 import { TRINITY_SECOND } from './helpers/config.mjs';
 
 /* -------------------------------------------- */
@@ -15,6 +17,11 @@ import { TRINITY_SECOND } from './helpers/config.mjs';
 Hooks.once('init', function () {
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
+
+
+  //for momentum and collateral tracking
+  registerSettings();
+
   game.trinity2e = {
     TrinitySecondEditionActor,
     TrinitySecondEditionItem,
@@ -74,6 +81,10 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 Hooks.once('ready', function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (bar, data, slot) => createItemMacro(data, slot));
+
+  //For the momentum/ collateral tracker
+  const resourceTracker = new TrinitySecondEditionResourceSheet();
+  resourceTracker.render(true);
 });
 
 /* -------------------------------------------- */

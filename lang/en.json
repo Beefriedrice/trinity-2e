@@ -101,5 +101,7 @@
       "quantumpower": "Quantum Power",
       "stunt": "Stunt"
     }
-  }
+  },
+  "Momentum": "Momentum",
+  "Collateral": "Collateral"
 }

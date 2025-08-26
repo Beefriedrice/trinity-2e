@@ -114,5 +114,7 @@ TRINITY_SECOND.sources = {
 }
 
 TRINITY_SECOND.terminology = {
-  hea: 'TRINITY_SECOND.SheetLabels.Health'
+  hea: 'TRINITY_SECOND.SheetLabels.Health',
+  mom: 'Trinity_SECOND.Momentum',
+  col: 'TRINITY_SECOND.Collateral'
 }
