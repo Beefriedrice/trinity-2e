@@ -316,7 +316,7 @@
     },
     "edge": {
       "templates": ["base"],
-      "category": ["mental", "physical", "social", "style", "combat", "maneuver", "powered", "enhanced"],
+      "category": "",
       "rating": "1",
       "prereq": "",
       "description": ""
