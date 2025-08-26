@@ -16,5 +16,6 @@ export const preloadHandlebarsTemplates = async function () {
     'systems/trinity-2e/templates/actor/parts/actor-powers.hbs',
     // Item partials
     'systems/trinity-2e/templates/item/parts/item-effects.hbs',
+    'systems/trinity-2e/templates/item/parts/item-attributes.hbs',
   ]);
 };

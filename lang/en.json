@@ -51,7 +51,13 @@
     "SheetLabels": {
       "Actor": "TrinitySecondEdition Actor Sheet",
       "Item": "TrinitySecondEdition Item Sheet",
-      "Health": "Health"
+      "Health": "Health",
+      "Prereq": "Prerequisites",
+      "Momentum": "Momentum",
+      "Collateral": "Collateral",
+      "Rating": "Rating",
+      "Description": "Description",
+      "Attributes": "Attributes"
     },
     "Item": {
       "Spell": {
@@ -70,6 +76,19 @@
       "Psi": "PSI",
       "Quantum": "Quantum",
       "Inspiration": "Inspiration"
+    },
+    "Edge": {
+      "Type": {
+        "Men": "Mental",
+        "Phy": "Physical",
+        "Soc": "Social",
+        "Sty": "Style",
+        "Com": "Advanced Combat Maneuvers",
+        "Pow": "Powered",
+        "Enh": "Enhanced",
+        "Nov": "Nova",
+        "Pat": "Path"
+      }
     }
   },
 
@@ -101,7 +120,5 @@
       "quantumpower": "Quantum Power",
       "stunt": "Stunt"
     }
-  },
-  "Momentum": "Momentum",
-  "Collateral": "Collateral"
+  }
 }

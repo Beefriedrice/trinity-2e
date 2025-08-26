@@ -116,5 +116,17 @@ TRINITY_SECOND.sources = {
 TRINITY_SECOND.terminology = {
   hea: 'TRINITY_SECOND.SheetLabels.Health',
   mom: 'Trinity_SECOND.Momentum',
-  col: 'TRINITY_SECOND.Collateral'
+  col: 'TRINITY_SECOND.Collateral',
+}
+
+TRINITY_SECOND.edgeCategory = {
+  men: 'TRINITY_SECOND.Edge.Type.Men',
+  phy: 'TRINITY_SECOND.Edge.Type.Phy',
+  soc: 'TRINITY_SECOND.Edge.Type.Soc',
+  sty: 'TRINITY_SECOND.Edge.Type.Sty',
+  com: 'TRINITY_SECOND.Edge.Type.Com',
+  pow: 'TRINITY_SECOND.Edge.Type.Pow',
+  enh: 'TRINITY_SECOND.Edge.Type.Enh',
+  nov: 'TRINITY_SECOND.Edge.Type.Nov',
+  pat: 'TRINITY_SECOND.Edge.Type.Pat',
 }
