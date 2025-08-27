@@ -1,0 +1,136 @@
+//Nova Sheet theming
+.nova { 
+  padding: 5px;
+}
+
+.nova .tabs .item:hover, .nova .tabs .item:focus {
+  text-shadow: 0 0 10px red;
+  color: red;
+}
+
+.nova-header, .nova .items-list .items-header,  .nova .items-list .items-header .item-name {
+  color: rgb(203, 167, 48);
+  background-color: rgb(20, 20, 20);
+}
+
+
+//character sheet digit displays.
+.text-2digit {
+  min-width: 25px;
+  max-width: 25px;
+  text-align: center;
+}
+
+.math-label {
+  max-width: 25px;
+}
+
+//layout
+
+//-resource section
+
+.resource-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+//-- health subsection
+
+.health-section {
+  flex: 1 1 220px;
+  max-width: 240px;
+  min-width: 200px;
+}
+
+.health-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.health-label {
+  width: 60px;
+  flex-basis: 60px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.mod-label {
+  margin-left: 5px;
+}
+
+.health-details {
+  width: 160px;
+  flex-basis: 160px;
+  align-items: center;
+}
+
+//--source sub-section
+
+.source-section {
+  max-width: 325px;
+  min-width: 275px;
+  flex: 1 1 300px;
+}
+
+.source-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.source-col1 {
+  margin: 0 5px;
+  flex-basis: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.source-col2 {
+  margin: 0 5px;
+  flex-basis: 190px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.source-element {
+  align-items: center;
+}
+
+.source-label {
+  font-weight: bold;
+}
+
+//-attribute section
+
+.attribute-header, .attribute-row {
+  display: flex; 
+  width: 100%; 
+  justify-content: space-between;
+}
+
+.attribute-row {   
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.attribute {
+  flex: 5 1 170px;
+  max-width: 170px;
+  min-width: 120px;
+}
+
+.approach {
+  flex: 1 5 60px;
+  max-width: 60px;
+  min-width: 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+//-skill section
+
+.skill {
+  margin: 0px 15px;
+}

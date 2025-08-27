@@ -120,44 +120,5 @@
   padding: 0 8px;
 }
 
-//Momentum and Collateral Tracker Box
-.group-resources {
-  left: 222px;
-  bottom: 15px;
-  position: fixed;
-  text-align: center;
-  color: #f0f0e0;
-  border: 1px solid #000;
-  border-radius: 2px;
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 5px #000 inset;
-  box-shadow: 0 0 5px #000 inset;
-  border-radius: 5px;
-  font-size: 23px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.group-resources .resource-item {
-  padding-top: 5px;
-}
-.group-resources .resource-label {
-  text-align: start;
-}
-.group-resources .resource-controls {
-  margin-right: 10px;
-  text-align: end;
-}
-.group-resources .resource-button {
-  background: white;
-  color: black;
-  cursor: pointer;
-  border-radius: 20px;
-  padding: 0px 9px 0px 9px;
-}
 
-.d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
 
