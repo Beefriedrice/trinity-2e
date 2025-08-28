@@ -416,10 +416,10 @@
 .trinity-2e .items-list .item .item-enhancement {
   flex: 0 0 85px;
 }
-.trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-size {
+.trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-soft, .trinity-2e .items-list .item .item-hard {
   flex: 0 0 25px;
 }
-.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-rating {
+.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-rating, .trinity-2e .items-list .item .item-soft, .trinity-2e .items-list .item .item-hard, .trinity-2e .items-list .item .item-tscale {
   text-align: center;
   font-size: 12px;
   margin: 0 5px;

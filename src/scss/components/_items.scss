@@ -115,10 +115,10 @@
     .item-enhancement {
       flex: 0 0 85px;
     }
-    .item-tscale, .item-size {
+    .item-tscale, .item-size, .item-soft, .item-hard {
       flex: 0 0 25px;
     }
-    .item-enhancement, .item-size, .item-category, .item-skill, .item-rating {
+    .item-enhancement, .item-size, .item-category, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale {
       text-align: center;
       font-size: 12px;
       margin: 0 5px;
