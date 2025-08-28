@@ -60,6 +60,7 @@
       "Finesse": "Finesse",
       "Force": "Force",
       "Game": "Game Mechanics",
+      "Handling": "Handling",
       "Hard": {"short": "Hard", "long": "Hard Armor"},
       "Health": "Health",
       "Item": "TrinitySecondEdition Item Sheet",
@@ -81,8 +82,10 @@
       "Soft": {"short": "Soft", "long": "Soft Armor"},
       "Specialty": "Specialty",
       "Specialties": "Specialties",
+      "Speed": "Speed",
       "Tags": "Tags",
-      "TechCat": "Technology Category"
+      "TechCat": "Technology Category",
+      "Weapons": "Weapons"
     },
     "Item": {
       "Spell": {

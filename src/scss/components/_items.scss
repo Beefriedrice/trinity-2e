@@ -101,8 +101,11 @@
     }
     //Columns for item tables on actor sheets.
     //"Rating" header and content
-    .item-rating, .item-tscale {
+    .item-rating, .item-tscale, .item-speed {
       flex: 0 0 30px;
+    }
+    .item-handling {
+      flex: 0 0 50px;
     }
     //"Skill" header and content
     .item-skill {
@@ -118,7 +121,7 @@
     .item-tscale, .item-size, .item-soft, .item-hard {
       flex: 0 0 25px;
     }
-    .item-enhancement, .item-size, .item-category, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale {
+    .item-enhancement, .item-size, .item-category, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
       text-align: center;
       font-size: 12px;
       margin: 0 5px;

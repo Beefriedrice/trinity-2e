@@ -404,8 +404,11 @@
   border: none;
   margin-right: 5px;
 }
-.trinity-2e .items-list .item .item-rating, .trinity-2e .items-list .item .item-tscale {
+.trinity-2e .items-list .item .item-rating, .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-speed {
   flex: 0 0 30px;
+}
+.trinity-2e .items-list .item .item-handling {
+  flex: 0 0 50px;
 }
 .trinity-2e .items-list .item .item-skill {
   flex: 0 0 70px;
@@ -419,7 +422,7 @@
 .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-soft, .trinity-2e .items-list .item .item-hard {
   flex: 0 0 25px;
 }
-.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-rating, .trinity-2e .items-list .item .item-soft, .trinity-2e .items-list .item .item-hard, .trinity-2e .items-list .item .item-tscale {
+.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-rating, .trinity-2e .items-list .item .item-soft, .trinity-2e .items-list .item .item-hard, .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-handling, .trinity-2e .items-list .item .item-speed {
   text-align: center;
   font-size: 12px;
   margin: 0 5px;
