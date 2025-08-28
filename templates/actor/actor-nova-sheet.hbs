@@ -83,6 +83,16 @@
                         <input class="text-2digit source-element" type="number" name="system.traits.transcendence.value" value="{{system.traits.transcendence.value}}" data-dtype="Number"/>
                     </div>
                 </div>
+                <div class="source-row">
+                    <div class="flexrow valign-center source-col1">
+                        Taken Out: 
+                        {{#if system.health.takenout.isfilled}}
+                        <input type="checkbox" name="system.health.takenout.isfilled" value="true" checked>
+                        {{else}}
+                        <input type="checkbox" name="system.health.takenout.isfilled" value="false">
+                        {{/if}}
+                    </div>
+                </div>
             </div>
         </section>
       </div>
@@ -172,7 +182,7 @@
     </div>
 
     {{!-- Active Effects Tab --}}
-    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+    <div class="tab effects" data-group="primary" data-tab="effects">
       {{> "systems/trinity-2e/templates/actor/parts/actor-effects.hbs"}}
     </div>
 

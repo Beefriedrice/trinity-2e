@@ -13,32 +13,12 @@
           value='{{item.name}}'
           placeholder='Name'
         /></h1>
-      <div class='grid grid-2col'>
-        <div class='resource'>
-          <label class='resource-label'>Quantity</label>
-          <input
-            type='text'
-            name='system.quantity'
-            value='{{system.quantity}}'
-            data-dtype='Number'
-          />
-        </div>
-        <div class='resource'>
-          <label class='resource-label'>Weight</label>
-          <input
-            type='text'
-            name='system.weight'
-            value='{{system.weight}}'
-            data-dtype='Number'
-          />
-        </div>
-      </div>
     </div>
   </header>
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>Description</a>
+    <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.Effect.Effect"}}</a>
     <a class='item' data-tab='attributes'>Attributes</a>
   </nav>
 
@@ -47,10 +27,20 @@
 
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
+      <div class="resource">
+        <h3>{{localize "TRINITY_SECOND.SheetLabels.Resolution"}}</h3>
+          <input
+            type='text'
+            name='system.status.resolution'
+            value='{{system.status.resolution}}'
+            data-dtype='Text'
+          />
+      </div>
+      <h3 class="added-segment">{{localize "TRINITY_SECOND.Effect.Effect"}}</h3>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
-        target='system.description'
+        target='system.status.effect'
         engine='prosemirror'
         button=true
         editable=editable
