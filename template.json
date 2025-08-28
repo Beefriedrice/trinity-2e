@@ -8,6 +8,11 @@
         "favoredapproach": "",
         "codename": "",
         "health": {
+          "hard": {
+            "filled": 0,
+            "quantity": 0,
+            "mod": 0
+          },
           "bruised": {
             "filled": 0,
             "quantity": 2,
