@@ -313,6 +313,9 @@
 .trinity-2e .tox .tox-edit-area {
   padding: 0 8px;
 }
+.trinity-2e .added-segment {
+  margin-top: 10px;
+}
 .trinity-2e .resource-label {
   font-weight: bold;
 }
@@ -401,7 +404,7 @@
   border: none;
   margin-right: 5px;
 }
-.trinity-2e .items-list .item .item-rating {
+.trinity-2e .items-list .item .item-rating, .trinity-2e .items-list .item .item-tscale {
   flex: 0 0 30px;
 }
 .trinity-2e .items-list .item .item-skill {
@@ -411,12 +414,12 @@
   flex: 0 0 70px;
 }
 .trinity-2e .items-list .item .item-enhancement {
-  flex: 0 0 90px;
+  flex: 0 0 85px;
 }
 .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-size {
   flex: 0 0 25px;
 }
-.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-rating {
+.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-rating {
   text-align: center;
   font-size: 12px;
   margin: 0 5px;

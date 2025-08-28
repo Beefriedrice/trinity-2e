@@ -1,4 +1,4 @@
-export async function diceRoller(quantity, enhancement = 0) {
+export async function diceRoller (quantity, enhancement) {
     //target number for roll.
     let target_number = 7;
 

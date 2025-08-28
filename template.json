@@ -430,7 +430,8 @@
       "techscale": 0,
       "size": 0,
       "cost": 0,
-      "inventiontype": "Mundane Tech"
+      "inventiontype": "Mundane Tech",
+      "category": "Device"
     }
   }
 }

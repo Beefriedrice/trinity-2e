@@ -124,24 +124,13 @@
     {{/each}}
             </div>
         </section>
-        
-        {{!-- Mega Attribute Section --}}
-{{!--        <h3 class="flex-group-center">Mega-Attributes</h3>
-        <section class="grid grid-3col">
-            {{#each system.attributes as |attribute key|}}
-                <div class="megaattribute flexrow flex-group-center">
-                    <label for="system.attributes.{{key}}.megavalue" class="resource-label flexlarge align-left" data-roll="(@attributes.{{key}}.megavalue)d10x=10cs>=8" data-label="{{localize (lookup @root.config.megaattributes key)}}">{{localize (lookup @root.config.megaattributes key)}}</label>
-                    <input style="text-align: center; width: 10%;" type="number" name="system.attributes.{{key}}.megavalue" value="{{attribute.megavalue}}" min="0" max="10" data-dtype="Number"/>
-                </div>
-            {{/each}}
-        </section> --}}
 
         {{!-- Skill Section --}}
         <h2 class="flex-group-center nova-header">Skills</h2>
         <section class="grid grid-4col">
             {{#each system.skills as |skill key|}}
                 <div class="skill flexrow flex-group-center" data-skill="{{key}}">
-                    <label class="skill-label resource-label flexlarge align-left" for="system.skills.{{key}}.value" data-skill="@skills.{{key}}" data-roll="(@skills.{{key}}.value)d10x=10cs>=8" data-label="{{localize (lookup @root.config.skills key)}}">{{localize (lookup @root.config.skills key)}}</label>
+                    <label class="skill-label resource-label flexlarge align-left" for="system.skills.{{key}}.value" data-skill="@skills.{{key}}.value" data-roll="(@skills.{{key}}.value)d10x=10cs>=8" data-label="{{localize (lookup @root.config.skills key)}}">{{localize (lookup @root.config.skills key)}}</label>
                     <input class="text-2digit" type="number" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
                 </div>
             {{/each}}

@@ -53,11 +53,13 @@
       "Attributes": "Attributes",
       "Category": "Category",
       "Collateral": "Collateral",
+      "Cost": "Cost",
       "Description": "Description",
       "Edges": "Edges",
       "Enhancement": "Enhancement",
       "Finesse": "Finesse",
       "Force": "Force",
+      "Game": "Game Mechanics",
       "Health": "Health",
       "Item": "TrinitySecondEdition Item Sheet",
       "Mental": "Mental",
@@ -76,6 +78,7 @@
       "Social": "Social",
       "Specialty": "Specialty",
       "Specialties": "Specialties",
+      "Tags": "Tags",
       "TechCat": "Technology Category"
     },
     "Item": {

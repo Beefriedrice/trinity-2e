@@ -15,22 +15,83 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource'>
-          <label class='resource-label'>Quantity</label>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Enhancement"}}</label>
           <input
             type='text'
-            name='system.quantity'
-            value='{{system.quantity}}'
+            name='system.weapon.enhancement'
+            value='{{system.weapon.enhancement}}'
             data-dtype='Number'
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>Weight</label>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Scale.Technology"}}</label>
           <input
             type='text'
-            name='system.weight'
-            value='{{system.weight}}'
+            name='system.weapon.techscale'
+            value='{{system.weapon.techscale}}'
             data-dtype='Number'
           />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Size"}}</label>
+          <input
+            type='text'
+            name='system.weapon.size'
+            value='{{system.weapon.size}}'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Cost"}}</label>
+          <input
+            type='text'
+            name='system.weapon.cost'
+            value='{{system.weapon.cost}}'
+            data-dtype='Number'
+          />
+        </div>
+         <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.ScienceType"}}</label>
+          <input
+            type='text'
+            name='system.weapon.sciencetype'
+            value='{{system.weapon.sciencetype}}'
+            data-dtype='Text'
+            list='inventiontype'
+          />
+          <datalist id="inventiontype">
+            <option value="{{localize 'TRINITY_SECOND.Science.Mundane'}}">{{localize 'TRINITY_SECOND.Science.Mundane'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Advanced'}}">{{localize 'TRINITY_SECOND.Science.Advanced'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Inspired'}}">{{localize 'TRINITY_SECOND.Science.Inspired'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Powered'}}">{{localize 'TRINITY_SECOND.Science.Powered'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Core'}}">{{localize 'TRINITY_SECOND.Science.Core'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Nova'}}">{{localize 'TRINITY_SECOND.Science.Nova'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Q'}}">{{localize 'TRINITY_SECOND.Science.Q'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Module'}}">{{localize 'TRINITY_SECOND.Science.Module'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Artifact'}}">{{localize 'TRINITY_SECOND.Science.Artifact'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Enigma'}}">{{localize 'TRINITY_SECOND.Science.Enigma'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Aetheric'}}">{{localize 'TRINITY_SECOND.Science.Aetheric'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Mystic'}}">{{localize 'TRINITY_SECOND.Science.Mystic'}}</option>
+          </datalist>
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.TechCat"}}</label>
+          <input
+            type='text'
+            name='system.weapon.category'
+            value='{{system.weapon.category}}'
+            data-dtype='Text'
+            list='inventioncategory'
+          />
+          <datalist id="inventioncategory">
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Device'}}">{{localize 'TRINITY_SECOND.TechCategory.Device'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Organism'}}">{{localize 'TRINITY_SECOND.TechCategory.Organism'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Compound'}}">{{localize 'TRINITY_SECOND.TechCategory.Compound'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Enigma'}}">{{localize 'TRINITY_SECOND.TechCategory.Enigma'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Cybernetic'}}">{{localize 'TRINITY_SECOND.TechCategory.Cybernetic'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Bioware'}}">{{localize 'TRINITY_SECOND.TechCategory.Bioware'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Noetic'}}">{{localize 'TRINITY_SECOND.TechCategory.Noetic'}}</option>            
+          </datalist>
         </div>
       </div>
     </div>
@@ -38,8 +99,8 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>Description</a>
-    <a class='item' data-tab='attributes'>Attributes</a>
+    <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.SheetLabels.Description"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TRINITY_SECOND.SheetLabels.Game"}}</a>
   </nav>
 
   {{! Sheet Body }}
@@ -48,9 +109,19 @@
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
+      <h3>{{localize "TRINITY_SECOND.SheetLabels.Tags"}}</h3>
+      <div class='resource'>
+        <input
+          type='text'
+          name='system.weapon.tags'
+          value='{{system.weapon.tags}}'
+          data-dtype='Text'
+        />
+      </div>
+      <h3 class="description added-segment">{{localize "TRINITY_SECOND.SheetLabels.Description"}}</h3>
       {{editor
         enrichedDescription
-        target='system.description'
+        target='system.weapon.description'
         engine='prosemirror'
         button=true
         editable=editable
