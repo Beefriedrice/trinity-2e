@@ -54,19 +54,38 @@
       "Category": "Category",
       "Collateral": "Collateral",
       "Description": "Description",
+      "Edges": "Edges",
+      "Enhancement": "Enhancement",
+      "Finesse": "Finesse",
+      "Force": "Force",
       "Health": "Health",
       "Item": "TrinitySecondEdition Item Sheet",
+      "Mental": "Mental",
       "Momentum": "Momentum",
+      "Novatrait": "Nova Traits",
+      "Physical": "Physical",
       "Prereq": "Prerequisites",
       "Rating": "Rating",
+      "Resilience": "Resilience",
+      "Scale": "Scale",
+      "ScienceType": "Science Type",
+      "Size": "Size",
       "Skill": "Skill",
-      "Specialty": "Specialty"
+      "Skills": "Skills",
+      "Skilltricks": "Skill Tricks",
+      "Social": "Social",
+      "Specialty": "Specialty",
+      "Specialties": "Specialties",
+      "TechCat": "Technology Category"
     },
     "Item": {
       "Spell": {
         "SpellLVL": "Level {level} Spells",
         "AddLVL": "Add LVL {level}"
       }
+    },
+    "Scale": {
+      "Technology": "Technology"
     },
     "Effect": {
       "Source": "Source",
@@ -92,6 +111,29 @@
         "Nov": "Nova",
         "Pat": "Path"
       }
+    },
+    "Science": {
+      "Mundane": "Mundane",
+      "Advanced": "Advanced",
+      "Inspired": "Inspired",
+      "Powered": "Powered",
+      "Core": "Core-Tech",
+      "Nova": "Nova-Tech",
+      "Q": "Q-Tech",
+      "Module": "Module",
+      "Artifact": "Artifact of Enigmatic Power",
+      "Enigma": "Enigma of Science",
+      "Aetheric": "Aetheric Contraption",
+      "Mystic": "Mystic Artifact"
+    },
+    "TechCategory": {
+      "Device": "Device",
+      "Organism": "Organism",
+      "Compound": "Compound",
+      "Enigma": "Engima",
+      "Cybernetic": "Cybernetic",
+      "Bioware": "Bioware",
+      "Noetic": "Noetic Biotech"
     }
   },
 

@@ -403,19 +403,23 @@
 }
 .trinity-2e .items-list .item .item-rating {
   flex: 0 0 30px;
-  max-width: 30px;
-  text-align: center;
-  margin: 0 20px;
 }
 .trinity-2e .items-list .item .item-skill {
-  font-size: 12px;
-  text-align: center;
-  flex: 0 0 50px;
+  flex: 0 0 70px;
 }
 .trinity-2e .items-list .item .item-category {
-  font-size: 12px;
-  text-align: center;
   flex: 0 0 70px;
+}
+.trinity-2e .items-list .item .item-enhancement {
+  flex: 0 0 90px;
+}
+.trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-size {
+  flex: 0 0 25px;
+}
+.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-rating {
+  text-align: center;
+  font-size: 12px;
+  margin: 0 5px;
 }
 .trinity-2e .items-list .item-prop {
   text-align: center;

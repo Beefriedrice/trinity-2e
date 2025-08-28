@@ -15,22 +15,83 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource'>
-          <label class='resource-label'>Quantity</label>
+          <label class='resource-label'>Enhancement</label>
           <input
             type='text'
-            name='system.quantity'
-            value='{{system.quantity}}'
+            name='system.equipment.enhancement'
+            value='{{system.equipment.enhancement}}'
             data-dtype='Number'
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>Weight</label>
+          <label class='resource-label'>Technology Scale</label>
           <input
             type='text'
-            name='system.weight'
-            value='{{system.weight}}'
+            name='system.equipment.techscale'
+            value='{{system.equipment.techscale}}'
             data-dtype='Number'
           />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>Size</label>
+          <input
+            type='text'
+            name='system.equipment.size'
+            value='{{system.equipment.size}}'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>Cost</label>
+          <input
+            type='text'
+            name='system.equipment.cost'
+            value='{{system.equipment.cost}}'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.ScienceType"}}</label>
+          <input
+            type='text'
+            name='system.equipment.sciencetype'
+            value='{{system.equipment.sciencetype}}'
+            data-dtype='Text'
+            list='inventiontype'
+          />
+          <datalist id="inventiontype">
+            <option value="{{localize 'TRINITY_SECOND.Science.Mundane'}}">{{localize 'TRINITY_SECOND.Science.Mundane'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Advanced'}}">{{localize 'TRINITY_SECOND.Science.Advanced'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Inspired'}}">{{localize 'TRINITY_SECOND.Science.Inspired'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Powered'}}">{{localize 'TRINITY_SECOND.Science.Powered'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Core'}}">{{localize 'TRINITY_SECOND.Science.Core'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Nova'}}">{{localize 'TRINITY_SECOND.Science.Nova'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Q'}}">{{localize 'TRINITY_SECOND.Science.Q'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Module'}}">{{localize 'TRINITY_SECOND.Science.Module'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Artifact'}}">{{localize 'TRINITY_SECOND.Science.Artifact'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Enigma'}}">{{localize 'TRINITY_SECOND.Science.Enigma'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Aetheric'}}">{{localize 'TRINITY_SECOND.Science.Aetheric'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.Science.Mystic'}}">{{localize 'TRINITY_SECOND.Science.Mystic'}}</option>
+          </datalist>
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.TechCat"}}</label>
+          <input
+            type='text'
+            name='system.equipment.category'
+            value='{{system.equipment.category}}'
+            data-dtype='Text'
+            list='inventioncategory'
+          />
+          <datalist id="inventioncategory">
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Device'}}">{{localize 'TRINITY_SECOND.TechCategory.Device'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Organism'}}">{{localize 'TRINITY_SECOND.TechCategory.Organism'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Compound'}}">{{localize 'TRINITY_SECOND.TechCategory.Compound'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Enigma'}}">{{localize 'TRINITY_SECOND.TechCategory.Enigma'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Cybernetic'}}">{{localize 'TRINITY_SECOND.TechCategory.Cybernetic'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Bioware'}}">{{localize 'TRINITY_SECOND.TechCategory.Bioware'}}</option>
+            <option value="{{localize 'TRINITY_SECOND.TechCategory.Noetic'}}">{{localize 'TRINITY_SECOND.TechCategory.Noetic Biotech'}}</option>            
+          </datalist>
         </div>
       </div>
     </div>

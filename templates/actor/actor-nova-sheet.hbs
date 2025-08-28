@@ -45,7 +45,7 @@
         {{!-- Source(Quantum) and Nova Unique traits --}}
         <section class="source-section">
             <div class="flex-group-center">
-                <h3 class="nova-header">Nova Traits</h3>
+                <h3 class="nova-header">{{localize "TRINITY_SECOND.SheetLabels.Novatrait"}}</h3>
             </div>
             <div class="source-column">
                 <div class="source-row">
@@ -79,11 +79,11 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="item" data-tab="stats">Attributes<br>& Skills</a>
-    <a class="item" data-tab="edges">Edges,<br>Skill Tricks,<br>& Specialties</a>
+    <a class="item" data-tab="stats">{{localize "TRINITY_SECOND.SheetLabels.Attributes"}}<br>& {{localize "TRINITY_SECOND.SheetLabels.Skills"}}</a>
+    <a class="item" data-tab="edges">{{localize "TRINITY_SECOND.SheetLabels.Edges"}},<br>{{localize "TRINITY_SECOND.SheetLabels.Skilltricks"}},<br>& {{localize "TRINITY_SECOND.SheetLabels.Specialties"}}</a>
     <a class="item" data-tab="powers">Mega-Edges<br>& Powers</a>
-    <a class="item" data-tab="equipment">Equipment</a>
-    <a class="item" data-tab="effects">Status<br>Effects</a>
+    <a class="item" data-tab="equipment">{{localize "TYPES.Item.equipment"}}</a>
+    <a class="item" data-tab="effects">Health &<br>Status<br>Effects</a>
     <a class="item" data-tab="background">Character<br>Background<br> & Paths</a>
   </nav>
 
@@ -93,16 +93,16 @@
     <div class="tab stats" data-group="primary" data-tab="stats">
         
         {{!-- Attribute Section --}}
-        <h2 class="flex-group-center nova-header">Attributes</h2>
+        <h2 class="flex-group-center nova-header">{{localize "TRINITY_SECOND.SheetLabels.Attributes"}}</h2>
         <section class="">
             {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
             use both the "grid" and "grid-Ncol" class where "N" can be any number
             from 1 to 12 and will create that number of columns.  --}}
             <div class="flex-group-center attribute-header">
                 <div class="approach"></div>
-                <div class="attribute"><h3>Mental</h3></div>
-                <div class="attribute"><h3>Physical</h3></div>
-                <div class="attribute"><h3>Social</h3></div>
+                <div class="attribute"><h3>{{localize "TRINITY_SECOND.SheetLabels.Mental"}}</h3></div>
+                <div class="attribute"><h3>{{localize "TRINITY_SECOND.SheetLabels.Physical"}}</h3></div>
+                <div class="attribute"><h3>{{localize "TRINITY_SECOND.SheetLabels.Social"}}</h3></div>
     {{#each system.attributes as |attribute key|}}
         {{#if attribute.row}}
             </div>

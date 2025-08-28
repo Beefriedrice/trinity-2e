@@ -99,24 +99,29 @@
         margin-right: 5px;
       }
     }
+    //Columns for item tables on actor sheets.
     //"Rating" header and content
     .item-rating {
       flex: 0 0 30px;
-      max-width: 30px;
-      text-align: center;
-      margin: 0 20px;
     }
     //"Skill" header and content
     .item-skill {
-      font-size: 12px;
-      text-align: center;
-      flex: 0 0 50px;
+      flex: 0 0 70px;
     }
     //"Category" header and content
     .item-category {
-      font-size: 12px;
-      text-align: center;
       flex: 0 0 70px;
+    }
+    .item-enhancement {
+      flex: 0 0 90px;
+    }
+    .item-tscale, .item-size {
+      flex: 0 0 25px;
+    }
+    .item-enhancement, .item-tscale, .item-size, .item-category, .item-skill, .item-rating {
+      text-align: center;
+      font-size: 12px;
+      margin: 0 5px;
     }
   }
 
@@ -149,6 +154,5 @@
 }
 
 //new styles
-
 
 

@@ -271,7 +271,7 @@
     },
     "armor": {
       "templates": ["base"],
-      "enhancements": 0,
+      "enhancement": 0,
       "soft": 0,
       "hard": 0,
       "base": "",
@@ -281,7 +281,8 @@
       "techscale": 0,
       "size": 0,
       "cost": 0,
-      "inventiontype": "Mundane Tech"
+      "inventiontype": "Mundane Tech",
+      "isEquipped": false
     },
     "contact": {
       "templates": ["base"],
@@ -292,23 +293,24 @@
       "path": "",
       "tags": ""
     },
-    "equipment": {
-      "templates": ["base"],
-      "enhancements": 0,
-      "tags": "",
-      "description": "",
-      "formula": "",
-      "techscale": 0,
-      "size": 0,
-      "cost": 0,
-      "inventiontype": "Mundane Tech"
-    },
     "edge": {
       "templates": ["base"],
       "category": "",
       "rating": "1",
       "prereq": "",
       "description": ""
+    },
+    "equipment": {
+      "templates": ["base"],
+      "enhancement": 0,
+      "tags": "",
+      "description": "",
+      "formula": "",
+      "techscale": 0,
+      "size": 0,
+      "cost": 0,
+      "sciencetype": "Mundane Science",
+      "category": "Device"
     },
     "injury": {
       "templates": ["base"],
@@ -407,7 +409,7 @@
     },
     "vehicle": {
       "templates": ["base"],
-      "enhancements": 0,
+      "enhancement": 0,
       "handling": 0,
       "speed": 0,
       "weapons": "",
@@ -421,7 +423,7 @@
     },
     "weapon": {
       "templates": ["base"],
-      "enhancements": 0,
+      "enhancement": 0,
       "tags": "",
       "description": "",
       "formula": "",

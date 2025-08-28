@@ -1,19 +1,23 @@
+<h3 class="equipment-header">General Objects & Equipment</h3>
 <ol class='items-list'>
   <li class='item flexrow items-header'>
     <div class='item-name'>{{localize 'Name'}}</div>
+    <div class='item-enhancement'>{{localize 'TRINITY_SECOND.SheetLabels.Enhancement'}}</div>
+    <div class='item-tscale'>{{localize 'TRINITY_SECOND.SheetLabels.Scale'}}</div>
+    <div class='item-size'>{{localize 'TRINITY_SECOND.SheetLabels.Size'}}</div>
     <div class='item-formula'>{{localize 'Roll Formula'}}</div>
     <div class='item-controls'>
       <a
         class='item-control item-create'
-        title='{{localize "DOCUMENT.Create" type='Item'}}'
-        data-type='item'
+        title='{{localize "DOCUMENT.Create" type='Equipment'}}'
+        data-type='equipment'
       >
         <i class='fas fa-plus'></i>
-        {{localize 'DOCUMENT.New' type='item'}}
+        {{localize 'DOCUMENT.New' type=''}}
       </a>
     </div>
   </li>
-  {{#each gear as |item id|}}
+  {{#each equipment as |item id|}}
     <li class='item flexrow' data-item-id='{{item._id}}'>
       <div class='item-name'>
         <div class='item-image'>
@@ -28,6 +32,9 @@
         </div>
         <h4>{{item.name}}</h4>
       </div>
+      <div class='item-enhancement'>{{item.system.equipment.enhancement}}</div>
+      <div class='item-tscale'>{{item.system.equipment.techscale}}</div>
+      <div class='item-size'>{{item.system.equipment.size}}</div>
       <div class='item-formula item-prop'>{{item.system.formula}}</div>
       <div class='item-controls'>
         <a
