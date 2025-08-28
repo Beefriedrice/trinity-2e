@@ -10,6 +10,7 @@ import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
 import { registerSettings } from './helpers/settings.mjs';
 import { TRINITY_SECOND } from './helpers/config.mjs';
 
+
 /* -------------------------------------------- */
 /*  Init Hook                                   */
 /* -------------------------------------------- */
@@ -36,8 +37,8 @@ Hooks.once('init', function () {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: '1d20 + @abilities.dex.mod',
-    decimals: 2,
+    formula: '({1d1+90, @skills.emp.value + @attributes.dex.value, @skills.ath.value + @attributes.cun.value}kl)d10x=10cs>=8',
+    decimals: 0,
   };
 
   // Define custom Document classes
@@ -72,6 +73,10 @@ Hooks.once('init', function () {
 // If you need to add Handlebars helpers, here is a useful example:
 Handlebars.registerHelper('toLowerCase', function (str) {
   return str.toLowerCase();
+});
+
+Handlebars.registerHelper('compare', function (valueA, valueB) {
+  return valueA === valueB;
 });
 
 /* -------------------------------------------- */

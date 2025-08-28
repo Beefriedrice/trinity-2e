@@ -125,52 +125,68 @@
         },
         "skills": {
           "aim": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "ath": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "clo": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "com": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "cul": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "emp": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "eni": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "hum": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "int": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "lar": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "med": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "per": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "pil": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "sci": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "sur": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           },
           "tec": {
-            "value": 0
+            "value": 0,
+            "specialty": []
           }
         }
       }
@@ -178,6 +194,7 @@
     "nova": {
       "templates": ["base"],
       "traits": {
+        "target": 7,
         "quantum": {
           "value": 1,
           "maxedout": 1
@@ -233,7 +250,7 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell", "weapon", "armor", "vehicle", "equipment", "module", "edge", "injury", "status", "field", "stunt", "gift", "skilltrick", "path", "contact", "megaedge", "powertag", "quantumpower"],
+    "types": ["item", "feature", "spell", "specialty", "weapon", "armor", "vehicle", "equipment", "module", "edge", "injury", "status", "field", "stunt", "gift", "skilltrick", "path", "contact", "megaedge", "powertag", "quantumpower"],
     "templates": {
       "base": {
         "description": ""
@@ -251,6 +268,11 @@
     "spell": {
       "templates": ["base"],
       "spellLevel": 1
+    },
+    "specialty": {
+      "templates": ["base"],
+      "skill": "aim",
+      "rating": 1
     },
     "weapon": {
       "templates": ["base"],

@@ -23,6 +23,7 @@
 
 .math-label {
   max-width: 25px;
+  text-align: center;
 }
 
 //layout
@@ -40,6 +41,7 @@
   flex: 1 1 220px;
   max-width: 240px;
   min-width: 200px;
+  padding-top: 5px;
 }
 
 .health-row {
@@ -47,6 +49,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 5px;
 }
 
 .health-label {
@@ -72,12 +75,14 @@
   max-width: 325px;
   min-width: 275px;
   flex: 1 1 300px;
+  padding-top: 5px;
 }
 
 .source-row {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  padding-top: 5px;
 }
 
 .source-col1 {

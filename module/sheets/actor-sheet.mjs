@@ -120,22 +120,37 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
    */
   _prepareItems(context) {
     // Initialize containers.
-    const gear = [];
-    const features = [];
     const armor = [];
-    const weapon = [];
-    const vehicle = [];
-    const equipment = [];
-    const module = [];
-    const edge = [];
-    const injury = [];
-    const status = [];
-    const gift = [];
-    const skilltrick = [];
-    const path = [];
     const contact = [];
+    const edge = [];
+    const equipment = [];
+    const features = [];
+    const gear = [];
+    const gift = [];
+    const injury = [];
     const megaedge = [];
+    const module = [];
+    const path = [];
     const quantumpower = [];
+    const skilltrick = [];
+    const specialty = {
+      aim: [],
+      ath: [],
+      clo: [],
+      com: [],
+      cul: [],
+      emp: [],
+      eni: [],
+      hum: [],
+      int: [],
+      lar: [],
+      med: [],
+      per: [],
+      pil: [],
+      sci: [],
+      sur: [],
+      tec: []
+    }
     const spells = {
       0: [],
       1: [],
@@ -148,73 +163,71 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       8: [],
       9: [],
     };
+    const status = [];
+    const vehicle = [];
+    const weapon = [];
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || Item.DEFAULT_ICON;
-      // Append to gear.
-      if (i.type === 'item') {
-        gear.push(i);
-      }
-      // Append to features.
-      else if (i.type === 'feature') {
-        features.push(i);
-      }
+      
       // Append to armor.
-      else if (i.type === 'armor') {
+      if (i.type === 'armor') {
         armor.push(i);
-      }
-      // Append to weapon.
-      else if (i.type === 'weapon') {
-        weapon.push(i);
-      }
-      // Append to vehicle.
-      else if (i.type === 'vehicle') {
-        vehicle.push(i);
-      }
-      // Append to equipment.
-      else if (i.type === 'equipment') {
-        equipment.push(i);
-      }
-      // Append to modules.
-      else if (i.type === 'module') {
-        module.push(i);
-      }
-      // Append to edges.
-      else if (i.type === 'edge') {
-        edge.push(i);
-      }
-      // Append to injury.
-      else if (i.type === 'injury') {
-        injury.push(i);
-      }
-      // Append to status.
-      else if (i.type === 'status') {
-        status.push(i);
-      }
-      // Append to gift.
-      else if (i.type === 'gift') {
-        gift.push(i);
-      }
-      // Append to skill tricks.
-      else if (i.type === 'skilltrick') {
-        skilltrick.push(i);
-      }
-      // Append to paths.
-      else if (i.type === 'path') {
-        path.push(i);
       }
       // Append to contacts.
       else if (i.type === 'contact') {
         contact.push(i);
       }
+      // Append to equipment.
+      else if (i.type === 'equipment') {
+        equipment.push(i);
+      }
+      // Append to edges.
+      else if (i.type === 'edge') {
+        edge.push(i);
+      }
+      // Append to features.
+      else if (i.type === 'feature') {
+        features.push(i);
+      }
+      // Append to gear.
+      else if (i.type === 'item') {
+        gear.push(i);
+      }
+      // Append to gift.
+      else if (i.type === 'gift') {
+        gift.push(i);
+      }
+      // Append to injury.
+      else if (i.type === 'injury') {
+        injury.push(i);
+      }
       // Append to mega-edges.
       else if (i.type === 'megaedge') {
         megaedge.push(i);
       }
+      // Append to modules.
+      else if (i.type === 'module') {
+        module.push(i);
+      }
+      // Append to paths.
+      else if (i.type === 'path') {
+        path.push(i);
+      }
       // Append to quantum powers.
       else if (i.type === 'quantumpower') {
         quantumpower.push(i);
+      }
+      // Append to skill tricks.
+      else if (i.type === 'skilltrick') {
+        skilltrick.push(i);
+      }
+      // Append to specialties
+      else if (i.type === 'specialty') {
+        if (i.system.skill != undefined) {  
+          specialty[i.system.skill].push(i);  
+        }
       }
       // Append to spells.
       else if (i.type === 'spell') {
@@ -222,26 +235,39 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
           spells[i.system.spellLevel].push(i);
         }
       }
+      // Append to status.
+      else if (i.type === 'status') {
+        status.push(i);
+      }
+      // Append to vehicle.
+      else if (i.type === 'vehicle') {
+        vehicle.push(i);
+      }
+      // Append to weapon.
+      else if (i.type === 'weapon') {
+        weapon.push(i);
+      }
     }
 
     // Assign and return
-    context.gear = gear;
-    context.features = features;
     context.armor = armor;
-    context.weapon = weapon;
-    context.vehicle = vehicle;
-    context.equipment = equipment;
-    context.module = module;
-    context.edge = edge;
-    context.injury = injury;
-    context.status = status;
-    context.gift = gift;
-    context.skilltrick = skilltrick;
-    context.path = path;
     context.contact = contact;
+    context.edge = edge;
+    context.equipment = equipment;
+    context.features = features;
+    context.gear = gear;
+    context.gift = gift;
+    context.injury = injury;
     context.megaedge = megaedge;
+    context.module = module;
+    context.path = path;
     context.quantumpower = quantumpower;
+    context.skilltrick = skilltrick;
+    context.specialty = specialty;
     context.spells = spells;
+    context.status = status;
+    context.vehicle = vehicle;
+    context.weapon = weapon;
   }
 
   /* -------------------------------------------- */
@@ -255,6 +281,36 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       const li = $(ev.currentTarget).parents('.item');
       const item = this.actor.items.get(li.data('itemId'));
       item.sheet.render(true);
+    });
+
+    //html.on('click', '.checkbox', (ev) => {
+    //  const boxName = ev.currentTarget;
+    //  const targetValue = boxName.dataset.checkbox;
+    //  ui.information.info(targetValue);
+    //}); 
+
+    // First step in creating a specialty dialog box.
+    html.on('click', '.skill', (ev) => {
+      const myDialogOptions = {
+        width: 200,
+        height: 200,
+        top: 500,
+        left: 500
+      }
+      const myDialog = new Dialog({
+        title: "test",
+        content: "Pick a button.",
+        buttons: {
+          button1: {
+            label: '1 die',
+            callback: () => {
+              let r = new Roll("1d10");
+              ui.notification("The button was pressed");
+            },
+            icon: `<i class="fas fa-dice-d6></i>`
+          }
+        }
+      }, myDialogOptions).render(true)
     });
 
     // -------------------------------------------------------------

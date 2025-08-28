@@ -446,6 +446,7 @@
 }
 .trinity-2e .math-label {
   max-width: 25px;
+  text-align: center;
 }
 .trinity-2e .resource-section {
   display: flex;
@@ -455,12 +456,14 @@
   flex: 1 1 220px;
   max-width: 240px;
   min-width: 200px;
+  padding-top: 5px;
 }
 .trinity-2e .health-row {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5px;
 }
 .trinity-2e .health-label {
   width: 60px;
@@ -480,11 +483,13 @@
   max-width: 325px;
   min-width: 275px;
   flex: 1 1 300px;
+  padding-top: 5px;
 }
 .trinity-2e .source-row {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-top: 5px;
 }
 .trinity-2e .source-col1 {
   margin: 0 5px;

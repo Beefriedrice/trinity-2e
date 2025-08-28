@@ -44,7 +44,7 @@
         
         {{!-- Source(Quantum) and Nova Unique traits --}}
         <section class="source-section">
-            <div class="source-column flex-group-center">
+            <div class="flex-group-center">
                 <h3 class="nova-header">Nova Traits</h3>
             </div>
             <div class="source-column">
@@ -57,7 +57,7 @@
                         <label class="source-label source-element" for="system.traits.quantumpoints.value">Quantum Points</label>
                         <input class="text-2digit source-element" type="text" name="system.traits.quantumpoints.value" value="{{system.traits.quantumpoints.value}}" data-dtype="Number"/>
                         <span class="math-label source-element"> / </span>
-                        <input class="text-2digit source-element" size="4" type="text" name="system.traits.quantumpoints.max" value="{{system.traits.quantumpoints.max}}" data-dtype="Number"/>
+                        <input class="text-2digit source-element" size="4" type="text" name="system.traits.quantumpoints.max" value="{{system.traits.quantumpoints.max}}" data-dtype="Number" readonly/>
                     </div>
                 </div>
                 <div class="source-row">
@@ -140,8 +140,8 @@
         <h2 class="flex-group-center nova-header">Skills</h2>
         <section class="grid grid-4col">
             {{#each system.skills as |skill key|}}
-                <div class="skill flexrow flex-group-center">
-                    <label for="system.skills.{{key}}.value" class="resource-label flexlarge align-left" data-skill="@skills.{{key}}.value" data-roll="(@skills.{{key}}.value)d10x=10cs>=8" data-label="{{localize (lookup @root.config.skills key)}}">{{localize (lookup @root.config.skills key)}}</label>
+                <div class="skill flexrow flex-group-center" data-skill="{{key}}">
+                    <label class="skill-label resource-label flexlarge align-left" for="system.skills.{{key}}.value" data-skill="@skills.{{key}}" data-roll="(@skills.{{key}}.value)d10x=10cs>=8" data-label="{{localize (lookup @root.config.skills key)}}">{{localize (lookup @root.config.skills key)}}</label>
                     <input class="text-2digit" type="number" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
                 </div>
             {{/each}}
