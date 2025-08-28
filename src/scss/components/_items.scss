@@ -55,10 +55,16 @@
     }
   }
 
+  // Dice Roll Column
+  .item-formula {
+    flex: 0 0 90px;
+    padding: 0 8px;
+  }
+
   // Control Buttons
   .item-controls {
     display: flex;
-    flex: 0 0 100px;
+    flex: 0 0 80px;
     justify-content: flex-end;
     a {
       font-size: 12px;
@@ -74,6 +80,7 @@
     border-bottom: 1px solid $c-faint;
     &:last-child { border-bottom: none; }
     .item-name {
+      flex: 2 1 200px;
       color: $c-dark;
       .item-image {
         flex: 0 0 30px;
@@ -82,6 +89,12 @@
         border: none;
         margin-right: 5px;
       }
+    }
+    .item-rating {
+      flex: 0 0 30px;
+      max-width: 30px;
+      text-align: center;
+      margin: 0 20px;
     }
   }
 
@@ -113,12 +126,7 @@
   }
 }
 
-// Example style for TrinitySecondEdition (can be removed if not needed).
-.item-formula {
-  
-  flex: 0 0 200px;
-  padding: 0 8px;
-}
+
 
 
 

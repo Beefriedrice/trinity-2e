@@ -269,22 +269,6 @@
       "templates": ["base"],
       "spellLevel": 1
     },
-    "specialty": {
-      "templates": ["base"],
-      "skill": "aim",
-      "rating": 1
-    },
-    "weapon": {
-      "templates": ["base"],
-      "enhancements": 0,
-      "tags": "",
-      "description": "",
-      "formula": "",
-      "techscale": 0,
-      "size": 0,
-      "cost": 0,
-      "inventiontype": "Mundane Tech"
-    },
     "armor": {
       "templates": ["base"],
       "enhancements": 0,
@@ -299,35 +283,18 @@
       "cost": 0,
       "inventiontype": "Mundane Tech"
     },
-    "vehicle": {
+    "contact": {
       "templates": ["base"],
-      "enhancements": 0,
-      "handling": 0,
-      "speed": 0,
-      "weapons": "",
-      "tags": "",
-      "description": "",
-      "formula": "",
-      "techscale": 0,
-      "size": 0,
-      "cost": 0,
-      "inventiontype": "Mundane Tech"
+      "rating": {
+        "value": 0,
+        "current": 0
+      },
+      "path": "",
+      "tags": ""
     },
     "equipment": {
       "templates": ["base"],
       "enhancements": 0,
-      "tags": "",
-      "description": "",
-      "formula": "",
-      "techscale": 0,
-      "size": 0,
-      "cost": 0,
-      "inventiontype": "Mundane Tech"
-    },
-    "module": {
-      "templates": ["base"],
-      "enhancements": 0,
-      "power": "",
       "tags": "",
       "description": "",
       "formula": "",
@@ -351,20 +318,10 @@
       "source": "",
       "firstaid": false
     },
-    "status": {
-      "templates": ["base"],
-      "effect": "",
-      "resolution": ""
-    },
     "field": {
       "templates": ["base"],
       "description": "",
       "complication": "",
-      "effect": ""
-    },
-    "stunt": {
-      "templates": ["base"],
-      "rating": "",
       "effect": ""
     },
     "gift": {
@@ -374,10 +331,26 @@
       "system": "",
       "type": ""
     },
-    "skilltrick": {
+    "megaedge": {
       "templates": ["base"],
-      "skill": "",
-      "description": ""
+      "rating": 0,
+      "prereq": "",
+      "attribute": "",
+      "description": "",
+      "powertags": "",
+      "maxedout": false
+    },
+    "module": {
+      "templates": ["base"],
+      "enhancements": 0,
+      "power": "",
+      "tags": "",
+      "description": "",
+      "formula": "",
+      "techscale": 0,
+      "size": 0,
+      "cost": 0,
+      "inventiontype": "Mundane Tech"
     },
     "path": {
       "templates": ["base"],
@@ -393,24 +366,6 @@
       "description": "",
       "community": "",
       "access": ""
-    },
-    "contact": {
-      "templates": ["base"],
-      "rating": {
-        "value": 0,
-        "current": 0
-      },
-      "path": "",
-      "tags": ""
-    },
-    "megaedge": {
-      "templates": ["base"],
-      "rating": 0,
-      "prereq": "",
-      "attribute": "",
-      "description": "",
-      "powertags": "",
-      "maxedout": false
     },
     "powertag": {
       "templates": ["base"],
@@ -429,6 +384,51 @@
       "description": "",
       "maxedout": false,
       "customtags": ""
+    },
+    "skilltrick": {
+      "templates": ["base"],
+      "skill": "",
+      "description": ""
+    },
+    "specialty": {
+      "templates": ["base"],
+      "skill": "aim",
+      "rating": 1
+    },
+    "status": {
+      "templates": ["base"],
+      "effect": "",
+      "resolution": ""
+    },
+    "stunt": {
+      "templates": ["base"],
+      "rating": "",
+      "effect": ""
+    },
+    "vehicle": {
+      "templates": ["base"],
+      "enhancements": 0,
+      "handling": 0,
+      "speed": 0,
+      "weapons": "",
+      "tags": "",
+      "description": "",
+      "formula": "",
+      "techscale": 0,
+      "size": 0,
+      "cost": 0,
+      "inventiontype": "Mundane Tech"
+    },
+    "weapon": {
+      "templates": ["base"],
+      "enhancements": 0,
+      "tags": "",
+      "description": "",
+      "formula": "",
+      "techscale": 0,
+      "size": 0,
+      "cost": 0,
+      "inventiontype": "Mundane Tech"
     }
   }
 }
