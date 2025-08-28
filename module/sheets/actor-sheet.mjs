@@ -133,24 +133,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     const path = [];
     const quantumpower = [];
     const skilltrick = [];
-    const specialty = {
-      aim: [],
-      ath: [],
-      clo: [],
-      com: [],
-      cul: [],
-      emp: [],
-      eni: [],
-      hum: [],
-      int: [],
-      lar: [],
-      med: [],
-      per: [],
-      pil: [],
-      sci: [],
-      sur: [],
-      tec: []
-    }
+    const specialty = [];
     const spells = {
       0: [],
       1: [],
@@ -225,9 +208,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       }
       // Append to specialties
       else if (i.type === 'specialty') {
-        if (i.system.skill != undefined) {  
-          specialty[i.system.skill].push(i);  
-        }
+        specialty.push(i);
       }
       // Append to spells.
       else if (i.type === 'spell') {

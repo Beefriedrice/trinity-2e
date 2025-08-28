@@ -50,15 +50,17 @@
     },
     "SheetLabels": {
       "Actor": "TrinitySecondEdition Actor Sheet",
-      "Item": "TrinitySecondEdition Item Sheet",
-      "Health": "Health",
-      "Prereq": "Prerequisites",
-      "Momentum": "Momentum",
-      "Collateral": "Collateral",
-      "Rating": "Rating",
-      "Description": "Description",
       "Attributes": "Attributes",
-      "Category": "Category"
+      "Category": "Category",
+      "Collateral": "Collateral",
+      "Description": "Description",
+      "Health": "Health",
+      "Item": "TrinitySecondEdition Item Sheet",
+      "Momentum": "Momentum",
+      "Prereq": "Prerequisites",
+      "Rating": "Rating",
+      "Skill": "Skill",
+      "Specialty": "Specialty"
     },
     "Item": {
       "Spell": {
@@ -84,7 +86,7 @@
         "Phy": "Physical",
         "Soc": "Social",
         "Sty": "Style",
-        "Com": "Advanced Combat Maneuvers",
+        "Com": "Adv. Combat Maneuver",
         "Pow": "Powered",
         "Enh": "Enhanced",
         "Nov": "Nova",
@@ -104,22 +106,23 @@
       "feature": "Feature",
       "spell": "Spell",
       "armor": "Armor",
-      "weapon": "Weapon",
-      "vehicle": "Vehicle",
-      "equipment": "Equipment",
-      "module": "Module",
+      "contact": "Contact",
       "edge": "Edge",
-      "injury": "Injury Condition",
-      "status": "Status Condition",
+      "equipment": "Equipment",
       "field": "Field Condition",
       "gift": "Gift",
-      "skilltrick": "Skill Trick",
-      "path": "Path",
-      "contact": "Contact",
+      "injury": "Injury Condition",
       "megaedge": "Mega-Edge",
+      "module": "Module",
+      "path": "Path",
       "powertag": "Power Tag",
       "quantumpower": "Quantum Power",
-      "stunt": "Stunt"
+      "skilltrick": "Skill Trick",
+      "specialty": "Specialty",
+      "status": "Status Condition",
+      "stunt": "Stunt",
+      "vehicle": "Vehicle",
+      "weapon": "Weapon"
     }
   }
 }
