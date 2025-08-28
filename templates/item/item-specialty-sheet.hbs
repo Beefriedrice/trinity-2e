@@ -18,8 +18,8 @@
           <label class='resource-label'>Skill</label>
           <input
             type='text'
-            name='system.skilltrick.skill'
-            value='{{system.skilltrick.skill}}'
+            name='system.specialty.skill'
+            value='{{system.specialty.skill}}'
             data-dtype='Text'
             list='skillslist'
           />
@@ -41,6 +41,15 @@
               <option value="{{localize 'TRINITY_SECOND.Skill.Sur.long'}}">{{localize 'TRINITY_SECOND.Skill.Sur.long'}}</option>
               <option value="{{localize 'TRINITY_SECOND.Skill.Tec.long'}}">{{localize 'TRINITY_SECOND.Skill.Tec.long'}}</option>
           </datalist>
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Rating"}}</label>
+          <input
+            type='text'
+            name='system.specialty.rating'
+            value='{{system.specialty.rating}}'
+            data-dtype='Number'
+          />
         </div>
       </div>
     </div>

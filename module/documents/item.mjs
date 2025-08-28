@@ -54,6 +54,9 @@ export class TrinitySecondEditionItem extends Item {
       else if(type === "skilltrick"){
         img = 'icons/svg/card-hand.svg';
       }
+      else if(type === "specialty"){
+        img = 'icons/svg/light.svg';
+      }
       else if(type === "status"){
         img = 'icons/svg/stoned.svg';
       }
