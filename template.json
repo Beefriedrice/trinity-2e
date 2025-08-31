@@ -231,8 +231,8 @@
           "max": 10
         }
       },
-      "powersuites": {
-        "none": "No Power Suite",
+      "powersuite": {
+        "none": "Quantum Powers",
         "one": "Power Suite 1", 
         "two": "Power Suite 2", 
         "three": "Power Suite 3"

@@ -1,26 +1,46 @@
-<div class="setting-button">Settings</div>
-<div class="power-settings">
-  <input type="text" name="system.powersuites.one" value="{{system.powersuites.one}}" data-dtype="Text"><br>
-  <input type="text" name="system.powersuites.two" value="{{system.powersuites.two}}" data-dtype="Text"><br>
-  <input type="text" name="system.powersuites.three" value="{{system.powersuites.three}}" data-dtype="Text"><br>
-  <input type="text" name="system.powersuites.none" value="{{system.powersuites.none}}" data-dtype="Text"><br>
-</div>
+
+  <div class="setting-button"><label>Power<br>Settings</label></div>
+  <div class="power-settings hide-data">
+    <h3>Power Suites</h3>
+    <div class="suite-row">
+      <div class="suite-label">Core</div>
+      <label class="suite-name">Name:</label>
+      <input class="suite-text" type="text" name="system.powersuite.none" value="{{system.powersuite.none}}"/>
+    </div>
+    <div class="suite-row">
+      <div class="suite-label">1st</div>
+      <label class="suite-name">Name:</label>
+      <input class="suite-text" type="text" name="system.powersuite.one" value="{{system.powersuite.one}}"/>
+    </div>
+    <div class="suite-row">
+      <div class="suite-label">2nd</div>
+      <label class="suite-name">Name:</label>
+      <input class="suite-text" type="text" name="system.powersuite.two" value="{{system.powersuite.two}}"/>
+    </div>
+    <div class="suite-row">
+      <div class="suite-label">3rd</div>
+      <label class="suite-name">Name:</label>
+      <input class="suite-text" type="text" name="system.powersuite.three" value="{{system.powersuite.three}}"/>
+    </div>
+  </div>
+
 {{#each quantumpower as |quantumpower suite|}}
-  <ol class='items-list'>
+  <ol class='items-list power-suite{{suite}}'>
     <li class='item flexrow items-header'>
       <div class='item-name'>
-        {{!--I couldn't figure out how to make handlebars work with an array --}}
-        {{#if (eq suite '0')}}
-          {{@root.system.powersuites.one}}
-        {{/if}}
+        
+        {{!--I couldn't figure out how to make handlebars work with an array --}} 
         {{#if (eq suite '1')}}
-          {{@root.system.powersuites.two}}
+          {{@root.system.powersuite.one}}
         {{/if}}
         {{#if (eq suite '2')}}
-          {{@root.system.powersuites.three}}
+          {{@root.system.powersuite.two}}
         {{/if}}
         {{#if (eq suite '3')}}
-          {{@root.system.powersuites.none}}
+          {{@root.system.powersuite.three}}
+        {{/if}}
+        {{#if (eq suite '0')}}
+          {{@root.system.powersuite.none}}
         {{/if}}
       </div>
       <div class='item-controls'>
@@ -28,7 +48,7 @@
           class='item-control item-create'
           title='{{localize "DOCUMENT.Create" type='Quantumpower'}}'
           data-type='quantumpower'
-          data-spell-level='{{suite}}'
+          data-suite='{{suite}}'
         >
           <i class='fas fa-plus'></i>
           {{localize 'DOCUMENT.New' type=''}}

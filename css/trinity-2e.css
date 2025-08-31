@@ -568,3 +568,33 @@
 }
 
 /*# sourceMappingURL=trinity-2e.css.map */
+.setting-button {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  border: solid 3px;
+  font-size: 11px;
+}
+
+.suite-row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.hide-data {
+  display: none;
+}
+
+.suite-text {
+  max-width: 350px;
+}
+
+.suite-label {
+  font-weight: bold;
+  flex: 0 0 35px;
+}

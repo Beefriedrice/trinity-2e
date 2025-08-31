@@ -136,7 +136,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       0: [],
       1: [],
       2: [],
-      3: []
+      3: [],
     };
     const skilltrick = [];
     const specialty = [];
@@ -209,8 +209,10 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       }
       // Append to quantum powers.
       else if (i.type === 'quantumpower') {
-        if (i.system.suite != undefined && i.system.suite >= 0 && i.system.suite <= 3) {
+        if (i.system.suite != undefined && i.system.suite >= 1 && i.system.suite <= 3) {
           quantumpower[i.system.suite].push(i)
+        } else {
+          quantumpower[0].push(i)
         }
       }
       // Append to skill tricks.
@@ -275,6 +277,10 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       const item = this.actor.items.get(li.data('itemId'));
       item.sheet.render(true);
     });
+
+    html.on('click', '.setting-button', (ev) => {
+      $(ev.currentTarget).next().toggleClass('hide-data')
+    })
 
     /** html.on('keyup', '.suiteqty', (ev) => {
       const number = $(ev.currentTarget).val();

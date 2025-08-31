@@ -15,22 +15,91 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource'>
-          <label class='resource-label'>Quantity</label>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.QMin"}}</label>
           <input
             type='text'
-            name='system.quantity'
-            value='{{system.quantity}}'
+            name='system.quantumpower.qminimum'
+            value='{{system.quantumpower.qminimum}}'
             data-dtype='Number'
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>Weight</label>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Action"}}</label>
           <input
             type='text'
-            name='system.weight'
-            value='{{system.weight}}'
+            name='system.quantumpower.action'
+            value='{{system.quantumpower.action}}'
             data-dtype='Number'
           />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Cost"}}</label>
+          <input
+            type='text'
+            name='system.quantumpower.cost'
+            value='{{system.quantumpower.cost}}'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Dice"}}</label>
+          <input
+            type='text'
+            name='system.quantumpower.dicepool'
+            value='{{system.quantumpower.dicepool}}'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Range"}}</label>
+          <input
+            type='text'
+            name='system.quantumpower.range'
+            value='{{system.quantumpower.range}}'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Duration"}}</label>
+          <input
+            type='text'
+            name='system.quantumpower.duration'
+            value='{{system.quantumpower.duration}}'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Rating"}}</label>
+          <input
+            type='text'
+            name='system.quantumpower.rating'
+            value='{{system.quantumpower.rating}}'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Maxed"}}</label>    
+          {{#if system.quantumpower.maxedout}}
+            <input type="checkbox" name="system.quantumpower.maxedout" value="true" checked>
+          {{else}}
+            <input type="checkbox" name="system.quantumpower.maxedout" value="false">
+          {{/if}}
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Suite"}}</label>
+          <input
+            type='text'
+            list="suite-choices"
+            name='system.suite'
+            value='{{system.suite}}'
+            data-dtype='Number'
+          />
+          <datalist id="suite-choices">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="None">None</option>
+          </datalist>
         </div>
       </div>
     </div>
@@ -38,25 +107,49 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>Description</a>
-    <a class='item' data-tab='attributes'>Attributes</a>
+    <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.Power.Description"}}</a>
+    <a class='item' data-tab='tags'>{{localize "TRINITY_SECOND.Power.TagD"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TRINITY_SECOND.SheetLabels.Game"}}</a>
   </nav>
 
   {{! Sheet Body }}
   <section class='sheet-body'>
-
     {{! Description Tab }}
-    <div class='tab' data-group='primary' data-tab='description'>
-      {{! Editors must receive enriched text data from getData to properly handle rolls }}
-      {{editor
-        enrichedDescription
-        target='system.description'
-        engine='prosemirror'
-        button=true
-        editable=editable
-      }}
+    <div class='tab' data-group='primary' data-tab='description'>  
+      <h3 class="description added-segment">{{localize "TRINITY_SECOND.Power.Description"}}</h3>
+        {{! Editors must receive enriched text data from getData to properly handle rolls }}
+        {{editor
+          enrichedDescription
+          target='system.quantumpower.description'
+          engine='prosemirror'
+          button=true
+          editable=editable
+        }}
+      </div>
     </div>
 
+    {{! Tags Tab }}
+    <div class='tab' data-tab='tags'>  
+      <h3>{{localize "TRINITY_SECOND.Power.Tags"}}</h3>
+      <div class="resource">
+        <input
+          type='text'
+          name='system.quantumpower.tags'
+          value='{{system.quantumpower.tags}}'
+          data-dtype='Text'
+        />
+      </div>
+      <h3 class="description">{{localize "TRINITY_SECOND.Power.TagD"}}</h3>
+        {{! Editors must receive enriched text data from getData to properly handle rolls }}
+        {{editor
+          enrichedDescription
+          target='system.quantumpower.tagdescription'
+          engine='prosemirror'
+          button=true
+          editable=editable
+        }}
+    </div>
+    
     {{! Attributes Tab }}
     <div class='tab attributes' data-group='primary' data-tab='attributes'>
       {{! As you add new fields, add them in here! }}

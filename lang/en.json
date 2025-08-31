@@ -135,6 +135,21 @@
         "Pat": "Path"
       }
     },
+    "Power": {
+      "QMin": "Quantum Minimum",
+      "Action": "Action Type",
+      "Cost": "Cost",
+      "Dice": "Dice Pool",
+      "Range": "Range",
+      "Duration": "Duration",
+      "Rating": "Rating",
+      "Description": "Power Description",
+      "Maxed": "Maxed Out?",
+      "Tags": "Power Tags",
+      "TagD": "Tag Descriptions",
+      "CustomTags": "Custom Tags",
+      "Suite": "Power Suite #"
+    },
     "Science": {
       "Mundane": "Mundane",
       "Advanced": "Advanced",
