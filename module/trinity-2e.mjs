@@ -11,6 +11,7 @@ import { registerSettings } from './helpers/settings.mjs';
 import { TRINITY_SECOND } from './helpers/config.mjs';
 
 
+
 /* -------------------------------------------- */
 /*  Init Hook                                   */
 /* -------------------------------------------- */
@@ -75,9 +76,18 @@ Handlebars.registerHelper('toLowerCase', function (str) {
   return str.toLowerCase();
 });
 
-Handlebars.registerHelper('compare', function (valueA, valueB) {
-  return valueA === valueB;
+Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
+  return (arg1 === arg2) ? options.fn(this) : options.inverse(this);
 });
+
+Handlebars.registerHelper('ifNotEquals', function (arg1, arg2, options) {
+  return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
+});
+
+Handlebars.registerHelper('greaterThanEquals', function (arg1, arg2, options) {
+  return (arg1 >= arg2) ? options.fn(this) : options.inverse(this);
+});
+
 
 /* -------------------------------------------- */
 /*  Ready Hook                                  */

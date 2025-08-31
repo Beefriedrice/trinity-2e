@@ -230,7 +230,13 @@
           "min": 0,
           "max": 10
         }
-      }
+      },
+      "powersuites": {
+        "none": "No Power Suite",
+        "one": "Power Suite 1", 
+        "two": "Power Suite 2", 
+        "three": "Power Suite 3"
+      } 
     },
     "character": {
       "templates": ["base"],
@@ -266,7 +272,31 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell", "specialty", "weapon", "armor", "vehicle", "equipment", "module", "edge", "injury", "status", "field", "stunt", "gift", "skilltrick", "path", "contact", "megaedge", "powertag", "quantumpower"],
+    "types": [
+      "item", 
+      "feature", 
+      "spell", 
+      "armor", 
+      "contact", 
+      "edge", 
+      "equipment", 
+      "field", 
+      "gift", 
+      "injury", 
+      "megaedge", 
+      "module", 
+      "path", 
+      "powersuite",
+      "powertag", 
+      "quantumpower",
+      "skilltrick", 
+      "specialty", 
+      "status", 
+      "stunt", 
+      "transformations",
+      "vehicle", 
+      "weapon"
+    ],
     "templates": {
       "base": {
         "description": ""
@@ -385,6 +415,11 @@
       "community": "",
       "access": ""
     },
+    "powersuite": {
+      "name": "",
+      "number": 1,
+      "techniques": 1
+    },
     "powertag": {
       "templates": ["base"],
       "rating": 0,
@@ -392,7 +427,7 @@
     },
     "quantumpower": {
       "templates": ["base"],
-      "minimum": "",
+      "qminimum": "",
       "action": "",
       "cost": "",
       "dicepool": "",
@@ -401,7 +436,10 @@
       "rating": "",
       "description": "",
       "maxedout": false,
-      "customtags": ""
+      "tags": "",
+      "tagdescription": "",
+      "customtags": "",
+      "suite": 0
     },
     "skilltrick": {
       "templates": ["base"],
@@ -422,6 +460,11 @@
       "templates": ["base"],
       "rating": "",
       "effect": ""
+    },
+    "transformation": {
+      "name": "",
+      "level": "",
+      "description": ""
     },
     "vehicle": {
       "templates": ["base"],

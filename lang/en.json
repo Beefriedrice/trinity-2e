@@ -49,7 +49,7 @@
       "Tec": { "long": "Technology", "abbr": "tec" }
     },
     "SheetLabels": {
-      "Actor": "TrinitySecondEdition Actor Sheet",
+      "Actor": "Trinity 2E Actor Sheet",
       "Attributes": "Attributes",
       "Bruised": "Bruised",
       "Category": "Category",
@@ -65,7 +65,7 @@
       "Hard": {"short": "Hard", "long": "Hard Armor"},
       "Health": "Health",
       "Injured": "Injured",
-      "Item": "TrinitySecondEdition Item Sheet",
+      "Item": "Trinity 2E Item Sheet",
       "Maimed": "Maimed",
       "Mental": "Mental",
       "Mod": "Mod",
@@ -73,6 +73,7 @@
       "Novatrait": "Nova Traits",
       "Objects": "General Objects & Equipment",
       "Physical": "Physical",
+      "Powersuite": "Power Suite",
       "Prereq": "Prerequisites",
       "Rating": "Rating",
       "Resilience": "Resilience",
@@ -91,12 +92,17 @@
       "Statuses": "Statuses",
       "Tags": "Tags",
       "TechCat": "Technology Category",
+      "Transformation": "Transformation",
       "Weapons": "Weapons"
     },
     "Item": {
       "Spell": {
         "SpellLVL": "Level {level} Spells",
         "AddLVL": "Add LVL {level}"
+      },
+      "Power": {
+        "PowerSuite": "Suite {suite} Powers",
+        "AddPower": "Add {level}"
       }
     },
     "Scale": {
@@ -174,6 +180,7 @@
       "megaedge": "Mega-Edge",
       "module": "Module",
       "path": "Path",
+      "powersuite": "Power Suite",
       "powertag": "Power Tag",
       "quantumpower": "Quantum Power",
       "skilltrick": "Skill Trick",

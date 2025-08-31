@@ -2,7 +2,7 @@ import {
   onManageActiveEffect,
   prepareActiveEffectCategories,
 } from '../helpers/effects.mjs';
-//import { diceRoller } from '..helpers/dice-roll.mjs';
+
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -111,7 +111,6 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
   _prepareNovaData(context) {
     // This is where you can enrich character-specific editor fields
     // or setup anything else that's specific to this type
-    
   }
 
   /**
@@ -132,7 +131,13 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     const megaedge = [];
     const module = [];
     const path = [];
-    const quantumpower = [];
+    const powersuite = [];
+    const quantumpower = {
+      0: [],
+      1: [],
+      2: [],
+      3: []
+    };
     const skilltrick = [];
     const specialty = [];
     const spells = {
@@ -199,9 +204,14 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       else if (i.type === 'path') {
         path.push(i);
       }
+      else if (i.type === 'powersuite') {
+        powersuite.push(i)
+      }
       // Append to quantum powers.
       else if (i.type === 'quantumpower') {
-        quantumpower.push(i);
+        if (i.system.suite != undefined && i.system.suite >= 0 && i.system.suite <= 3) {
+          quantumpower[i.system.suite].push(i)
+        }
       }
       // Append to skill tricks.
       else if (i.type === 'skilltrick') {
@@ -243,6 +253,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     context.megaedge = megaedge;
     context.module = module;
     context.path = path;
+    context.powersuite = powersuite;
     context.quantumpower = quantumpower;
     context.skilltrick = skilltrick;
     context.specialty = specialty;
@@ -264,6 +275,15 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       const item = this.actor.items.get(li.data('itemId'));
       item.sheet.render(true);
     });
+
+    /** html.on('keyup', '.suiteqty', (ev) => {
+      const number = $(ev.currentTarget).val();
+      for (let i = 0; i <= number; i++) {
+        this.actor.system.nova.powersuites
+      }
+      
+    }); */
+
 
     //Failed attempt to make checking a box update a value.
 
@@ -323,12 +343,12 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     }*/
 
     // Chaos and experimentation.
-    html.on('click', '.skill', (ev) => {
-      const skillName = ev.target.dataset.skill;
+    html.on('click', '.skill', () => {
+      //const skillValue = $(event.currentTarget).next.value
       
-      diceRoller(4, 3);
+     //diceRoller(4, 3);
       
-      const myDialogOptions = {
+      /*const myDialogOptions = {
         width: 200,
         height: 200,
         top: 500,
@@ -351,7 +371,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
             icon: `<i class="fas fa-dice-d6></i>`
           }
         }
-      }, myDialogOptions).render(true)
+      }, myDialogOptions).render(true)*/
     });
 
     // -------------------------------------------------------------

@@ -45,6 +45,9 @@ export class TrinitySecondEditionItem extends Item {
       else if(type === "path"){
         img = 'icons/svg/walk.svg';
       }
+      else if(type === "powersuite"){
+        img = 'icons/svg/sun.svg';
+      }
       else if(type === "powertag"){
         img = 'icons/svg/explosion.svg';
       }

@@ -44,4 +44,4 @@ export async function diceRoller (quantity, enhancement) {
         user: game.user._id,
         content: getDice,
     });
-}
+};

@@ -87,7 +87,7 @@ TRINITY_SECOND.skills = {
   sci: 'TRINITY_SECOND.Skill.Sci.long',
   sur: 'TRINITY_SECOND.Skill.Sur.long',
   tec: 'TRINITY_SECOND.Skill.Tec.long',
-}
+};
 
 TRINITY_SECOND.skillAbbreviations = {
   aim: 'TRINITY_SECOND.Skill.Aim.abbr',
@@ -106,18 +106,18 @@ TRINITY_SECOND.skillAbbreviations = {
   sci: 'TRINITY_SECOND.Skill.Sci.abbr',
   sur: 'TRINITY_SECOND.Skill.Sur.abbr',
   tec: 'TRINITY_SECOND.Skill.Tec.abbr',
-}
+};
 
 TRINITY_SECOND.sources = {
   psi: 'TRINITY_SECOND.Source.Psi',
   qua: 'TRINITY_SECOND.Source.Quantum'
-}
+};
 
 TRINITY_SECOND.terminology = {
   hea: 'TRINITY_SECOND.SheetLabels.Health',
   mom: 'Trinity_SECOND.Momentum',
   col: 'TRINITY_SECOND.Collateral',
-}
+};
 
 TRINITY_SECOND.edgeCategory = {
   men: 'TRINITY_SECOND.Edge.Type.Men',
@@ -129,4 +129,4 @@ TRINITY_SECOND.edgeCategory = {
   enh: 'TRINITY_SECOND.Edge.Type.Enh',
   nov: 'TRINITY_SECOND.Edge.Type.Nov',
   pat: 'TRINITY_SECOND.Edge.Type.Pat',
-}
+};
