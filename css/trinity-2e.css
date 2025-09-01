@@ -586,10 +586,6 @@
   align-items: center;
 }
 
-.hide-data {
-  display: none;
-}
-
 .suite-text {
   max-width: 350px;
 }
@@ -597,4 +593,11 @@
 .suite-label {
   font-weight: bold;
   flex: 0 0 35px;
+}
+
+.item-tags {
+  text-align: center;
+  font-size: 12px;
+  margin: 0 5px;
+  flex: 0 0 250px;
 }

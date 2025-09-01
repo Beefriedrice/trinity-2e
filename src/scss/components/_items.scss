@@ -118,10 +118,13 @@
     .item-enhancement {
       flex: 0 0 85px;
     }
+    .item-tags {
+      flex: 0 0 250px;
+    }
     .item-tscale, .item-size, .item-soft, .item-hard {
       flex: 0 0 25px;
     }
-    .item-enhancement, .item-size, .item-category, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
+    .item-enhancement, .item-size, .item-tages, .item-category, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
       text-align: center;
       font-size: 12px;
       margin: 0 5px;
@@ -154,6 +157,34 @@
       // font-size: 16px;
     }
   }
+}
+
+// Nova Power Tab Power Suite Buttons
+.setting-button {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  border: solid 3px;
+  font-size: 11px;
+}
+
+.suite-row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.suite-text {
+  max-width: 350px;
+}
+
+.suite-label {
+  font-weight: bold;
+  flex: 0 0 35px;
 }
 
 //new styles
