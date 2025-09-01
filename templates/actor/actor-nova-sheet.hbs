@@ -161,9 +161,26 @@
     </div>
 
     {{!-- Biography Tab --}}
+    
     <div class="tab background" data-group="primary" data-tab="background">
-      {{!-- Editors must receive enriched text data from getData to properly handle rolls --}}
-      {{editor enrichedBiography target="system.biography" engine="prosemirror" button=true editable=editable}}
+        <nav class="background-sheet-tabs tabs" data-group="secondary">
+            {{!-- Default tab is specified in actor-sheet.mjs --}}
+            <a class="item" data-tab="paths">Paths & Contacts</a>
+            <a class="item" data-tab="background">Background</a>
+            <a class="item" data-tab="experience">Experience</a>
+        </nav>
+        <div class="background-sheet-body">
+            <div class="tab paths" data-group="secondary" data-tab="paths">
+                {{> "systems/trinity-2e/templates/actor/parts/actor-paths.hbs"}}      
+            </div>
+            <div class="tab background" data-group="secondary" data-tab="background">
+                {{> "systems/trinity-2e/templates/actor/parts/actor-background.hbs"}}
+            </div>
+            <div class="tab experience" data-group="secondary" data-tab="experience">
+                {{> "systems/trinity-2e/templates/actor/parts/actor-experience.hbs"}}
+            </div>
+        </div>
+      
     </div>
 
     {{!-- Owned Edges Tab --}}

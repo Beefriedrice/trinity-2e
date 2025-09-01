@@ -22,9 +22,9 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
           initial: 'stats',
         },
         { 
-          navSelector: '.secondary-sheet-tabs',
-          contentSelector: '.secondary-sheet-body',
-          intiial: 'attributes'
+          navSelector: '.background-sheet-tabs',
+          contentSelector: '.background-sheet-body',
+          intiial: 'paths'
         }
       ],
     });
