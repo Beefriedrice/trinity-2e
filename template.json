@@ -231,9 +231,11 @@
           "max": 10
         }
       },
+      "powersbutton": false,
       "powersuite": {
         "none": "Quantum Powers",
         "one": "Power Suite 1", 
+        "onehide": false,
         "two": "Power Suite 2", 
         "three": "Power Suite 3"
       } 

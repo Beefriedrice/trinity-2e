@@ -9,6 +9,7 @@ import TrinitySecondEditionResourceSheet from './sheets/resource-sheet.mjs';
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
 import { registerSettings } from './helpers/settings.mjs';
 import { TRINITY_SECOND } from './helpers/config.mjs';
+//import { diceRoller } from './helpers/dice-roll.mjs';
 
 
 
@@ -21,8 +22,6 @@ Hooks.once('init', function () {
   // accessible in global contexts.
 
 
-  //for momentum and collateral tracking
-  registerSettings();
 
   game.trinity2e = {
     TrinitySecondEditionActor,
@@ -32,6 +31,12 @@ Hooks.once('init', function () {
 
   // Add custom constants for configuration.
   CONFIG.TRINITY_SECOND = TRINITY_SECOND;
+
+  //Add dice rolling function
+  //CONFIG.diceRoller() = diceRoller();
+
+  //for momentum and collateral tracking
+  registerSettings();
 
   /**
    * Set an initiative formula for the system

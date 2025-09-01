@@ -270,7 +270,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
-
+    
     // Render the item sheet for viewing/editing prior to the editable check.
     html.on('click', '.item-edit', (ev) => {
       const li = $(ev.currentTarget).parents('.item');
@@ -278,9 +278,13 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       item.sheet.render(true);
     });
 
-    html.on('click', '.setting-button', (ev) => {
-      $(ev.currentTarget).next().toggleClass('hide-data')
-    })
+    $(document).ready(() => {
+      $('.power-settings').hide();
+    });
+
+    html.on('click', '.power-button', () => {
+      $('.power-settings').toggle();
+    });
 
     /** html.on('keyup', '.suiteqty', (ev) => {
       const number = $(ev.currentTarget).val();
