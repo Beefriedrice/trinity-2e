@@ -121,6 +121,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
   _prepareItems(context) {
     // Initialize containers.
     const armor = [];
+    const bond = [];
     const contact = [];
     const edge = [];
     const equipment = [];
@@ -153,6 +154,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       9: [],
     };
     const status = [];
+    const transformation = [];
     const vehicle = [];
     const weapon = [];
 
@@ -163,6 +165,10 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       // Append to armor.
       if (i.type === 'armor') {
         armor.push(i);
+      }
+      //Append to bonds.
+      else if (i.type === 'bond') {
+        bond.push(i);
       }
       // Append to contacts.
       else if (i.type === 'contact') {
@@ -233,6 +239,10 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       else if (i.type === 'status') {
         status.push(i);
       }
+      // Append to transformation
+      else if (i.type === 'transformation') {
+        transformation.push(i);
+      }
       // Append to vehicle.
       else if (i.type === 'vehicle') {
         vehicle.push(i);
@@ -245,6 +255,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
 
     // Assign and return
     context.armor = armor;
+    context.bond = bond;
     context.contact = contact;
     context.edge = edge;
     context.equipment = equipment;
@@ -261,6 +272,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     context.specialty = specialty;
     context.spells = spells;
     context.status = status;
+    context.transformation = transformation;
     context.vehicle = vehicle;
     context.weapon = weapon;
   }

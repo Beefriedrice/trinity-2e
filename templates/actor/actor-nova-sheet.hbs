@@ -167,7 +167,8 @@
             {{!-- Default tab is specified in actor-sheet.mjs --}}
             <a class="item" data-tab="paths">Paths & Contacts</a>
             <a class="item" data-tab="background">Background</a>
-            <a class="item" data-tab="experience">Experience</a>
+            <a class="item" data-tab="bonds">Bonds</a>
+            <a class="item" data-tab="transformations">Transformations</a>
         </nav>
         <div class="background-sheet-body">
             <div class="tab paths" data-group="secondary" data-tab="paths">
@@ -176,8 +177,11 @@
             <div class="tab background" data-group="secondary" data-tab="background">
                 {{> "systems/trinity-2e/templates/actor/parts/actor-background.hbs"}}
             </div>
-            <div class="tab experience" data-group="secondary" data-tab="experience">
-                {{> "systems/trinity-2e/templates/actor/parts/actor-experience.hbs"}}
+            <div class="tab experience" data-group="secondary" data-tab="bonds">
+                {{> "systems/trinity-2e/templates/actor/parts/actor-bonds.hbs"}}
+            </div>
+            <div class="tab experience" data-group="secondary" data-tab="transformations">
+                {{> "systems/trinity-2e/templates/actor/parts/actor-transformations.hbs"}}
             </div>
         </div>
       

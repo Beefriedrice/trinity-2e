@@ -18,6 +18,9 @@ export class TrinitySecondEditionItem extends Item {
       if(type === "armor"){
         img = 'icons/svg/statue.svg';
       }
+      else if(type === "bond"){
+        img = 'icons/svg/heal.svg';
+      }
       else if(type === "contact"){
         img = 'icons/svg/mystery-man.svg';
       }

@@ -284,6 +284,7 @@
       "feature", 
       "spell", 
       "armor", 
+      "bond",
       "contact", 
       "edge", 
       "equipment", 
@@ -336,6 +337,15 @@
       "cost": 0,
       "inventiontype": "Mundane Tech",
       "isEquipped": false
+    },
+    "bond":{
+      "person": "",
+      "action": "",
+      "diceroll": "",
+      "successes": "",
+      "duration": "",
+      "feature": "",
+      "drawback": ""
     },
     "contact": {
       "templates": ["base"],

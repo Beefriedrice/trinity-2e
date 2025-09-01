@@ -1,0 +1,141 @@
+<form class='{{cssClass}}' autocomplete='off'>
+  <header class='sheet-header'>
+    <img
+      class='profile-img'
+      src='{{item.img}}'
+      data-edit='img'
+      title='{{item.name}}'
+    />
+    <div class='header-fields'>
+      <h1 class='charname'><input
+          name='name'
+          type='text'
+          value='{{item.name}}'
+          placeholder='Name'
+        /></h1>
+      <div class='grid grid-2col'>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Assocperson"}}</label>
+          <input
+            type='text'
+            name='system.bond.person'
+            value='{{system.bond.person}}'
+            data-dtype='String'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Duration"}}</label>
+          <input
+            type='text'
+            name='system.bond.duration'
+            value='{{system.bond.duration}}'
+            data-dtype='String'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Diceroll"}}</label>
+          <input
+            type='text'
+            name='system.bond.diceroll'
+            value='{{system.bond.diceroll}}'
+            data-dtype='String'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Successes"}}</label>
+          <input
+            type='text'
+            name='system.bond.successes'
+            value='{{system.bond.successes}}'
+            data-dtype='String'
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{! Sheet Tab Navigation }}
+  <nav class='sheet-tabs tabs' data-group='primary'>
+    <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.SheetLabels.Feature"}}</a>
+    <a class='item' data-tab='drawback'>{{localize "TRINITY_SECOND.SheetLabels.Drawback"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TRINITY_SECOND.SheetLabels.Game"}}</a>
+  </nav>
+
+  {{! Sheet Body }}
+  <section class='sheet-body'>
+    {{! Feature Tab }}
+    <div class='tab' data-group='primary' data-tab='description'>
+      <div class='resource'>
+        <h3 class=''>{{localize "TRINITY_SECOND.SheetLabels.Action"}}</h3>
+        <input
+          type='text'
+          name='system.bond.action'
+          value='{{system.bond.action}}'
+          data-dtype='String'
+        />
+      </div>
+      <h3 class="description added-segment">{{localize "TRINITY_SECOND.SheetLabels.Feature"}}</h3>
+      {{! Editors must receive enriched text data from getData to properly handle rolls }}
+      {{editor
+        enrichedDescription
+        target='system.bond.feature'
+        engine='prosemirror'
+        button=true
+        editable=editable
+      }}
+    </div>
+    
+
+    {{! Drawback Tab }}
+    <div class='tab' data-group='primary' data-tab='drawback'>
+      <h3 class="description">{{localize "TRINITY_SECOND.SheetLabels.Drawback"}}</h3>
+      {{! Editors must receive enriched text data from getData to properly handle rolls }}
+      {{editor
+        enrichedDescription
+        target='system.bond.drawback'
+        engine='prosemirror'
+        button=true
+        editable=editable
+      }}
+    </div>
+
+    {{! Attributes Tab }}
+    <div class='tab attributes' data-group='primary' data-tab='attributes'>
+      {{! As you add new fields, add them in here! }}
+      <div class='resource'>
+        <label class='resource-label'>Roll Formula:</label>
+        <span>{{system.formula}}</span>
+        <div class='grid grid-4col'>
+          <div class='grid-span-1'>
+            <label class='resource-label'>Number of Dice</label>
+            <input
+              type='text'
+              name='system.roll.diceNum'
+              value='{{system.roll.diceNum}}'
+              data-dtype='Number'
+            />
+          </div>
+          <div class='grid-span-1'>
+            <label class='resource-label'>Die Size</label>
+            <input
+              type='text'
+              name='system.roll.diceSize'
+              value='{{system.roll.diceSize}}'
+              data-dtype='String'
+            />
+          </div>
+          <div class='grid-span-2'>
+            <label class='resource-label'>Roll Modifier</label>
+            <input
+              type='text'
+              name='system.roll.diceBonus'
+              value='{{system.roll.diceBonus}}'
+              data-dtype='String'
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</form>
