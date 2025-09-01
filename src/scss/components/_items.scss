@@ -100,19 +100,19 @@
       }
     }
     //Columns for item tables on actor sheets.
-    //"Rating" header and content
+    .item-tscale, .item-size, .item-soft, .item-hard {
+      flex: 0 0 25px;
+    }
     .item-rating, .item-tscale, .item-speed {
       flex: 0 0 30px;
     }
+    .item-prating {
+      flex: 0 0 45px;
+    }
     .item-handling {
-      flex: 0 0 50px;
+      flex: 0 0 60px;
     }
-    //"Skill" header and content
-    .item-skill {
-      flex: 0 0 70px;
-    }
-    //"Category" header and content
-    .item-category {
+    .item-category, .item-skill, .item-ptype, .item-suspended {
       flex: 0 0 70px;
     }
     .item-enhancement {
@@ -121,10 +121,9 @@
     .item-tags {
       flex: 0 0 250px;
     }
-    .item-tscale, .item-size, .item-soft, .item-hard {
-      flex: 0 0 25px;
-    }
-    .item-enhancement, .item-size, .item-tags, .item-category, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
+    
+    //text styling and margins
+    .item-enhancement, .item-prating, .item-size, .item-tags, .item-category, .item-suspended, .item-ptype, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
       text-align: center;
       font-size: 12px;
       margin: 0 5px;

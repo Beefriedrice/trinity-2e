@@ -15,22 +15,73 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource'>
-          <label class='resource-label'>Quantity</label>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Rating"}}</label>
           <input
             type='text'
-            name='system.quantity'
-            value='{{system.quantity}}'
+            name='system.path.rating.value'
+            value='{{system.path.rating.value}}'
             data-dtype='Number'
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>Weight</label>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Currentrating"}}</label>
           <input
             type='text'
-            name='system.weight'
-            value='{{system.weight}}'
+            name='system.path.rating.current'
+            value='{{system.path.rating.current}}'
             data-dtype='Number'
           />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Pathtype"}}</label>
+          <input
+            type='text'
+            name='system.path.type'
+            list='path-types'
+            value='{{system.path.type}}'
+            data-dtype='String'
+          />
+          <datalist id="path-types">
+            <option value="Origin">Origin</option>
+            <option value="Role">Role</option>
+            <option value="Society">Society</option>
+            <option value="Additional Path 1">Additional Path 1</option>
+            <option value="Additional Path 2">Additional Path 2</option>
+          </datalist>
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Community"}}</label>
+          <input
+            type='text'
+            name='system.path.community'
+            value='{{system.path.community}}'
+            data-dtype='String'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Access"}}</label>
+          <input
+            type='text'
+            name='system.path.access'
+            value='{{system.path.access}}'
+            data-dtype='String'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Revoked"}}</label>    
+          {{#if system.path.revoked}}
+            <input type="checkbox" name="system.path.revoked" value="true" checked>
+          {{else}}
+            <input type="checkbox" name="system.path.revoked" value="false">
+          {{/if}}
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Suspended"}}</label>    
+          {{#if system.path.suspended}}
+            <input type="checkbox" name="system.path.suspended" value="true" checked>
+          {{else}}
+            <input type="checkbox" name="system.path.suspended" value="false">
+          {{/if}}
         </div>
       </div>
     </div>
@@ -38,23 +89,46 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>Description</a>
-    <a class='item' data-tab='attributes'>Attributes</a>
+    <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.SheetLabels.Description"}}</a>
+    <a class='item' data-tab='options'>{{localize "TRINITY_SECOND.SheetLabels.Options"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TRINITY_SECOND.SheetLabels.Game"}}</a>
   </nav>
 
   {{! Sheet Body }}
   <section class='sheet-body'>
-
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
+      <h3 class="description">{{localize "TRINITY_SECOND.SheetLabels.Description"}}</h3>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
-        target='system.description'
+        target='system.path.description'
         engine='prosemirror'
         button=true
         editable=editable
       }}
+    </div>
+
+    {{! Description Tab }}
+    <div class='tab' data-group='primary' data-tab='options'>
+      <h3>{{localize "TRINITY_SECOND.SheetLabels.Skills"}}</h3>
+      <div class='resource'>
+        <input
+          type='text'
+          name='system.path.skills'
+          value='{{system.path.skills}}'
+          data-dtype='String'
+        />
+      </div>
+      <h3 class="added-segment">{{localize "TRINITY_SECOND.SheetLabels.Edges"}}</h3>
+      <div class='resource'>
+        <input
+          type='text'
+          name='system.path.edges'
+          value='{{system.path.edges}}'
+          data-dtype='String'
+        />
+      </div>
     </div>
 
     {{! Attributes Tab }}
