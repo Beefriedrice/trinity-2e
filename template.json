@@ -32,6 +32,11 @@
             "isfilled": false
           }
         },
+        "experience": {
+          "total": 0,
+          "spent": 0,
+          "current": 0
+        },
         "source": {
           "value": 1,
           "min": 0,

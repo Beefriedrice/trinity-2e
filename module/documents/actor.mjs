@@ -53,6 +53,7 @@ export class TrinitySecondEditionActor extends Actor {
       // Calculate the modifier using d20 rules.
       ability.mod = Math.floor((ability.value - 10) / 2);
     }
+    systemData.experience.current = systemData.experience.total - systemData.experience.spent;
   }
 
   _prepareNovaData(actorData) {
@@ -62,6 +63,7 @@ export class TrinitySecondEditionActor extends Actor {
     const systemData = actorData.system;
 
     systemData.traits.quantumpoints.max = systemData.traits.quantum.value * 5 + 10;
+    systemData.experience.current = systemData.experience.total - systemData.experience.spent;
   }
 
   /**

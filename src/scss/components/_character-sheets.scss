@@ -21,6 +21,12 @@
   text-align: center;
 }
 
+.text-3digit {
+  min-width: 35px;
+  max-width: 35px;
+  text-align: center;
+}
+
 .math-label {
   max-width: 25px;
   text-align: center;
@@ -138,4 +144,16 @@
 
 .skill {
   margin: 0px 15px;
+}
+
+//- Experience Section
+.xp-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.xp-spent, .xp-total, .xp-current {
+  flex: 1 1 40px;
+  text-align: center;
 }

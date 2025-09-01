@@ -1,4 +1,28 @@
-
-words also
-{{!-- Editors must receive enriched text data from getData to properly handle rolls --}}
-{{editor enrichedBiography target="system.biography" engine="prosemirror" button=true editable=editable}}
+<div>
+    <div>
+        <h3>Experience</h3>
+        <div class="xp-row">
+            <div class="xp-spent">Spent</div>
+            <div class="xp-current">Current Remaining</div>
+            <div class="xp-total">Total Earned</div>
+        </div>
+        <div class="xp-row">
+            <div><input class="xp-spent text-3digit" type=text name="system.experience.spent" value="{{system.experience.spent}}"/></div>
+            <div><input class="xp-current text-3digit" type=text name="system.experience.current" value="{{system.experience.current}}" readonly/></div>
+            <div><input class="xp-total text-3digit" type=text name="system.experience.total" value="{{system.experience.total}}"/></div>
+        </div>
+    </div>
+    <h3 class="added-segment">Background</h3>
+    <div>
+        <label class="" for"system.templates.concept">Concept</label>
+        <input class="" type="number" name="system.templates.concept" value="{{system.templates.concept}}" data-dtype="String"/>
+    </div>
+    <div class="">
+        <label class="" for"system.templates.momentofinsp">Moment of Inspiration</label>
+        <input class="" type="number" name="system.templates.momentofinsp" value="{{system.templates.momentofinsp}}" data-dtype="String"/>
+    </div>
+    <div class="">
+        <label class="" for"system.templates.biography">Biography</label>
+        <textarea class="" rows="10" name="system.templates.biography" data-dtype="String"/>{{system.templates.biography}}</textarea>
+    </div>
+</div>

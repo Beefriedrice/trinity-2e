@@ -518,6 +518,11 @@
   max-width: 25px;
   text-align: center;
 }
+.trinity-2e .text-3digit {
+  min-width: 35px;
+  max-width: 35px;
+  text-align: center;
+}
 .trinity-2e .math-label {
   max-width: 25px;
   text-align: center;
@@ -606,6 +611,15 @@
 }
 .trinity-2e .skill {
   margin: 0px 15px;
+}
+.trinity-2e .xp-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.trinity-2e .xp-spent, .trinity-2e .xp-total, .trinity-2e .xp-current {
+  flex: 1 1 40px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=trinity-2e.css.map */
