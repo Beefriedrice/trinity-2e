@@ -112,18 +112,21 @@
     .item-handling {
       flex: 0 0 60px;
     }
-    .item-category, .item-skill, .item-ptype, .item-suspended {
+    .item-category, .item-skill, .item-ptype, .item-suspended, .item-path {
       flex: 0 0 70px;
     }
     .item-enhancement {
       flex: 0 0 85px;
+    }
+    .item-tags-short {
+      flex: 0 0 120px;
     }
     .item-tags {
       flex: 0 0 250px;
     }
     
     //text styling and margins
-    .item-enhancement, .item-prating, .item-size, .item-tags, .item-category, .item-suspended, .item-ptype, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
+    .item-enhancement, .item-path, .item-tags-short, .item-prating, .item-size, .item-tags, .item-category, .item-suspended, .item-ptype, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
       text-align: center;
       font-size: 12px;
       margin: 0 5px;

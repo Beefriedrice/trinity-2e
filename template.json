@@ -335,11 +335,12 @@
     "contact": {
       "templates": ["base"],
       "rating": {
-        "value": 0,
-        "current": 0
+        "value": 1,
+        "current": 1
       },
       "path": "",
-      "tags": ""
+      "tags": "",
+      "description": ""
     },
     "edge": {
       "templates": ["base"],

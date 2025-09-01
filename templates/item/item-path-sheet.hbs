@@ -15,20 +15,20 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Rating"}}</label>
-          <input
-            type='text'
-            name='system.path.rating.value'
-            value='{{system.path.rating.value}}'
-            data-dtype='Number'
-          />
-        </div>
-        <div class='resource'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Currentrating"}}</label>
           <input
             type='text'
             name='system.path.rating.current'
             value='{{system.path.rating.current}}'
+            data-dtype='Number'
+          />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Rating"}}</label>
+          <input
+            type='text'
+            name='system.path.rating.value'
+            value='{{system.path.rating.value}}'
             data-dtype='Number'
           />
         </div>
@@ -109,7 +109,7 @@
       }}
     </div>
 
-    {{! Description Tab }}
+    {{! Options Tab }}
     <div class='tab' data-group='primary' data-tab='options'>
       <h3>{{localize "TRINITY_SECOND.SheetLabels.Skills"}}</h3>
       <div class='resource'>
