@@ -419,10 +419,13 @@
 .trinity-2e .items-list .item .item-enhancement {
   flex: 0 0 85px;
 }
+.trinity-2e .items-list .item .item-tags {
+  flex: 0 0 250px;
+}
 .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-soft, .trinity-2e .items-list .item .item-hard {
   flex: 0 0 25px;
 }
-.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-rating, .trinity-2e .items-list .item .item-soft, .trinity-2e .items-list .item .item-hard, .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-handling, .trinity-2e .items-list .item .item-speed {
+.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-tags, .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-rating, .trinity-2e .items-list .item .item-soft, .trinity-2e .items-list .item .item-hard, .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-handling, .trinity-2e .items-list .item .item-speed {
   text-align: center;
   font-size: 12px;
   margin: 0 5px;
@@ -450,6 +453,29 @@
   padding-left: 5px;
   text-align: left;
 }
+.trinity-2e .setting-button {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  border: solid 3px;
+  font-size: 11px;
+}
+.trinity-2e .suite-row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.trinity-2e .suite-text {
+  max-width: 350px;
+}
+.trinity-2e .suite-label {
+  font-weight: bold;
+  flex: 0 0 35px;
+}
 .trinity-2e .effects .item .effect-source,
 .trinity-2e .effects .item .effect-duration,
 .trinity-2e .effects .item .effect-controls {
@@ -460,6 +486,18 @@
 }
 .trinity-2e .effects .item .effect-controls {
   border: none;
+}
+.trinity-2e .effects .item .effect-duration {
+  flex: 0 0 50px;
+  margin: 0 5px;
+}
+.trinity-2e .effects .item .effect-source {
+  flex: 0 0 50px;
+  margin: 0 5px;
+}
+.trinity-2e .effects .item .effect-controls {
+  flex: 0 0 100px;
+  margin: 0 5px;
 }
 .trinity-2e .nova {
   padding: 5px;
@@ -568,36 +606,3 @@
 }
 
 /*# sourceMappingURL=trinity-2e.css.map */
-.setting-button {
-  width: 50px;
-  height: 50px;
-  align-items: center;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  font-weight: bold;
-  border: solid 3px;
-  font-size: 11px;
-}
-
-.suite-row {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-
-.suite-text {
-  max-width: 350px;
-}
-
-.suite-label {
-  font-weight: bold;
-  flex: 0 0 35px;
-}
-
-.item-tags {
-  text-align: center;
-  font-size: 12px;
-  margin: 0 5px;
-  flex: 0 0 250px;
-}

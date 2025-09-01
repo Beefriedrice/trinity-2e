@@ -385,9 +385,9 @@
       "templates": ["base"],
       "rating": 0,
       "prereq": "",
-      "attribute": "",
       "description": "",
-      "powertags": "",
+      "tags": "",
+      "tagsdescription": "",
       "maxedout": false
     },
     "module": {
