@@ -69,6 +69,9 @@ export class TrinitySecondEditionItem extends Item {
       else if(type === "stunt"){
         img = 'icons/svg/jump.svg';
       }
+      else if(type === "transformation"){
+        img = 'icons/svg/radiation.svg';
+      }
       else if(type === "vehicle"){
         img = 'icons/svg/anchor.svg';
       }

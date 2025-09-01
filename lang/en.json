@@ -77,6 +77,7 @@
       "Health": "Health",
       "Injured": "Injured",
       "Item": "Trinity 2E Item Sheet",
+      "Level": "Level",
       "Maimed": "Maimed",
       "Megaedges": "Mega-Edges",
       "Mental": "Mental",
@@ -114,6 +115,7 @@
       "Tags": "Tags",
       "TechCat": "Technology Category",
       "Transformation": "Transformation",
+      "Transformations": "Transformations",
       "Weapons": "Weapons"
     },
     "Item": {
@@ -224,6 +226,7 @@
       "specialty": "Specialty",
       "status": "Status Condition",
       "stunt": "Stunt",
+      "transformation": "Transformation",
       "vehicle": "Vehicle",
       "weapon": "Weapon"
     }

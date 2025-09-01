@@ -416,7 +416,7 @@
 .trinity-2e .items-list .item .item-successes {
   flex: 0 0 50px;
 }
-.trinity-2e .items-list .item .item-handling, .trinity-2e .items-list .item .item-duration {
+.trinity-2e .items-list .item .item-handling, .trinity-2e .items-list .item .item-duration, .trinity-2e .items-list .item .item-level {
   flex: 0 0 60px;
 }
 .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-ptype, .trinity-2e .items-list .item .item-suspended, .trinity-2e .items-list .item .item-path {
@@ -431,7 +431,7 @@
 .trinity-2e .items-list .item .item-tags {
   flex: 0 0 250px;
 }
-.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-person, .trinity-2e .items-list .item .item-successes, .trinity-2e .items-list .item .item-duration, .trinity-2e .items-list .item .item-path, .trinity-2e .items-list .item .item-tags-short, .trinity-2e .items-list .item .item-prating, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-tags, .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-suspended, .trinity-2e .items-list .item .item-ptype, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-rating, .trinity-2e .items-list .item .item-soft, .trinity-2e .items-list .item .item-hard, .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-handling, .trinity-2e .items-list .item .item-speed {
+.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-person, .trinity-2e .items-list .item .item-level, .trinity-2e .items-list .item .item-successes, .trinity-2e .items-list .item .item-duration, .trinity-2e .items-list .item .item-path, .trinity-2e .items-list .item .item-tags-short, .trinity-2e .items-list .item .item-prating, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-tags, .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-suspended, .trinity-2e .items-list .item .item-ptype, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-rating, .trinity-2e .items-list .item .item-soft, .trinity-2e .items-list .item .item-hard, .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-handling, .trinity-2e .items-list .item .item-speed {
   text-align: center;
   font-size: 12px;
   margin: 0 5px;
