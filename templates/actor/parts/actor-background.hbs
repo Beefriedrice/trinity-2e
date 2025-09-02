@@ -14,15 +14,19 @@
     </div>
     <h3 class="added-segment">Background</h3>
     <div>
-        <label class="" for"system.templates.concept">Concept</label>
-        <input class="" type="number" name="system.templates.concept" value="{{system.templates.concept}}" data-dtype="String"/>
+        <label class="" for"system.templates.concept">{{localize "TRINITY_SECOND.SheetLabels.Concept"}}</label>
+        <input class="" type="text" name="system.templates.concept" value="{{system.templates.concept}}" data-dtype="String"/>
     </div>
     <div class="">
-        <label class="" for"system.templates.momentofinsp">Moment of Inspiration</label>
-        <input class="" type="number" name="system.templates.momentofinsp" value="{{system.templates.momentofinsp}}" data-dtype="String"/>
+        <label class="" for"system.templates.momentofinsp">{{localize "TRINITY_SECOND.SheetLabels.Momentofinsp"}}</label>
+        <input class="" type="text" name="system.templates.momentofinsp" value="{{system.templates.momentofinsp}}" data-dtype="String"/>
     </div>
     <div class="">
-        <label class="" for"system.templates.biography">Biography</label>
+        <label class="" for"system.templates.biography">{{localize "TRINITY_SECOND.SheetLabels.Biography"}}</label>
         <textarea class="" rows="10" name="system.templates.biography" data-dtype="String"/>{{system.templates.biography}}</textarea>
+    </div>
+    <div class="">
+        <label class="" for"system.templates.aspirations">{{localize "TRINITY_SECOND.SheetLabels.Aspirations"}}</label>
+        <textarea class="" rows="10" name="system.templates.aspirations" data-dtype="String"/>{{system.templates.aspirations}}</textarea>
     </div>
 </div>

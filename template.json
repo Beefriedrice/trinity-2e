@@ -330,7 +330,6 @@
       "hard": 0,
       "base": "",
       "tags": "",
-      "description": "",
       "formula": "",
       "techscale": 0,
       "size": 0,
@@ -339,6 +338,7 @@
       "isEquipped": false
     },
     "bond":{
+      "templates": ["base"],
       "person": "",
       "action": "",
       "diceroll": "",
@@ -354,21 +354,18 @@
         "current": 1
       },
       "path": "",
-      "tags": "",
-      "description": ""
+      "tags": ""
     },
     "edge": {
       "templates": ["base"],
       "category": "",
       "rating": "1",
-      "prereq": "",
-      "description": ""
+      "prereq": ""
     },
     "equipment": {
       "templates": ["base"],
       "enhancement": 0,
       "tags": "",
-      "description": "",
       "formula": "",
       "techscale": 0,
       "size": 0,
@@ -376,32 +373,28 @@
       "sciencetype": "Mundane Science",
       "category": "Device"
     },
-    "injury": {
-      "templates": ["base"],
-      "level": ["bruised", "injured", "maimed"],
-      "effect": "",
-      "description": "",
-      "source": "",
-      "firstaid": false
-    },
     "field": {
       "templates": ["base"],
-      "description": "",
       "complication": "",
       "effect": ""
     },
     "gift": {
       "templates": ["base"],
       "keywords": "",
-      "description": "",
       "system": "",
       "type": ""
+    },
+    "injury": {
+      "templates": ["base"],
+      "wound": "",
+      "effect": "",
+      "source": "",
+      "firstaid": false
     },
     "megaedge": {
       "templates": ["base"],
       "rating": 1,
       "prereq": "",
-      "description": "",
       "tags": "",
       "tagsdescription": "",
       "maxedout": false
@@ -411,7 +404,6 @@
       "enhancements": 0,
       "power": "",
       "tags": "",
-      "description": "",
       "formula": "",
       "techscale": 1,
       "size": 0,
@@ -429,19 +421,18 @@
       "revoked": false,
       "skills": "",
       "edges": "",
-      "description": "",
       "community": "",
       "access": ""
     },
     "powersuite": {
+      "templates": ["base"],
       "name": "",
       "number": 1,
       "techniques": 1
     },
     "powertag": {
       "templates": ["base"],
-      "rating": 0,
-      "description": ""
+      "rating": 0
     },
     "quantumpower": {
       "templates": ["base"],
@@ -452,7 +443,6 @@
       "range": "",
       "duration": "",
       "rating": "",
-      "description": "",
       "maxedout": false,
       "tags": "",
       "tagdescription": "",
@@ -461,8 +451,7 @@
     },
     "skilltrick": {
       "templates": ["base"],
-      "skill": "",
-      "description": ""
+      "skill": ""
     },
     "specialty": {
       "templates": ["base"],
@@ -480,8 +469,8 @@
       "effect": ""
     },
     "transformation": {
-      "level": "",
-      "description": ""
+      "templates": ["base"],
+      "level": ""
     },
     "vehicle": {
       "templates": ["base"],
@@ -490,7 +479,6 @@
       "speed": 0,
       "weapons": "",
       "tags": "",
-      "description": "",
       "formula": "",
       "techscale": 0,
       "size": 0,
@@ -501,7 +489,6 @@
       "templates": ["base"],
       "enhancement": 0,
       "tags": "",
-      "description": "",
       "formula": "",
       "techscale": 0,
       "size": 0,

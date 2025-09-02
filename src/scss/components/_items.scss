@@ -109,10 +109,10 @@
     .item-prating {
       flex: 0 0 45px;
     }
-    .item-successes {
+    .item-successes, .item-first {
       flex: 0 0 50px;
     }
-    .item-handling, .item-duration, .item-level {
+    .item-handling, .item-duration, .item-level, .wound-type {
       flex: 0 0 60px;
     }
     .item-category, .item-skill, .item-ptype, .item-suspended, .item-path {
@@ -129,7 +129,7 @@
     }
     
     //text styling and margins
-    .item-enhancement, .item-person, .item-level, .item-successes, .item-duration, .item-path, .item-tags-short, .item-prating, .item-size, .item-tags, .item-category, .item-suspended, .item-ptype, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
+    .item-enhancement, .item-person, .item-level, .item-wound, .item-first, .item-successes, .item-duration, .item-path, .item-tags-short, .item-prating, .item-size, .item-tags, .item-category, .item-suspended, .item-ptype, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
       text-align: center;
       font-size: 12px;
       margin: 0 5px;
