@@ -7,53 +7,6 @@
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
       <input class="charname" name="system.codename" type="text" value="{{system.codename}}" placeholder="Alias"/>
       <div class="resource-section">
-
-        {{!-- Health --}}
-        <section class="health-section">
-            <div class="flex-group-center">
-                <h3 class="nova-header">{{localize "TRINITY_SECOND.SheetLabels.Health"}}</h3>
-            </div>
-            {{!-- Hard Armor --}}
-            <div class="health-row">
-                <label class="health-label" for="system.health.hard.filled">{{localize "TRINITY_SECOND.SheetLabels.Hard.long"}}:</label>
-                <div class="health-details">
-                    <input class="health-input text-2digit" type="number" name="system.health.hard.filled" value="{{system.health.hard.filled}}" data-dtype="Number"/>
-                    <span class="math-label"> / </span>
-                    <input class="health-input text-2digit" type="number" name="system.health.hard.quantity" value="{{system.health.hard.quantity}}" data-dtype="Number"/>
-                    <span class="mod-label"><strong>{{localize "TRINITY_SECOND.SheetLabels.Mod"}}:</strong> + <input class="health-input text-2digit" readonly type="number" name="system.health.hardmod" value="0" data-dtype="Number"/></span>
-                </div>
-            </div>
-            {{!-- Bruised --}}
-            <div class="health-row">
-                <label class="health-label" for="system.health.bruised.filled">{{localize "TRINITY_SECOND.SheetLabels.Bruised"}}:</label>
-                <div class="health-details">
-                    <input class="health-input text-2digit" type="number" name="system.health.bruised.filled" value="{{system.health.bruised.filled}}" data-dtype="Number"/>
-                    <span class="math-label"> / </span>
-                    <input class="health-input text-2digit" type="number" name="system.health.bruised.quantity" value="{{system.health.bruised.quantity}}" data-dtype="Number"/>
-                    <span class="mod-label"><strong>{{localize "TRINITY_SECOND.SheetLabels.Mod"}}:</strong> + <input class="health-input text-2digit" type="number" name="system.health.bruised.mod" value="{{system.health.bruised.mod}}" data-dtype="Number"/></span>
-                </div>
-            </div>
-            {{!-- Injured --}}
-            <div class="health-row">
-                <label class="health-label" for="system.health.injured.filled">{{localize "TRINITY_SECOND.SheetLabels.Injured"}}:</label>
-                <div class="health-details">
-                    <input class="health-input text-2digit" type="number" name="system.health.injured.filled" value="{{system.health.injured.filled}}" data-dtype="Number"/>
-                    <span class="math-label"> / </span>
-                    <input class="health-input text-2digit" type="number" name="system.health.injured.quantity" value="{{system.health.injured.quantity}}" data-dtype="Number"/>
-                    <span class="mod-label"><strong>{{localize "TRINITY_SECOND.SheetLabels.Mod"}}:</strong> + <input class="health-input text-2digit" type="number" name="system.health.injured.mod" value="{{system.health.injured.mod}}" data-dtype="Number"/></span>
-                </div>
-            </div>
-            {{!-- Maimed --}}
-            <div class="health-row">
-                <label class="health-label" for="system.health.maimed.filled">{{localize "TRINITY_SECOND.SheetLabels.Maimed"}}:</label>
-                <div class="health-details">
-                    <input class="text-2digit" type="number" name="system.health.maimed.filled" value="{{system.health.maimed.filled}}" data-dtype="Number"/>
-                    <span class="math-label"> / </span>
-                    <input class="text-2digit" type="number" name="system.health.maimed.quantity" value="{{system.health.maimed.quantity}}" data-dtype="Number"/>
-                    <span class="mod-label"><strong>{{localize "TRINITY_SECOND.SheetLabels.Mod"}}:</strong> + <input class="health-input text-2digit" type="number" name="system.health.maimed.mod" value="{{system.health.maimed.mod}}" data-dtype="Number"/></span>
-                </div>
-            </div>
-        </section>
         
         {{!-- Source(Quantum) and Nova Unique traits --}}
         <section class="source-section">
@@ -81,16 +34,6 @@
                     <div class="flexrow valign-center source-col2">
                         <label class="source-label source-element" for"system.traits.transcendence.value">Transcendence</label>
                         <input class="text-2digit source-element" type="number" name="system.traits.transcendence.value" value="{{system.traits.transcendence.value}}" data-dtype="Number"/>
-                    </div>
-                </div>
-                <div class="source-row">
-                    <div class="flexrow valign-center source-col1">
-                        Taken Out: 
-                        {{#if system.health.takenout.isfilled}}
-                        <input type="checkbox" name="system.health.takenout.isfilled" value="true" checked>
-                        {{else}}
-                        <input type="checkbox" name="system.health.takenout.isfilled" value="false">
-                        {{/if}}
                     </div>
                 </div>
             </div>
@@ -183,8 +126,15 @@
 
         {{!-- Active Effects Tab --}}
         <div class="tab effects" data-group="primary" data-tab="effects">
-            {{> "systems/trinity-2e/templates/actor/parts/actor-effects.hbs"}}
+            <nav class="status-sheet-tabs sheet-tabs tabs" data-group="status">
+                {{!-- Default tab is specified in actor-sheet.mjs --}}
+                <a class="item" data-tab="health">Health</a>
+                <a class="item" data-tab="status">Status Conditions</a>
+                <a class="item" data-tab="effects">Effects</a>
+            </nav>
+            <div class="status-sheet-body">
+                {{> "systems/trinity-2e/templates/actor/parts/actor-effects.hbs"}}
+            </div>
         </div>
-
     </section>
 </form>

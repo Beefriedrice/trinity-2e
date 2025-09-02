@@ -112,13 +112,13 @@
     .item-successes, .item-first {
       flex: 0 0 50px;
     }
-    .item-handling, .item-duration, .item-level, .wound-type {
+    .item-handling, .item-duration, .item-level {
       flex: 0 0 60px;
     }
     .item-category, .item-skill, .item-ptype, .item-suspended, .item-path {
       flex: 0 0 70px;
     }
-    .item-enhancement {
+    .item-enhancement, .item-wound {
       flex: 0 0 85px;
     }
     .item-tags-short, .item-person {

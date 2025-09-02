@@ -267,6 +267,68 @@
   display: flex;
 }
 
+#controls .simple-dice-roller-popup.control-tool {
+  font-size: 18px !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.simple-dice-roller-popup ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+}
+
+.simple-dice-roller-popup .sdr-lastrow {
+  border-bottom: none;
+}
+
+.simple-dice-roller-popup .sdr-lastcol {
+  border-right: none;
+}
+
+.simple-dice-roller-popup .sdr-col1 {
+  width: 110px;
+  text-align: left;
+}
+
+.simple-dice-roller-popup li {
+  display: inline-block;
+  width: 48px;
+  text-align: center;
+  padding: 5px;
+  border-right: 1px solid #333;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
+
+.simple-dice-roller-popup li:hover {
+  color: #FFF;
+  border: 1px solid red;
+  border-bottom: 1px solid #ff6400;
+  box-shadow: 0 0 10px #ff6400;
+  cursor: pointer;
+}
+
+.simple-dice-roller-popup li i {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.sdr-sub-controls {
+  position: absolute;
+  left: 56px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  margin-top: -32px;
+  pointer-events: auto;
+}
+
 /* Styles limited to trinity-2e sheets */
 .trinity-2e .item-form {
   font-family: "Roboto", sans-serif;
@@ -416,13 +478,13 @@
 .trinity-2e .items-list .item .item-successes, .trinity-2e .items-list .item .item-first {
   flex: 0 0 50px;
 }
-.trinity-2e .items-list .item .item-handling, .trinity-2e .items-list .item .item-duration, .trinity-2e .items-list .item .item-level, .trinity-2e .items-list .item .wound-type {
+.trinity-2e .items-list .item .item-handling, .trinity-2e .items-list .item .item-duration, .trinity-2e .items-list .item .item-level {
   flex: 0 0 60px;
 }
 .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-ptype, .trinity-2e .items-list .item .item-suspended, .trinity-2e .items-list .item .item-path {
   flex: 0 0 70px;
 }
-.trinity-2e .items-list .item .item-enhancement {
+.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-wound {
   flex: 0 0 85px;
 }
 .trinity-2e .items-list .item .item-tags-short, .trinity-2e .items-list .item .item-person {
@@ -535,31 +597,31 @@
   justify-content: space-between;
 }
 .trinity-2e .health-section {
-  flex: 1 1 220px;
-  max-width: 240px;
-  min-width: 200px;
+  max-width: 90px;
+  min-width: 90px;
   padding-top: 5px;
 }
 .trinity-2e .health-row {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  justify-items: center;
   align-items: center;
   padding-top: 5px;
+  text-align: center;
 }
 .trinity-2e .health-label {
-  width: 90px;
-  flex-basis: 90px;
+  width: 100%;
   font-weight: bold;
-  align-items: center;
+  text-align: center;
+  padding-top: 5px;
 }
 .trinity-2e .mod-label {
   margin-left: 5px;
 }
-.trinity-2e .health-details {
-  width: 160px;
-  flex-basis: 160px;
-  align-items: center;
+.trinity-2e .status-section {
+  display: grid;
+  grid-template-columns: 100px 1fr;
 }
 .trinity-2e .source-section {
   max-width: 325px;
@@ -624,77 +686,14 @@
   flex: 1 1 40px;
   text-align: center;
 }
-
-/*# sourceMappingURL=trinity-2e.css.map */
-#controls .simple-dice-roller-popup.control-tool {
-    font-size: 18px !important;
-    width: auto !important;
-    height: auto !important;
-}
-
-.simple-dice-roller-popup ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid #333;
-    display: flex;
-    align-items: center;
-}
-
-.simple-dice-roller-popup .sdr-lastrow {
-    border-bottom: none;
-}
-
-.simple-dice-roller-popup .sdr-lastcol {
-    border-right: none;
-}
-
-.simple-dice-roller-popup .sdr-col1 {
-    width: 110px;
-    text-align: left;
-}
-
-.simple-dice-roller-popup li {
-    display: inline-block;
-    width: 48px;
-    text-align: center;
-    padding: 5px;
-    border-right: 1px solid #333;
-    cursor: pointer;
-    border-bottom: 1px solid transparent;
-    border-top: 1px solid transparent;
-}
-
-.simple-dice-roller-popup li:hover {
-    color: #FFF;
-    border: 1px solid red;
-    border-bottom: 1px solid #ff6400;
-    box-shadow: 0 0 10px #ff6400;
-    cursor: pointer;
-}
-
-.simple-dice-roller-popup li i {
-    font-size: 24px;
-    vertical-align: middle;
-}
-
-.sdr-sub-controls {
-    position: absolute;
-    left: 56px;
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    margin-top: -32px;
-    pointer-events: auto;
-} 
-
-.scale-cell {
+.trinity-2e .scale-cell {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 15px;
 }
-
-.scale-mods {
+.trinity-2e .scale-mods {
   text-align: left;
 }
+
+/*# sourceMappingURL=trinity-2e.css.map */

@@ -40,6 +40,11 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
           navSelector: '.power-sheet-tabs',
           contentSelector: '.power-sheet-body',
           intiial: 'skilltricks'
+        },
+        { 
+          navSelector: '.status-sheet-tabs',
+          contentSelector: '.status-sheet-body',
+          intiial: 'health'
         }
       ],
     });
@@ -172,6 +177,9 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     const transformation = [];
     const vehicle = [];
     const weapon = [];
+    let injured = 0;
+    let bruised = 0;
+    let maimed = 0;
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -212,6 +220,13 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       // Append to injury.
       else if (i.type === 'injury') {
         injury.push(i);
+        if (i.system.injury.wound === 'Bruised' || i.system.injury.wound === 'bruised') {
+          bruised += 1;
+        } else if (i.system.injury.wound === 'Injured' || i.system.injury.wound === 'injured') {
+          injured += 1;
+        } else if (i.system.injury.wound === 'Maimed' || i.system.injury.wound === 'maimed') {
+          maimed += 1;
+        }
       }
       // Append to mega-edges.
       else if (i.type === 'megaedge') {
@@ -230,7 +245,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       }
       // Append to quantum powers.
       else if (i.type === 'quantumpower') {
-        if (i.system.suite != undefined && i.system.suite >= 1 && i.system.suite <= 3) {
+        if (i.system.suite >= 1 && i.system.suite <= 3) {
           quantumpower[i.system.suite].push(i)
         } else {
           quantumpower[0].push(i)
@@ -269,6 +284,9 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     }
 
     // Assign and return
+    context.system.health.bruised.filled = bruised;
+    context.system.health.injured.filled = injured;
+    context.system.health.maimed.filled = maimed;
     context.armor = armor;
     context.bond = bond;
     context.contact = contact;

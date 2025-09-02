@@ -1,10 +1,12 @@
 <div class="tab qpowers" data-group="powers" data-tab="qpowers">
+    
   {{!-- Quantum Power Section.  
   Prebuilt for 3 power suites. 
   Powers go into the corresponding numbered power suite or if anything else into the "general" section. 
   --}}
   <h3 class="quantumpower-header added-segment">{{localize "TRINITY_SECOND.SheetLabels.Quantumpowers"}}</h3>
   {{#each quantumpower as |quantumpower suite|}}
+  
     <ol class='items-list power-suite{{suite}}'>
       <li class='item flexrow items-header'>
         <div class='item-name'>
@@ -68,9 +70,11 @@
       {{/each}}
     </ol>    
   {{/each}}
+  
 </div>
+
+{{!-- Mega Edge Section --}}
 <div class="tab megaedges" data-group="powers" data-tab="megaedges">
-  {{!-- Mega Edge Section --}}
   <h3 class="megaedge-header added-segment">{{localize "TRINITY_SECOND.SheetLabels.Megaedges"}}</h3>
   <ol class='items-list'>
     <li class='item flexrow items-header'>
@@ -178,9 +182,9 @@
     {{/each}}
   </ol>
 </div>
+
+{{!-- Power Settings Button.--}}
 <div class="tab paths" data-group="powers" data-tab="options">
-  {{!-- Power Settings Button. Couldn't figure out how to make it not automatically hide every time a field is updated.  Fix later. --}}
-  {{!<div class="setting-button power-button"><label>Power<br>Settings</label></div>}}
   <h3>Power Suites</h3>
   <div class="suite-row">
     <div class="suite-label">Core</div>
@@ -191,6 +195,12 @@
     <div class="suite-label">1st</div>
     <label class="suite-name">Name: </label>
     <input class="suite-text" type="text" name="system.powersuite.one" value="{{system.powersuite.one}}" data-dtype="String"/>
+    {{!--Hide: 
+    {{#if system.powersuite.hideone}}
+      <input type="checkbox" name="system.powersuite.hideone" value="true" checked>
+    {{else}}
+      <input type="checkbox" name="system.powersuite.hideone" value="false">
+    {{/if}}--}}
   </div>
   <div class="suite-row">
     <div class="suite-label">2nd</div>
