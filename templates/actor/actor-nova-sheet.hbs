@@ -4,31 +4,8 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-      <input class="charname" name="system.codename" type="text" value="{{system.codename}}" placeholder="Alias"/>
-      <div class="resource-section">
-        
-        {{!-- Source(Quantum) and Nova Unique traits --}}
-        <section class="source-section">
-            <div class="flex-group-center">
-                <h3 class="nova-header">{{localize "TRINITY_SECOND.SheetLabels.Novatrait"}}</h3>
-            </div>
-            <div class="source-column">
-                <div class="source-row">
-                    <div class="flexrow valign-center source-col1">
-                        <label class="source-label source-element" for="system.traits.quantum.value">Quantum</label>
-                        <input class="text-2digit source-element" type="text" name="system.traits.quantum.value" value="{{system.traits.quantum.value}}" data-dtype="Number"/>
-                    </div>
-                    <div class="flexrow valign-center source-col2">
-                        <label class="source-label source-element" for="system.traits.quantumpoints.value">Quantum Points</label>
-                        <input class="text-2digit source-element" type="text" name="system.traits.quantumpoints.value" value="{{system.traits.quantumpoints.value}}" data-dtype="Number"/>
-                        <span class="math-label source-element"> / </span>
-                        <input class="text-2digit source-element" size="4" type="text" name="system.traits.quantumpoints.max" value="{{system.traits.quantumpoints.max}}" data-dtype="Number" readonly/>
-                    </div>
-                </div>
-            </div>
-        </section>
-      </div>
+        <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+        <input class="charname" name="system.codename" type="text" value="{{system.codename}}" placeholder="Alias"/>        
     </div>
   </header>
 
