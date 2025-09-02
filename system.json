@@ -25,7 +25,10 @@
     "minimum": 13,
     "verified": "13.347"
   },
-  "esmodules": ["module/trinity-2e.mjs"],
+  "esmodules": [
+    "module/trinity-2e.mjs",
+    "module/sheets/dice-sheet.mjs"
+  ],
   "styles": ["css/trinity-2e.css"],
   "languages": [
     {

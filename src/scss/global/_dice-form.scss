@@ -1,0 +1,61 @@
+#controls .simple-dice-roller-popup.control-tool {
+    font-size: 18px !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.simple-dice-roller-popup ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+}
+
+.simple-dice-roller-popup .sdr-lastrow {
+    border-bottom: none;
+}
+
+.simple-dice-roller-popup .sdr-lastcol {
+    border-right: none;
+}
+
+.simple-dice-roller-popup .sdr-col1 {
+    width: 110px;
+    text-align: left;
+}
+
+.simple-dice-roller-popup li {
+    display: inline-block;
+    width: 48px;
+    text-align: center;
+    padding: 5px;
+    border-right: 1px solid #333;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+}
+
+.simple-dice-roller-popup li:hover {
+    color: #FFF;
+    border: 1px solid red;
+    border-bottom: 1px solid #ff6400;
+    box-shadow: 0 0 10px #ff6400;
+    cursor: pointer;
+}
+
+.simple-dice-roller-popup li i {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.sdr-sub-controls {
+    position: absolute;
+    left: 56px;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    margin-top: -32px;
+    pointer-events: auto;
+} 

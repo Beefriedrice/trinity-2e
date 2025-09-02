@@ -1,10 +1,8 @@
 class SimpleDiceRoller {
-  static _createDiceTableHtmlOneCell(diceType, diceRoll, isLast) {
+  static _createDiceTableHtmlOneCell(diceRoll, isLast, targetNumber) {
     let s = [];
     s.push(
-      '<li data-dice-type="',
-      diceType,
-      '" data-dice-roll="',
+      '<li data-dice-type="10" data-target-number="', targetNumber, '" data-dice-roll="',
       diceRoll,
       '"'
     );
@@ -12,40 +10,17 @@ class SimpleDiceRoller {
     if (diceRoll == 1) {
       s.push(' class="sdr-col1">');
 
-      if (diceType == "f") {
-        s.push(
-          '<i class="far fa-plus-square" "data-dice-type="',
-          diceType,
-          '" data-dice-roll="1"></i>'
-        );
-      } else if (diceType == 100) {
-        s.push(
-          '<i class="df-d10-10" data-dice-type="',
-          diceType,
-          '" data-dice-roll="1"></i>'
-        );
-        s.push(
-          '<i class="df-d10-10" data-dice-type="',
-          diceType,
-          '" data-dice-roll="1"></i>'
-        );
-      } else {
-        s.push(
-          '<i class="df-d',
-          diceType,
-          "-",
-          diceType,
-          '" data-dice-type="',
-          diceType,
-          '" data-dice-roll="1"></i>'
-        );
-      }
+      s.push(
+        '<i class="df-d',
+        10,
+        "-",
+        10,
+        '" data-dice-type="',
+        10,
+        '" data-dice-roll="1"></i>'
+      );
+      s.push("Target - ", targetNumber);
 
-      if (diceType == "f") {
-        s.push(" Fate");
-      } else {
-        s.push(" d" + diceType);
-      }
     } else if (isLast) {
       s.push(' class="sdr-lastcol">' + diceRoll);
     } else {
@@ -56,14 +31,14 @@ class SimpleDiceRoller {
     return s.join("");
   }
 
-  static _createDiceTableHtmlOneLine(diceType, maxDiceCount) {
+  static _createDiceTableHtmlOneLine(targetNumber) {
     let s = [];
 
     s.push("<ul>");
 
-    for (let i = 1; i <= maxDiceCount; ++i) {
-      let isLast = i == maxDiceCount;
-      s.push(this._createDiceTableHtmlOneCell(diceType, i, isLast));
+    for (let i = 1; i <= 10; ++i) {
+      let isLast = i == 10;
+      s.push(this._createDiceTableHtmlOneCell(i, isLast, targetNumber));
     }
 
     s.push("</ul>");
@@ -71,50 +46,18 @@ class SimpleDiceRoller {
     return s.join("");
   }
 
-  static _createDiceTableHtml(maxDiceCount, enableFateDice) {
+  static _createDiceTableHtml() {
     let s = [];
 
-    s.push(this._createDiceTableHtmlOneLine(2, maxDiceCount));
-    s.push(this._createDiceTableHtmlOneLine(4, maxDiceCount));
-    s.push(this._createDiceTableHtmlOneLine(6, maxDiceCount));
-    s.push(this._createDiceTableHtmlOneLine(8, maxDiceCount));
-    s.push(this._createDiceTableHtmlOneLine(10, maxDiceCount));
-    s.push(this._createDiceTableHtmlOneLine(12, maxDiceCount));
-    s.push(this._createDiceTableHtmlOneLine(20, maxDiceCount));
-    s.push(this._createDiceTableHtmlOneLine(100, maxDiceCount));
-    if (enableFateDice) {
-      s.push(this._createDiceTableHtmlOneLine("f", maxDiceCount));
-    }
+    s.push(this._createDiceTableHtmlOneLine(7));
+    s.push(this._createDiceTableHtmlOneLine(8));
 
     return s.join("");
   }
 
-  static _cachedMaxDiceCount = NaN;
-  static _cachedEnableFateDice = false;
-
   static async _createDiceTable(html) {
-    console.log("SDR | Creating dice table");
-    let maxDiceCount = parseInt(
-      game.settings.get("simple-dice-roller", "maxDiceCount"),
-      10
-    );
 
-    let enableFateDice = Boolean(
-      game.settings.get("simple-dice-roller", "enableFateDice")
-    );
-
-    if (isNaN(maxDiceCount) || maxDiceCount < 1 || maxDiceCount > 30) {
-      maxDiceCount = 5;
-    }
-
-    this._cachedMaxDiceCount = maxDiceCount;
-
-    this._cachedEnableFateDice = enableFateDice;
-
-    const tableContentsHtml = this._createDiceTableHtml(
-      maxDiceCount,
-      enableFateDice
-    );
+    const tableContentsHtml = this._createDiceTableHtml();
 
     const tableContents = $(tableContentsHtml);
 
@@ -126,16 +69,18 @@ class SimpleDiceRoller {
   }
 
   static async _rollDice(event, html) {
-    var diceType = event.target.dataset.diceType;
-    var diceRoll = event.target.dataset.diceRoll;
 
-    var formula = diceRoll + "d" + diceType;
+    var diceRoll = event.target.dataset.diceRoll;
+    var targetNumber = event.target.dataset.targetNumber;
+    //diceRoller(diceRoll, targetNumber, 0);
+
+    var formula = diceRoll + "d10x=10cs>=" + targetNumber;
 
     let r = new Roll(formula);
 
     r.toMessage({
       user: game.user._id,
-    });
+    }); 
 
     const $popup = $(".simple-dice-roller-popup");
     $popup.hide();
@@ -143,7 +88,7 @@ class SimpleDiceRoller {
 
 }
 
-Hooks.on("renderSceneControls", (controls, html) => {
+Hooks.on("renderSceneControls", () => {
   if (
     !document.querySelector(
       "#scene-controls-layers button[data-control='simple-dice-roller']"
@@ -152,7 +97,7 @@ Hooks.on("renderSceneControls", (controls, html) => {
     document.querySelector("#scene-controls-layers").insertAdjacentHTML(
       "beforeend",
       `<li>
-            <button type="button" class="control ui-control icon fas fa-dice-d20" role="tab" data-action="simple-dice-roller" data-control="simple-dice-roller" data-tooltip="Simple Dice Roller" aria-controls="scene-controls-tools"></button>
+            <button type="button" class="control ui-control icon fas fa-dice-d10" role="tab" data-action="simple-dice-roller" data-control="simple-dice-roller" data-tooltip="Dice Table" aria-controls="scene-controls-tools"></button>
             <ol class="sub-controls app control-tools sdr-sub-controls">
                 <li id="SDRpopup" class="simple-dice-roller-popup control-tool">
                 </li>
@@ -160,8 +105,6 @@ Hooks.on("renderSceneControls", (controls, html) => {
         </li>
         `
     );
-
-    console.log("SDR | Simple Dice Roller button added to scene controls");
 
     // Always use jQuery to select the popup
     const $popup = $(".simple-dice-roller-popup");
@@ -173,7 +116,6 @@ Hooks.on("renderSceneControls", (controls, html) => {
         "#scene-controls-layers button[data-control='simple-dice-roller']"
       )
       .addEventListener("click", (ev) => {
-        console.log("SDR | Simple Dice Roller button clicked");
         const $popup = $(".simple-dice-roller-popup");
         // Toggle display between none and block
         if ($popup.is(":visible")) {
@@ -185,23 +127,48 @@ Hooks.on("renderSceneControls", (controls, html) => {
   }
 });
 
-Hooks.once("init", () => {
-  game.settings.register("simple-dice-roller", "maxDiceCount", {
-    name: game.i18n.localize("simpleDiceRoller.maxDiceCount.name"),
-    hint: game.i18n.localize("simpleDiceRoller.maxDiceCount.hint"),
-    scope: "world",
-    config: true,
-    default: 8,
-    type: Number,
-  });
-  game.settings.register("simple-dice-roller", "enableFateDice", {
-    name: game.i18n.localize("simpleDiceRoller.enableFateDice.name"),
-    hint: game.i18n.localize("simpleDiceRoller.enableFateDice.hint"),
-    scope: "world",
-    config: true,
-    default: false,
-    type: Boolean,
-  });
-});
+export async function diceRoller (quantity, target_number = 8, enhancement = 0) {
+     
+    let rollText = quantity + "d10x=10cs>=" + target_number;
 
-console.log("SDR | Simple Dice Roller loaded");
+    let theRoll = new Roll(rollText);
+
+    await theRoll.evaluate();
+
+    let diceRoll = theRoll.dice[0].results;
+    let total = theRoll.total;
+    let getDice = `<div class="message-content">
+    <div class="dice-roll expanded" data-action="expandRoll">
+    <div class="dice-result">
+    <div class="dice-formula">${theRoll.formula}</div>
+    <div class=dice-tooltip>
+    <div class="wrapper">
+    <section class="tooltip-part">
+    <div class="dice">
+    <header class="part-header flexrow">
+    <span class="part-formula">${theRoll.formula}</span>
+    <span class="part-total" ${theRoll.total}</span>
+    </header>
+    <ol class="dice-rolls">`
+    for (let dice of diceRoll.sort((a, b) => a>b)) {
+        getDice += `<li class="roll die d10`
+        if (dice.result >= target_number) {
+            getDice += ` success`;
+            if (dice.result === 10) {
+                getDice += ` exploded`;
+            };
+        };
+        getDice += `">${dice.result}</li>`;
+    }
+    getDice += `</ol></div></section></div></div>`;
+    getDice += `<h4 class="dice-total">${total}</h4>`;
+    if (total > 0) {
+        total += enhancement;
+        getDice += `<h4 class="dice-total">${total} with Enhancement</h4>`;
+    }
+    getDice += `</div></div></div>`;
+    ChatMessage.create({
+        user: game.user._id,
+        content: getDice,
+    });
+};
