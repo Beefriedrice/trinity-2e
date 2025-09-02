@@ -635,24 +635,6 @@
   justify-content: space-between;
   padding-top: 5px;
 }
-.trinity-2e .source-col1 {
-  margin: 0 5px;
-  flex-basis: 100px;
-  display: flex;
-  justify-content: space-between;
-}
-.trinity-2e .source-col2 {
-  margin: 0 5px;
-  flex-basis: 190px;
-  display: flex;
-  justify-content: space-between;
-}
-.trinity-2e .source-element {
-  align-items: center;
-}
-.trinity-2e .source-label {
-  font-weight: bold;
-}
 .trinity-2e .attribute-header, .trinity-2e .attribute-row {
   display: flex;
   width: 100%;
@@ -695,7 +677,7 @@
 .trinity-2e .scale-mods {
   text-align: left;
 }
-.trinity-2e .transcendence-row {
+.trinity-2e .stat-detail-row {
   display: flex;
   justify-content: space-around;
   align-items: center;

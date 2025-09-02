@@ -4,14 +4,14 @@
   Prebuilt for 3 power suites. 
   Powers go into the corresponding numbered power suite or if anything else into the "general" section. 
   --}}
-  <div class="transcendence-row">              
-    <label class="source-label source-element" for="system.traits.quantum.value">Quantum</label>
-    <input class="text-2digit source-element" type="text" name="system.traits.quantum.value" value="{{system.traits.quantum.value}}" data-dtype="Number"/>
-    <label class="source-label source-element" for="system.traits.quantumpoints.value">Quantum Points</label>
+  <div class="stat-detail-row">              
+    <label class="resource-label" for="system.traits.quantum.value">Quantum</label>
+    <input class="text-2digit" type="text" name="system.traits.quantum.value" value="{{system.traits.quantum.value}}" data-dtype="Number"/>
+    <label class="resource-label" for="system.traits.quantumpoints.value">Quantum Points</label>
     <div>
-      <input class="text-2digit source-element" type="text" name="system.traits.quantumpoints.value" value="{{system.traits.quantumpoints.value}}" data-dtype="Number"/>
-      <span class="math-label source-element"> / </span>
-      <input class="text-2digit source-element" size="4" type="text" name="system.traits.quantumpoints.max" value="{{system.traits.quantumpoints.max}}" data-dtype="Number" readonly/>
+      <input class="text-2digit" type="text" name="system.traits.quantumpoints.value" value="{{system.traits.quantumpoints.value}}" data-dtype="Number"/>
+      <span class="math-label"> / </span>
+      <input class="text-2digit" size="4" type="text" name="system.traits.quantumpoints.max" value="{{system.traits.quantumpoints.max}}" data-dtype="Number" readonly/>
     </div>                
   </div>
 
@@ -193,11 +193,11 @@
 
 {{!-- Transformations Section --}}
 <div class="tab transformations" data-group="powers" data-tab="transformations">
-  <div class="transcendence-row">
-    <label class="source-label source-element" for"system.traits.flux.value">Flux</label>
-    <input class="text-2digit source-element" type="number" name="system.traits.flux.value" value="{{system.traits.flux.value}}" data-dtype="Number"/>  
-    <label class="source-label source-element" for"system.traits.transcendence.value">Transcendence</label>
-    <input class="text-2digit source-element" type="number" name="system.traits.transcendence.value" value="{{system.traits.transcendence.value}}" data-dtype="Number"/>
+  <div class="stat-detail-row">
+    <label class="resource-label" for"system.traits.flux.value">Flux</label>
+    <input class="text-2digit" type="number" name="system.traits.flux.value" value="{{system.traits.flux.value}}" data-dtype="Number"/>  
+    <label class="resource-label" for"system.traits.transcendence.value">Transcendence</label>
+    <input class="text-2digit" type="number" name="system.traits.transcendence.value" value="{{system.traits.transcendence.value}}" data-dtype="Number"/>
   </div>
   <ol class='items-list'>
     <li class='item flexrow items-header'>

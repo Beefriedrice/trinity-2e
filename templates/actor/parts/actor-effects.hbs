@@ -107,10 +107,9 @@
 
 {{!-- Status Section --}}
 <div class="tab status" data-group="status" data-tab="status">
-  <h3 class="status-header">{{localize "TRINITY_SECOND.SheetLabels.Statuses"}}</h3>
   <ol class='items-list'>
     <li class='item flexrow items-header'>
-      <div class='item-name'>{{localize 'Name'}}</div>
+      <div class='item-name'>{{localize "TYPES.Item.status"}} {{localize 'Name'}}</div>
       <div class='item-formula'>{{localize 'Roll Formula'}}</div>
       <div class='item-controls'>
         <a
@@ -159,7 +158,6 @@
 </div>
 
 <div class="tab effects" data-group="status" data-tab="effects">
-  <h3 class="added-segment">{{localize "TRINITY_SECOND.Effect.Effect"}}</h3>
   <ol class="items-list effects-list">
     {{#each effects as |section sid|}}
       <li class="effect-header items-header flexrow" data-effect-type="{{section.type}}" data-parent-id="{{@root.actor.id}}" >

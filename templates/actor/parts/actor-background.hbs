@@ -1,18 +1,13 @@
 <div>
-    <div>
-        <h3>Experience</h3>
-        <div class="xp-row">
-            <div class="xp-spent">Spent</div>
-            <div class="xp-current">Current Remaining</div>
-            <div class="xp-total">Total Earned</div>
-        </div>
-        <div class="xp-row">
-            <div><input class="xp-spent text-3digit" type=text name="system.experience.spent" value="{{system.experience.spent}}"/></div>
-            <div><input class="xp-current text-3digit" type=text name="system.experience.current" value="{{system.experience.current}}" readonly/></div>
-            <div><input class="xp-total text-3digit" type=text name="system.experience.total" value="{{system.experience.total}}"/></div>
-        </div>
+    <div class="stat-detail-row">
+        <div class="resource-label">XP Spent</div>
+        <input class="text-3digit" type=text name="system.experience.spent" value="{{system.experience.spent}}"/>
+        <div class="resource-label">XP Remaining</div>
+        <input class="text-3digit" type=text name="system.experience.current" value="{{system.experience.current}}" readonly/>
+        <div class="resource-label">Total XP Earned</div>
+        <input class="text-3digit" type=text name="system.experience.total" value="{{system.experience.total}}"/>
     </div>
-    <h3 class="added-segment">Background</h3>
+    <h3 class="nova-header added-segment">Background</h3>
     <div>
         <label class="" for"system.templates.concept">{{localize "TRINITY_SECOND.SheetLabels.Concept"}}</label>
         <input class="" type="text" name="system.templates.concept" value="{{system.templates.concept}}" data-dtype="String"/>

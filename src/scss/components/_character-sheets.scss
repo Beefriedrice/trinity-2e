@@ -91,28 +91,6 @@
   padding-top: 5px;
 }
 
-.source-col1 {
-  margin: 0 5px;
-  flex-basis: 100px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.source-col2 {
-  margin: 0 5px;
-  flex-basis: 190px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.source-element {
-  align-items: center;
-}
-
-.source-label {
-  font-weight: bold;
-}
-
 //-attribute section
 
 .attribute-header, .attribute-row {
@@ -170,7 +148,7 @@
   text-align: left;
 }
 
-.transcendence-row {
+.stat-detail-row {
   display: flex;
   justify-content: space-around;
   align-items: center;
