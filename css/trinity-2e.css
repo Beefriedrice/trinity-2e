@@ -695,5 +695,11 @@
 .trinity-2e .scale-mods {
   text-align: left;
 }
+.trinity-2e .transcendence-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+}
 
 /*# sourceMappingURL=trinity-2e.css.map */
