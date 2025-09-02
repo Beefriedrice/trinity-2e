@@ -22,9 +22,24 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
           initial: 'stats',
         },
         { 
+          navSelector: '.attribute-sheet-tabs',
+          contentSelector: '.attribute-sheet-body',
+          intiial: 'attributes'
+        },
+        { 
           navSelector: '.background-sheet-tabs',
           contentSelector: '.background-sheet-body',
           intiial: 'paths'
+        },
+        { 
+          navSelector: '.gear-sheet-tabs',
+          contentSelector: '.gear-sheet-body',
+          intiial: 'weapons'
+        },
+        { 
+          navSelector: '.power-sheet-tabs',
+          contentSelector: '.power-sheet-body',
+          intiial: 'skilltricks'
         }
       ],
     });

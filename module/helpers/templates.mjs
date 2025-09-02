@@ -6,9 +6,9 @@
 export const preloadHandlebarsTemplates = async function () {
   return loadTemplates([
     // Actor partials.
+    'systems/trinity-2e/templates/actor/parts/actor-attributes.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-background.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-bonds.hbs',
-    'systems/trinity-2e/templates/actor/parts/actor-edges.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-effects.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-equipment.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-features.hbs',

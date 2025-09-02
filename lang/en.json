@@ -139,6 +139,14 @@
       }
     },
     "Scale": {
+      "Dur": "Durability",
+      "Lea": "Leadership",
+      "Men": "Mental",
+      "Mig": "Might",
+      "Pow": "Power",
+      "Siz": "Size",
+      "Spe": "Speed",
+      "Tec": "Technology",
       "Technology": "Technology"
     },
     "Effect": {

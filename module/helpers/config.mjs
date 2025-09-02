@@ -130,3 +130,13 @@ TRINITY_SECOND.edgeCategory = {
   nov: 'TRINITY_SECOND.Edge.Type.Nov',
   pat: 'TRINITY_SECOND.Edge.Type.Pat',
 };
+
+TRINITY_SECOND.scale = {
+  dur: 'TRINITY_SECOND.Scale.Dur',
+  lea: 'TRINITY_SECOND.Scale.Lea',
+  men: 'TRINITY_SECOND.Scale.Men',
+  mig: 'TRINITY_SECOND.Scale.Mig',
+  pow: 'TRINITY_SECOND.Scale.Pow',
+  siz: 'TRINITY_SECOND.Scale.Siz',
+  spe: 'TRINITY_SECOND.Scale.Spe',
+};

@@ -99,113 +99,92 @@
     </div>
   </header>
 
-  {{!-- Sheet Tab Navigation --}}
-  <nav class="sheet-tabs tabs" data-group="primary">
-    {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="item" data-tab="stats">{{localize "TRINITY_SECOND.SheetLabels.Attributes"}}<br>& {{localize "TRINITY_SECOND.SheetLabels.Skills"}}</a>
-    <a class="item" data-tab="edges">{{localize "TRINITY_SECOND.SheetLabels.Edges"}},<br>{{localize "TRINITY_SECOND.SheetLabels.Skilltricks"}},<br>& {{localize "TRINITY_SECOND.SheetLabels.Specialties"}}</a>
-    <a class="item" data-tab="powers">Mega-Edges<br>& Powers</a>
-    <a class="item" data-tab="equipment">{{localize "TYPES.Item.equipment"}}</a>
-    <a class="item" data-tab="effects">Health &<br>Status<br>Effects</a>
-    <a class="item" data-tab="background">Character<br>Background<br> & Paths</a>
-  </nav>
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        {{!-- Default tab is specified in actor-sheet.mjs --}}
+        <a class="item" data-tab="stats">Core Mechanics</a>
+        <a class="item" data-tab="powers">Special Abilities</a>
+        <a class="item" data-tab="equipment">Gear</a>
+        <a class="item" data-tab="effects">Status</a>
+        <a class="item" data-tab="background">Background</a>
+    </nav>
 
-  {{!-- Sheet Body --}}  <section class="sheet-body">
+    {{!-- Sheet Body --}}  
+    <section class="sheet-body">
 
-    {{!-- Owned Features Tab --}}
-    <div class="tab stats" data-group="primary" data-tab="stats">
-        
-        {{!-- Attribute Section --}}
-        <h2 class="flex-group-center nova-header">{{localize "TRINITY_SECOND.SheetLabels.Attributes"}}</h2>
-        <section class="">
-            {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-            use both the "grid" and "grid-Ncol" class where "N" can be any number
-            from 1 to 12 and will create that number of columns.  --}}
-            <div class="flex-group-center attribute-header">
-                <div class="approach"></div>
-                <div class="attribute"><h3>{{localize "TRINITY_SECOND.SheetLabels.Mental"}}</h3></div>
-                <div class="attribute"><h3>{{localize "TRINITY_SECOND.SheetLabels.Physical"}}</h3></div>
-                <div class="attribute"><h3>{{localize "TRINITY_SECOND.SheetLabels.Social"}}</h3></div>
-    {{#each system.attributes as |attribute key|}}
-        {{#if attribute.row}}
-            </div>
-            <div class="valign-center attribute-row">
-                <div class="approach flex-col valign-center">
-                    <div class="approach">{{attribute.approach}}</div>
-                </div>
-            {{/if}}
-                <div class="attribute">
-                    <div class="flexrow valign-center">
-                        <label class="resource-label flex-left" for="system.attributes.{{key}}.value" data-attribute="@attributes.{{key}}.value" data-roll="(@attributes.{{key}}.value)d10x=10cs>=8" data-label="{{localize (lookup @root.config.attributes key)}}">{{localize (lookup @root.config.attributes key)}}</label>
-                        <input class="text-2digit" type="number" name="system.attributes.{{key}}.value" value="{{attribute.value}}" min="0" max="10" data-dtype="Number"/>
-                    </div>
-                    <div class="flexrow valign-center">
-                        <label class="resource-label" for="system.attributes.{{key}}.megavalue" data-roll="(@attributes.{{key}}.megavalue)d10x=10cs>=8" data-label="{{localize (lookup @root.config.megaattributes key)}}">{{localize (lookup @root.config.megaattributes key)}}</label>
-                        <input class="text-2digit" type="number" name="system.attributes.{{key}}.megavalue" value="{{attribute.megavalue}}" min="0" max="10" data-dtype="Number"/>
-                    </div>
-                </div>
-    {{/each}}
-            </div>
-        </section>
-
-        {{!-- Skill Section --}}
-        <h2 class="flex-group-center nova-header">{{localize "TRINITY_SECOND.SheetLabels.Skills"}}</h2>
-        <section class="grid grid-4col">
-            {{#each system.skills as |skill key|}}
-                <div class="skill flexrow flex-group-center" data-skill="{{key}}">
-                    <label class="skill-label resource-label flexlarge align-left" for="system.skills.{{key}}.value" data-skill="@skills.{{key}}.value" data-roll="(@skills.{{key}}.value)d10x=10cs>=8" data-label="{{localize (lookup @root.config.skills key)}}">{{localize (lookup @root.config.skills key)}}</label>
-                    <input class="text-2digit" type="number" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
-                </div>
-            {{/each}}
-        </section>
-    </div>
-
-    {{!-- Biography Tab --}}
-    
-    <div class="tab background" data-group="primary" data-tab="background">
-        <nav class="background-sheet-tabs sheet-tabs tabs" data-group="secondary">
-            {{!-- Default tab is specified in actor-sheet.mjs --}}
-            <a class="item" data-tab="paths">Paths & Contacts</a>
-            <a class="item" data-tab="background">Background</a>
-            <a class="item" data-tab="bonds">Bonds</a>
-            <a class="item" data-tab="transformations">Transformations</a>
-        </nav>
-        <div class="background-sheet-body">
-            <div class="tab paths" data-group="secondary" data-tab="paths">
-                {{> "systems/trinity-2e/templates/actor/parts/actor-paths.hbs"}}      
-            </div>
-            <div class="tab background" data-group="secondary" data-tab="background">
-                {{> "systems/trinity-2e/templates/actor/parts/actor-background.hbs"}}
-            </div>
-            <div class="tab experience" data-group="secondary" data-tab="bonds">
-                {{> "systems/trinity-2e/templates/actor/parts/actor-bonds.hbs"}}
-            </div>
-            <div class="tab experience" data-group="secondary" data-tab="transformations">
-                {{> "systems/trinity-2e/templates/actor/parts/actor-transformations.hbs"}}
+        {{!-- Core Mechanics Tab --}}
+        <div class="tab stats" data-group="primary" data-tab="stats">
+            <nav class="attribute-sheet-tabs sheet-tabs tabs" data-group="attributes">
+                {{!-- Default tab is specified in actor-sheet.mjs --}}
+                <a class="item" data-tab="attributes">Attributes & Skills</a>
+                <a class="item" data-tab="specialties">Specialties</a>
+                <a class="item" data-tab="edges">Edges</a>
+                <a class="item" data-tab="scale">Scale</a>
+            </nav>
+            <div class="attribute-sheet-body">
+                {{> "systems/trinity-2e/templates/actor/parts/actor-attributes.hbs"}}      
             </div>
         </div>
-      
-    </div>
 
-    {{!-- Owned Edges Tab --}}
-    <div class="tab edges" data-group="primary" data-tab="edges">
-      {{> "systems/trinity-2e/templates/actor/parts/actor-edges.hbs"}}
-    </div>
+        {{!-- Background Tab --}}
+        
+        <div class="tab background" data-group="primary" data-tab="background">
+            <nav class="background-sheet-tabs sheet-tabs tabs" data-group="backgrounds">
+                {{!-- Default tab is specified in actor-sheet.mjs --}}
+                <a class="item" data-tab="paths">Paths & Contacts</a>
+                <a class="item" data-tab="background">Background</a>
+                <a class="item" data-tab="bonds">Bonds</a>
+                <a class="item" data-tab="transformations">Transformations</a>
+            </nav>
+            <div class="background-sheet-body">
+                <div class="tab paths" data-group="backgrounds" data-tab="paths">
+                    {{> "systems/trinity-2e/templates/actor/parts/actor-paths.hbs"}}      
+                </div>
+                <div class="tab background" data-group="backgrounds" data-tab="background">
+                    {{> "systems/trinity-2e/templates/actor/parts/actor-background.hbs"}}
+                </div>
+                <div class="tab bonds" data-group="backgrounds" data-tab="bonds">
+                    {{> "systems/trinity-2e/templates/actor/parts/actor-bonds.hbs"}}
+                </div>
+                <div class="tab transformations" data-group="backgrounds" data-tab="transformations">
+                    {{> "systems/trinity-2e/templates/actor/parts/actor-transformations.hbs"}}
+                </div>
+            </div>
+        
+        </div>
 
-    {{!-- Owned Powers Tab --}}
-    <div class="tab powers" data-group="primary" data-tab="powers">
-      {{> "systems/trinity-2e/templates/actor/parts/actor-powers.hbs"}}
-    </div>
+        {{!-- Owned Powers Tab --}}
+        <div class="tab powers" data-group="primary" data-tab="powers">
+            {{!-- Default tab is specified in actor-sheet.mjs --}}
+            <nav class="power-sheet-tabs sheet-tabs tabs" data-group="powers">
+                <a class="item" data-tab="qpowers">Quantum Powers</a>
+                <a class="item" data-tab="megaedges">Mega Edges</a>
+                <a class="item" data-tab="skilltricks">Skill Tricks</a>
+                <a class="item" data-tab="options">Options</a>
+            </nav>
+            <div class="power-sheet-body">
+                {{> "systems/trinity-2e/templates/actor/parts/actor-powers.hbs"}}
+            </div>
+        </div>
 
-    {{!-- Owned Equipment Tab --}}
-    <div class="tab equipment" data-group="primary" data-tab="equipment">
-       {{> "systems/trinity-2e/templates/actor/parts/actor-equipment.hbs"}}
-    </div>
+        {{!-- Owned Equipment Tab --}}
+        <div class="tab equipment" data-group="primary" data-tab="equipment">
+            <nav class="gear-sheet-tabs sheet-tabs tabs" data-group="gear">
+                {{!-- Default tab is specified in actor-sheet.mjs --}}
+                <a class="item" data-tab="weapons">Weapons</a>
+                <a class="item" data-tab="armor">Armor</a>
+                <a class="item" data-tab="vehicles">Vehicles</a>
+                <a class="item" data-tab="other">Other Items</a>
+            </nav>
+            <div class="gear-sheet-body">
+                {{> "systems/trinity-2e/templates/actor/parts/actor-equipment.hbs"}}
+            </div>
+        </div>
 
-    {{!-- Active Effects Tab --}}
-    <div class="tab effects" data-group="primary" data-tab="effects">
-      {{> "systems/trinity-2e/templates/actor/parts/actor-effects.hbs"}}
-    </div>
+        {{!-- Active Effects Tab --}}
+        <div class="tab effects" data-group="primary" data-tab="effects">
+            {{> "systems/trinity-2e/templates/actor/parts/actor-effects.hbs"}}
+        </div>
 
-  </section>
+    </section>
 </form>
