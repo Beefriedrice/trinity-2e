@@ -322,31 +322,6 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       item.sheet.render(true);
     });
 
-    $(document).ready(() => {
-      $('.power-settings').hide();
-    });
-
-    html.on('click', '.power-button', () => {
-      $('.power-settings').toggle();
-    });
-
-    /** html.on('keyup', '.suiteqty', (ev) => {
-      const number = $(ev.currentTarget).val();
-      for (let i = 0; i <= number; i++) {
-        this.actor.system.nova.powersuites
-      }
-      
-    }); */
-
-
-    //Failed attempt to make checking a box update a value.
-
-    //html.on('click', '.checkbox', (ev) => {
-    //  const boxName = ev.currentTarget;
-    //  const targetValue = boxName.dataset.checkbox;
-    //  ui.information.info(targetValue);
-    //}); 
-
     /**  Having trouble exporting this function while trying to get it to work.
     async function diceRoller (quantity, enhancement) {
     //target number for roll.
