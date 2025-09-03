@@ -408,7 +408,7 @@
       "techscale": 1,
       "size": 0,
       "cost": 0,
-      "sciencetype": "Mundane Science",
+      "inventiontype": "Mundane Science",
       "category": "Device"
     },
     "gift": {
@@ -459,7 +459,7 @@
       "tags": "",
       "tagdescription": "",
       "customtags": "",
-      "suite": 0
+      "suite": "None"
     },
     "skilltrick": {
       "templates": ["base"],
