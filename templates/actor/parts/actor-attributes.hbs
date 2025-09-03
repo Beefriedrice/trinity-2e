@@ -15,7 +15,7 @@
         </div>
         <div class="valign-center attribute-row">
             <div class="approach valign-center">
-                <input class="small-box" type="radio" name="system.favoredapproach" value="{{attribute.approach}}"
+                <input class="radio-to-check" type="radio" name="system.favoredapproach" value="{{attribute.approach}}"
                 {{#if (eq attribute.approach @root.system.favoredapproach)}}
                 checked
                 {{/if}}/> 
@@ -28,8 +28,8 @@
                     <input class="text-2digit" type="number" name="system.attributes.{{key}}.value" value="{{attribute.value}}" min="0" max="10" data-dtype="Number"/>
                 </div>
                 <div class="flexrow valign-center">
-                    <label class="resource-label" for="system.attributes.{{key}}.megavalue" data-roll="(@attributes.{{key}}.megavalue)d10x=10cs>=8" data-label="{{localize (lookup @root.config.megaattributes key)}}">{{localize (lookup @root.config.megaattributes key)}}</label>
-                    <input class="text-2digit" type="number" name="system.attributes.{{key}}.megavalue" value="{{attribute.megavalue}}" min="0" max="10" data-dtype="Number"/>
+                    <label class="resource-label" for="system.attributes.{{key}}.mega.value" data-roll="(@attributes.{{key}}.mega.value)d10x=10cs>=8" data-label="{{localize (lookup @root.config.megaattributes key)}}">{{localize (lookup @root.config.megaattributes key)}}</label>
+                    <input class="text-2digit" type="number" name="system.attributes.{{key}}.mega.value" value="{{attribute.mega.value}}" min="0" max="10" data-dtype="Number"/>
                 </div>
             </div>
         {{/each}}

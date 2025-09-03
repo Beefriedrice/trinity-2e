@@ -78,58 +78,85 @@
         "attributes":  {
           "int": {
             "value": 1,
-            "megavalue": 0,
+            "mega": {
+              "value": 0,
+              "maxedout": false
+            },
             "arena": "Mental",
             "approach": "Force",
             "row": true
           },
           "mig": {
             "value": 1,
-            "megavalue": 0,
+            "mega": {
+              "value": 0,
+              "maxedout": false
+            },
             "arena": "Physical",
             "approach": "Force"
           },
           "pre": {
             "value": 1,
-            "megavalue": 0,
+            "mega": {
+              "value": 0,
+              "maxedout": false
+            },
             "arena": "Social",
             "approach": "Force"
           },
           "cun": {
             "value": 1,
-            "megavalue": 0,
+            "mega": {
+              "value": 0,
+              "maxedout": false
+            },
             "arena": "Mental",
             "approach": "Finesse",
             "row": true
           },
           "dex": {
             "value": 1,
-            "megavalue": 0,
+            "mega": {
+              "value": 0,
+              "maxedout": false
+            },
             "arena": "Physical",
             "approach": "Finesse"
           },
           "man": {
             "value": 1,
-            "megavalue": 0,
+            "mega": {
+              "value": 0,
+              "maxedout": false
+            },
             "arena": "Social",
             "approach": "Finesse"
           },
           "res": {
             "value": 1,
-            "megavalue": 0,
+            "mega": {
+              "value": 0,
+              "maxedout": false
+            },
             "arena": "Mental",
             "approach": "Resilience",
             "row": true
           },
           "sta": {
             "value": 1,
-            "megavalue": 0,
+              "mega": {
+              "value": 0,
+            "maxedout": false
+            },
             "arena": "Physical",
             "approach": "Resilience"
           },
           "com": {
             "value": 1,
-            "megavalue": 0,
+            "mega": {
+              "value": 0,
+              "maxedout": false
+            },
             "arena": "Social",
             "approach": "Resilience"
           }
@@ -219,7 +246,7 @@
         "target": 7,
         "quantum": {
           "value": 1,
-          "maxedout": 1
+          "maxedout": false
         },
         "quantumpoints": {
           "value": 0,
@@ -228,8 +255,7 @@
         },
         "flux": {
           "value": 0,
-          "min": 0,
-          "max": 20
+          "min": 0
         },
         "transcendence": {
           "value": 0,
@@ -237,7 +263,6 @@
           "max": 10
         }
       },
-      "powersbutton": false,
       "powersuite": {
         "none": "Quantum Powers",
         "one": "Power Suite 1", 

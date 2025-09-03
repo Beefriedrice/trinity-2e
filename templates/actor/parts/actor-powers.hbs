@@ -261,7 +261,7 @@
     <div class="suite-column resource-label">1st Suite</div>
     <label class="suite-name">Name: </label>
     <input class="suite-text" type="text" name="system.powersuite.one" value="{{system.powersuite.one}}" data-dtype="String"/>
-    {{!--Hide: 
+    {{!--The continuing failed attempts to allow players to control the number of power suites that show. 
     {{#if system.powersuite.hideone}}
       <input type="checkbox" name="system.powersuite.hideone" value="true" checked>
     {{else}}
@@ -278,4 +278,23 @@
     <label class="suite-name">Name: </label>
     <input class="suite-text" type="text" name="system.powersuite.three" value="{{system.powersuite.three}}" data-dtype="String"/>
   </div>
+  <h3 class="nova-header">Maxed Out Tracking</h3>
+  <div class="maxed-out-row">
+    <label class="maxed-out resource-label" for="system.quantum.maxedout">Quantum Maxed Out?</label>
+    {{#if system.quantum.maxedout}} 
+      <input class="align-boxes small-check" type="checkbox" name="system.quantum.maxedout" value="true" checked data-dtype="Boolean"/>
+    {{else}}
+      <input class="align-boxes small-check" type="checkbox" name="system.quantum.maxedout" value="false" data-dtype="Boolean"/>
+    {{/if}}
+  </div>
+  {{#each system.attributes as |attribute key|}}
+    <div class="maxed-out-row">
+      <label class="maxed-out resource-label" for="system.attributes.{{key}}.mega.maxedout">{{localize (lookup @root.config.megaattributes key)}} Maxed Out?</label>
+      {{#if attribute.mega.maxedout}}
+        <input class="align-boxes small-check" type="checkbox" name="system.attributes.{{key}}.mega.maxedout" value="true" data-dtype="Boolean" checked/>
+      {{else}}
+        <input class="align-boxes small-check" type="checkbox" name="system.attributes.{{key}}.mega.maxedout" value="false" data-dtype="Boolean"/>
+      {{/if}}
+    </div>
+  {{/each}}
 </div>

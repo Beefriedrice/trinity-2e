@@ -13,6 +13,9 @@
   background-color: rgb(20, 20, 20);
 }
 
+h2.nova-header, h3.nova-header {
+  padding-top: 2px;
+}
 
 //character sheet digit displays.
 .text-2digit {
@@ -165,7 +168,7 @@
   flex: 0 0 80px;
 }
 
-.small-box {
+.radio-to-check {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -181,15 +184,29 @@
   flex: 0 0 13px;
 }
 
-.small-box:checked {
+.radio-to-check:checked {
   background-color: black;
   border: 2px solid black;
 }
 
-.small-box:checked::before {
+.radio-to-check:checked::before {
   position: absolute;
   color: black !important;
   background-color: black;
   border: 2px solid black;
   border-radius: 2px;
+}
+
+.align-boxes {
+  flex: 0 0 5px;
+}
+
+.maxed-out {
+  flex: 0 0 220px;
+}
+
+.maxed-out-row {
+  display: flex;
+  justify-content: start;
+  margin: 5px 0;
 }

@@ -378,6 +378,10 @@
 .trinity-2e .added-segment {
   margin-top: 10px;
 }
+.trinity-2e .small-check {
+  width: 13px;
+  height: 13px;
+}
 .trinity-2e .resource-label {
   font-weight: bold;
 }
@@ -574,6 +578,9 @@
   color: rgb(203, 167, 48);
   background-color: rgb(20, 20, 20);
 }
+.trinity-2e h2.nova-header, .trinity-2e h3.nova-header {
+  padding-top: 2px;
+}
 .trinity-2e .text-2digit {
   min-width: 25px;
   max-width: 25px;
@@ -687,7 +694,7 @@
 .trinity-2e .suite-column {
   flex: 0 0 80px;
 }
-.trinity-2e .small-box {
+.trinity-2e .radio-to-check {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -702,16 +709,27 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   flex: 0 0 13px;
 }
-.trinity-2e .small-box:checked {
+.trinity-2e .radio-to-check:checked {
   background-color: black;
   border: 2px solid black;
 }
-.trinity-2e .small-box:checked::before {
+.trinity-2e .radio-to-check:checked::before {
   position: absolute;
   color: black !important;
   background-color: black;
   border: 2px solid black;
   border-radius: 2px;
+}
+.trinity-2e .align-boxes {
+  flex: 0 0 5px;
+}
+.trinity-2e .maxed-out {
+  flex: 0 0 220px;
+}
+.trinity-2e .maxed-out-row {
+  display: flex;
+  justify-content: start;
+  margin: 5px 0;
 }
 
 /*# sourceMappingURL=trinity-2e.css.map */
