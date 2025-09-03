@@ -565,9 +565,12 @@
 .trinity-2e .nova {
   padding: 5px;
 }
+.trinity-2e .nova .sheet-tabs .active {
+  text-shadow: 0 0 10px rgb(12, 83, 21) !important;
+}
 .trinity-2e .nova .tabs .item:hover, .trinity-2e .nova .tabs .item:focus {
-  text-shadow: 0 0 10px red;
-  color: red;
+  text-shadow: 0 0 10px rgb(12, 83, 21);
+  color: rgb(12, 83, 21);
 }
 .trinity-2e .nova-header, .trinity-2e .nova .items-list .items-header, .trinity-2e .nova .items-list .items-header .item-name {
   color: rgb(203, 167, 48);
@@ -589,6 +592,11 @@
 .trinity-2e .math-label {
   max-width: 25px;
   text-align: center;
+}
+.trinity-2e .resource {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
 }
 .trinity-2e .resource-section {
   display: flex;

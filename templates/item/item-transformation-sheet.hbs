@@ -14,19 +14,19 @@
           placeholder='Name'
         /></h1>
       <div class='grid grid-1col'>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Level"}}</label>
           <input
             type='text'
-            name='system.transformation.level'
-            value='{{system.transformation.level}}'
+            name='system.level'
+            value='{{system.level}}'
             data-dtype='String'
             list="transformation-level"
           />
           <datalist id="transformation-level">
-            <option value="Low-Level">Low-Level</option>
-            <option value="Mid-Level">Mid-Level</option>
-            <option value="High-Level">High-Level</option>
+            <option value="Low-Level">{{localize "TRINITY_SECOND.SheetLabels.Lowl"}}</option>
+            <option value="Mid-Level">{{localize "TRINITY_SECOND.SheetLabels.Midl"}}</option>
+            <option value="High-Level">{{localize "TRINITY_SECOND.SheetLabels.Highl"}}</option>
           </datalist>
         </div>
       </div>
@@ -36,7 +36,6 @@
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
     <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.SheetLabels.Description"}}</a>
-    <a class='item' data-tab='attributes'>{{localize "TRINITY_SECOND.SheetLabels.Game"}}</a>
   </nav>
 
   {{! Sheet Body }}
@@ -47,50 +46,11 @@
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
-        target='system.transformation.description'
+        target='system.description'
         engine='prosemirror'
         button=true
         editable=editable
       }}
-    </div>
-
-    {{! Attributes Tab }}
-    <div class='tab attributes' data-group='primary' data-tab='attributes'>
-      {{! As you add new fields, add them in here! }}
-      <div class='resource'>
-        <label class='resource-label'>Roll Formula:</label>
-        <span>{{system.formula}}</span>
-        <div class='grid grid-4col'>
-          <div class='grid-span-1'>
-            <label class='resource-label'>Number of Dice</label>
-            <input
-              type='text'
-              name='system.roll.diceNum'
-              value='{{system.roll.diceNum}}'
-              data-dtype='Number'
-            />
-          </div>
-          <div class='grid-span-1'>
-            <label class='resource-label'>Die Size</label>
-            <input
-              type='text'
-              name='system.roll.diceSize'
-              value='{{system.roll.diceSize}}'
-              data-dtype='String'
-            />
-          </div>
-          <div class='grid-span-2'>
-            <label class='resource-label'>Roll Modifier</label>
-            <input
-              type='text'
-              name='system.roll.diceBonus'
-              value='{{system.roll.diceBonus}}'
-              data-dtype='String'
-            />
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 </form>

@@ -18,17 +18,19 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Enhancement"}}</label>
           <input
             type='text'
-            name='system.weapon.enhancement'
-            value='{{system.weapon.enhancement}}'
+            class="text-2digit"
+            name='system.enhancement'
+            value='{{system.enhancement}}'
             data-dtype='Number'
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Scale.Technology"}}</label>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Scale.Tecscale"}}</label>
           <input
             type='text'
-            name='system.weapon.techscale'
-            value='{{system.weapon.techscale}}'
+            class="text-2digit"
+            name='system.techscale'
+            value='{{system.techscale}}'
             data-dtype='Number'
           />
         </div>
@@ -36,8 +38,9 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Size"}}</label>
           <input
             type='text'
-            name='system.weapon.size'
-            value='{{system.weapon.size}}'
+            class="text-2digit"
+            name='system.size'
+            value='{{system.size}}'
             data-dtype='Number'
           />
         </div>
@@ -45,17 +48,18 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Cost"}}</label>
           <input
             type='text'
-            name='system.weapon.cost'
-            value='{{system.weapon.cost}}'
+            class="text-2digit"
+            name='system.cost'
+            value='{{system.cost}}'
             data-dtype='Number'
           />
         </div>
-         <div class='resource'>
+         <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.ScienceType"}}</label>
           <input
             type='text'
-            name='system.weapon.sciencetype'
-            value='{{system.weapon.sciencetype}}'
+            name='system.inventiontype'
+            value='{{system.inventiontype}}'
             data-dtype='String'
             list='inventiontype'
           />
@@ -74,12 +78,12 @@
             <option value="{{localize 'TRINITY_SECOND.Science.Mystic'}}">{{localize 'TRINITY_SECOND.Science.Mystic'}}</option>
           </datalist>
         </div>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.TechCat"}}</label>
           <input
             type='text'
-            name='system.weapon.category'
-            value='{{system.weapon.category}}'
+            name='system.category'
+            value='{{system.category}}'
             data-dtype='String'
             list='inventioncategory'
           />
@@ -113,15 +117,15 @@
       <div class='resource'>
         <input
           type='text'
-          name='system.weapon.tags'
-          value='{{system.weapon.tags}}'
+          name='system.tags'
+          value='{{system.tags}}'
           data-dtype='String'
         />
       </div>
       <h3 class="description added-segment">{{localize "TRINITY_SECOND.SheetLabels.Description"}}</h3>
       {{editor
         enrichedDescription
-        target='system.weapon.description'
+        target='system.description'
         engine='prosemirror'
         button=true
         editable=editable

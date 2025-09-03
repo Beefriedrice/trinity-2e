@@ -3,9 +3,13 @@
   padding: 5px;
 }
 
+.nova .sheet-tabs .active {
+  text-shadow: 0 0 10px $shadow-color !important;
+}
+
 .nova .tabs .item:hover, .nova .tabs .item:focus {
-  text-shadow: 0 0 10px red;
-  color: red;
+  text-shadow: 0 0 10px $shadow-color;
+  color: $shadow-color;
 }
 
 .nova-header, .nova .items-list .items-header,  .nova .items-list .items-header .item-name {
@@ -38,6 +42,12 @@ h2.nova-header, h3.nova-header {
 //layout
 
 //-resource section
+
+.resource {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
+}
 
 .resource-section {
   display: flex;

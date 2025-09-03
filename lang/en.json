@@ -82,13 +82,16 @@
       "Handling": "Handling",
       "Hard": {"short": "Hard", "long": "Hard Armor"},
       "Health": "Health",
+      "Highl": "High-Level",
       "Injured": "Injured",
       "Injuries": "Injuries",
       "Item": "Trinity 2E Item Sheet",
       "Level": "Level",
+      "Lowl": "Low-Level",
       "Maimed": "Maimed",
       "Megaedges": "Mega-Edges",
       "Mental": "Mental",
+      "Midl": "Mid-Level",
       "Mod": "Mod",
       "Momentofinsp": "Moment of Inspiration",
       "Momentum": "Momentum",
@@ -148,7 +151,7 @@
       "Siz": "Size",
       "Spe": "Speed",
       "Tec": "Technology",
-      "Technology": "Technology"
+      "Tecscale": "Technology Scale"
     },
     "Effect": {
       "Duration": "Duration",

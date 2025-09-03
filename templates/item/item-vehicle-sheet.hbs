@@ -18,17 +18,19 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Enhancement"}}</label>
           <input
             type='text'
-            name='system.vehicle.enhancement'
-            value='{{system.vehicle.enhancement}}'
+            class="text-2digit"
+            name='system.enhancement'
+            value='{{system.enhancement}}'
             data-dtype='Number'
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Scale.Technology"}}</label>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Scale.Tecscale"}}</label>
           <input
             type='text'
-            name='system.vehicle.techscale'
-            value='{{system.vehicle.techscale}}'
+            class="text-2digit"
+            name='system.techscale'
+            value='{{system.techscale}}'
             data-dtype='Number'
           />
         </div>
@@ -36,17 +38,19 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Handling"}}</label>
           <input
             type='text'
-            name='system.vehicle.handling'
-            value='{{system.vehicle.handling}}'
-            data-dtype='Number'
+            class="text-2digit"
+            name='system.handling'
+            value='{{system.handling}}'
+            data-dtype='String'
           />
         </div>
         <div class='resource'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Speed"}}</label>
           <input
             type='text'
-            name='system.vehicle.speed'
-            value='{{system.vehicle.speed}}'
+            class="text-2digit"
+            name='system.speed'
+            value='{{system.speed}}'
             data-dtype='Number'
           />
         </div>
@@ -54,8 +58,9 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Size"}}</label>
           <input
             type='text'
-            name='system.vehicle.size'
-            value='{{system.vehicle.size}}'
+            class="text-2digit"
+            name='system.size'
+            value='{{system.size}}'
             data-dtype='Number'
           />
         </div>
@@ -63,17 +68,18 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Cost"}}</label>
           <input
             type='text'
-            name='system.vehicle.cost'
-            value='{{system.vehicle.cost}}'
+            class="text-2digit"
+            name='system.cost'
+            value='{{system.cost}}'
             data-dtype='Number'
           />
         </div>
-        <div class='resource'>
+        <div class=''>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.ScienceType"}}</label>
           <input
             type='text'
-            name='system.vehicle.sciencetype'
-            value='{{system.vehicle.sciencetype}}'
+            name='system.inventiontype'
+            value='{{system.inventiontype}}'
             data-dtype='String'
             list='inventiontype'
           />
@@ -92,12 +98,12 @@
             <option value="{{localize 'TRINITY_SECOND.Science.Mystic'}}">{{localize 'TRINITY_SECOND.Science.Mystic'}}</option>
           </datalist>
         </div>
-        <div class='resource'>
+        <div class=''>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.TechCat"}}</label>
           <input
             type='text'
-            name='system.vehicle.category'
-            value='{{system.vehicle.category}}'
+            name='system.category'
+            value='{{system.category}}'
             data-dtype='String'
             list='inventioncategory'
           />
@@ -130,8 +136,8 @@
       <div class='resource'>
         <input
           type='text'
-          name='system.vehicle.tags'
-          value='{{system.vehicle.tags}}'
+          name='system.tags'
+          value='{{system.tags}}'
           data-dtype='String'
         />
       </div>
@@ -139,8 +145,8 @@
       <div class='resource'>
         <input
           type='text'
-          name='system.vehicle.weapons'
-          value='{{system.vehicle.weapons}}'
+          name='system.weapons'
+          value='{{system.weapons}}'
           data-dtype='String'
         />
       </div>
@@ -149,7 +155,7 @@
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
-        target='system.vehicle.description'
+        target='system.description'
         engine='prosemirror'
         button=true
         editable=editable
