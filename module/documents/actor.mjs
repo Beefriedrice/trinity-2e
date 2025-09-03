@@ -49,7 +49,7 @@ export class TrinitySecondEditionActor extends Actor {
     systemData.health.maimed.max = systemData.health.maimed.base + systemData.health.maimed.stamina + systemData.health.maimed.added;
 
     //create a total health for token usage.
-    systemData.health.total.value = systemData.health.bruised.value + systemData.health.injured.value + systemData.health.maimed.value + systemData.hard.value;
+    systemData.health.total.value = systemData.health.bruised.value + systemData.health.injured.value + systemData.health.maimed.value + systemData.health.hard.value;
     systemData.health.total.max = systemData.health.bruised.max + systemData.health.injured.max + systemData.health.maimed.max + systemData.health.hard.max;
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
@@ -137,20 +137,7 @@ export class TrinitySecondEditionActor extends Actor {
   _getNovaRollData(data) {
     if (this.type !== 'nova') return;
 
-    // Copy the ability scores to the top level, so that rolls can use
-    // formulas like `@str.mod + 4`.
-    if (data.attributes) {
-      for (let [k, v] of Object.entries(data.attributes)) {
-        data[k] = foundry.utils.deepClone(v);
-      }
-    }
-
     data.quantum = data.traits.quantum.value ?? 1;
-
-    // Add level for easier access, or fall back to 0.
-    if (data.attributes.level) {
-      data.lvl = data.attributes.level.value ?? 0;
-    }
   }
 
   /**

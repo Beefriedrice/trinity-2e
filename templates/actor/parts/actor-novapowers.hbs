@@ -1,13 +1,23 @@
-<div class="tab qpowers" data-group="powers" data-tab="qpowers">
-    
-  {{!-- Quantum Power Section.  
+<nav class="power-sheet-tabs sheet-tabs tabs" data-group="powers">
+    <a class="item" data-tab="qpowers">Quantum Powers</a>
+    <a class="item" data-tab="megaedges">Mega Edges</a>
+    <a class="item" data-tab="skilltricks">Skill Tricks</a>
+    <a class="item" data-tab="transformations">Transcendence</a>
+    <a class="item" data-tab="options">Options</a>
+</nav>
+
+{{!-- Main Tab Section--}}
+<div class="power-sheet-body">
+
+{{!-- Quantum Power Sub Section.  
   Prebuilt for 3 power suites. 
   Powers go into the corresponding numbered power suite or if anything else into the "general" section. 
   --}}
+<div class="tab qpowers" data-group="powers" data-tab="qpowers">
   <div class="stat-detail-row">              
-    <label class="resource-label" for="system.traits.quantum.value">Quantum</label>
+    <label class="resource-label" for="system.traits.quantum.value">{{localize "TRINITY_SECOND.SheetLabels.Quantum"}}</label>
     <input class="text-2digit" type="text" name="system.traits.quantum.value" value="{{system.traits.quantum.value}}" data-dtype="Number"/>
-    <label class="resource-label" for="system.traits.quantumpoints.value">Quantum Points</label>
+    <label class="resource-label" for="system.traits.quantumpoints.value">{{localize "TRINITY_SECOND.SheetLabels.Quantumpoints"}}</label>
     <div>
       <input class="text-2digit" type="text" name="system.traits.quantumpoints.value" value="{{system.traits.quantumpoints.value}}" data-dtype="Number"/>
       <span class="math-label"> / </span>
@@ -87,7 +97,7 @@
 <div class="tab megaedges" data-group="powers" data-tab="megaedges">
   <ol class='items-list'>
     <li class='item flexrow items-header'>
-      <div class='item-name'>{{localize "TYPES.Item.megaedge"}} {{localize 'Name'}}</div>
+      <div class='item-name'>{{localize "TYPES.Item.megaedge"}}</div>
       <div class='item-rating'>{{localize 'TRINITY_SECOND.SheetLabels.Rating'}}</div>
       <div class='item-tags-short'>{{localize 'TRINITY_SECOND.SheetLabels.Tags'}}</div>
       <div class='item-controls'>
@@ -141,7 +151,7 @@
 <div class="tab skilltricks" data-group="powers" data-tab="skilltricks">
   <ol class='items-list'>
     <li class='item flexrow items-header'>
-      <div class='item-name'>{{localize "TYPES.Item.skilltrick"}} {{localize 'Name'}}</div>
+      <div class='item-name'>{{localize "TYPES.Item.skilltrick"}}</div>
       <div class='item-skill'>{{localize 'TRINITY_SECOND.SheetLabels.Skill'}}</div>
       <div class='item-formula'>{{localize 'Roll Formula'}}</div>
       <div class='item-controls'>
@@ -194,14 +204,14 @@
 {{!-- Transformations Section --}}
 <div class="tab transformations" data-group="powers" data-tab="transformations">
   <div class="stat-detail-row">
-    <label class="resource-label" for"system.traits.flux.value">Flux</label>
+    <label class="resource-label" for"system.traits.flux.value">{{localize "TRINITY_SECOND.SheetLabels.Flux"}}</label>
     <input class="text-2digit" type="number" name="system.traits.flux.value" value="{{system.traits.flux.value}}" data-dtype="Number"/>  
-    <label class="resource-label" for"system.traits.transcendence.value">Transcendence</label>
+    <label class="resource-label" for"system.traits.transcendence.value">{{localize "TRINITY_SECOND.SheetLabels.Transcendence"}}</label>
     <input class="text-2digit" type="number" name="system.traits.transcendence.value" value="{{system.traits.transcendence.value}}" data-dtype="Number"/>
   </div>
   <ol class='items-list'>
     <li class='item flexrow items-header'>
-      <div class='item-name'>{{localize "TYPES.Item.transformation"}} {{localize 'Name'}}</div>
+      <div class='item-name'>{{localize "TYPES.Item.transformation"}}</div>
       <div class='item-level'>{{localize 'TRINITY_SECOND.SheetLabels.Level'}}</div>
       <div class='item-controls'>
         <a
@@ -251,36 +261,30 @@
 
 {{!-- Power Options Section.--}}
 <div class="tab paths" data-group="powers" data-tab="options">
-  <h3 class="nova-header">Power Suites</h3>
+  <h3 class="nova-header">{{localize "TRINITY_SECOND.SheetLabels.Powersuites"}}</h3>
   <div class="stat-detail-row">
-    <div class="suite-column resource-label">Non-Suite</div>
-    <label class="suite-name">Name: </label>
+    <div class="suite-column resource-label">{{localize "TRINITY_SECOND.SheetLabels.Nopowersuite"}}</div>
+    <label class="suite-name">{{localize "TRINITY_SECOND.SheetLabels.Name"}}: </label>
     <input class="suite-text" type="text" name="system.powersuite.none" value="{{system.powersuite.none}}" data-dtype="String"/>
   </div>
   <div class="stat-detail-row">
-    <div class="suite-column resource-label">1st Suite</div>
-    <label class="suite-name">Name: </label>
+    <div class="suite-column resource-label">{{localize "TRINITY_SECOND.SheetLabels.Suite1"}}</div>
+    <label class="suite-name">{{localize "TRINITY_SECOND.SheetLabels.Name"}}: </label>
     <input class="suite-text" type="text" name="system.powersuite.one" value="{{system.powersuite.one}}" data-dtype="String"/>
-    {{!--The continuing failed attempts to allow players to control the number of power suites that show. 
-    {{#if system.powersuite.hideone}}
-      <input type="checkbox" name="system.powersuite.hideone" value="true" checked>
-    {{else}}
-      <input type="checkbox" name="system.powersuite.hideone" value="false">
-    {{/if}}--}}
   </div>
   <div class="stat-detail-row">
-    <div class="suite-column resource-label">2nd Suite</div>
-    <label class="suite-name">Name: </label>
+    <div class="suite-column resource-label">{{localize "TRINITY_SECOND.SheetLabels.Suite2"}}</div>
+    <label class="suite-name">{{localize "TRINITY_SECOND.SheetLabels.Name"}}: </label>
     <input class="suite-text" type="text" name="system.powersuite.two" value="{{system.powersuite.two}}" data-dtype="String"/>
   </div>
   <div class="stat-detail-row">
-    <div class="suite-column resource-label">3rd Suite</div>
-    <label class="suite-name">Name: </label>
+    <div class="suite-column resource-label">{{localize "TRINITY_SECOND.SheetLabels.Suite3"}}</div>
+    <label class="suite-name">{{localize "TRINITY_SECOND.SheetLabels.Name"}}: </label>
     <input class="suite-text" type="text" name="system.powersuite.three" value="{{system.powersuite.three}}" data-dtype="String"/>
   </div>
-  <h3 class="nova-header">Maxed Out Tracking</h3>
+  <h3 class="nova-header">{{localize "TRINITY_SECOND.SheetLabels.Maxedtrack"}}</h3>
   <div class="maxed-out-row">
-    <label class="maxed-out resource-label" for="system.quantum.maxedout">Quantum Maxed Out?</label>
+    <label class="maxed-out resource-label" for="system.quantum.maxedout">{{localize "TRINITY_SECOND.SheetLabels.Quantum"}} {{localize "TRINITY_SECOND.SheetLabels.Maxedout"}}?</label>
     {{#if system.quantum.maxedout}} 
       <input class="align-boxes small-check" type="checkbox" name="system.quantum.maxedout" value="true" checked data-dtype="Boolean"/>
     {{else}}
@@ -289,7 +293,7 @@
   </div>
   {{#each system.attributes as |attribute key|}}
     <div class="maxed-out-row">
-      <label class="maxed-out resource-label" for="system.attributes.{{key}}.mega.maxedout">{{localize (lookup @root.config.megaattributes key)}} Maxed Out?</label>
+      <label class="maxed-out resource-label" for="system.attributes.{{key}}.mega.maxedout">{{localize (lookup @root.config.megaattributes key)}} {{localize "TRINITY_SECOND.SheetLabels.Maxedout"}}?</label>
       {{#if attribute.mega.maxedout}}
         <input class="align-boxes small-check" type="checkbox" name="system.attributes.{{key}}.mega.maxedout" value="true" data-dtype="Boolean" checked/>
       {{else}}
@@ -297,4 +301,5 @@
       {{/if}}
     </div>
   {{/each}}
+</div>
 </div>

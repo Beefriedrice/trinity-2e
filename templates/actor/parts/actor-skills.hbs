@@ -1,9 +1,0 @@
-
-    <div class="skills grid grid-3col">
-    {{#each system.skill as |attribute key|}}
-        <div class="skills flexrow flex-group-center">
-            <label for="system.skills.{{key}}.value" class="resource-label flexlarge align-left" data-skill="@skills.{{key}}.value" data-roll="(@skills.{{key}}.value)d10x=10cs>=8" data-label="{{localize (lookup @root.config.skills key)}}">{{localize (lookup @root.config.skills key)}}</label>
-            <input type="text" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
-        </div>
-    {{/each}}
-    </div>

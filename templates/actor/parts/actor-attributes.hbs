@@ -27,10 +27,12 @@
                     <label class="resource-label flex-left" for="system.attributes.{{key}}.value" data-attribute="@attributes.{{key}}.value" data-roll="(@attributes.{{key}}.value)d10x=10cs>=8" data-label="{{localize (lookup @root.config.attributes key)}}">{{localize (lookup @root.config.attributes key)}}</label>
                     <input class="text-2digit" type="number" name="system.attributes.{{key}}.value" value="{{attribute.value}}" min="0" max="10" data-dtype="Number"/>
                 </div>
+                {{#if (eq @root.document.type 'nova')}}
                 <div class="flexrow valign-center">
                     <label class="resource-label" for="system.attributes.{{key}}.mega.value" data-roll="(@attributes.{{key}}.mega.value)d10x=10cs>=8" data-label="{{localize (lookup @root.config.megaattributes key)}}">{{localize (lookup @root.config.megaattributes key)}}</label>
                     <input class="text-2digit" type="number" name="system.attributes.{{key}}.mega.value" value="{{attribute.mega.value}}" min="0" max="10" data-dtype="Number"/>
                 </div>
+                {{/if}}
             </div>
         {{/each}}
         </div>
@@ -52,7 +54,7 @@
 <div class="tab specialties" data-group="attributes" data-tab="specialties">
     <ol class='items-list'>
     <li class='item flexrow items-header'>
-        <div class='item-name'>{{localize "TYPES.Item.specialty"}} {{localize 'Name'}}</div>
+        <div class='item-name'>{{localize "TYPES.Item.specialty"}}</div>
         <div class='item-skill'>{{localize 'TRINITY_SECOND.SheetLabels.Skill'}}</div>
         <div class='item-rating'>{{localize 'TRINITY_SECOND.SheetLabels.Rating'}}</div>
         <div class='item-formula'>{{localize 'Roll Formula'}}</div>
@@ -109,7 +111,7 @@
 <div class="tab edges" data-group="attributes" data-tab="edges">
     <ol class='items-list'>
     <li class='item flexrow items-header'>
-        <div class='item-name'>{{localize "TYPES.Item.edge"}} {{localize 'Name'}}</div>
+        <div class='item-name'>{{localize "TYPES.Item.edge"}}</div>
         <div class='item-category'>{{localize 'TRINITY_SECOND.SheetLabels.Category'}}</div>
         <div class='item-rating'>{{localize 'TRINITY_SECOND.SheetLabels.Rating'}}</div>
         <div class='item-formula'>{{localize 'Roll Formula'}}</div>
@@ -163,7 +165,7 @@
 
 {{!-- Scale Section --}}
 <div class="tab scale" data-group="attributes" data-tab="scale">
-    <h2 class="flex-group-center nova-header">Scale</h2>
+    <h2 class="flex-group-center nova-header">{{localize "TRINITY_SECOND.SheetLabels.Scale"}}</h2>
     <div class="scale grid grid-4col">
         {{#each system.scale as |scale key|}}
             <div class="scale-cell">
@@ -172,7 +174,7 @@
             </div>
         {{/each}}
     </div>
-    <h3 class="added-segment">Circumstantial Modifiers</h3>
+    <h3 class="added-segment">{{localize "TRINITY_SECOND.SheetLabels.Circumstantialmod"}}</h3>
     <div class="scale">
         <textarea class="scale-mods" rows="10" name="system.templates.scalemodifiers" data-dtype="String">{{system.templates.scalemodifiers}}</textarea>
     </div>

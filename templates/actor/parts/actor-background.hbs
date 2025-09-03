@@ -1,13 +1,13 @@
 <div>
     <div class="stat-detail-row">
-        <div class="resource-label">XP Spent</div>
+        <div class="resource-label">{{localize "TRINITY_SECOND.SheetLabels.Xpspent"}}</div>
         <input class="text-3digit" type=text name="system.experience.spent" value="{{system.experience.spent}}"/>
-        <div class="resource-label">XP Remaining</div>
+        <div class="resource-label">{{localize "TRINITY_SECOND.SheetLabels.Xpremaining"}}</div>
         <input class="text-3digit" type=text name="system.experience.current" value="{{system.experience.current}}" readonly/>
-        <div class="resource-label">Total XP Earned</div>
+        <div class="resource-label">{{localize "TRINITY_SECOND.SheetLabels.Xptotal"}}</div>
         <input class="text-3digit" type=text name="system.experience.total" value="{{system.experience.total}}"/>
     </div>
-    <h3 class="nova-header added-segment">Background</h3>
+    <h3 class="nova-header added-segment">{{localize "TRINITY_SECOND.SheetLabels.Characterbackground"}}</h3>
     <div>
         <label class="" for"system.templates.concept">{{localize "TRINITY_SECOND.SheetLabels.Concept"}}</label>
         <input class="" type="text" name="system.templates.concept" value="{{system.templates.concept}}" data-dtype="String"/>
