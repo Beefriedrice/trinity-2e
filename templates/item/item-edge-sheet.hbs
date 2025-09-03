@@ -18,14 +18,15 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Rating"}}</label>
           <input
             type='text'
-            name='system.edge.rating'
-            value='{{system.edge.rating}}'
+            class="text-2digit"
+            name='system.rating'
+            value='{{system.rating}}'
             data-dtype='String'
           />
         </div>
-        <div class='resource'>
+        <div class='resource-text grid-span-2'>
           <label class='resource-label'>Category</label>
-          <input type="text" list="edgeCategories" name="system.edge.category" value="{{system.edge.category}}" data-dtype="Text">
+          <input type="text" list="edgeCategories" name="system.category" value="{{system.category}}" data-dtype="Text">
           <datalist id="edgeCategories">
             <option value="{{localize "TRINITY_SECOND.Edge.Type.Men"}}">{{localize "TRINITY_SECOND.Edge.Type.Men"}}</option>
             <option value="{{localize "TRINITY_SECOND.Edge.Type.Phy"}}">{{localize "TRINITY_SECOND.Edge.Type.Phy"}}</option>
@@ -38,12 +39,11 @@
             <option value="{{localize "TRINITY_SECOND.Edge.Type.Nov"}}">{{localize "TRINITY_SECOND.Edge.Type.Nov"}}</option>
           </datalist>
         </div>
-      </div>
-      <div>
-        <div><label class="resource-label">{{localize "TRINITY_SECOND.SheetLabels.Prereq"}}</label><input type="text" data-dtype="Text" name="system.edge.prereq" value="{{system.edge.prereq}}"><br>
+        <div class="resource-text grid-span-2">
+          <label class="resource-label">{{localize "TRINITY_SECOND.SheetLabels.Prereq"}}</label>
+          <input type="text" data-dtype="Text" name="system.prereq" value="{{system.prereq}}"><br>
         </div>
       </div>
-      
     </div>
   </header>
 

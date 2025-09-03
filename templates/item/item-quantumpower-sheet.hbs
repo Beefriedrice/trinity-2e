@@ -15,20 +15,12 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.QMin"}}</label>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Rating"}}</label>
           <input
             type='text'
-            name='system.quantumpower.qminimum'
-            value='{{system.quantumpower.qminimum}}'
-            data-dtype='Number'
-          />
-        </div>
-        <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Action"}}</label>
-          <input
-            type='text'
-            name='system.quantumpower.action'
-            value='{{system.quantumpower.action}}'
+            class='text-2digit'
+            name='system.rating'
+            value='{{system.rating}}'
             data-dtype='Number'
           />
         </div>
@@ -36,56 +28,63 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Cost"}}</label>
           <input
             type='text'
-            name='system.quantumpower.cost'
-            value='{{system.quantumpower.cost}}'
+            class='text-2digit'
+            name='system.cost'
+            value='{{system.cost}}'
             data-dtype='Number'
           />
         </div>
-        <div class='resource'>
+        <div class='resource-text'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.QMin"}}</label>
+          <input
+            type='text'
+            name='system.qminimum'
+            value='{{system.qminimum}}'
+            data-dtype='String'
+          />
+        </div>
+        <div class='resource-text'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Action"}}</label>
+          <input
+            type='text'
+            name='system.action'
+            value='{{system.action}}'
+            list='action-type'
+            data-dtype='String'
+          />
+          <datalist id="action-type">
+            <option value="Ordinary">{{localize "TRINITY_SECOND.SheetLabels.Ordinary"}}</option>
+            <option value="Reflexive">{{localize "TRINITY_SECOND.SheetLabels.Reflexive"}}</option>
+          </datalist>
+        </div>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Dice"}}</label>
           <input
             type='text'
-            name='system.quantumpower.dicepool'
-            value='{{system.quantumpower.dicepool}}'
-            data-dtype='Number'
+            name='system.dicepool'
+            value='{{system.dicepool}}'
+            data-dtype='String'
           />
         </div>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Range"}}</label>
           <input
             type='text'
-            name='system.quantumpower.range'
-            value='{{system.quantumpower.range}}'
-            data-dtype='Number'
+            name='system.range'
+            value='{{system.range}}'
+            data-dtype='String'
           />
         </div>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Duration"}}</label>
           <input
             type='text'
-            name='system.quantumpower.duration'
-            value='{{system.quantumpower.duration}}'
-            data-dtype='Number'
+            name='system.duration'
+            value='{{system.duration}}'
+            data-dtype='String'
           />
         </div>
-        <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Rating"}}</label>
-          <input
-            type='text'
-            name='system.quantumpower.rating'
-            value='{{system.quantumpower.rating}}'
-            data-dtype='Number'
-          />
-        </div>
-        <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Maxed"}}</label>    
-          {{#if system.quantumpower.maxedout}}
-            <input type="checkbox" name="system.quantumpower.maxedout" value="true" checked>
-          {{else}}
-            <input type="checkbox" name="system.quantumpower.maxedout" value="false">
-          {{/if}}
-        </div>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Suite"}}</label>
           <input
             type='text'
@@ -100,6 +99,14 @@
             <option value="3">3</option>
             <option value="None">None</option>
           </datalist>
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Maxed"}}</label>    
+          {{#if system.maxedout}}
+            <input type="checkbox" class='medium-check' name="system.maxedout" value="true" checked>
+          {{else}}
+            <input type="checkbox" class='medium-check' name="system.maxedout" value="false">
+          {{/if}}
         </div>
       </div>
     </div>
@@ -120,7 +127,7 @@
         {{! Editors must receive enriched text data from getData to properly handle rolls }}
         {{editor
           enrichedDescription
-          target='system.quantumpower.description'
+          target='system.description'
           engine='prosemirror'
           button=true
           editable=editable
@@ -134,8 +141,8 @@
       <div class="resource">
         <input
           type='text'
-          name='system.quantumpower.tags'
-          value='{{system.quantumpower.tags}}'
+          name='system.tags'
+          value='{{system.tags}}'
           data-dtype='String'
         />
       </div>
@@ -143,7 +150,7 @@
         {{! Editors must receive enriched text data from getData to properly handle rolls }}
         {{editor
           enrichedDescription
-          target='system.quantumpower.tagdescription'
+          target='system.tagdescription'
           engine='prosemirror'
           button=true
           editable=editable

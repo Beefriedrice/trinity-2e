@@ -14,7 +14,7 @@
           placeholder='Name'
         /></h1>
       <div class='grid grid-2col'>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Wound"}}</label>
           <input
             type='text'
@@ -24,28 +24,28 @@
             data-dtype='String'
           />
           <datalist id="wound-type">
-            <option value="Armor">Armor</option>
-            <option value="Bruised">Bruised</option>
-            <option value="Injured">Injured</option>
-            <option value="Maimed">Maimed</option>
+            <option value="Armor">{{localize "TRINITY_SECOND.SheetLabels.Armor"}}</option>
+            <option value="Bruised">{{localize "TRINITY_SECOND.SheetLabels.Bruised"}}</option>
+            <option value="Injured">{{localize "TRINITY_SECOND.SheetLabels.Injured"}}</option>
+            <option value="Maimed">{{localize "TRINITY_SECOND.SheetLabels.Maimed"}}</option>
           </datalist>
         </div>
-        <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Firstaid"}}</label>
-          {{#if system.injury.firstaid}}
-            <input type="checkbox" name="system.injury.firstaid" value="true" checked data-dtype="Boolean"/>
-          {{else}}
-            <input type="checkbox" name="system.injury.firstaid" value="false" data-dtype="Boolean"/>
-          {{/if}}
-        </div>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Woundsource"}}</label>
           <input
             type='text'
-            name='system.injury.source'
-            value='{{system.injury.source}}'
+            name='system.source'
+            value='{{system.source}}'
             data-dtype='String'
           />
+        </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Firstaid"}}</label>
+          {{#if system.firstaid}}
+            <input type="checkbox" class="medium-check" name="system.firstaid" value="true" checked data-dtype="Boolean"/>
+          {{else}}
+            <input type="checkbox" class="medium-check" name="system.firstaid" value="false" data-dtype="Boolean"/>
+          {{/if}}
         </div>
       </div>
     </div>

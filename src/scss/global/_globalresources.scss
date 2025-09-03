@@ -18,8 +18,8 @@
     text-align: start;
   }
   .resource-controls {
-    margin-right: 10px;
     text-align: end;
+    margin-left: 25px;
   }
   .resource-button {
     background: white;
@@ -54,4 +54,11 @@
   border: solid 3px;
   border-radius: 10px;
   font-size: 11px;
+}
+
+.atmosphere-flex {
+  margin-left: 4px;
+  max-width: 15px;
+  min-width: 15px;
+  text-align: end;
 }

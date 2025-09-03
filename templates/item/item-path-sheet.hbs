@@ -18,8 +18,9 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Currentrating"}}</label>
           <input
             type='text'
-            name='system.path.rating.value'
-            value='{{system.path.rating.value}}'
+            class="text-2digit"
+            name='system.rating.value'
+            value='{{system.rating.value}}'
             data-dtype='Number'
           />
         </div>
@@ -27,61 +28,62 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Rating"}}</label>
           <input
             type='text'
-            name='system.path.rating.max'
-            value='{{system.path.rating.max}}'
+            class="text-2digit"
+            name='system.rating.max'
+            value='{{system.rating.max}}'
             data-dtype='Number'
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Pathtype"}}</label>
-          <input
-            type='text'
-            name='system.path.type'
-            list='path-types'
-            value='{{system.path.type}}'
-            data-dtype='String'
-          />
-          <datalist id="path-types">
-            <option value="Origin">Origin</option>
-            <option value="Role">Role</option>
-            <option value="Society">Society</option>
-            <option value="Additional Path 1">Additional Path 1</option>
-            <option value="Additional Path 2">Additional Path 2</option>
-          </datalist>
-        </div>
-        <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Community"}}</label>
-          <input
-            type='text'
-            name='system.path.community'
-            value='{{system.path.community}}'
-            data-dtype='String'
-          />
-        </div>
-        <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Access"}}</label>
-          <input
-            type='text'
-            name='system.path.access'
-            value='{{system.path.access}}'
-            data-dtype='String'
-          />
-        </div>
-        <div class='resource'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Revoked"}}</label>    
-          {{#if system.path.revoked}}
-            <input type="checkbox" name="system.path.revoked" value="true" checked>
+          {{#if system.revoked}}
+            <input type="checkbox" name="system.revoked" value="true" checked>
           {{else}}
-            <input type="checkbox" name="system.path.revoked" value="false">
+            <input type="checkbox" name="system.revoked" value="false">
           {{/if}}
         </div>
         <div class='resource'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Suspended"}}</label>    
-          {{#if system.path.suspended}}
-            <input type="checkbox" name="system.path.suspended" value="true" checked>
+          {{#if system.suspended}}
+            <input type="checkbox" name="system.suspended" value="true" checked>
           {{else}}
-            <input type="checkbox" name="system.path.suspended" value="false">
+            <input type="checkbox" name="system.suspended" value="false">
           {{/if}}
+        </div>
+        <div class='resource-text'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Pathtype"}}</label>
+          <input
+            type='text'
+            name='system.type'
+            list='path-types'
+            value='{{system.type}}'
+            data-dtype='String'
+          />
+          <datalist id="path-types">
+            <option value="Origin">{{localize "TRINITY_SECOND.SheetLabels.Origin"}}</option>
+            <option value="Role">{{localize "TRINITY_SECOND.SheetLabels.Role"}}</option>
+            <option value="Society">{{localize "TRINITY_SECOND.SheetLabels.Society"}}</option>
+            <option value="Additional Path 1">{{localize "TRINITY_SECOND.SheetLabels.Additional1"}}</option>
+            <option value="Additional Path 2">{{localize "TRINITY_SECOND.SheetLabels.Additional2"}}</option>
+          </datalist>
+        </div>
+        <div class='resource-text'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Community"}}</label>
+          <input
+            type='text'
+            name='system.community'
+            value='{{system.community}}'
+            data-dtype='String'
+          />
+        </div>
+        <div class='resource-text'>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Access"}}</label>
+          <input
+            type='text'
+            name='system.access'
+            value='{{system.access}}'
+            data-dtype='String'
+          />
         </div>
       </div>
     </div>
@@ -102,7 +104,7 @@
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
-        target='system.path.description'
+        target='system.description'
         engine='prosemirror'
         button=true
         editable=editable
@@ -112,11 +114,11 @@
     {{! Options Tab }}
     <div class='tab' data-group='primary' data-tab='options'>
       <h3>{{localize "TRINITY_SECOND.SheetLabels.Skills"}}</h3>
-      <div class='resource'>
+      <div class='resource-text'>
         <input
           type='text'
-          name='system.path.skills'
-          value='{{system.path.skills}}'
+          name='system.skills'
+          value='{{system.skills}}'
           data-dtype='String'
         />
       </div>
@@ -124,8 +126,8 @@
       <div class='resource'>
         <input
           type='text'
-          name='system.path.edges'
-          value='{{system.path.edges}}'
+          name='system.edges'
+          value='{{system.edges}}'
           data-dtype='String'
         />
       </div>

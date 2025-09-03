@@ -18,6 +18,7 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Soft.long"}}</label>
           <input
             type='text'
+            class="text-2digit"
             name='system.soft'
             value='{{system.soft}}'
             data-dtype='Number'
@@ -27,6 +28,7 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Hard.long"}}</label>
           <input
             type='text'
+            class="text-2digit"
             name='system.hard'
             value='{{system.hard}}'
             data-dtype='Number'
@@ -36,17 +38,19 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Enhancement"}}</label>
           <input
             type='text'
-            name='system.armor.enhancement'
-            value='{{system.armor.enhancement}}'
+            class="text-2digit"
+            name='system.enhancement'
+            value='{{system.enhancement}}'
             data-dtype='Number'
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Scale.Technology"}}</label>
+          <label class='resource-label'>{{localize "TRINITY_SECOND.Scale.Tecscale"}}</label>
           <input
             type='text'
-            name='system.armor.techscale'
-            value='{{system.armor.techscale}}'
+            class="text-2digit"
+            name='system.techscale'
+            value='{{system.techscale}}'
             data-dtype='Number'
           />
         </div>
@@ -54,8 +58,9 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Size"}}</label>
           <input
             type='text'
-            name='system.armor.size'
-            value='{{system.armor.size}}'
+            class="text-2digit"
+            name='system.size'
+            value='{{system.size}}'
             data-dtype='Number'
           />
         </div>
@@ -63,17 +68,18 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Cost"}}</label>
           <input
             type='text'
-            name='system.armor.cost'
-            value='{{system.armor.cost}}'
+            class="text-2digit"
+            name='system.cost'
+            value='{{system.cost}}'
             data-dtype='Number'
           />
         </div>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.ScienceType"}}</label>
           <input
             type='text'
-            name='system.armor.sciencetype'
-            value='{{system.armor.sciencetype}}'
+            name='system.inventiontype'
+            value='{{system.inventiontype}}'
             data-dtype='String'
             list='inventiontype'
           />
@@ -92,12 +98,12 @@
             <option value="{{localize 'TRINITY_SECOND.Science.Mystic'}}">{{localize 'TRINITY_SECOND.Science.Mystic'}}</option>
           </datalist>
         </div>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.TechCat"}}</label>
           <input
             type='text'
-            name='system.armor.category'
-            value='{{system.armor.category}}'
+            name='system.category'
+            value='{{system.category}}'
             data-dtype='String'
             list='inventioncategory'
           />
@@ -112,12 +118,21 @@
           </datalist>
         </div>
         <div class="resource">
-          <label class="resource-label">Equipped?</label>
+          <label class="resource-label">{{localize "TRINITY_SECOND.SheetLabels.Isequipped"}}</label>
           {{#if system.isEquipped}}
-            <input type="checkbox" name="system.isEquipped" value="true" checked />
+            <input type="checkbox" class="medium-check" name="system.isEquipped" value="true" checked />
           {{else}}
-            <input type="checkbox" name="system.isEquipped" value="false" />
+            <input type="checkbox" class="medium-check" name="system.isEquipped" value="false" />
           {{/if}}
+        </div>
+        <div class='resource-text grid-span-2'>
+          <label class="resource-label">{{localize "TRINITY_SECOND.SheetLabels.Tags"}}</label>
+          <input
+            type='text'
+            name='system.tags'
+            value='{{system.tags}}'
+            data-dtype='String'
+          />
         </div>
       </div>
     </div>
@@ -134,20 +149,10 @@
 
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
-      <h3>{{localize "TRINITY_SECOND.SheetLabels.Tags"}}</h3>
-      <div class='resource'>
-        <input
-          type='text'
-          name='system.armor.tags'
-          value='{{system.armor.tags}}'
-          data-dtype='String'
-        />
-      </div>
-      <h3 class="description added-segment">{{localize "TRINITY_SECOND.SheetLabels.Description"}}</h3>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
-        target='system.armor.description'
+        target='system.description'
         engine='prosemirror'
         button=true
         editable=editable

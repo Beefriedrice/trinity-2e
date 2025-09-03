@@ -243,8 +243,8 @@
   text-align: start;
 }
 .group-resources .resource-controls {
-  margin-right: 10px;
   text-align: end;
+  margin-left: 25px;
 }
 .group-resources .resource-button {
   background: white;
@@ -277,6 +277,13 @@
   border: solid 3px;
   border-radius: 10px;
   font-size: 11px;
+}
+
+.atmosphere-flex {
+  margin-left: 4px;
+  max-width: 15px;
+  min-width: 15px;
+  text-align: end;
 }
 
 #controls .quick-dice-sheet-popup.control-tool {
@@ -387,6 +394,11 @@
 .trinity-2e .small-check {
   width: 13px;
   height: 13px;
+}
+.trinity-2e .medium-check {
+  width: 16px;
+  height: 16px;
+  padding-bottom: 3px;
 }
 .trinity-2e .resource-label {
   font-weight: bold;

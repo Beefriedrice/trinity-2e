@@ -32,10 +32,10 @@
         </div>
         <h4>{{item.name}}</h4>
       </div>
-      <div class='item-prating'>{{item.system.path.rating.value}} / {{item.system.path.rating.max}}</div>
-      <div class='item-ptype'>{{item.system.path.type}}</div>
-      <div class='item-suspended'>{{#if item.system.path.revoked}}Yes{{else}}No{{/if}}</div>
-      <div class='item-suspended'>{{#if item.system.path.suspended}}Yes{{else}}No{{/if}}</div>
+      <div class='item-prating'>{{item.system.rating.value}} / {{item.system.rating.max}}</div>
+      <div class='item-ptype'>{{item.system.type}}</div>
+      <div class='item-suspended'>{{#if item.system.revoked}}Yes{{else}}No{{/if}}</div>
+      <div class='item-suspended'>{{#if item.system.suspended}}Yes{{else}}No{{/if}}</div>
       <div class='item-controls'>
         <a
           class='item-control item-edit'
@@ -87,9 +87,9 @@
         </div>
         <h4>{{item.name}}</h4>
       </div>
-      <div class='item-prating'>{{item.system.contact.rating.value}} / {{item.system.contact.rating.max}}</div>
-      <div class='item-path'>{{item.system.contact.path}}</div>
-      <div class='item-tags-short'>{{item.system.contact.tags}}</div>
+      <div class='item-prating'>{{item.system.rating.value}} / {{item.system.rating.max}}</div>
+      <div class='item-path'>{{item.system.path}}</div>
+      <div class='item-tags-short'>{{item.system.tags}}</div>
       <div class='item-controls'>
         <a
           class='item-control item-edit'

@@ -18,8 +18,9 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Currentrating"}}</label>
           <input
             type='text'
-            name='system.contact.rating.value'
-            value='{{system.contact.rating.value}}'
+            class="text-2digit"
+            name='system.rating.value'
+            value='{{system.rating.value}}'
             data-dtype='Number'
           />
         </div>
@@ -27,26 +28,27 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Rating"}}</label>
           <input
             type='text'
-            name='system.contact.rating.max'
-            value='{{system.contact.rating.max}}'
+            class="text-2digit"
+            name='system.rating.max'
+            value='{{system.rating.max}}'
             data-dtype='Number'
           />
         </div>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TYPES.Item.path"}}</label>
           <input
             type='text'
-            name='system.contact.path'
-            value='{{system.contact.path}}'
+            name='system.path'
+            value='{{system.path}}'
             data-dtype='String'
           />
         </div>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Tags"}}</label>
           <input
             type='text'
-            name='system.contact.tags'
-            value='{{system.contact.tags}}'
+            name='system.tags'
+            value='{{system.tags}}'
             data-dtype='String'
           />
         </div>
@@ -68,7 +70,7 @@
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
-        target='system.contact.description'
+        target='system.description'
         engine='prosemirror'
         button=true
         editable=editable

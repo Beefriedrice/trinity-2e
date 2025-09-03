@@ -14,30 +14,30 @@
           placeholder='Name'
         /></h1>
       <div class='grid grid-2col'>
-        <div class='resource'>
+        <div class='resource-text grid-span-2'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Assocperson"}}</label>
           <input
             type='text'
-            name='system.bond.person'
-            value='{{system.bond.person}}'
+            name='system.person'
+            value='{{system.person}}'
             data-dtype='String'
           />
         </div>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Duration"}}</label>
           <input
             type='text'
-            name='system.bond.duration'
-            value='{{system.bond.duration}}'
+            name='system.duration'
+            value='{{system.duration}}'
             data-dtype='String'
           />
         </div>
-        <div class='resource'>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Diceroll"}}</label>
           <input
             type='text'
-            name='system.bond.diceroll'
-            value='{{system.bond.diceroll}}'
+            name='system.diceroll'
+            value='{{system.diceroll}}'
             data-dtype='String'
           />
         </div>
@@ -45,9 +45,10 @@
           <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Successes"}}</label>
           <input
             type='text'
-            name='system.bond.successes'
-            value='{{system.bond.successes}}'
-            data-dtype='String'
+            class="text-3digit"
+            name='system.successes'
+            value='{{system.successes}}'
+            data-dtype='Number'
           />
         </div>
       </div>
@@ -65,12 +66,12 @@
   <section class='sheet-body'>
     {{! Feature Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
-      <div class='resource'>
+      <div class='resource-text'>
         <h3 class=''>{{localize "TRINITY_SECOND.SheetLabels.Action"}}</h3>
         <input
           type='text'
-          name='system.bond.action'
-          value='{{system.bond.action}}'
+          name='system.action'
+          value='{{system.action}}'
           data-dtype='String'
         />
       </div>
@@ -78,7 +79,7 @@
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
-        target='system.bond.feature'
+        target='system.feature'
         engine='prosemirror'
         button=true
         editable=editable
@@ -92,7 +93,7 @@
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
-        target='system.bond.drawback'
+        target='system.drawback'
         engine='prosemirror'
         button=true
         editable=editable
