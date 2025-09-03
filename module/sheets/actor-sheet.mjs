@@ -220,11 +220,11 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       // Append to injury.
       else if (i.type === 'injury') {
         injury.push(i);
-        if (i.system.injury.wound === 'Bruised' || i.system.injury.wound === 'bruised') {
+        if (i.system.wound === 'Bruised' || i.system.wound === 'bruised') {
           bruised += 1;
-        } else if (i.system.injury.wound === 'Injured' || i.system.injury.wound === 'injured') {
+        } else if (i.system.wound === 'Injured' || i.system.wound === 'injured') {
           injured += 1;
-        } else if (i.system.injury.wound === 'Maimed' || i.system.injury.wound === 'maimed') {
+        } else if (i.system.wound === 'Maimed' || i.system.wound === 'maimed') {
           maimed += 1;
         }
       }

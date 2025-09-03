@@ -111,10 +111,16 @@
 }
 
 .approach {
-  flex: 1 5 60px;
-  max-width: 60px;
-  min-width: 40px;
-  font-size: 16px;
+  flex: 0 0 55px;
+  max-width: 55px;
+  min-width: 55px;
+  display: flex;
+  margin-right: 5px;
+  align-items: center;
+}
+
+.approach-label {
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -153,4 +159,37 @@
   justify-content: space-around;
   align-items: center;
   margin: 10px 0;
+}
+
+.suite-column {
+  flex: 0 0 80px;
+}
+
+.small-box {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border: 2px solid black;
+  border-radius: 2px;
+  content: none;
+  outline: none;
+  margin-bottom: 2px;
+  margin-right: 3px;
+  box-shadow: rgba(0,0,0, 0.24) 0px 3px 8px;
+  flex: 0 0 13px;
+}
+
+.small-box:checked {
+  background-color: black;
+  border: 2px solid black;
+}
+
+.small-box:checked::before {
+  position: absolute;
+  color: black !important;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 2px;
 }

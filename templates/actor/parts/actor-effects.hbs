@@ -61,6 +61,7 @@
             class='item-control item-create'
             title='{{localize "DOCUMENT.Create" type='Injury'}}'
             data-type='injury'
+            data-wound='Bruised'
           >
             <i class='fas fa-plus'></i>
             {{localize 'DOCUMENT.New' type=''}}
@@ -82,7 +83,7 @@
             </div>
             <h4>{{item.name}}</h4>
           </div>
-          <div class="item-wound">{{item.system.injury.wound}}</div>
+          <div class="item-wound">{{item.system.wound}}</div>
           <div class="item-first">{{#if item.system.injury.firstaid}}Yes{{else}}No{{/if}}</div>
           <div class='item-controls'>
             <a

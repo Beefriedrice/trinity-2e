@@ -11,11 +11,15 @@
             <div class="attribute"><h3>{{localize "TRINITY_SECOND.SheetLabels.Physical"}}</h3></div>
             <div class="attribute"><h3>{{localize "TRINITY_SECOND.SheetLabels.Social"}}</h3></div>
         {{#each system.attributes as |attribute key|}}
-            {{#if attribute.row}}
+            {{#if (or (eq @index 0) (eq @index 3) (eq @index 6))}}
         </div>
         <div class="valign-center attribute-row">
-            <div class="approach flex-col valign-center">
-                <div class="approach">{{attribute.approach}}</div>
+            <div class="approach valign-center">
+                <input class="small-box" type="radio" name="system.favoredapproach" value="{{attribute.approach}}"
+                {{#if (eq attribute.approach @root.system.favoredapproach)}}
+                checked
+                {{/if}}/> 
+                <label class="approach-label"> {{attribute.approach}}</label>
             </div>
             {{/if}}
             <div class="attribute">
