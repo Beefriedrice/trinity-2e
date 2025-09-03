@@ -18,7 +18,6 @@ export const preloadHandlebarsTemplates = async function () {
     'systems/trinity-2e/templates/actor/parts/actor-spells.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-status.hbs',
     // Item partials
-    'systems/trinity-2e/templates/item/parts/item-attributes.hbs',
-    'systems/trinity-2e/templates/item/parts/item-effects.hbs',
+    'systems/trinity-2e/templates/item/parts/item-attributes.hbs'
   ]);
 };

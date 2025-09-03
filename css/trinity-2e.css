@@ -566,14 +566,14 @@
   padding: 5px;
 }
 .trinity-2e .nova .sheet-tabs .active {
-  text-shadow: 0 0 10px rgb(12, 83, 21) !important;
+  text-shadow: 0 0 10px goldenrod !important;
 }
 .trinity-2e .nova .tabs .item:hover, .trinity-2e .nova .tabs .item:focus {
-  text-shadow: 0 0 10px rgb(12, 83, 21);
-  color: rgb(12, 83, 21);
+  text-shadow: 0 0 10px goldenrod;
+  color: goldenrod;
 }
 .trinity-2e .nova-header, .trinity-2e .nova .items-list .items-header, .trinity-2e .nova .items-list .items-header .item-name {
-  color: rgb(203, 167, 48);
+  color: goldenrod;
   background-color: rgb(20, 20, 20);
 }
 .trinity-2e h2.nova-header, .trinity-2e h3.nova-header {
@@ -655,8 +655,8 @@
   margin-bottom: 10px;
 }
 .trinity-2e .attribute {
-  flex: 5 1 170px;
-  max-width: 170px;
+  flex: 5 1 160px;
+  max-width: 160px;
   min-width: 120px;
 }
 .trinity-2e .approach {
