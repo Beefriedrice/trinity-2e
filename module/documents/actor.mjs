@@ -32,6 +32,26 @@ export class TrinitySecondEditionActor extends Actor {
     const systemData = actorData.system;
     const flags = actorData.flags.trinity2e || {};
 
+    // Prepare experience formulas
+    systemData.experience.current = systemData.experience.total - systemData.experience.spent;
+
+    // prepare derived health boxes
+    if (systemData.attributes.sta.value >= 3) {
+      systemData.health.bruised.stamina = 1;
+    }
+    if (systemData.attributes.sta.value >= 5) {
+      systemData.health.injured.stamina = 1;
+    }
+
+    //calculate total of each wound type.
+    systemData.health.bruised.quantity = systemData.health.bruised.base + systemData.health.bruised.stamina + systemData.health.bruised.added;
+    systemData.health.injured.quantity = systemData.health.injured.base + systemData.health.injured.stamina + systemData.health.injured.added;
+    systemData.health.maimed.quantity = systemData.health.maimed.base + systemData.health.maimed.stamina + systemData.health.maimed.added;
+
+    //create a total health for token usage.
+    systemData.health.total.quantity = systemData.health.bruised.quantity + systemData.health.injured.quantity + systemData.health.maimed.quantity + systemData.health.hard.quantity;
+    systemData.health.total.filled = systemData.health.bruised.filled + systemData.health.injured.filled + systemData.health.maimed.filled + systemData.health.hard.filled;
+
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     this._prepareCharacterData(actorData);
@@ -53,7 +73,6 @@ export class TrinitySecondEditionActor extends Actor {
       // Calculate the modifier using d20 rules.
       ability.mod = Math.floor((ability.value - 10) / 2);
     }
-    systemData.experience.current = systemData.experience.total - systemData.experience.spent;
   }
 
   _prepareNovaData(actorData) {
@@ -62,8 +81,8 @@ export class TrinitySecondEditionActor extends Actor {
     // Make modifications to data here. For example:
     const systemData = actorData.system;
 
+    //Calculate quantum points based on quantum rating.
     systemData.traits.quantumpoints.max = systemData.traits.quantum.value * 5 + 10;
-    systemData.experience.current = systemData.experience.total - systemData.experience.spent;
   }
 
   /**

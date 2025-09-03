@@ -50,24 +50,28 @@ h2.nova-header, h3.nova-header {
   max-width: 90px;
   min-width: 90px;
   padding-top: 5px;
+  .health-type {
+    padding-top: 10px;
+  }
+  .health-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding-top: 5px;
+    text-align: center;
+  }
+  .health-label {
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 15px;
+  }
 }
 
-.health-row {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  justify-items: center;
-  align-items: center;
-  padding-top: 5px;
-  text-align: center;
-}
 
-.health-label {
-  width: 100%;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 5px;
-}
 
 .mod-label {
   margin-left: 5px;
@@ -157,13 +161,6 @@ h2.nova-header, h3.nova-header {
   text-align: left;
 }
 
-.stat-detail-row {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 10px 0;
-}
-
 .suite-column {
   flex: 0 0 80px;
 }
@@ -174,11 +171,11 @@ h2.nova-header, h3.nova-header {
   appearance: none;
   width: 13px;
   height: 13px;
-  border: 2px solid black;
+  border: 1px solid rgb(74, 74, 74);
   border-radius: 2px;
   content: none;
   outline: none;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
   margin-right: 3px;
   box-shadow: rgba(0,0,0, 0.24) 0px 3px 8px;
   flex: 0 0 13px;
@@ -186,14 +183,14 @@ h2.nova-header, h3.nova-header {
 
 .radio-to-check:checked {
   background-color: black;
-  border: 2px solid black;
+  border: 1px solid rgb(74, 74, 74);
 }
 
 .radio-to-check:checked::before {
   position: absolute;
   color: black !important;
-  background-color: black;
-  border: 2px solid black;
+  background-color: rgb(74, 74, 74);
+  border: 1px solid rgb(74, 74, 74);
   border-radius: 2px;
 }
 
@@ -209,4 +206,29 @@ h2.nova-header, h3.nova-header {
   display: flex;
   justify-content: start;
   margin: 5px 0;
+}
+
+.stat-detail-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+  .option-wound {
+    flex: 0 0 90px;
+  }
+  .option-base {
+    flex: 0 0 40px;
+  }
+  .option-stamina {
+    flex: 0 0 45px;
+  }
+  .option-add {
+    flex: 0 0 65px;
+  }
+  .option-mod {
+    flex: 0 0 55px;
+  }
+  .option-wound, .option-base, .option-stamina, .option-add, .option-mod {
+    text-align: center;
+  }
 }

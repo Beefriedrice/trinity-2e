@@ -178,6 +178,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     let injured = 0;
     let bruised = 0;
     let maimed = 0;
+    let armorWound = 0;
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -224,6 +225,8 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
           injured += 1;
         } else if (i.system.wound === 'Maimed' || i.system.wound === 'maimed') {
           maimed += 1;
+        } else if (i.system.wound === 'Armor' || i.system.wound === 'armor' || i.system.wound === 'Hard Armor' || i.system.wound === 'hard armor') {
+          armorWound += 1;
         }
       }
       // Append to mega-edges.
@@ -275,6 +278,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     }
 
     // Assign and return
+    context.system.health.hard.filled = armorWound;
     context.system.health.bruised.filled = bruised;
     context.system.health.injured.filled = injured;
     context.system.health.maimed.filled = maimed;

@@ -7,46 +7,54 @@
           <h3 class="nova-header">{{localize "TRINITY_SECOND.SheetLabels.Health"}}</h3>
       </div>
       {{!-- Hard Armor --}}
-      <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Hard.long"}}</div>
-      <div class="health-row">
-        <input class="health-input text-2digit" type="number" name="system.health.hard.filled" value="{{system.health.hard.filled}}" data-dtype="Number"/>
-        <span class="math-label"> / </span>
-        <input class="health-input text-2digit" type="number" name="system.health.hard.quantity" value="{{system.health.hard.quantity}}" data-dtype="Number"/>
+      <div class="health-type">
+        <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Hard.long"}}</div>
+        <div class="health-row">
+          <div class="health-input">{{system.health.hard.filled}}</div>
+          <span class="math-label"> / </span>
+          <div class="health-input">{{system.health.hard.quantity}}</div>
+        </div>
+        <div class="health-row"><span class="mod-label">No {{localize "TRINITY_SECOND.SheetLabels.Mod"}}</span></div>
       </div>
-      <div class="health-row"><span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: + <input class="health-input text-2digit" readonly type="number" name="system.health.hardmod" value="0" data-dtype="Number"/></span></div>
       {{!-- Bruised --}}
-      <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Bruised"}}</div>
-      <div class="health-row">
-        <input class="health-input text-2digit" type="number" name="system.health.bruised.filled" value="{{system.health.bruised.filled}}" data-dtype="Number" readonly/>
-        <span class="math-label"> / </span>
-        <input class="health-input text-2digit" type="number" name="system.health.bruised.quantity" value="{{system.health.bruised.quantity}}" data-dtype="Number"/>  
+      <div class="health-type">
+        <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Bruised"}}</div>
+        <div class="health-row">
+          <div class="health-input">{{system.health.bruised.filled}}</div>
+          <span class="math-label"> / </span>
+          <div class="health-input">{{system.health.bruised.quantity}}</div>
+        </div>
+        <div class="health-row"><span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: +{{system.health.bruised.mod}}</span></div>
       </div>
-      <div class="health-row"><span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: + <input class="health-input text-2digit" type="number" name="system.health.bruised.mod" value="{{system.health.bruised.mod}}" data-dtype="Number"/></span></div>
       {{!-- Injured --}}
-      <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Injured"}}</div>
-      <div class="health-row">
-        <input class="health-input text-2digit" type="number" name="system.health.injured.filled" value="{{system.health.injured.filled}}" data-dtype="Number" readonly/>
-        <span class="math-label"> / </span>
-        <input class="health-input text-2digit" type="number" name="system.health.injured.quantity" value="{{system.health.injured.quantity}}" data-dtype="Number"/>              
+      <div class="health-type">
+        <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Injured"}}</div>
+        <div class="health-row">
+          <div class="health-input">{{system.health.injured.filled}}</div>
+          <span class="math-label"> / </span>
+          <div class="health-input">{{system.health.injured.quantity}}</div>
+        </div>
+        <div class="health-row"><span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: +{{system.health.injured.mod}}</span></div>
       </div>
-      <div class="health-row"><span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: + <input class="health-input text-2digit" type="number" name="system.health.injured.mod" value="{{system.health.injured.mod}}" data-dtype="Number"/></span></div>
       {{!-- Maimed --}}
-      <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Maimed"}}</div>
-      <div class="health-row">
-        <input class="text-2digit" type="number" name="system.health.maimed.filled" value="{{system.health.maimed.filled}}" data-dtype="Number" readonly/>
-        <span class="math-label"> / </span>
-        <input class="text-2digit" type="number" name="system.health.maimed.quantity" value="{{system.health.maimed.quantity}}" data-dtype="Number"/>
+      <div class="health-type">
+        <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Maimed"}}</div>
+        <div class="health-row">
+          <div class="health-input">{{system.health.maimed.filled}}</div>
+          <span class="math-label"> / </span>
+          <div class="health-input">{{system.health.maimed.quantity}}</div>
+        </div>
+        <div class="health-row"><span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: +{{system.health.maimed.mod}}</span></div>
       </div>
-      <div class="health-row">
-        <span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: + <input class="health-input text-2digit" type="number" name="system.health.maimed.mod" value="{{system.health.maimed.mod}}" data-dtype="Number"/></span>
-      </div>
-      <div class="health-label">Taken Out</div>
-      <div class="health-row">
-        {{#if system.health.takenout.isfilled}}
-          <input type="checkbox" name="system.health.takenout.isfilled" value="true" checked>
-        {{else}}
-          <input type="checkbox" name="system.health.takenout.isfilled" value="false">
-        {{/if}}
+      <div class="health-type">
+        <div class="health-label"><label for="system.health.takenout.isfilled">Taken Out</label></div>
+        <div class="health-row">
+          {{#if system.health.takenout.isfilled}}
+            <input class="small-check" id="system.health.takenout.isfilled" type="checkbox" name="system.health.takenout.isfilled" value="true" checked>
+          {{else}}
+            <input class="small-check" id="system.health.takenout.isfilled" type="checkbox" name="system.health.takenout.isfilled" value="false">
+          {{/if}}
+        </div>
       </div>
   </div>
   
@@ -197,4 +205,44 @@
       </ol>
     {{/each}}
   </ol>
+</div>
+
+{{!-- Health Configuration/ Options --}}
+<div class="tab options" data-group="status" data-tab="options">
+  <h3 class="nova-header flex-group-center">Health Configuration</h3>
+  <div class="stat-detail-row">
+    <div class="resource-label option-wound">Wound Level</div>
+    <div class="resource-label option-base">Base</div>
+    <div class="resource-label option-stamina">Stamina</div>
+    <div class="resource-label option-add">Additional</div>
+    <div class="resource-label option-mod">Modifier</div>
+  </div>
+    <div class="stat-detail-row">
+    <div class="option-wound">Hard Armor</div>
+    <div class="option-base">0</div>
+    <div class="option-stamina">0</div>
+    <div class="option-add"><input class="text-2digit" type="text" name="system.health.hard.quantity" value="{{system.health.hard.quantity}}" data-dtype="Number"/></div>
+    <div class="option-mod">0</div>
+  </div>
+  <div class="stat-detail-row">
+    <div class="option-wound">Bruised</div>
+    <div class="option-base">{{system.health.bruised.base}}</div>
+    <div class="option-stamina">{{system.health.bruised.stamina}}</div>
+    <div class="option-add"><input class="text-2digit" type="text" name="system.health.bruised.added" value="{{system.health.bruised.added}}" data-dtype="Number"/></div>
+    <div class="option-mod">+ <input class="text-2digit" type="text" name="system.health.bruised.mod" value="{{system.health.bruised.mod}}" data-dtype="Number"/></div>
+  </div>
+  <div class="stat-detail-row">
+    <div class="option-wound">Injured</div>
+    <div class="option-base">{{system.health.injured.base}}</div>
+    <div class="option-stamina">{{system.health.injured.stamina}}</div>
+    <div class="option-add"><input class="text-2digit" type="text" name="system.health.injured.added" value="{{system.health.injured.added}}" data-dtype="Number"/></div>
+    <div class="option-mod">+ <input class="text-2digit" type="text" name="system.health.injured.mod" value="{{system.health.injured.mod}}" data-dtype="Number"/></div>
+  </div>
+  <div class="stat-detail-row">
+    <div class="option-wound">Maimed</div>
+    <div class="option-base">{{system.health.maimed.base}}</div>
+    <div class="option-stamina">0</div>
+    <div class="option-add"><input class="text-2digit" type="text" name="system.health.maimed.added" value="{{system.health.maimed.added}}" data-dtype="Number"/></div>
+    <div class="option-mod">+ <input class="text-2digit" type="text" name="system.health.maimed.mod" value="{{system.health.maimed.mod}}" data-dtype="Number"/></div>
+  </div>
 </div>
