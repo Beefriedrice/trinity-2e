@@ -16,7 +16,7 @@ export default class TrinitySecondEditionResourceSheet extends Application {
 
     getData() {
         //Get current value
-        let groupResources = { momentum: game.settings.get('trinity-2e', 'momentum'), collateral: game.settings.get('trinity-2e', 'collateral') };
+        let groupResources = { momentum: game.settings.get('trinity-2e', 'momentum'), collateral: game.settings.get('trinity-2e', 'collateral'), atmosphere: game.settings.get('trinity-2e', 'atmosphere') };
 
         return {
             groupResources
@@ -31,8 +31,14 @@ export default class TrinitySecondEditionResourceSheet extends Application {
         html.find('.plus').click(async (event) => {
             const type = event.currentTarget.dataset.type;
             var currentResource = game.settings.get('trinity-2e', type) || 0;
-            currentResource++;
-            await game.settings.set('trinity-2e', type, currentResource);
+            if (type === 'atmosphere' && currentResource < 3) {
+                currentResource++;
+                await game.settings.set('trinity-2e', type, currentResource);
+            } else if (type !== 'atmosphere') {
+                currentResource++;
+                await game.settings.set('trinity-2e', type, currentResource);
+            }
+            
             game.socket.emit('system.trinity-2e', 'plus');
             this.syncData();
             this.render();
@@ -41,7 +47,10 @@ export default class TrinitySecondEditionResourceSheet extends Application {
         html.find('.minus').click(async (event) => {
             const type = event.currentTarget.dataset.type;
             var currentResource = game.settings.get('trinity-2e', type) || 0;
-            if (currentResource > 0) {
+            if ((currentResource > 0) && (type !== "atmosphere")) {
+                currentResource --;
+                await game.settings.set('trinity-2e', type, currentResource);
+            } else if (currentResource > -3 && type === 'atmosphere') {
                 currentResource --;
                 await game.settings.set('trinity-2e', type, currentResource);
             }
@@ -52,6 +61,10 @@ export default class TrinitySecondEditionResourceSheet extends Application {
         game.socket.on('system.trinity-2e', (message) => {
             console.log(message);
             this.render();
+        });
+
+        html.find('.setting-control').click(() => {
+            $(".resource-listing").toggle();
         });
     }
 }

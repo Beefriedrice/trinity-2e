@@ -127,6 +127,8 @@ Hooks.on("renderSceneControls", () => {
   }
 });
 
+
+//Failed dice roller function current work in progress.  The function works, my exporting it so far has not.
 export async function diceRoller (quantity, target_number = 8, enhancement = 0) {
      
     let rollText = quantity + "d10x=10cs>=" + target_number;

@@ -1,8 +1,5 @@
 //Momentum and Collateral Tracker Box
 .group-resources {
-  left: 222px;
-  bottom: 15px;
-  position: fixed;
   text-align: center;
   color: #f0f0e0;
   border: 1px solid #000;
@@ -14,27 +11,47 @@
   font-size: 23px;
   padding-left: 10px;
   padding-right: 10px;
-}
-.group-resources .resource-item {
-  padding-top: 5px;
-}
-.group-resources .resource-label {
-  text-align: start;
-}
-.group-resources .resource-controls {
-  margin-right: 10px;
-  text-align: end;
-}
-.group-resources .resource-button {
-  background: white;
-  color: black;
-  cursor: pointer;
-  border-radius: 20px;
-  padding: 0px 9px 0px 9px;
+  .resource-item {
+    padding-top: 5px;
+  }
+  .resource-label {
+    text-align: start;
+  }
+  .resource-controls {
+    margin-right: 10px;
+    text-align: end;
+  }
+  .resource-button {
+    background: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 0px 9px 0px 9px;
+  }
 }
 
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.global-resource-box {
+  position: fixed;
+  left: 222px;
+  bottom: 15px;
+}
+
+
+.setting-button {
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  border: solid 3px;
+  border-radius: 3px;
+  font-size: 11px;
 }

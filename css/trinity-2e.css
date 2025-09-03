@@ -224,9 +224,6 @@
 }
 
 .group-resources {
-  left: 222px;
-  bottom: 15px;
-  position: fixed;
   text-align: center;
   color: #f0f0e0;
   border: 1px solid #000;
@@ -239,20 +236,16 @@
   padding-left: 10px;
   padding-right: 10px;
 }
-
 .group-resources .resource-item {
   padding-top: 5px;
 }
-
 .group-resources .resource-label {
   text-align: start;
 }
-
 .group-resources .resource-controls {
   margin-right: 10px;
   text-align: end;
 }
-
 .group-resources .resource-button {
   background: white;
   color: black;
@@ -265,6 +258,25 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.global-resource-box {
+  position: fixed;
+  left: 222px;
+  bottom: 15px;
+}
+
+.setting-button {
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  border: solid 3px;
+  border-radius: 3px;
+  font-size: 11px;
 }
 
 #controls .simple-dice-roller-popup.control-tool {
@@ -524,17 +536,6 @@
 .trinity-2e .items-list .items-header .item-name {
   padding-left: 5px;
   text-align: left;
-}
-.trinity-2e .setting-button {
-  width: 50px;
-  height: 50px;
-  align-items: center;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  font-weight: bold;
-  border: solid 3px;
-  font-size: 11px;
 }
 .trinity-2e .suite-row {
   display: flex;

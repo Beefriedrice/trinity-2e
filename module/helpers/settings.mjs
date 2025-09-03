@@ -11,6 +11,16 @@ export function registerSettings() {
     game.settings.register('trinity-2e', 'collateral', {
         name: game.i18n.localize('TRINITY_SECOND.Collateral'),
         hint: "Tracks collateral dice.",
+        default: 0,
+        scope: "world",
+        type: Number,
+        config: false
+    });
+
+    game.settings.register('trinity-2e', 'atmosphere', {
+        name: game.i18n.localize('TRINITY_SECOND.Atmosphere'),
+        hint: "Tracks current atmosphere.",
+        default: 0,
         scope: "world",
         type: Number,
         config: false

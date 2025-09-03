@@ -179,6 +179,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     let bruised = 0;
     let maimed = 0;
     let armorWound = 0;
+    let hardArmor = 0;
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -187,6 +188,9 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       // Append to armor.
       if (i.type === 'armor') {
         armor.push(i);
+        if (i.system.isEquipped) {
+          hardArmor += i.system.hard;
+        }
       }
       //Append to bonds.
       else if (i.type === 'bond') {
@@ -278,6 +282,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     }
 
     // Assign and return
+    context.system.health.hard.max = hardArmor;
     context.system.health.hard.value = armorWound;
     context.system.health.bruised.value = bruised;
     context.system.health.injured.value = injured;
