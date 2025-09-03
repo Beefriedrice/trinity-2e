@@ -1,28 +1,15 @@
-class SimpleDiceRoller {
-  static _createDiceTableHtmlOneCell(diceRoll, isLast, targetNumber) {
+class quickDiceSheet {
+  static _createDiceTableHtmlOneCell(diceRoll, targetNumber, rollAgain) {
     let s = [];
-    s.push(
-      '<li data-dice-type="10" data-target-number="', targetNumber, '" data-dice-roll="',
-      diceRoll,
-      '"'
-    );
+    s.push('<li data-dice-type="10" data-roll-again="', rollAgain, '" data-target-number="', targetNumber, '" data-dice-roll="', diceRoll, '"');
 
     if (diceRoll == 1) {
-      s.push(' class="sdr-col1">');
+      s.push(' class="dice-sheet-col1">');
+      s.push('<i class="" data-dice-type="10" data-dice-roll="1"></i>');
+      s.push("Target: ", targetNumber, "<br>", rollAgain, "-Again");
 
-      s.push(
-        '<i class="df-d',
-        10,
-        "-",
-        10,
-        '" data-dice-type="',
-        10,
-        '" data-dice-roll="1"></i>'
-      );
-      s.push("Target - ", targetNumber);
-
-    } else if (isLast) {
-      s.push(' class="sdr-lastcol">' + diceRoll);
+    } else if (diceRoll == 10) {
+      s.push(' class="dice-sheet-lastcol">' + diceRoll);
     } else {
       s.push(">" + diceRoll);
     }
@@ -31,14 +18,13 @@ class SimpleDiceRoller {
     return s.join("");
   }
 
-  static _createDiceTableHtmlOneLine(targetNumber) {
+  static _createDiceTableHtmlOneLine(targetNumber, rollAgain) {
     let s = [];
 
     s.push("<ul>");
 
     for (let i = 1; i <= 10; ++i) {
-      let isLast = i == 10;
-      s.push(this._createDiceTableHtmlOneCell(i, isLast, targetNumber));
+      s.push(this._createDiceTableHtmlOneCell(i, targetNumber, rollAgain));
     }
 
     s.push("</ul>");
@@ -49,8 +35,12 @@ class SimpleDiceRoller {
   static _createDiceTableHtml() {
     let s = [];
 
-    s.push(this._createDiceTableHtmlOneLine(7));
-    s.push(this._createDiceTableHtmlOneLine(8));
+    s.push(this._createDiceTableHtmlOneLine(7, 10));
+    s.push(this._createDiceTableHtmlOneLine(7, 9));
+    s.push(this._createDiceTableHtmlOneLine(7, 8));
+    s.push(this._createDiceTableHtmlOneLine(8, 10));
+    s.push(this._createDiceTableHtmlOneLine(8, 9));
+    s.push(this._createDiceTableHtmlOneLine(8, 8));
 
     return s.join("");
   }
@@ -72,9 +62,10 @@ class SimpleDiceRoller {
 
     var diceRoll = event.target.dataset.diceRoll;
     var targetNumber = event.target.dataset.targetNumber;
+    var rollAgain = event.target.dataset.rollAgain;
     //diceRoller(diceRoll, targetNumber, 0);
 
-    var formula = diceRoll + "d10x=10cs>=" + targetNumber;
+    var formula = diceRoll + "d10x=" + rollAgain + "cs>=" + targetNumber;
 
     let r = new Roll(formula);
 
@@ -82,7 +73,7 @@ class SimpleDiceRoller {
       user: game.user._id,
     }); 
 
-    const $popup = $(".simple-dice-roller-popup");
+    const $popup = $(".quick-dice-sheet-popup");
     $popup.hide();
   }
 
@@ -91,38 +82,34 @@ class SimpleDiceRoller {
 Hooks.on("renderSceneControls", () => {
   if (
     !document.querySelector(
-      "#scene-controls-layers button[data-control='simple-dice-roller']"
+      "#scene-controls-layers button[data-control='quick-dice-sheet']"
     )
   ) {
     document.querySelector("#scene-controls-layers").insertAdjacentHTML(
       "beforeend",
       `<li>
-            <button type="button" class="control ui-control icon fas fa-dice-d10" role="tab" data-action="simple-dice-roller" data-control="simple-dice-roller" data-tooltip="Dice Table" aria-controls="scene-controls-tools"></button>
-            <ol class="sub-controls app control-tools sdr-sub-controls">
-                <li id="SDRpopup" class="simple-dice-roller-popup control-tool">
-                </li>
-            </ol>
+          <button type="button" class="control ui-control icon fas fa-dice-d10" role="tab" data-action="quick-dice-sheet" data-control="quick-dice-sheet" data-tooltip="Dice Table" aria-controls="scene-controls-tools"></button>
+          <ol class="sub-controls app control-tools dice-sheet-sub-controls">
+              <li class="quick-dice-sheet-popup control-tool">
+              </li>
+          </ol>
         </li>
         `
     );
 
     // Always use jQuery to select the popup
-    const $popup = $(".simple-dice-roller-popup");
-    SimpleDiceRoller._createDiceTable($popup);
+    const $popup = $(".quick-dice-sheet-popup");
+    quickDiceSheet._createDiceTable($popup);
     $popup.hide();
 
     document
       .querySelector(
-        "#scene-controls-layers button[data-control='simple-dice-roller']"
+        "#scene-controls-layers button[data-control='quick-dice-sheet']"
       )
       .addEventListener("click", (ev) => {
-        const $popup = $(".simple-dice-roller-popup");
+        const $popup = $(".quick-dice-sheet-popup");
         // Toggle display between none and block
-        if ($popup.is(":visible")) {
-          $popup.hide();
-        } else {
-          $popup.show();
-        }
+        $popup.toggle();
       });
   }
 });
