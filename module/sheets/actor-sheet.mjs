@@ -278,10 +278,11 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     }
 
     // Assign and return
-    context.system.health.hard.filled = armorWound;
-    context.system.health.bruised.filled = bruised;
-    context.system.health.injured.filled = injured;
-    context.system.health.maimed.filled = maimed;
+    context.system.health.hard.value = armorWound;
+    context.system.health.bruised.value = bruised;
+    context.system.health.injured.value = injured;
+    context.system.health.maimed.value = maimed;
+    context.system.health.total.value = armorWound + bruised + injured + maimed;
     context.armor = armor;
     context.bond = bond;
     context.contact = contact;

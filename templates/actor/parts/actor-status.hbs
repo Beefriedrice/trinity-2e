@@ -10,9 +10,9 @@
       <div class="health-type">
         <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Hard.long"}}</div>
         <div class="health-row">
-          <div class="health-input">{{system.health.hard.filled}}</div>
+          <div class="health-input">{{system.health.hard.value}}</div>
           <span class="math-label"> / </span>
-          <div class="health-input">{{system.health.hard.quantity}}</div>
+          <div class="health-input">{{system.health.hard.max}}</div>
         </div>
         <div class="health-row"><span class="mod-label">No {{localize "TRINITY_SECOND.SheetLabels.Mod"}}</span></div>
       </div>
@@ -20,9 +20,9 @@
       <div class="health-type">
         <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Bruised"}}</div>
         <div class="health-row">
-          <div class="health-input">{{system.health.bruised.filled}}</div>
+          <div class="health-input">{{system.health.bruised.value}}</div>
           <span class="math-label"> / </span>
-          <div class="health-input">{{system.health.bruised.quantity}}</div>
+          <div class="health-input">{{system.health.bruised.max}}</div>
         </div>
         <div class="health-row"><span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: +{{system.health.bruised.mod}}</span></div>
       </div>
@@ -30,9 +30,9 @@
       <div class="health-type">
         <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Injured"}}</div>
         <div class="health-row">
-          <div class="health-input">{{system.health.injured.filled}}</div>
+          <div class="health-input">{{system.health.injured.value}}</div>
           <span class="math-label"> / </span>
-          <div class="health-input">{{system.health.injured.quantity}}</div>
+          <div class="health-input">{{system.health.injured.max}}</div>
         </div>
         <div class="health-row"><span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: +{{system.health.injured.mod}}</span></div>
       </div>
@@ -40,9 +40,9 @@
       <div class="health-type">
         <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Maimed"}}</div>
         <div class="health-row">
-          <div class="health-input">{{system.health.maimed.filled}}</div>
+          <div class="health-input">{{system.health.maimed.value}}</div>
           <span class="math-label"> / </span>
-          <div class="health-input">{{system.health.maimed.quantity}}</div>
+          <div class="health-input">{{system.health.maimed.max}}</div>
         </div>
         <div class="health-row"><span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: +{{system.health.maimed.mod}}</span></div>
       </div>
@@ -221,7 +221,7 @@
     <div class="option-wound">Hard Armor</div>
     <div class="option-base">0</div>
     <div class="option-stamina">0</div>
-    <div class="option-add"><input class="text-2digit" type="text" name="system.health.hard.quantity" value="{{system.health.hard.quantity}}" data-dtype="Number"/></div>
+    <div class="option-add"><input class="text-2digit" type="text" name="system.health.hard.max" value="{{system.health.hard.max}}" data-dtype="Number"/></div>
     <div class="option-mod">0</div>
   </div>
   <div class="stat-detail-row">

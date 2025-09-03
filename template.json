@@ -9,40 +9,45 @@
         "codename": "",
         "health": {
           "hard": {
-            "filled": 0,
-            "quantity": 0,
+            "value": 0,
+            "min": 0,
+            "max": 0,
             "mod": 0
           },
           "bruised": {
             "base": 2,
             "stamina": 0,
             "added": 0,
-            "filled": 0,
-            "quantity": 2,
+            "value": 0,
+            "min": 0,
+            "max": 2,
             "mod": 1
           },
           "injured": {
             "base": 2,
             "stamina": 0,
             "added": 0,
-            "filled": 0,
-            "quantity": 2,
+            "value": 0,
+            "min": 0,
+            "max": 2,
             "mod": 2
           },
           "maimed": {
             "base": 1,
             "stamina": 0,
             "added": 0,
-            "filled": 0,
-            "quantity": 1,
+            "value": 0,
+            "min": 0,
+            "max": 1,
             "mod": 4
           },
           "takenout": {
             "isfilled": false
           },
           "total": {
-            "filled": 0,
-            "quantity": 0
+            "value": 0,
+            "min": 0,
+            "max": 5
           }
         },
         "experience": {
@@ -279,7 +284,6 @@
       "powersuite": {
         "none": "Quantum Powers",
         "one": "Power Suite 1", 
-        "onehide": false,
         "two": "Power Suite 2", 
         "three": "Power Suite 3"
       } 
@@ -364,12 +368,12 @@
       "hard": 0,
       "base": "",
       "tags": "",
-      "formula": "",
-      "techscale": 0,
+      "techscale": 1,
       "size": 0,
       "cost": 0,
       "inventiontype": "Mundane Tech",
-      "isEquipped": false
+      "isEquipped": false,
+      "formula": ""
     },
     "bond":{
       "templates": ["base"],
@@ -384,8 +388,8 @@
     "contact": {
       "templates": ["base"],
       "rating": {
-        "value": 1,
-        "current": 1
+        "max": 1,
+        "value": 1
       },
       "path": "",
       "tags": ""
@@ -432,8 +436,8 @@
       "templates": ["base"],
       "type": "",
       "rating": {
-        "value": 1,
-        "current": 1
+        "max": 1,
+        "value": 1
       },
       "suspended": false,
       "revoked": false,

@@ -44,13 +44,13 @@ export class TrinitySecondEditionActor extends Actor {
     }
 
     //calculate total of each wound type.
-    systemData.health.bruised.quantity = systemData.health.bruised.base + systemData.health.bruised.stamina + systemData.health.bruised.added;
-    systemData.health.injured.quantity = systemData.health.injured.base + systemData.health.injured.stamina + systemData.health.injured.added;
-    systemData.health.maimed.quantity = systemData.health.maimed.base + systemData.health.maimed.stamina + systemData.health.maimed.added;
+    systemData.health.bruised.max = systemData.health.bruised.base + systemData.health.bruised.stamina + systemData.health.bruised.added;
+    systemData.health.injured.max = systemData.health.injured.base + systemData.health.injured.stamina + systemData.health.injured.added;
+    systemData.health.maimed.max = systemData.health.maimed.base + systemData.health.maimed.stamina + systemData.health.maimed.added;
 
     //create a total health for token usage.
-    systemData.health.total.quantity = systemData.health.bruised.quantity + systemData.health.injured.quantity + systemData.health.maimed.quantity + systemData.health.hard.quantity;
-    systemData.health.total.filled = systemData.health.bruised.filled + systemData.health.injured.filled + systemData.health.maimed.filled + systemData.health.hard.filled;
+    systemData.health.total.value = systemData.health.bruised.value + systemData.health.injured.value + systemData.health.maimed.value + systemData.hard.value;
+    systemData.health.total.max = systemData.health.bruised.max + systemData.health.injured.max + systemData.health.maimed.max + systemData.health.hard.max;
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
