@@ -30,9 +30,6 @@ export class TrinitySecondEditionItem extends Item {
       else if(type === "equipment"){
         img = 'icons/svg/chest.svg';
       }
-      else if(type === "field"){
-        img = 'icons/svg/fire.svg';
-      }
       else if(type === "gift"){
         img = 'icons/svg/aura.svg';
       }
@@ -42,17 +39,8 @@ export class TrinitySecondEditionItem extends Item {
       else if(type === "megaedge"){
         img = 'icons/svg/upgrade.svg';
       }
-      else if(type === "module"){
-        img = 'icons/commodities/tech/plug.svg';
-      }
       else if(type === "path"){
         img = 'icons/svg/walk.svg';
-      }
-      else if(type === "powersuite"){
-        img = 'icons/svg/sun.svg';
-      }
-      else if(type === "powertag"){
-        img = 'icons/svg/explosion.svg';
       }
       else if(type === "quantumpower"){
         img = 'icons/svg/lightning.svg';
@@ -65,9 +53,6 @@ export class TrinitySecondEditionItem extends Item {
       }
       else if(type === "status"){
         img = 'icons/svg/stoned.svg';
-      }
-      else if(type === "stunt"){
-        img = 'icons/svg/jump.svg';
       }
       else if(type === "transformation"){
         img = 'icons/svg/radiation.svg';

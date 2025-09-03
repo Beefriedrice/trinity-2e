@@ -150,9 +150,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     const gift = [];
     const injury = [];
     const megaedge = [];
-    const module = [];
     const path = [];
-    const powersuite = [];
     const quantumpower = {
       0: [],
       1: [],
@@ -232,16 +230,9 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       else if (i.type === 'megaedge') {
         megaedge.push(i);
       }
-      // Append to modules.
-      else if (i.type === 'module') {
-        module.push(i);
-      }
       // Append to paths.
       else if (i.type === 'path') {
         path.push(i);
-      }
-      else if (i.type === 'powersuite') {
-        powersuite.push(i)
       }
       // Append to quantum powers.
       else if (i.type === 'quantumpower') {
@@ -297,9 +288,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     context.gift = gift;
     context.injury = injury;
     context.megaedge = megaedge;
-    context.module = module;
     context.path = path;
-    context.powersuite = powersuite;
     context.quantumpower = quantumpower;
     context.skilltrick = skilltrick;
     context.specialty = specialty;

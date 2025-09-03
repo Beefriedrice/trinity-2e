@@ -289,19 +289,14 @@
       "contact", 
       "edge", 
       "equipment", 
-      "field", 
       "gift", 
       "injury", 
-      "megaedge", 
-      "module", 
+      "megaedge",
       "path", 
-      "powersuite",
-      "powertag", 
       "quantumpower",
       "skilltrick", 
       "specialty", 
       "status", 
-      "stunt", 
       "transformation",
       "vehicle", 
       "weapon"
@@ -374,11 +369,6 @@
       "sciencetype": "Mundane Science",
       "category": "Device"
     },
-    "field": {
-      "templates": ["base"],
-      "complication": "",
-      "effect": ""
-    },
     "gift": {
       "templates": ["base"],
       "keywords": "",
@@ -400,17 +390,6 @@
       "tagsdescription": "",
       "maxedout": false
     },
-    "module": {
-      "templates": ["base"],
-      "enhancements": 0,
-      "power": "",
-      "tags": "",
-      "formula": "",
-      "techscale": 1,
-      "size": 0,
-      "cost": 0,
-      "inventiontype": "Mundane Tech"
-    },
     "path": {
       "templates": ["base"],
       "type": "",
@@ -424,16 +403,6 @@
       "edges": "",
       "community": "",
       "access": ""
-    },
-    "powersuite": {
-      "templates": ["base"],
-      "name": "",
-      "number": 1,
-      "techniques": 1
-    },
-    "powertag": {
-      "templates": ["base"],
-      "rating": 0
     },
     "quantumpower": {
       "templates": ["base"],
@@ -463,11 +432,6 @@
       "templates": ["base"],
       "effect": "",
       "resolution": ""
-    },
-    "stunt": {
-      "templates": ["base"],
-      "rating": "",
-      "effect": ""
     },
     "transformation": {
       "templates": ["base"],
