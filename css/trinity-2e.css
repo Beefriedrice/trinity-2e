@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.test-color {
+  color: brown;
+}
+
 /* Global styles */
 .window-app {
   font-family: "Roboto", sans-serif;
@@ -574,8 +578,16 @@
   flex: 0 0 100px;
   margin: 0 5px;
 }
-.trinity-2e .nova {
-  padding: 5px;
+.trinity-2e .baseline .sheet-tabs .active {
+  text-shadow: 0 0 10px white !important;
+}
+.trinity-2e .baseline .tabs .item:hover, .trinity-2e .baseline .tabs .item:focus {
+  text-shadow: 0 0 10px white;
+  color: white;
+}
+.trinity-2e .baseline .style-header, .trinity-2e .baseline .items-list .items-header, .trinity-2e .baseline .items-list .items-header .item-name {
+  color: white;
+  background-color: navy;
 }
 .trinity-2e .nova .sheet-tabs .active {
   text-shadow: 0 0 10px goldenrod !important;
@@ -588,22 +600,38 @@
   color: goldenrod;
   background-color: rgb(20, 20, 20);
 }
-.trinity-2e h2.style-header, .trinity-2e h3.style-header {
-  padding-top: 2px;
+.trinity-2e .psion .sheet-tabs .active {
+  text-shadow: 0 0 10px white !important;
 }
-.trinity-2e .talent {
-  padding: 5px;
+.trinity-2e .psion .tabs .item:hover, .trinity-2e .psion .tabs .item:focus {
+  text-shadow: 0 0 10px white;
+  color: white;
+}
+.trinity-2e .psion .style-header, .trinity-2e .psion .items-list .items-header, .trinity-2e .psion .items-list .items-header .item-name {
+  color: white;
+  background-color: maroon;
+}
+.trinity-2e .sgc .sheet-tabs .active {
+  text-shadow: 0 0 10px white !important;
+}
+.trinity-2e .sgc .tabs .item:hover, .trinity-2e .sgc .tabs .item:focus {
+  text-shadow: 0 0 10px white;
+  color: white;
+}
+.trinity-2e .sgc .style-header, .trinity-2e .sgc .items-list .items-header, .trinity-2e .sgc .items-list .items-header .item-name {
+  color: white;
+  background-color: navy;
 }
 .trinity-2e .talent .sheet-tabs .active {
-  text-shadow: 0 0 10px navy !important;
+  text-shadow: 0 0 10px rgb(124, 58, 34) !important;
 }
 .trinity-2e .talent .tabs .item:hover, .trinity-2e .talent .tabs .item:focus {
-  text-shadow: 0 0 10px navy;
-  color: navy;
+  text-shadow: 0 0 10px rgb(124, 58, 34);
+  color: rgb(124, 58, 34);
 }
 .trinity-2e .talent .style-header, .trinity-2e .talent .items-list .items-header, .trinity-2e .talent .items-list .items-header .item-name {
   color: white;
-  background-color: navy;
+  background-color: rgb(124, 58, 34);
 }
 .trinity-2e h2.style-header, .trinity-2e h3.style-header {
   padding-top: 2px;
