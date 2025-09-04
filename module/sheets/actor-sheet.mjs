@@ -52,7 +52,12 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/trinity-2e/templates/actor/actor-${this.actor.type}-sheet.hbs`;
+    if (this.actor.type === "SGC") {
+      return `systems/trinity-2e/templates/actor/actor-sgc-sheet.hbs`;
+    } else { 
+      return `systems/trinity-2e/templates/actor/actor-sheet.hbs`;
+    }
+    //return `systems/trinity-2e/templates/actor/actor-${this.actor.type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */

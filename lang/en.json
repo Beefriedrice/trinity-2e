@@ -11,7 +11,7 @@
     "Attribute": {
       "Int": { "long": "Intelligence", "abbr": "int" },
       "Cun": { "long": "Cunning", "abbr": "cun" },
-      "Res": { "long": "Resilience", "abbr": "res" },
+      "Res": { "long": "Resolve", "abbr": "res" },
       "Mig": { "long": "Might", "abbr": "mig" },
       "Dex": { "long": "Dexterity", "abbr": "dex" },
       "Sta": { "long": "Stamina", "abbr": "sta" },
@@ -22,7 +22,7 @@
     "MegaAttribute": {
       "Int": { "long": "Mega-Intelligence", "abbr": "m-int" },
       "Cun": { "long": "Mega-Cunning", "abbr": "m-cun" },
-      "Res": { "long": "Mega-Resilience", "abbr": "m-res" },
+      "Res": { "long": "Mega-Resolve", "abbr": "m-res" },
       "Mig": { "long": "Mega-Might", "abbr": "m-mig" },
       "Dex": { "long": "Mega-Dexterity", "abbr": "m-dex" },
       "Sta": { "long": "Mega-Stamina", "abbr": "m-sta" },
@@ -259,6 +259,9 @@
   "TYPES": {
     "Actor": {
       "nova": "Nova",
+      "psiad": "Psiad",
+      "psion": "Psion",
+      "talent": "Talent",
       "character": "Character",
       "npc": "NPC"
     },

@@ -1,6 +1,6 @@
 <div class="tab attributes" data-group="attributes" data-tab="attributes">
     {{!-- Attribute Section --}}
-    <h2 class="flex-group-center nova-header">{{localize "TRINITY_SECOND.SheetLabels.Attributes"}}</h2>
+    <h2 class="flex-group-center style-header">{{localize "TRINITY_SECOND.SheetLabels.Attributes"}}</h2>
     <section class="">
         {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
         use both the "grid" and "grid-Ncol" class where "N" can be any number
@@ -39,7 +39,7 @@
     </section>
 
     {{!-- Skill Section --}}
-    <h2 class="flex-group-center nova-header">{{localize "TRINITY_SECOND.SheetLabels.Skills"}}</h2>
+    <h2 class="flex-group-center style-header">{{localize "TRINITY_SECOND.SheetLabels.Skills"}}</h2>
     <section class="grid grid-4col">
         {{#each system.skills as |skill key|}}
             <div class="skill flexrow flex-group-center" data-skill="{{key}}">
@@ -165,7 +165,7 @@
 
 {{!-- Scale Section --}}
 <div class="tab scale" data-group="attributes" data-tab="scale">
-    <h2 class="flex-group-center nova-header">{{localize "TRINITY_SECOND.SheetLabels.Scale"}}</h2>
+    <h2 class="flex-group-center style-header">{{localize "TRINITY_SECOND.SheetLabels.Scale"}}</h2>
     <div class="scale grid grid-4col">
         {{#each system.scale as |scale key|}}
             <div class="scale-cell">

@@ -83,6 +83,7 @@ export class TrinitySecondEditionActor extends Actor {
 
     //Calculate quantum points based on quantum rating.
     systemData.traits.quantumpoints.max = systemData.traits.quantum.value * 5 + 10;
+    
   }
 
   /**
