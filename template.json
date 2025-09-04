@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["nova", "talent", "character", "npc"],
+    "types": ["nova", "baseline", "psion", "sgc", "talent"],
     "templates": {
       "base": {
         "concept": "",
@@ -258,6 +258,9 @@
         }
       }
     },
+    "baseline": {
+      "templates": ["base"]
+    },
     "nova": {
       "templates": ["base"],
       "traits": {
@@ -288,14 +291,13 @@
         "three": "Power Suite 3"
       } 
     },
-    "talent": {
+    "psion": {
       "templates": ["base"]
     },
-    "npc": {
-      "templates": ["base"],
-      "cr": 0
+    "sgc": {
+      "templates": ["base"]
     },
-    "character": {
+    "talent": {
       "templates": ["base"]
     }
   },

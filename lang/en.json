@@ -258,12 +258,14 @@
 
   "TYPES": {
     "Actor": {
+      "baseline": "Baseline",
+      "mesmerist": "Mesmerist",
       "nova": "Nova",
       "psiad": "Psiad",
       "psion": "Psion",
-      "talent": "Talent",
-      "character": "Character",
-      "npc": "NPC"
+      "sgc": "Story Guide Character",
+      "stalwart": "Stalwart",
+      "talent": "Talent/ Daredevil/ Mesermist/ Stalwart"
     },
     "Item": {
       "item": "Item",

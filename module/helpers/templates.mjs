@@ -10,11 +10,8 @@ export const preloadHandlebarsTemplates = async function () {
     'systems/trinity-2e/templates/actor/parts/actor-background.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-bonds.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-equipment.hbs',
-    'systems/trinity-2e/templates/actor/parts/actor-features.hbs',
-    'systems/trinity-2e/templates/actor/parts/actor-items.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-paths.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-novapowers.hbs',
-    'systems/trinity-2e/templates/actor/parts/actor-spells.hbs',
     'systems/trinity-2e/templates/actor/parts/actor-status.hbs',
     // Item partials
     'systems/trinity-2e/templates/item/parts/item-attributes.hbs'

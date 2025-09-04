@@ -80,21 +80,36 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     // Adding a pointer to CONFIG.TRINITY_SECOND
     context.config = CONFIG.TRINITY_SECOND;
 
-    // Prepare character data and items.
-    if (actorData.type == 'character') {
+    
+
+    // Prepare Baseline data and items.
+    if (actorData.type == 'baseline') {
       this._prepareItems(context);
-      this._prepareCharacterData(context);
+      this._prepareBaselineData(context);
     }
 
-    // Prepare nova data and items.
+    // Prepare Nova data and items.
     if (actorData.type == 'nova') {
       this._prepareItems(context);
       this._prepareNovaData(context);
     }
 
-    // Prepare NPC data and items.
-    if (actorData.type == 'npc') {
+    // Prepare Psion data and items.
+    if (actorData.type == 'psion') {
       this._prepareItems(context);
+      this._preparePsionData(context);
+    }
+
+    // Prepare Talent data and items.
+    if (actorData.type == 'talent') {
+      this._prepareItems(context);
+      this._prepareTalentData(context);
+    }
+
+    // Prepare SGC data and items.
+    if (actorData.type == 'sgc') {
+      this._prepareItems(context);
+      this._prepareSGCData(context);
     }
 
     // Enrich biography info for display
@@ -128,12 +143,24 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
    *
    * @param {object} context The context object to mutate
    */
-  _prepareCharacterData(context) {
+
+  _prepareBaselineData(context) {
+
+  }
+
+  _prepareNovaData(context) {
     // This is where you can enrich character-specific editor fields
     // or setup anything else that's specific to this type
   }
 
-  _prepareNovaData(context) {
+  _preparePsionData(context) {
+
+  }
+
+  _prepareSGCData(context) {
+
+  }
+  _prepareTalentData(context) {
     // This is where you can enrich character-specific editor fields
     // or setup anything else that's specific to this type
   }

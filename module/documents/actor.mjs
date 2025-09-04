@@ -54,25 +54,19 @@ export class TrinitySecondEditionActor extends Actor {
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
-    this._prepareCharacterData(actorData);
+
+    this._prepareBaselineData(actorData);
     this._prepareNovaData(actorData);
-    this._prepareNpcData(actorData);
+    this._preparePsionData(actorData);
+    this._prepareSGCData(actorData);
+    this._prepareTalentData(actorData);
   }
 
-  /**
-   * Prepare Character type specific data
-   */
-  _prepareCharacterData(actorData) {
-    if (actorData.type !== 'character') return;
 
-    // Make modifications to data here. For example:
+  _prepareBaselineData(actorData) {
+    if (actorData.type !== 'baseline') return;
+
     const systemData = actorData.system;
-
-    // Loop through ability scores, and add their modifiers to our sheet output.
-    for (let [key, ability] of Object.entries(systemData.abilities)) {
-      // Calculate the modifier using d20 rules.
-      ability.mod = Math.floor((ability.value - 10) / 2);
-    }
   }
 
   _prepareNovaData(actorData) {
@@ -86,15 +80,22 @@ export class TrinitySecondEditionActor extends Actor {
     
   }
 
-  /**
-   * Prepare NPC type specific data.
-   */
-  _prepareNpcData(actorData) {
-    if (actorData.type !== 'npc') return;
+  _preparePsionData(actorData) {
+    if (actorData.type !== 'psion') return;
 
-    // Make modifications to data here. For example:
     const systemData = actorData.system;
-    systemData.xp = systemData.cr * systemData.cr * 100;
+  }
+
+  _prepareSGCData(actorData) {
+    if (actorData.type !== 'sgc') return;
+
+    const systemData = actorData.system;
+  }
+
+  _prepareTalentData(actorData) {
+    if (actorData.type !== 'talent') return;
+
+    const systemData = actorData.system;
   }
 
   /**
@@ -105,31 +106,21 @@ export class TrinitySecondEditionActor extends Actor {
     const data = { ...this.system };
 
     // Prepare character roll data.
-    this._getCharacterRollData(data);
+    this._getBaselineRollData(data);
     this._getNovaRollData(data);
-    this._getNpcRollData(data);
+    this._getPsionRollData(data);
+    this._getSGCRollData(data);
+    this._getTalentRollData(data);
 
     return data;
   }
 
   /**
-   * Prepare character roll data.
+   * Prepare baseline roll data.
    */
-  _getCharacterRollData(data) {
-    if (this.type !== 'character') return;
+  _getBaselineRollData(data) {
+    if (this.type !== 'baseline') return;
 
-    // Copy the ability scores to the top level, so that rolls can use
-    // formulas like `@str.mod + 4`.
-    if (data.abilities) {
-      for (let [k, v] of Object.entries(data.abilities)) {
-        data[k] = foundry.utils.deepClone(v);
-      }
-    }
-
-    // Add level for easier access, or fall back to 0.
-    if (data.attributes.level) {
-      data.lvl = data.attributes.level.value ?? 0;
-    }
   }
 
   /**
@@ -142,11 +133,26 @@ export class TrinitySecondEditionActor extends Actor {
   }
 
   /**
-   * Prepare NPC roll data.
+   * Prepare Psion roll data.
    */
-  _getNpcRollData(data) {
-    if (this.type !== 'npc') return;
+  _getPsionRollData(data) {
+    if (this.type !== 'psion') return;
 
-    // Process additional NPC data here.
+  }
+
+  /**
+   * Prepare SGC roll data.
+   */
+  _getSGCRollData(data) {
+    if (this.type !== 'sgc') return;
+
+  }
+
+   /**
+   * Prepare Talent roll data.
+   */
+  _getTalentRollData(data) {
+    if (this.type !== 'talent') return;
+
   }
 }
