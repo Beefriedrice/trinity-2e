@@ -151,6 +151,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
   _prepareNovaData(context) {
     // This is where you can enrich character-specific editor fields
     // or setup anything else that's specific to this type
+
   }
 
   _preparePsionData(context) {
@@ -177,7 +178,6 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     const contact = [];
     const edge = [];
     const equipment = [];
-    const features = [];
     const gear = [];
     const gift = [];
     const injury = [];
@@ -191,18 +191,6 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     };
     const skilltrick = [];
     const specialty = [];
-    const spells = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: [],
-    };
     const status = [];
     const transformation = [];
     const vehicle = [];
@@ -217,7 +205,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     for (let i of context.items) {
       i.img = i.img || Item.DEFAULT_ICON;
       
-      // Append to armor.
+      // Append to armor. If equipped add hard armor to health total.
       if (i.type === 'armor') {
         armor.push(i);
         if (i.system.isEquipped) {
@@ -240,19 +228,11 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       else if (i.type === 'edge') {
         edge.push(i);
       }
-      // Append to features.
-      else if (i.type === 'feature') {
-        features.push(i);
-      }
-      // Append to gear.
-      else if (i.type === 'item') {
-        gear.push(i);
-      }
       // Append to gift.
       else if (i.type === 'gift') {
         gift.push(i);
       }
-      // Append to injury.
+      // Append to injury.  Track wounds by type of injury
       else if (i.type === 'injury') {
         injury.push(i);
         if (i.system.wound === 'Bruised' || i.system.wound === 'bruised') {
@@ -273,7 +253,7 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       else if (i.type === 'path') {
         path.push(i);
       }
-      // Append to quantum powers.
+      // Append to quantum powers. Sub-sort by suite number (or assign to general list if not given a number 1, 2, or 3)
       else if (i.type === 'quantumpower') {
         if (i.system.suite >= 1 && i.system.suite <= 3) {
           quantumpower[i.system.suite].push(i)
@@ -288,12 +268,6 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
       // Append to specialties
       else if (i.type === 'specialty') {
         specialty.push(i);
-      }
-      // Append to spells.
-      else if (i.type === 'spell') {
-        if (i.system.spellLevel != undefined) {
-          spells[i.system.spellLevel].push(i);
-        }
       }
       // Append to status.
       else if (i.type === 'status') {
@@ -325,7 +299,6 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     context.contact = contact;
     context.edge = edge;
     context.equipment = equipment;
-    context.features = features;
     context.gear = gear;
     context.gift = gift;
     context.injury = injury;
@@ -334,7 +307,6 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     context.quantumpower = quantumpower;
     context.skilltrick = skilltrick;
     context.specialty = specialty;
-    context.spells = spells;
     context.status = status;
     context.transformation = transformation;
     context.vehicle = vehicle;
@@ -355,6 +327,9 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     });
 
     /**  Having trouble exporting this function while trying to get it to work.
+     * 
+     * 
+     * 
     async function diceRoller (quantity, enhancement) {
     //target number for roll.
     let target_number = 7;

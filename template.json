@@ -55,12 +55,6 @@
           "spent": 0,
           "current": 0
         },
-        "source": {
-          "value": 1,
-          "min": 0,
-          "max": 7,
-          "name": "psi"
-        },
         "scale": {
           "dur": {
             "value": 1,
@@ -101,8 +95,7 @@
               "maxedout": false
             },
             "arena": "Mental",
-            "approach": "Force",
-            "row": true
+            "approach": "Force"
           },
           "mig": {
             "value": 1,
@@ -129,8 +122,7 @@
               "maxedout": false
             },
             "arena": "Mental",
-            "approach": "Finesse",
-            "row": true
+            "approach": "Finesse"
           },
           "dex": {
             "value": 1,
@@ -157,8 +149,7 @@
               "maxedout": false
             },
             "arena": "Mental",
-            "approach": "Resilience",
-            "row": true
+            "approach": "Resilience"
           },
           "sta": {
             "value": 1,
@@ -295,17 +286,45 @@
       "templates": ["base"]
     },
     "sgc": {
-      "templates": ["base"]
+      "templates": ["base"],
+      "type": "",
+      "threat": "",
+      "primary": {
+        "value": 1,
+        "suggestions": ""
+      },
+      "secondary": {
+        "value": 1,
+        "suggestions": ""
+      },
+      "desperation": {
+        "value": 1,
+        "suggestions": ""
+      },
+      "enhancement": {
+        "value": 0
+      }, 
+      "defense": {
+        "value": 0
+      },
+      "health": {
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "value": 1,
+        "name": ""
+      },
+      "equipment": {
+        "value": 0
+      }
     },
     "talent": {
       "templates": ["base"]
     }
   },
   "Item": {
-    "types": [
-      "item", 
-      "feature", 
-      "spell", 
+    "types": [ 
       "armor", 
       "bond",
       "contact", 
@@ -327,19 +346,6 @@
       "base": {
         "description": ""
       }
-    },
-    "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
-    },
-    "feature": {
-      "templates": ["base"]
-    },
-    "spell": {
-      "templates": ["base"],
-      "spellLevel": 1
     },
     "armor": {
       "templates": ["base"],

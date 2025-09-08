@@ -1,10 +1,10 @@
     /** Snippet that could be useful. 
+     * 
+     * 
      * Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, ability] of Object.entries(systemData.abilities)) {
       // Calculate the modifier using d20 rules.
-      ability.mod = Math.floor((ability.value - 10) / 2); */
-
-
+      ability.mod = Math.floor((ability.value - 10) / 2); 
 
     // Originally in actor.mjs in the _getCharacterRollData function.
     // Copy the ability scores to the top level, so that rolls can use
@@ -19,3 +19,44 @@
     if (data.attributes.level) {
       data.lvl = data.attributes.level.value ?? 0;
     }
+
+
+    //from actor-sheet
+    // Append to spells.
+        const spells = {
+          0: [],
+          1: [],
+          2: [],
+          3: [],
+          4: [],
+          5: [],
+          6: [],
+          7: [],
+          8: [],
+          9: [],
+        };  
+    
+      else if (i.type === 'spell') {
+        if (i.system.spellLevel != undefined) {
+          spells[i.system.spellLevel].push(i);
+        }
+      }
+
+
+
+      //removed templates
+      "spell": {
+        "templates": ["base"],
+        "spellLevel": 1
+      },
+
+      "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0,
+      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+    },
+    "feature": {
+      "templates": ["base"]
+    },
+    */
