@@ -1,14 +1,14 @@
 // Import document classes.
-import { TrinitySecondEditionActor } from './documents/actor.mjs';
-import { TrinitySecondEditionItem } from './documents/item.mjs';
+import { TrinityContinuumActor } from './documents/actor.mjs';
+import { TrinityContinuumItem } from './documents/item.mjs';
 // Import sheet classes.
-import { TrinitySecondEditionActorSheet } from './sheets/actor-sheet.mjs';
-import { TrinitySecondEditionItemSheet } from './sheets/item-sheet.mjs';
-import TrinitySecondEditionResourceSheet from './sheets/resource-sheet.mjs';
+import { TrinityContinuumActorSheet } from './sheets/actor-sheet.mjs';
+import { TrinityContinuumItemSheet } from './sheets/item-sheet.mjs';
+import TrinityContinuumResourceSheet from './sheets/resource-sheet.mjs';
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
 import { registerSettings } from './helpers/settings.mjs';
-import { TRINITY_SECOND } from './helpers/config.mjs';
+import { TC } from './helpers/config.mjs';
 //import { diceRoller } from './helpers/dice-roll.mjs';
 
 
@@ -23,14 +23,14 @@ Hooks.once('init', function () {
 
 
 
-  game.trinity2e = {
-    TrinitySecondEditionActor,
-    TrinitySecondEditionItem,
+  game.trinitycontinuum = {
+    TrinityContinuumActor,
+    TrinityContinuumItem,
     rollItemMacro,
   };
 
   // Add custom constants for configuration.
-  CONFIG.TRINITY_SECOND = TRINITY_SECOND;
+  CONFIG.TC = TC;
 
   //Add dice rolling function
   //CONFIG.diceRoller() = diceRoller();
@@ -48,8 +48,8 @@ Hooks.once('init', function () {
   };
 
   // Define custom Document classes
-  CONFIG.Actor.documentClass = TrinitySecondEditionActor;
-  CONFIG.Item.documentClass = TrinitySecondEditionItem;
+  CONFIG.Actor.documentClass = TrinityContinuumActor;
+  CONFIG.Item.documentClass = TrinityContinuumItem;
 
   // Active Effects are never copied to the Actor,
   // but will still apply to the Actor from within the Item
@@ -58,14 +58,14 @@ Hooks.once('init', function () {
 
   // Register sheet application classes
   Actors.unregisterSheet('core', ActorSheet);
-  Actors.registerSheet('trinity-2e', TrinitySecondEditionActorSheet, {
+  Actors.registerSheet('trinity-continuum', TrinityContinuumActorSheet, {
     makeDefault: true,
-    label: 'TRINITY_SECOND.SheetLabels.Actor',
+    label: 'TC.SheetLabels.Actor',
   });
   Items.unregisterSheet('core', ItemSheet);
-  Items.registerSheet('trinity-2e', TrinitySecondEditionItemSheet, {
+  Items.registerSheet('trinity-continuum', TrinityContinuumItemSheet, {
     makeDefault: true,
-    label: 'TRINITY_SECOND.SheetLabels.Item',
+    label: 'TC.SheetLabels.Item',
   });
 
   // Preload Handlebars templates.
@@ -91,7 +91,7 @@ Hooks.once('ready', function () {
   Hooks.on('hotbarDrop', (bar, data, slot) => createItemMacro(data, slot));
 
   //For the momentum/ collateral tracker
-  const resourceTracker = new TrinitySecondEditionResourceSheet();
+  const resourceTracker = new TrinityContinuumResourceSheet();
   resourceTracker.render(true);
 });
 
@@ -118,7 +118,7 @@ async function createItemMacro(data, slot) {
   const item = await Item.fromDropData(data);
 
   // Create the macro command using the uuid.
-  const command = `game.trinity2e.rollItemMacro("${data.uuid}");`;
+  const command = `game.trinitycontinuum.rollItemMacro("${data.uuid}");`;
   let macro = game.macros.find(
     (m) => m.name === item.name && m.command === command
   );
@@ -128,7 +128,7 @@ async function createItemMacro(data, slot) {
       type: 'script',
       img: item.img,
       command: command,
-      flags: { 'trinity-2e.itemMacro': true },
+      flags: { 'trinity-continuum.itemMacro': true },
     });
   }
   game.user.assignHotbarMacro(macro, slot);

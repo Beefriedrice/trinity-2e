@@ -1,142 +1,142 @@
-export const TRINITY_SECOND = {};
+export const TC = {};
 
 /**
  * The set of Ability Scores used within the system.
  * @type {Object}
  */
-TRINITY_SECOND.abilities = {
-  str: 'TRINITY_SECOND.Ability.Str.long',
-  dex: 'TRINITY_SECOND.Ability.Dex.long',
-  con: 'TRINITY_SECOND.Ability.Con.long',
-  int: 'TRINITY_SECOND.Ability.Int.long',
-  wis: 'TRINITY_SECOND.Ability.Wis.long',
-  cha: 'TRINITY_SECOND.Ability.Cha.long',
+TC.abilities = {
+  str: 'TC.Ability.Str.long',
+  dex: 'TC.Ability.Dex.long',
+  con: 'TC.Ability.Con.long',
+  int: 'TC.Ability.Int.long',
+  wis: 'TC.Ability.Wis.long',
+  cha: 'TC.Ability.Cha.long',
 };
 
-TRINITY_SECOND.abilityAbbreviations = {
-  str: 'TRINITY_SECOND.Ability.Str.abbr',
-  dex: 'TRINITY_SECOND.Ability.Dex.abbr',
-  con: 'TRINITY_SECOND.Ability.Con.abbr',
-  int: 'TRINITY_SECOND.Ability.Int.abbr',
-  wis: 'TRINITY_SECOND.Ability.Wis.abbr',
-  cha: 'TRINITY_SECOND.Ability.Cha.abbr',
+TC.abilityAbbreviations = {
+  str: 'TC.Ability.Str.abbr',
+  dex: 'TC.Ability.Dex.abbr',
+  con: 'TC.Ability.Con.abbr',
+  int: 'TC.Ability.Int.abbr',
+  wis: 'TC.Ability.Wis.abbr',
+  cha: 'TC.Ability.Cha.abbr',
 };
 
-TRINITY_SECOND.attributes = {
-  int: 'TRINITY_SECOND.Attribute.Int.long',
-  cun: 'TRINITY_SECOND.Attribute.Cun.long',
-  res: 'TRINITY_SECOND.Attribute.Res.long',
-  mig: 'TRINITY_SECOND.Attribute.Mig.long',
-  dex: 'TRINITY_SECOND.Attribute.Dex.long',
-  sta: 'TRINITY_SECOND.Attribute.Sta.long',
-  pre: 'TRINITY_SECOND.Attribute.Pre.long',
-  man: 'TRINITY_SECOND.Attribute.Man.long',
-  com: 'TRINITY_SECOND.Attribute.Com.long',
+TC.attributes = {
+  int: 'TC.Attribute.Int.long',
+  cun: 'TC.Attribute.Cun.long',
+  res: 'TC.Attribute.Res.long',
+  mig: 'TC.Attribute.Mig.long',
+  dex: 'TC.Attribute.Dex.long',
+  sta: 'TC.Attribute.Sta.long',
+  pre: 'TC.Attribute.Pre.long',
+  man: 'TC.Attribute.Man.long',
+  com: 'TC.Attribute.Com.long',
 };
 
-TRINITY_SECOND.attributeAbbreviations = {
-  int: 'TRINITY_SECOND.Attribute.Int.abbr',
-  cun: 'TRINITY_SECOND.Attribute.Cun.abbr',
-  res: 'TRINITY_SECOND.Attribute.Res.abbr',
-  mig: 'TRINITY_SECOND.Attribute.Mig.abbr',
-  dex: 'TRINITY_SECOND.Attribute.Dex.abbr',
-  sta: 'TRINITY_SECOND.Attribute.Sta.abbr',
-  pre: 'TRINITY_SECOND.Attribute.Pre.abbr',
-  man: 'TRINITY_SECOND.Attribute.Man.abbr',
-  com: 'TRINITY_SECOND.Attribute.Com.abbr',
+TC.attributeAbbreviations = {
+  int: 'TC.Attribute.Int.abbr',
+  cun: 'TC.Attribute.Cun.abbr',
+  res: 'TC.Attribute.Res.abbr',
+  mig: 'TC.Attribute.Mig.abbr',
+  dex: 'TC.Attribute.Dex.abbr',
+  sta: 'TC.Attribute.Sta.abbr',
+  pre: 'TC.Attribute.Pre.abbr',
+  man: 'TC.Attribute.Man.abbr',
+  com: 'TC.Attribute.Com.abbr',
 };
 
-TRINITY_SECOND.megaattributes = {
-  int: 'TRINITY_SECOND.MegaAttribute.Int.long',
-  cun: 'TRINITY_SECOND.MegaAttribute.Cun.long',
-  res: 'TRINITY_SECOND.MegaAttribute.Res.long',
-  mig: 'TRINITY_SECOND.MegaAttribute.Mig.long',
-  dex: 'TRINITY_SECOND.MegaAttribute.Dex.long',
-  sta: 'TRINITY_SECOND.MegaAttribute.Sta.long',
-  pre: 'TRINITY_SECOND.MegaAttribute.Pre.long',
-  man: 'TRINITY_SECOND.MegaAttribute.Man.long',
-  com: 'TRINITY_SECOND.MegaAttribute.Com.long',
+TC.megaattributes = {
+  int: 'TC.MegaAttribute.Int.long',
+  cun: 'TC.MegaAttribute.Cun.long',
+  res: 'TC.MegaAttribute.Res.long',
+  mig: 'TC.MegaAttribute.Mig.long',
+  dex: 'TC.MegaAttribute.Dex.long',
+  sta: 'TC.MegaAttribute.Sta.long',
+  pre: 'TC.MegaAttribute.Pre.long',
+  man: 'TC.MegaAttribute.Man.long',
+  com: 'TC.MegaAttribute.Com.long',
 };
 
-TRINITY_SECOND.megaattributeAbbreviations = {
-  int: 'TRINITY_SECOND.MegaAttribute.Int.abbr',
-  cun: 'TRINITY_SECOND.MegaAttribute.Cun.abbr',
-  res: 'TRINITY_SECOND.MegaAttribute.Res.abbr',
-  mig: 'TRINITY_SECOND.MegaAttribute.Mig.abbr',
-  dex: 'TRINITY_SECOND.MegaAttribute.Dex.abbr',
-  sta: 'TRINITY_SECOND.MegaAttribute.Sta.abbr',
-  pre: 'TRINITY_SECOND.MegaAttribute.Pre.abbr',
-  man: 'TRINITY_SECOND.MegaAttribute.Man.abbr',
-  com: 'TRINITY_SECOND.MegaAttribute.Com.abbr',
+TC.megaattributeAbbreviations = {
+  int: 'TC.MegaAttribute.Int.abbr',
+  cun: 'TC.MegaAttribute.Cun.abbr',
+  res: 'TC.MegaAttribute.Res.abbr',
+  mig: 'TC.MegaAttribute.Mig.abbr',
+  dex: 'TC.MegaAttribute.Dex.abbr',
+  sta: 'TC.MegaAttribute.Sta.abbr',
+  pre: 'TC.MegaAttribute.Pre.abbr',
+  man: 'TC.MegaAttribute.Man.abbr',
+  com: 'TC.MegaAttribute.Com.abbr',
 };
 
-TRINITY_SECOND.skills = {
-  aim: 'TRINITY_SECOND.Skill.Aim.long',
-  ath: 'TRINITY_SECOND.Skill.Ath.long',
-  clo: 'TRINITY_SECOND.Skill.Clo.long',
-  com: 'TRINITY_SECOND.Skill.Com.long',
-  cul: 'TRINITY_SECOND.Skill.Cul.long',
-  emp: 'TRINITY_SECOND.Skill.Emp.long',
-  eni: 'TRINITY_SECOND.Skill.Eni.long',
-  hum: 'TRINITY_SECOND.Skill.Hum.long',
-  int: 'TRINITY_SECOND.Skill.Int.long',
-  lar: 'TRINITY_SECOND.Skill.Lar.long',
-  med: 'TRINITY_SECOND.Skill.Med.long',
-  per: 'TRINITY_SECOND.Skill.Per.long',
-  pil: 'TRINITY_SECOND.Skill.Pil.long',
-  sci: 'TRINITY_SECOND.Skill.Sci.long',
-  sur: 'TRINITY_SECOND.Skill.Sur.long',
-  tec: 'TRINITY_SECOND.Skill.Tec.long',
+TC.skills = {
+  aim: 'TC.Skill.Aim.long',
+  ath: 'TC.Skill.Ath.long',
+  clo: 'TC.Skill.Clo.long',
+  com: 'TC.Skill.Com.long',
+  cul: 'TC.Skill.Cul.long',
+  emp: 'TC.Skill.Emp.long',
+  eni: 'TC.Skill.Eni.long',
+  hum: 'TC.Skill.Hum.long',
+  int: 'TC.Skill.Int.long',
+  lar: 'TC.Skill.Lar.long',
+  med: 'TC.Skill.Med.long',
+  per: 'TC.Skill.Per.long',
+  pil: 'TC.Skill.Pil.long',
+  sci: 'TC.Skill.Sci.long',
+  sur: 'TC.Skill.Sur.long',
+  tec: 'TC.Skill.Tec.long',
 };
 
-TRINITY_SECOND.skillAbbreviations = {
-  aim: 'TRINITY_SECOND.Skill.Aim.abbr',
-  ath: 'TRINITY_SECOND.Skill.Ath.abbr',
-  clo: 'TRINITY_SECOND.Skill.Clo.abbr',
-  com: 'TRINITY_SECOND.Skill.Com.abbr',
-  cul: 'TRINITY_SECOND.Skill.Cul.abbr',
-  emp: 'TRINITY_SECOND.Skill.Emp.abbr',
-  eni: 'TRINITY_SECOND.Skill.Eni.abbr',
-  hum: 'TRINITY_SECOND.Skill.Hum.abbr',
-  int: 'TRINITY_SECOND.Skill.Int.abbr',
-  lar: 'TRINITY_SECOND.Skill.Lar.abbr',
-  med: 'TRINITY_SECOND.Skill.Med.abbr',
-  per: 'TRINITY_SECOND.Skill.Per.abbr',
-  pil: 'TRINITY_SECOND.Skill.Pil.abbr',
-  sci: 'TRINITY_SECOND.Skill.Sci.abbr',
-  sur: 'TRINITY_SECOND.Skill.Sur.abbr',
-  tec: 'TRINITY_SECOND.Skill.Tec.abbr',
+TC.skillAbbreviations = {
+  aim: 'TC.Skill.Aim.abbr',
+  ath: 'TC.Skill.Ath.abbr',
+  clo: 'TC.Skill.Clo.abbr',
+  com: 'TC.Skill.Com.abbr',
+  cul: 'TC.Skill.Cul.abbr',
+  emp: 'TC.Skill.Emp.abbr',
+  eni: 'TC.Skill.Eni.abbr',
+  hum: 'TC.Skill.Hum.abbr',
+  int: 'TC.Skill.Int.abbr',
+  lar: 'TC.Skill.Lar.abbr',
+  med: 'TC.Skill.Med.abbr',
+  per: 'TC.Skill.Per.abbr',
+  pil: 'TC.Skill.Pil.abbr',
+  sci: 'TC.Skill.Sci.abbr',
+  sur: 'TC.Skill.Sur.abbr',
+  tec: 'TC.Skill.Tec.abbr',
 };
 
-TRINITY_SECOND.sources = {
-  psi: 'TRINITY_SECOND.Source.Psi',
-  qua: 'TRINITY_SECOND.Source.Quantum'
+TC.sources = {
+  psi: 'TC.Source.Psi',
+  qua: 'TC.Source.Quantum'
 };
 
-TRINITY_SECOND.terminology = {
-  hea: 'TRINITY_SECOND.SheetLabels.Health',
+TC.terminology = {
+  hea: 'TC.SheetLabels.Health',
   mom: 'Trinity_SECOND.Momentum',
-  col: 'TRINITY_SECOND.Collateral',
+  col: 'TC.Collateral',
 };
 
-TRINITY_SECOND.edgeCategory = {
-  men: 'TRINITY_SECOND.Edge.Type.Men',
-  phy: 'TRINITY_SECOND.Edge.Type.Phy',
-  soc: 'TRINITY_SECOND.Edge.Type.Soc',
-  sty: 'TRINITY_SECOND.Edge.Type.Sty',
-  com: 'TRINITY_SECOND.Edge.Type.Com',
-  pow: 'TRINITY_SECOND.Edge.Type.Pow',
-  enh: 'TRINITY_SECOND.Edge.Type.Enh',
-  nov: 'TRINITY_SECOND.Edge.Type.Nov',
-  pat: 'TRINITY_SECOND.Edge.Type.Pat',
+TC.edgeCategory = {
+  men: 'TC.Edge.Type.Men',
+  phy: 'TC.Edge.Type.Phy',
+  soc: 'TC.Edge.Type.Soc',
+  sty: 'TC.Edge.Type.Sty',
+  com: 'TC.Edge.Type.Com',
+  pow: 'TC.Edge.Type.Pow',
+  enh: 'TC.Edge.Type.Enh',
+  nov: 'TC.Edge.Type.Nov',
+  pat: 'TC.Edge.Type.Pat',
 };
 
-TRINITY_SECOND.scale = {
-  dur: 'TRINITY_SECOND.Scale.Dur',
-  lea: 'TRINITY_SECOND.Scale.Lea',
-  men: 'TRINITY_SECOND.Scale.Men',
-  mig: 'TRINITY_SECOND.Scale.Mig',
-  pow: 'TRINITY_SECOND.Scale.Pow',
-  siz: 'TRINITY_SECOND.Scale.Siz',
-  spe: 'TRINITY_SECOND.Scale.Spe',
+TC.scale = {
+  dur: 'TC.Scale.Dur',
+  lea: 'TC.Scale.Lea',
+  men: 'TC.Scale.Men',
+  mig: 'TC.Scale.Mig',
+  pow: 'TC.Scale.Pow',
+  siz: 'TC.Scale.Siz',
+  spe: 'TC.Scale.Spe',
 };

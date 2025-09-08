@@ -15,7 +15,7 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Rating"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Rating"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -25,7 +25,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Maxed"}}</label>
+          <label class='resource-label'>{{localize "TC.Power.Maxed"}}</label>
           {{#if system.maxedout}}
             <input type="checkbox" class="medium-check" name="system.maxedout" value="true" checked data-dtype="Boolean"/>
           {{else}}
@@ -38,9 +38,9 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.SheetLabels.Description"}}</a>
-    <a class='item' data-tab='tags'>{{localize "TRINITY_SECOND.SheetLabels.Tags"}}</a>
-    <a class='item' data-tab='attributes'>{{localize "TRINITY_SECOND.SheetLabels.Attributes"}}</a>
+    <a class='item' data-tab='description'>{{localize "TC.SheetLabels.Description"}}</a>
+    <a class='item' data-tab='tags'>{{localize "TC.SheetLabels.Tags"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TC.SheetLabels.Attributes"}}</a>
   </nav>
 
   {{! Sheet Body }}
@@ -49,7 +49,7 @@
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
       <div class='resource-text'>
-        <h3>{{localize "TRINITY_SECOND.SheetLabels.Prereq"}}</h3>
+        <h3>{{localize "TC.SheetLabels.Prereq"}}</h3>
         <input
           type='text'
           name='system.prereq'
@@ -57,7 +57,7 @@
           data-dtype='String'
         />
       </div>
-      <h3 class="added-segment">{{localize "TRINITY_SECOND.SheetLabels.Description"}}</h3>
+      <h3 class="added-segment">{{localize "TC.SheetLabels.Description"}}</h3>
       <div>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
@@ -72,7 +72,7 @@
 
     {{! Tags Tab }}
     <div class='tab' data-tab='tags'>  
-      <h3>{{localize "TRINITY_SECOND.SheetLabels.Tags"}}</h3>
+      <h3>{{localize "TC.SheetLabels.Tags"}}</h3>
       <div class="resource-text">
         <input
           type='text'
@@ -81,7 +81,7 @@
           data-dtype='String'
         />
       </div>
-      <h3 class="description added-segment">{{localize "TRINITY_SECOND.Power.TagD"}}</h3>
+      <h3 class="description added-segment">{{localize "TC.Power.TagD"}}</h3>
         {{! Editors must receive enriched text data from getData to properly handle rolls }}
         {{editor
           enrichedDescription
@@ -95,7 +95,7 @@
     {{! Attributes Tab }}
     <div class='tab attributes' data-group='primary' data-tab='attributes'>
       {{! As you add new fields, add them in here! }}
-      {{> "systems/trinity-2e/templates/item/parts/item-attributes.hbs"}}
+      {{> "systems/trinity-continuum/templates/item/parts/item-attributes.hbs"}}
     </div>
   </section>
 </form>

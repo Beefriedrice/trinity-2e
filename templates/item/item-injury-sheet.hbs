@@ -15,7 +15,7 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Wound"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Wound"}}</label>
           <input
             type='text'
             name='system.wound'
@@ -24,14 +24,14 @@
             data-dtype='String'
           />
           <datalist id="wound-type">
-            <option value="Armor">{{localize "TRINITY_SECOND.SheetLabels.Armor"}}</option>
-            <option value="Bruised">{{localize "TRINITY_SECOND.SheetLabels.Bruised"}}</option>
-            <option value="Injured">{{localize "TRINITY_SECOND.SheetLabels.Injured"}}</option>
-            <option value="Maimed">{{localize "TRINITY_SECOND.SheetLabels.Maimed"}}</option>
+            <option value="Armor">{{localize "TC.SheetLabels.Armor"}}</option>
+            <option value="Bruised">{{localize "TC.SheetLabels.Bruised"}}</option>
+            <option value="Injured">{{localize "TC.SheetLabels.Injured"}}</option>
+            <option value="Maimed">{{localize "TC.SheetLabels.Maimed"}}</option>
           </datalist>
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Woundsource"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Woundsource"}}</label>
           <input
             type='text'
             name='system.source'
@@ -40,7 +40,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Firstaid"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Firstaid"}}</label>
           {{#if system.firstaid}}
             <input type="checkbox" class="medium-check" name="system.firstaid" value="true" checked data-dtype="Boolean"/>
           {{else}}
@@ -53,8 +53,8 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.SheetLabels.Description"}}</a>
-    <a class='item' data-tab='attributes'>{{localize "TRINITY_SECOND.SheetLabels.Attributes"}}</a>
+    <a class='item' data-tab='description'>{{localize "TC.SheetLabels.Description"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TC.SheetLabels.Attributes"}}</a>
   </nav>
 
   {{! Sheet Body }}
@@ -62,7 +62,7 @@
 
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
-      <h3 class="added-segment">{{localize "TRINITY_SECOND.SheetLabels.Effect"}}</h3>
+      <h3 class="added-segment">{{localize "TC.SheetLabels.Effect"}}</h3>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
@@ -76,7 +76,7 @@
     {{! Attributes Tab }}
     <div class='tab attributes' data-group='primary' data-tab='attributes'>
       {{! As you add new fields, add them in here! }}
-      {{> "systems/trinity-2e/templates/item/parts/item-attributes.hbs"}}
+      {{> "systems/trinity-continuum/templates/item/parts/item-attributes.hbs"}}
     </div>
   </section>
 </form>

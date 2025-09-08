@@ -1,5 +1,5 @@
 {
-  "TRINITY_SECOND": {
+  "TC": {
     "Ability": {
       "Str": { "long": "Strength", "abbr": "str" },
       "Con": { "long": "Constitution", "abbr": "con" },
@@ -52,7 +52,7 @@
       "Abilities": "Abilities",
       "Access": "Access",
       "Action": "Action",
-      "Actor": "Trinity 2E Actor Sheet",
+      "Actor": "Trinity Continuum Actor Sheet",
       "Additional1": "Additional Path 1",
       "Additional2": "Additional Path 2",
       "Armor": "Armor",
@@ -97,7 +97,7 @@
       "Injured": "Injured",
       "Injuries": "Injuries",
       "Isequipped": "Equipped?",
-      "Item": "Trinity 2E Item Sheet",
+      "Item": "Trinity Continuum Item Sheet",
       "Level": "Level",
       "Lowl": "Low-Level",
       "Maimed": "Maimed",

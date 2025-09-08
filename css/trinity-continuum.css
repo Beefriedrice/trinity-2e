@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-.test-color {
-  color: brown;
-}
-
 /* Global styles */
 .window-app {
   font-family: "Roboto", sans-serif;
@@ -346,11 +342,11 @@
   pointer-events: auto;
 }
 
-/* Styles limited to trinity-2e sheets */
-.trinity-2e .item-form {
+/* Styles limited to trinity-continuum sheets */
+.trinity-continuum .item-form {
   font-family: "Roboto", sans-serif;
 }
-.trinity-2e .sheet-header {
+.trinity-continuum .sheet-header {
   flex: 0 auto;
   overflow: hidden;
   display: flex;
@@ -359,55 +355,55 @@
   justify-content: flex-start;
   margin-bottom: 10px;
 }
-.trinity-2e .sheet-header .profile-img {
+.trinity-continuum .sheet-header .profile-img {
   flex: 0 0 100px;
   height: 100px;
   margin-right: 10px;
 }
-.trinity-2e .sheet-header .header-fields {
+.trinity-continuum .sheet-header .header-fields {
   flex: 1;
 }
-.trinity-2e .sheet-header h1.charname {
+.trinity-continuum .sheet-header h1.charname {
   height: 50px;
   padding: 0px;
   margin: 5px 0;
   border-bottom: 0;
 }
-.trinity-2e .sheet-header h1.charname input {
+.trinity-continuum .sheet-header h1.charname input {
   width: 100%;
   height: 100%;
   margin: 0;
 }
-.trinity-2e .sheet-tabs {
+.trinity-continuum .sheet-tabs {
   flex: 0;
 }
-.trinity-2e .sheet-body,
-.trinity-2e .sheet-body .tab,
-.trinity-2e .sheet-body .tab .editor {
+.trinity-continuum .sheet-body,
+.trinity-continuum .sheet-body .tab,
+.trinity-continuum .sheet-body .tab .editor {
   height: 100%;
 }
-.trinity-2e .tox .tox-editor-container {
+.trinity-continuum .tox .tox-editor-container {
   background: #fff;
 }
-.trinity-2e .tox .tox-edit-area {
+.trinity-continuum .tox .tox-edit-area {
   padding: 0 8px;
 }
-.trinity-2e .added-segment {
+.trinity-continuum .added-segment {
   margin-top: 10px;
 }
-.trinity-2e .small-check {
+.trinity-continuum .small-check {
   width: 13px;
   height: 13px;
 }
-.trinity-2e .medium-check {
+.trinity-continuum .medium-check {
   width: 16px;
   height: 16px;
   padding-bottom: 3px;
 }
-.trinity-2e .resource-label {
+.trinity-continuum .resource-label {
   font-weight: bold;
 }
-.trinity-2e .items-header {
+.trinity-continuum .items-header {
   height: 28px;
   margin: 2px 0;
   padding: 0;
@@ -416,23 +412,23 @@
   border: 2px groove #eeede0;
   font-weight: bold;
 }
-.trinity-2e .items-header > * {
+.trinity-continuum .items-header > * {
   font-size: 14px;
   text-align: center;
 }
-.trinity-2e .items-header .item-name {
+.trinity-continuum .items-header .item-name {
   font-weight: bold;
   padding-left: 5px;
   text-align: left;
   display: flex;
 }
-.trinity-2e .skilltrick-list {
+.trinity-continuum .skilltrick-list {
   margin-top: 10px;
 }
-.trinity-2e .specialty-list {
+.trinity-continuum .specialty-list {
   margin-top: 10px;
 }
-.trinity-2e .items-list {
+.trinity-continuum .items-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -440,12 +436,12 @@
   scrollbar-width: thin;
   color: #444;
 }
-.trinity-2e .items-list .item-list {
+.trinity-continuum .items-list .item-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.trinity-2e .items-list .item-name {
+.trinity-continuum .items-list .item-name {
   flex: 2;
   margin: 0;
   overflow: hidden;
@@ -454,83 +450,83 @@
   align-items: center;
   display: flex;
 }
-.trinity-2e .items-list .item-name h3, .trinity-2e .items-list .item-name h4 {
+.trinity-continuum .items-list .item-name h3, .trinity-continuum .items-list .item-name h4 {
   margin: 0;
   white-space: nowrap;
   overflow-x: hidden;
 }
-.trinity-2e .items-list .item-formula {
+.trinity-continuum .items-list .item-formula {
   flex: 0 0 90px;
   padding: 0 8px;
 }
-.trinity-2e .items-list .item-controls {
+.trinity-continuum .items-list .item-controls {
   display: flex;
   flex: 0 0 80px;
   justify-content: flex-end;
 }
-.trinity-2e .items-list .item-controls a {
+.trinity-continuum .items-list .item-controls a {
   font-size: 12px;
   text-align: center;
   margin: 0 6px;
 }
-.trinity-2e .items-list .item {
+.trinity-continuum .items-list .item {
   align-items: center;
   padding: 0 2px;
   border-bottom: 1px solid #c9c7b8;
 }
-.trinity-2e .items-list .item:last-child {
+.trinity-continuum .items-list .item:last-child {
   border-bottom: none;
 }
-.trinity-2e .items-list .item .item-name {
+.trinity-continuum .items-list .item .item-name {
   flex: 2 1 200px;
   color: #191813;
 }
-.trinity-2e .items-list .item .item-name .item-image {
+.trinity-continuum .items-list .item .item-name .item-image {
   flex: 0 0 30px;
   height: 30px;
   background-size: 30px;
   border: none;
   margin-right: 5px;
 }
-.trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-soft, .trinity-2e .items-list .item .item-hard {
+.trinity-continuum .items-list .item .item-tscale, .trinity-continuum .items-list .item .item-size, .trinity-continuum .items-list .item .item-soft, .trinity-continuum .items-list .item .item-hard {
   flex: 0 0 25px;
 }
-.trinity-2e .items-list .item .item-rating, .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-speed {
+.trinity-continuum .items-list .item .item-rating, .trinity-continuum .items-list .item .item-tscale, .trinity-continuum .items-list .item .item-speed {
   flex: 0 0 30px;
 }
-.trinity-2e .items-list .item .item-prating {
+.trinity-continuum .items-list .item .item-prating {
   flex: 0 0 45px;
 }
-.trinity-2e .items-list .item .item-successes, .trinity-2e .items-list .item .item-first {
+.trinity-continuum .items-list .item .item-successes, .trinity-continuum .items-list .item .item-first {
   flex: 0 0 50px;
 }
-.trinity-2e .items-list .item .item-handling, .trinity-2e .items-list .item .item-duration, .trinity-2e .items-list .item .item-level {
+.trinity-continuum .items-list .item .item-handling, .trinity-continuum .items-list .item .item-duration, .trinity-continuum .items-list .item .item-level {
   flex: 0 0 60px;
 }
-.trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-ptype, .trinity-2e .items-list .item .item-suspended, .trinity-2e .items-list .item .item-path {
+.trinity-continuum .items-list .item .item-category, .trinity-continuum .items-list .item .item-skill, .trinity-continuum .items-list .item .item-ptype, .trinity-continuum .items-list .item .item-suspended, .trinity-continuum .items-list .item .item-path {
   flex: 0 0 70px;
 }
-.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-wound {
+.trinity-continuum .items-list .item .item-enhancement, .trinity-continuum .items-list .item .item-wound {
   flex: 0 0 85px;
 }
-.trinity-2e .items-list .item .item-tags-short, .trinity-2e .items-list .item .item-person {
+.trinity-continuum .items-list .item .item-tags-short, .trinity-continuum .items-list .item .item-person {
   flex: 0 0 120px;
 }
-.trinity-2e .items-list .item .item-tags {
+.trinity-continuum .items-list .item .item-tags {
   flex: 0 0 250px;
 }
-.trinity-2e .items-list .item .item-enhancement, .trinity-2e .items-list .item .item-person, .trinity-2e .items-list .item .item-level, .trinity-2e .items-list .item .item-wound, .trinity-2e .items-list .item .item-first, .trinity-2e .items-list .item .item-successes, .trinity-2e .items-list .item .item-duration, .trinity-2e .items-list .item .item-path, .trinity-2e .items-list .item .item-tags-short, .trinity-2e .items-list .item .item-prating, .trinity-2e .items-list .item .item-size, .trinity-2e .items-list .item .item-tags, .trinity-2e .items-list .item .item-category, .trinity-2e .items-list .item .item-suspended, .trinity-2e .items-list .item .item-ptype, .trinity-2e .items-list .item .item-skill, .trinity-2e .items-list .item .item-rating, .trinity-2e .items-list .item .item-soft, .trinity-2e .items-list .item .item-hard, .trinity-2e .items-list .item .item-tscale, .trinity-2e .items-list .item .item-handling, .trinity-2e .items-list .item .item-speed {
+.trinity-continuum .items-list .item .item-enhancement, .trinity-continuum .items-list .item .item-person, .trinity-continuum .items-list .item .item-level, .trinity-continuum .items-list .item .item-wound, .trinity-continuum .items-list .item .item-first, .trinity-continuum .items-list .item .item-successes, .trinity-continuum .items-list .item .item-duration, .trinity-continuum .items-list .item .item-path, .trinity-continuum .items-list .item .item-tags-short, .trinity-continuum .items-list .item .item-prating, .trinity-continuum .items-list .item .item-size, .trinity-continuum .items-list .item .item-tags, .trinity-continuum .items-list .item .item-category, .trinity-continuum .items-list .item .item-suspended, .trinity-continuum .items-list .item .item-ptype, .trinity-continuum .items-list .item .item-skill, .trinity-continuum .items-list .item .item-rating, .trinity-continuum .items-list .item .item-soft, .trinity-continuum .items-list .item .item-hard, .trinity-continuum .items-list .item .item-tscale, .trinity-continuum .items-list .item .item-handling, .trinity-continuum .items-list .item .item-speed {
   text-align: center;
   font-size: 12px;
   margin: 0 5px;
 }
-.trinity-2e .items-list .item-prop {
+.trinity-continuum .items-list .item-prop {
   text-align: center;
   border-left: 1px solid #c9c7b8;
   border-right: 1px solid #c9c7b8;
   font-size: 12px;
 }
-.trinity-2e .items-list .items-header {
+.trinity-continuum .items-list .items-header {
   height: 28px;
   margin: 2px 0;
   padding: 0;
@@ -539,135 +535,135 @@
   border: 2px groove #eeede0;
   font-weight: bold;
 }
-.trinity-2e .items-list .items-header > * {
+.trinity-continuum .items-list .items-header > * {
   font-size: 12px;
   text-align: center;
 }
-.trinity-2e .items-list .items-header .item-name {
+.trinity-continuum .items-list .items-header .item-name {
   padding-left: 5px;
   text-align: left;
 }
-.trinity-2e .suite-row {
+.trinity-continuum .suite-row {
   display: flex;
   justify-content: start;
   align-items: center;
 }
-.trinity-2e .suite-text {
+.trinity-continuum .suite-text {
   max-width: 350px;
 }
-.trinity-2e .effects .item .effect-source,
-.trinity-2e .effects .item .effect-duration,
-.trinity-2e .effects .item .effect-controls {
+.trinity-continuum .effects .item .effect-source,
+.trinity-continuum .effects .item .effect-duration,
+.trinity-continuum .effects .item .effect-controls {
   text-align: center;
   border-left: 1px solid #c9c7b8;
   border-right: 1px solid #c9c7b8;
   font-size: 12px;
 }
-.trinity-2e .effects .item .effect-controls {
+.trinity-continuum .effects .item .effect-controls {
   border: none;
 }
-.trinity-2e .effects .item .effect-duration {
+.trinity-continuum .effects .item .effect-duration {
   flex: 0 0 50px;
   margin: 0 5px;
 }
-.trinity-2e .effects .item .effect-source {
+.trinity-continuum .effects .item .effect-source {
   flex: 0 0 50px;
   margin: 0 5px;
 }
-.trinity-2e .effects .item .effect-controls {
+.trinity-continuum .effects .item .effect-controls {
   flex: 0 0 100px;
   margin: 0 5px;
 }
-.trinity-2e .baseline .sheet-tabs .active {
+.trinity-continuum .baseline .sheet-tabs .active {
   text-shadow: 0 0 10px white !important;
 }
-.trinity-2e .baseline .tabs .item:hover, .trinity-2e .baseline .tabs .item:focus {
+.trinity-continuum .baseline .tabs .item:hover, .trinity-continuum .baseline .tabs .item:focus {
   text-shadow: 0 0 10px white;
   color: white;
 }
-.trinity-2e .baseline .style-header, .trinity-2e .baseline .items-list .items-header, .trinity-2e .baseline .items-list .items-header .item-name {
+.trinity-continuum .baseline .style-header, .trinity-continuum .baseline .items-list .items-header, .trinity-continuum .baseline .items-list .items-header .item-name {
   color: white;
   background-color: navy;
 }
-.trinity-2e .nova .sheet-tabs .active {
+.trinity-continuum .nova .sheet-tabs .active {
   text-shadow: 0 0 10px goldenrod !important;
 }
-.trinity-2e .nova .tabs .item:hover, .trinity-2e .nova .tabs .item:focus {
+.trinity-continuum .nova .tabs .item:hover, .trinity-continuum .nova .tabs .item:focus {
   text-shadow: 0 0 10px goldenrod;
   color: goldenrod;
 }
-.trinity-2e .nova .style-header, .trinity-2e .nova .items-list .items-header, .trinity-2e .nova .items-list .items-header .item-name {
+.trinity-continuum .nova .style-header, .trinity-continuum .nova .items-list .items-header, .trinity-continuum .nova .items-list .items-header .item-name {
   color: goldenrod;
   background-color: rgb(20, 20, 20);
 }
-.trinity-2e .psion .sheet-tabs .active {
+.trinity-continuum .psion .sheet-tabs .active {
   text-shadow: 0 0 10px white !important;
 }
-.trinity-2e .psion .tabs .item:hover, .trinity-2e .psion .tabs .item:focus {
+.trinity-continuum .psion .tabs .item:hover, .trinity-continuum .psion .tabs .item:focus {
   text-shadow: 0 0 10px white;
   color: white;
 }
-.trinity-2e .psion .style-header, .trinity-2e .psion .items-list .items-header, .trinity-2e .psion .items-list .items-header .item-name {
+.trinity-continuum .psion .style-header, .trinity-continuum .psion .items-list .items-header, .trinity-continuum .psion .items-list .items-header .item-name {
   color: white;
   background-color: maroon;
 }
-.trinity-2e .sgc .sheet-tabs .active {
+.trinity-continuum .sgc .sheet-tabs .active {
   text-shadow: 0 0 10px white !important;
 }
-.trinity-2e .sgc .tabs .item:hover, .trinity-2e .sgc .tabs .item:focus {
+.trinity-continuum .sgc .tabs .item:hover, .trinity-continuum .sgc .tabs .item:focus {
   text-shadow: 0 0 10px white;
   color: white;
 }
-.trinity-2e .sgc .style-header, .trinity-2e .sgc .items-list .items-header, .trinity-2e .sgc .items-list .items-header .item-name {
+.trinity-continuum .sgc .style-header, .trinity-continuum .sgc .items-list .items-header, .trinity-continuum .sgc .items-list .items-header .item-name {
   color: white;
   background-color: navy;
 }
-.trinity-2e .talent .sheet-tabs .active {
+.trinity-continuum .talent .sheet-tabs .active {
   text-shadow: 0 0 10px rgb(124, 58, 34) !important;
 }
-.trinity-2e .talent .tabs .item:hover, .trinity-2e .talent .tabs .item:focus {
+.trinity-continuum .talent .tabs .item:hover, .trinity-continuum .talent .tabs .item:focus {
   text-shadow: 0 0 10px rgb(124, 58, 34);
   color: rgb(124, 58, 34);
 }
-.trinity-2e .talent .style-header, .trinity-2e .talent .items-list .items-header, .trinity-2e .talent .items-list .items-header .item-name {
+.trinity-continuum .talent .style-header, .trinity-continuum .talent .items-list .items-header, .trinity-continuum .talent .items-list .items-header .item-name {
   color: white;
   background-color: rgb(124, 58, 34);
 }
-.trinity-2e h2.style-header, .trinity-2e h3.style-header {
+.trinity-continuum h2.style-header, .trinity-continuum h3.style-header {
   padding-top: 2px;
 }
-.trinity-2e .text-2digit {
+.trinity-continuum .text-2digit {
   min-width: 25px;
   max-width: 25px;
   text-align: center;
 }
-.trinity-2e .text-3digit {
+.trinity-continuum .text-3digit {
   min-width: 35px;
   max-width: 35px;
   text-align: center;
 }
-.trinity-2e .math-label {
+.trinity-continuum .math-label {
   max-width: 25px;
   text-align: center;
 }
-.trinity-2e .resource {
+.trinity-continuum .resource {
   display: flex;
   justify-content: space-between;
   margin: 0 5px;
 }
-.trinity-2e .resource-section {
+.trinity-continuum .resource-section {
   display: flex;
   justify-content: space-between;
 }
-.trinity-2e .health-section {
+.trinity-continuum .health-section {
   max-width: 90px;
   min-width: 90px;
   padding-top: 5px;
 }
-.trinity-2e .health-section .health-type {
+.trinity-continuum .health-section .health-type {
   padding-top: 10px;
 }
-.trinity-2e .health-section .health-row {
+.trinity-continuum .health-section .health-row {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -676,47 +672,47 @@
   padding-top: 5px;
   text-align: center;
 }
-.trinity-2e .health-section .health-label {
+.trinity-continuum .health-section .health-label {
   width: 100%;
   font-weight: bold;
   text-align: center;
   padding-top: 5px;
   font-size: 15px;
 }
-.trinity-2e .mod-label {
+.trinity-continuum .mod-label {
   margin-left: 5px;
 }
-.trinity-2e .status-section {
+.trinity-continuum .status-section {
   display: grid;
   grid-template-columns: 100px 1fr;
 }
-.trinity-2e .source-section {
+.trinity-continuum .source-section {
   max-width: 325px;
   min-width: 275px;
   flex: 1 1 300px;
   padding-top: 5px;
 }
-.trinity-2e .source-row {
+.trinity-continuum .source-row {
   display: flex;
   width: 100%;
   justify-content: space-between;
   padding-top: 5px;
 }
-.trinity-2e .attribute-header, .trinity-2e .attribute-row {
+.trinity-continuum .attribute-header, .trinity-continuum .attribute-row {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-.trinity-2e .attribute-row {
+.trinity-continuum .attribute-row {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.trinity-2e .attribute {
+.trinity-continuum .attribute {
   flex: 5 1 160px;
   max-width: 160px;
   min-width: 120px;
 }
-.trinity-2e .approach {
+.trinity-continuum .approach {
   flex: 0 0 55px;
   max-width: 55px;
   min-width: 55px;
@@ -724,35 +720,35 @@
   margin-right: 5px;
   align-items: center;
 }
-.trinity-2e .approach-label {
+.trinity-continuum .approach-label {
   font-size: 15px;
   font-weight: bold;
 }
-.trinity-2e .skill {
+.trinity-continuum .skill {
   margin: 0px 15px;
 }
-.trinity-2e .xp-row {
+.trinity-continuum .xp-row {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.trinity-2e .xp-spent, .trinity-2e .xp-total, .trinity-2e .xp-current {
+.trinity-continuum .xp-spent, .trinity-continuum .xp-total, .trinity-continuum .xp-current {
   flex: 1 1 40px;
   text-align: center;
 }
-.trinity-2e .scale-cell {
+.trinity-continuum .scale-cell {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 15px;
 }
-.trinity-2e .scale-mods {
+.trinity-continuum .scale-mods {
   text-align: left;
 }
-.trinity-2e .suite-column {
+.trinity-continuum .suite-column {
   flex: 0 0 80px;
 }
-.trinity-2e .radio-to-check {
+.trinity-continuum .radio-to-check {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -767,51 +763,51 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   flex: 0 0 13px;
 }
-.trinity-2e .radio-to-check:checked {
+.trinity-continuum .radio-to-check:checked {
   background-color: black;
   border: 1px solid rgb(74, 74, 74);
 }
-.trinity-2e .radio-to-check:checked::before {
+.trinity-continuum .radio-to-check:checked::before {
   position: absolute;
   color: black !important;
   background-color: rgb(74, 74, 74);
   border: 1px solid rgb(74, 74, 74);
   border-radius: 2px;
 }
-.trinity-2e .align-boxes {
+.trinity-continuum .align-boxes {
   flex: 0 0 5px;
 }
-.trinity-2e .maxed-out {
+.trinity-continuum .maxed-out {
   flex: 0 0 220px;
 }
-.trinity-2e .maxed-out-row {
+.trinity-continuum .maxed-out-row {
   display: flex;
   justify-content: start;
   margin: 5px 0;
 }
-.trinity-2e .stat-detail-row {
+.trinity-continuum .stat-detail-row {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 10px 0;
 }
-.trinity-2e .stat-detail-row .option-wound {
+.trinity-continuum .stat-detail-row .option-wound {
   flex: 0 0 90px;
 }
-.trinity-2e .stat-detail-row .option-base {
+.trinity-continuum .stat-detail-row .option-base {
   flex: 0 0 40px;
 }
-.trinity-2e .stat-detail-row .option-stamina {
+.trinity-continuum .stat-detail-row .option-stamina {
   flex: 0 0 45px;
 }
-.trinity-2e .stat-detail-row .option-add {
+.trinity-continuum .stat-detail-row .option-add {
   flex: 0 0 65px;
 }
-.trinity-2e .stat-detail-row .option-mod {
+.trinity-continuum .stat-detail-row .option-mod {
   flex: 0 0 55px;
 }
-.trinity-2e .stat-detail-row .option-wound, .trinity-2e .stat-detail-row .option-base, .trinity-2e .stat-detail-row .option-stamina, .trinity-2e .stat-detail-row .option-add, .trinity-2e .stat-detail-row .option-mod {
+.trinity-continuum .stat-detail-row .option-wound, .trinity-continuum .stat-detail-row .option-base, .trinity-continuum .stat-detail-row .option-stamina, .trinity-continuum .stat-detail-row .option-add, .trinity-continuum .stat-detail-row .option-mod {
   text-align: center;
 }
 
-/*# sourceMappingURL=trinity-2e.css.map */
+/*# sourceMappingURL=trinity-continuum.css.map */

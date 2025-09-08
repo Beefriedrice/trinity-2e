@@ -4,47 +4,47 @@
   <section class="status-section">
     <div class="health-section">
       <div class="flex-group-center">
-          <h3 class="style-header">{{localize "TRINITY_SECOND.SheetLabels.Health"}}</h3>
+          <h3 class="style-header">{{localize "TC.SheetLabels.Health"}}</h3>
       </div>
       {{!-- Hard Armor --}}
       <div class="health-type">
-        <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Hard.long"}}</div>
+        <div class="health-label">{{localize "TC.SheetLabels.Hard.long"}}</div>
         <div class="health-row">
           <div class="health-input">{{system.health.hard.value}}</div>
           <span class="math-label"> / </span>
           <div class="health-input">{{system.health.hard.max}}</div>
         </div>
-        <div class="health-row"><span class="mod-label">No {{localize "TRINITY_SECOND.SheetLabels.Mod"}}</span></div>
+        <div class="health-row"><span class="mod-label">No {{localize "TC.SheetLabels.Mod"}}</span></div>
       </div>
       {{!-- Bruised --}}
       <div class="health-type">
-        <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Bruised"}}</div>
+        <div class="health-label">{{localize "TC.SheetLabels.Bruised"}}</div>
         <div class="health-row">
           <div class="health-input">{{system.health.bruised.value}}</div>
           <span class="math-label"> / </span>
           <div class="health-input">{{system.health.bruised.max}}</div>
         </div>
-        <div class="health-row"><span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: +{{system.health.bruised.mod}}</span></div>
+        <div class="health-row"><span class="mod-label">{{localize "TC.SheetLabels.Mod"}}: +{{system.health.bruised.mod}}</span></div>
       </div>
       {{!-- Injured --}}
       <div class="health-type">
-        <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Injured"}}</div>
+        <div class="health-label">{{localize "TC.SheetLabels.Injured"}}</div>
         <div class="health-row">
           <div class="health-input">{{system.health.injured.value}}</div>
           <span class="math-label"> / </span>
           <div class="health-input">{{system.health.injured.max}}</div>
         </div>
-        <div class="health-row"><span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: +{{system.health.injured.mod}}</span></div>
+        <div class="health-row"><span class="mod-label">{{localize "TC.SheetLabels.Mod"}}: +{{system.health.injured.mod}}</span></div>
       </div>
       {{!-- Maimed --}}
       <div class="health-type">
-        <div class="health-label">{{localize "TRINITY_SECOND.SheetLabels.Maimed"}}</div>
+        <div class="health-label">{{localize "TC.SheetLabels.Maimed"}}</div>
         <div class="health-row">
           <div class="health-input">{{system.health.maimed.value}}</div>
           <span class="math-label"> / </span>
           <div class="health-input">{{system.health.maimed.max}}</div>
         </div>
-        <div class="health-row"><span class="mod-label">{{localize "TRINITY_SECOND.SheetLabels.Mod"}}: +{{system.health.maimed.mod}}</span></div>
+        <div class="health-row"><span class="mod-label">{{localize "TC.SheetLabels.Mod"}}: +{{system.health.maimed.mod}}</span></div>
       </div>
       <div class="health-type">
         <div class="health-label"><label for="system.health.takenout.isfilled">Taken Out</label></div>
@@ -62,8 +62,8 @@
     <ol class='items-list'>
       <li class='item flexrow items-header'>
         <div class='item-name'>{{localize "TYPES.Item.injury"}}</div>
-        <div class="item-wound">{{localize "TRINITY_SECOND.SheetLabels.Wound"}}</div>
-        <div class="item-first">{{localize "TRINITY_SECOND.SheetLabels.Firstaidshort"}}</div>
+        <div class="item-wound">{{localize "TC.SheetLabels.Wound"}}</div>
+        <div class="item-first">{{localize "TC.SheetLabels.Firstaidshort"}}</div>
         <div class='item-controls'>
           <a
             class='item-control item-create'
@@ -171,8 +171,8 @@
     {{#each effects as |section sid|}}
       <li class="effect-header items-header flexrow" data-effect-type="{{section.type}}" data-parent-id="{{@root.actor.id}}" >
         <h3 class="item-name effect-name flexrow">{{localize section.label}}</h3>
-        <div class="effect-source">{{localize "TRINITY_SECOND.Effect.Source"}}</div>
-        <div class="effect-duration">{{localize "TRINITY_SECOND.Effect.Duration"}}</div>
+        <div class="effect-source">{{localize "TC.Effect.Source"}}</div>
+        <div class="effect-duration">{{localize "TC.Effect.Duration"}}</div>
         <div class="item-controls effect-controls flexrow">
           <a class="effect-control" data-action="create" title="{{localize 'DOCUMENT.Create' type="Effect"}}">
             <i class="fas fa-plus"></i> {{localize "DOCUMENT.New" type=""}}
@@ -190,7 +190,7 @@
           <div class="effect-source">{{effect.sourceName}}</div>
           <div class="effect-duration">{{effect.duration.label}}</div>
           <div class="item-controls effect-controls flexrow">
-            <a class="effect-control" data-action="toggle" title="{{localize 'TRINITY_SECOND.Effect.Toggle'}}">
+            <a class="effect-control" data-action="toggle" title="{{localize 'TC.Effect.Toggle'}}">
               <i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
             </a>
             <a class="effect-control" data-action="edit" title="{{localize 'DOCUMENT.Update' type="Effect"}}">

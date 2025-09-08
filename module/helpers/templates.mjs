@@ -6,14 +6,14 @@
 export const preloadHandlebarsTemplates = async function () {
   return loadTemplates([
     // Actor partials.
-    'systems/trinity-2e/templates/actor/parts/actor-attributes.hbs',
-    'systems/trinity-2e/templates/actor/parts/actor-background.hbs',
-    'systems/trinity-2e/templates/actor/parts/actor-bonds.hbs',
-    'systems/trinity-2e/templates/actor/parts/actor-equipment.hbs',
-    'systems/trinity-2e/templates/actor/parts/actor-paths.hbs',
-    'systems/trinity-2e/templates/actor/parts/actor-novapowers.hbs',
-    'systems/trinity-2e/templates/actor/parts/actor-status.hbs',
+    'systems/trinity-continuum/templates/actor/parts/actor-attributes.hbs',
+    'systems/trinity-continuum/templates/actor/parts/actor-background.hbs',
+    'systems/trinity-continuum/templates/actor/parts/actor-bonds.hbs',
+    'systems/trinity-continuum/templates/actor/parts/actor-equipment.hbs',
+    'systems/trinity-continuum/templates/actor/parts/actor-paths.hbs',
+    'systems/trinity-continuum/templates/actor/parts/actor-novapowers.hbs',
+    'systems/trinity-continuum/templates/actor/parts/actor-status.hbs',
     // Item partials
-    'systems/trinity-2e/templates/item/parts/item-attributes.hbs'
+    'systems/trinity-continuum/templates/item/parts/item-attributes.hbs'
   ]);
 };

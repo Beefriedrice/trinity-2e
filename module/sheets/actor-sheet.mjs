@@ -8,11 +8,11 @@ import {
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class TrinitySecondEditionActorSheet extends ActorSheet {
+export class TrinityContinuumActorSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ['trinity-2e', 'sheet', 'actor'],
+      classes: ['trinity-continuum', 'sheet', 'actor'],
       width: 750,
       height: 850,
       tabs: [
@@ -53,11 +53,11 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
   /** @override */
   get template() {
     if (this.actor.type === "SGC") {
-      return `systems/trinity-2e/templates/actor/actor-sgc-sheet.hbs`;
+      return `systems/trinity-continuum/templates/actor/actor-sgc-sheet.hbs`;
     } else { 
-      return `systems/trinity-2e/templates/actor/actor-sheet.hbs`;
+      return `systems/trinity-continuum/templates/actor/actor-sheet.hbs`;
     }
-    //return `systems/trinity-2e/templates/actor/actor-${this.actor.type}-sheet.hbs`;
+    //return `systems/trinity-continuum/templates/actor/actor-${this.actor.type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */
@@ -77,8 +77,8 @@ export class TrinitySecondEditionActorSheet extends ActorSheet {
     context.system = actorData.system;
     context.flags = actorData.flags;
 
-    // Adding a pointer to CONFIG.TRINITY_SECOND
-    context.config = CONFIG.TRINITY_SECOND;
+    // Adding a pointer to CONFIG.TC
+    context.config = CONFIG.TC;
 
     
 

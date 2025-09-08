@@ -18,8 +18,8 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.Effect.Effect"}}</a>
-    <a class='item' data-tab='attributes'>{{localize "TRINITY_SECOND.SheetLabels.Attributes"}}</a>
+    <a class='item' data-tab='description'>{{localize "TC.Effect.Effect"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TC.SheetLabels.Attributes"}}</a>
   </nav>
 
   {{! Sheet Body }}
@@ -28,7 +28,7 @@
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
       <div class="resource-text">
-        <h3>{{localize "TRINITY_SECOND.SheetLabels.Resolution"}}</h3>
+        <h3>{{localize "TC.SheetLabels.Resolution"}}</h3>
           <input
             type='text'
             name='system.resolution'
@@ -36,7 +36,7 @@
             data-dtype='String'
           />
       </div>
-      <h3 class="added-segment">{{localize "TRINITY_SECOND.Effect.Effect"}}</h3>
+      <h3 class="added-segment">{{localize "TC.Effect.Effect"}}</h3>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription

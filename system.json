@@ -1,14 +1,14 @@
 {
-  "id": "trinity-2e",
-  "title": "Trinity 2E (Storypath System)",
-  "description": "The Trinity Second Edition (Storypath System) system for FoundryVTT!",
+  "id": "trinity-continuum",
+  "title": "Trinity Continuum (Storypath)",
+  "description": "The Trinity Continuum (Storypath) system for FoundryVTT!",
   "authors": [
     {
       "name": "Beefriedrice",
       "discord": "beefriedrice"
     }
   ],
-  "url": "https://github.com/Beefriedrice/trinity-2e",
+  "url": "https://github.com/Beefriedrice/trinity-continuum",
   "license": "LICENSE.txt",
   "readme": "README.md",
   "bugs": "bugs.txt",
@@ -16,8 +16,8 @@
   "media": [
     {
       "type": "setup",
-      "url": "systems/trinity-2e/assets/TrinityContinuumLogo.png",
-      "thumbnail": "systems/trinity-2e/assets/TrinityContinuumLogo.png"
+      "url": "systems/trinity-continuum/assets/TrinityContinuumLogo.png",
+      "thumbnail": "systems/trinity-continuum/assets/TrinityContinuumLogo.png"
     }
   ],
   "version": "0.0.2",
@@ -26,10 +26,10 @@
     "verified": "13.347"
   },
   "esmodules": [
-    "module/trinity-2e.mjs",
+    "module/trinity-continuum.mjs",
     "module/sheets/dice-sheet.mjs"
   ],
-  "styles": ["css/trinity-2e.css"],
+  "styles": ["css/trinity-continuum.css"],
   "languages": [
     {
       "lang": "en",
@@ -40,9 +40,9 @@
   "packs": [],
   "packFolders": [],
   "socket": false,
-  "manifest": "https://raw.githubusercontent.com/beefriedrice/trinity-2e/master/system.json",
-  "download": "https://github.com/Beefriedrice/trinity-2e/archive/refs/heads/master.zip",
-  "background": "systems/trinity-2e/assets/anvil-impact.png",
+  "manifest": "https://raw.githubusercontent.com/beefriedrice/trinity-continuum/master/system.json",
+  "download": "https://github.com/Beefriedrice/trinity-continuum/archive/refs/heads/master.zip",
+  "background": "systems/trinity-continuum/assets/anvil-impact.png",
   "grid": {
     "distance": 1,
     "units": "Meter"

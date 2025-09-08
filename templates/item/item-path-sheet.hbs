@@ -15,7 +15,7 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Currentrating"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Currentrating"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -25,7 +25,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Rating"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Rating"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -35,7 +35,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Revoked"}}</label>    
+          <label class='resource-label'>{{localize "TC.SheetLabels.Revoked"}}</label>    
           {{#if system.revoked}}
             <input type="checkbox" name="system.revoked" value="true" checked>
           {{else}}
@@ -43,7 +43,7 @@
           {{/if}}
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Suspended"}}</label>    
+          <label class='resource-label'>{{localize "TC.SheetLabels.Suspended"}}</label>    
           {{#if system.suspended}}
             <input type="checkbox" name="system.suspended" value="true" checked>
           {{else}}
@@ -51,7 +51,7 @@
           {{/if}}
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Pathtype"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Pathtype"}}</label>
           <input
             type='text'
             name='system.type'
@@ -60,15 +60,15 @@
             data-dtype='String'
           />
           <datalist id="path-types">
-            <option value="Origin">{{localize "TRINITY_SECOND.SheetLabels.Origin"}}</option>
-            <option value="Role">{{localize "TRINITY_SECOND.SheetLabels.Role"}}</option>
-            <option value="Society">{{localize "TRINITY_SECOND.SheetLabels.Society"}}</option>
-            <option value="Additional Path 1">{{localize "TRINITY_SECOND.SheetLabels.Additional1"}}</option>
-            <option value="Additional Path 2">{{localize "TRINITY_SECOND.SheetLabels.Additional2"}}</option>
+            <option value="Origin">{{localize "TC.SheetLabels.Origin"}}</option>
+            <option value="Role">{{localize "TC.SheetLabels.Role"}}</option>
+            <option value="Society">{{localize "TC.SheetLabels.Society"}}</option>
+            <option value="Additional Path 1">{{localize "TC.SheetLabels.Additional1"}}</option>
+            <option value="Additional Path 2">{{localize "TC.SheetLabels.Additional2"}}</option>
           </datalist>
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Community"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Community"}}</label>
           <input
             type='text'
             name='system.community'
@@ -77,7 +77,7 @@
           />
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Access"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Access"}}</label>
           <input
             type='text'
             name='system.access'
@@ -91,16 +91,16 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.SheetLabels.Description"}}</a>
-    <a class='item' data-tab='options'>{{localize "TRINITY_SECOND.SheetLabels.Options"}}</a>
-    <a class='item' data-tab='attributes'>{{localize "TRINITY_SECOND.SheetLabels.Game"}}</a>
+    <a class='item' data-tab='description'>{{localize "TC.SheetLabels.Description"}}</a>
+    <a class='item' data-tab='options'>{{localize "TC.SheetLabels.Options"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TC.SheetLabels.Game"}}</a>
   </nav>
 
   {{! Sheet Body }}
   <section class='sheet-body'>
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
-      <h3 class="description">{{localize "TRINITY_SECOND.SheetLabels.Description"}}</h3>
+      <h3 class="description">{{localize "TC.SheetLabels.Description"}}</h3>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
@@ -113,7 +113,7 @@
 
     {{! Options Tab }}
     <div class='tab' data-group='primary' data-tab='options'>
-      <h3>{{localize "TRINITY_SECOND.SheetLabels.Skills"}}</h3>
+      <h3>{{localize "TC.SheetLabels.Skills"}}</h3>
       <div class='resource-text'>
         <input
           type='text'
@@ -122,7 +122,7 @@
           data-dtype='String'
         />
       </div>
-      <h3 class="added-segment">{{localize "TRINITY_SECOND.SheetLabels.Edges"}}</h3>
+      <h3 class="added-segment">{{localize "TC.SheetLabels.Edges"}}</h3>
       <div class='resource'>
         <input
           type='text'
@@ -136,7 +136,7 @@
     {{! Attributes Tab }}
     <div class='tab attributes' data-group='primary' data-tab='attributes'>
       {{! As you add new fields, add them in here! }}
-        {{> "systems/trinity-2e/templates/item/parts/item-attributes.hbs"}}
+        {{> "systems/trinity-continuum/templates/item/parts/item-attributes.hbs"}}
     </div>
   </section>
 </form>

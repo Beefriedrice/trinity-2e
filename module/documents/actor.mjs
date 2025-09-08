@@ -2,7 +2,7 @@
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-export class TrinitySecondEditionActor extends Actor {
+export class TrinityContinuumActor extends Actor {
   /** @override */
   prepareData() {
     // Prepare data for the actor. Calling the super version of this executes
@@ -30,7 +30,7 @@ export class TrinitySecondEditionActor extends Actor {
   prepareDerivedData() {
     const actorData = this;
     const systemData = actorData.system;
-    const flags = actorData.flags.trinity2e || {};
+    const flags = actorData.flags.trinitycontinuum || {};
 
     // Prepare experience formulas
     systemData.experience.current = systemData.experience.total - systemData.experience.spent;

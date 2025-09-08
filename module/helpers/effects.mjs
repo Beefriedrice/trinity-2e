@@ -43,17 +43,17 @@ export function prepareActiveEffectCategories(effects) {
   const categories = {
     temporary: {
       type: 'temporary',
-      label: game.i18n.localize('TRINITY_SECOND.Effect.Temporary'),
+      label: game.i18n.localize('TC.Effect.Temporary'),
       effects: [],
     },
     passive: {
       type: 'passive',
-      label: game.i18n.localize('TRINITY_SECOND.Effect.Passive'),
+      label: game.i18n.localize('TC.Effect.Passive'),
       effects: [],
     },
     inactive: {
       type: 'inactive',
-      label: game.i18n.localize('TRINITY_SECOND.Effect.Inactive'),
+      label: game.i18n.localize('TC.Effect.Inactive'),
       effects: [],
     },
   };

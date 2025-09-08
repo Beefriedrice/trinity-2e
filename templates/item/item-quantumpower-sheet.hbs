@@ -15,7 +15,7 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Rating"}}</label>
+          <label class='resource-label'>{{localize "TC.Power.Rating"}}</label>
           <input
             type='text'
             class='text-2digit'
@@ -25,7 +25,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Cost"}}</label>
+          <label class='resource-label'>{{localize "TC.Power.Cost"}}</label>
           <input
             type='text'
             class='text-2digit'
@@ -35,7 +35,7 @@
           />
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.QMin"}}</label>
+          <label class='resource-label'>{{localize "TC.Power.QMin"}}</label>
           <input
             type='text'
             name='system.qminimum'
@@ -44,7 +44,7 @@
           />
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Action"}}</label>
+          <label class='resource-label'>{{localize "TC.Power.Action"}}</label>
           <input
             type='text'
             name='system.action'
@@ -53,12 +53,12 @@
             data-dtype='String'
           />
           <datalist id="action-type">
-            <option value="Ordinary">{{localize "TRINITY_SECOND.SheetLabels.Ordinary"}}</option>
-            <option value="Reflexive">{{localize "TRINITY_SECOND.SheetLabels.Reflexive"}}</option>
+            <option value="Ordinary">{{localize "TC.SheetLabels.Ordinary"}}</option>
+            <option value="Reflexive">{{localize "TC.SheetLabels.Reflexive"}}</option>
           </datalist>
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Dice"}}</label>
+          <label class='resource-label'>{{localize "TC.Power.Dice"}}</label>
           <input
             type='text'
             name='system.dicepool'
@@ -67,7 +67,7 @@
           />
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Range"}}</label>
+          <label class='resource-label'>{{localize "TC.Power.Range"}}</label>
           <input
             type='text'
             name='system.range'
@@ -76,7 +76,7 @@
           />
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Duration"}}</label>
+          <label class='resource-label'>{{localize "TC.Power.Duration"}}</label>
           <input
             type='text'
             name='system.duration'
@@ -85,7 +85,7 @@
           />
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Suite"}}</label>
+          <label class='resource-label'>{{localize "TC.Power.Suite"}}</label>
           <input
             type='text'
             list="suite-choices"
@@ -101,7 +101,7 @@
           </datalist>
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.Power.Maxed"}}</label>    
+          <label class='resource-label'>{{localize "TC.Power.Maxed"}}</label>    
           {{#if system.maxedout}}
             <input type="checkbox" class='medium-check' name="system.maxedout" value="true" checked>
           {{else}}
@@ -114,16 +114,16 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.Power.Description"}}</a>
-    <a class='item' data-tab='tags'>{{localize "TRINITY_SECOND.Power.TagD"}}</a>
-    <a class='item' data-tab='attributes'>{{localize "TRINITY_SECOND.SheetLabels.Game"}}</a>
+    <a class='item' data-tab='description'>{{localize "TC.Power.Description"}}</a>
+    <a class='item' data-tab='tags'>{{localize "TC.Power.TagD"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TC.SheetLabels.Game"}}</a>
   </nav>
 
   {{! Sheet Body }}
   <section class='sheet-body'>
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>  
-      <h3 class="description added-segment">{{localize "TRINITY_SECOND.Power.Description"}}</h3>
+      <h3 class="description added-segment">{{localize "TC.Power.Description"}}</h3>
         {{! Editors must receive enriched text data from getData to properly handle rolls }}
         {{editor
           enrichedDescription
@@ -137,7 +137,7 @@
 
     {{! Tags Tab }}
     <div class='tab' data-tab='tags'>  
-      <h3>{{localize "TRINITY_SECOND.Power.Tags"}}</h3>
+      <h3>{{localize "TC.Power.Tags"}}</h3>
       <div class="resource">
         <input
           type='text'
@@ -146,7 +146,7 @@
           data-dtype='String'
         />
       </div>
-      <h3 class="description">{{localize "TRINITY_SECOND.Power.TagD"}}</h3>
+      <h3 class="description">{{localize "TC.Power.TagD"}}</h3>
         {{! Editors must receive enriched text data from getData to properly handle rolls }}
         {{editor
           enrichedDescription
@@ -160,7 +160,7 @@
     {{! Attributes Tab }}
     <div class='tab attributes' data-group='primary' data-tab='attributes'>
       {{! As you add new fields, add them in here! }}
-      {{> "systems/trinity-2e/templates/item/parts/item-attributes.hbs"}}
+      {{> "systems/trinity-continuum/templates/item/parts/item-attributes.hbs"}}
     </div>
   </section>
 </form>

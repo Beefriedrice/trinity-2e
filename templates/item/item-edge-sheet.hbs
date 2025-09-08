@@ -15,7 +15,7 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Rating"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Rating"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -28,19 +28,19 @@
           <label class='resource-label'>Category</label>
           <input type="text" list="edgeCategories" name="system.category" value="{{system.category}}" data-dtype="Text">
           <datalist id="edgeCategories">
-            <option value="{{localize "TRINITY_SECOND.Edge.Type.Men"}}">{{localize "TRINITY_SECOND.Edge.Type.Men"}}</option>
-            <option value="{{localize "TRINITY_SECOND.Edge.Type.Phy"}}">{{localize "TRINITY_SECOND.Edge.Type.Phy"}}</option>
-            <option value="{{localize "TRINITY_SECOND.Edge.Type.Soc"}}">{{localize "TRINITY_SECOND.Edge.Type.Soc"}}</option>
-            <option value="{{localize "TRINITY_SECOND.Edge.Type.Sty"}}">{{localize "TRINITY_SECOND.Edge.Type.Sty"}}</option>
-            <option value="{{localize "TRINITY_SECOND.Edge.Type.Com"}}">{{localize "TRINITY_SECOND.Edge.Type.Com"}}</option>
-            <option value="{{localize "TRINITY_SECOND.Edge.Type.Pat"}}">{{localize "TRINITY_SECOND.Edge.Type.Pat"}}</option>
-            <option value="{{localize "TRINITY_SECOND.Edge.Type.Pow"}}">{{localize "TRINITY_SECOND.Edge.Type.Pow"}}</option>
-            <option value="{{localize "TRINITY_SECOND.Edge.Type.Enh"}}">{{localize "TRINITY_SECOND.Edge.Type.Enh"}}</option>
-            <option value="{{localize "TRINITY_SECOND.Edge.Type.Nov"}}">{{localize "TRINITY_SECOND.Edge.Type.Nov"}}</option>
+            <option value="{{localize "TC.Edge.Type.Men"}}">{{localize "TC.Edge.Type.Men"}}</option>
+            <option value="{{localize "TC.Edge.Type.Phy"}}">{{localize "TC.Edge.Type.Phy"}}</option>
+            <option value="{{localize "TC.Edge.Type.Soc"}}">{{localize "TC.Edge.Type.Soc"}}</option>
+            <option value="{{localize "TC.Edge.Type.Sty"}}">{{localize "TC.Edge.Type.Sty"}}</option>
+            <option value="{{localize "TC.Edge.Type.Com"}}">{{localize "TC.Edge.Type.Com"}}</option>
+            <option value="{{localize "TC.Edge.Type.Pat"}}">{{localize "TC.Edge.Type.Pat"}}</option>
+            <option value="{{localize "TC.Edge.Type.Pow"}}">{{localize "TC.Edge.Type.Pow"}}</option>
+            <option value="{{localize "TC.Edge.Type.Enh"}}">{{localize "TC.Edge.Type.Enh"}}</option>
+            <option value="{{localize "TC.Edge.Type.Nov"}}">{{localize "TC.Edge.Type.Nov"}}</option>
           </datalist>
         </div>
         <div class="resource-text grid-span-2">
-          <label class="resource-label">{{localize "TRINITY_SECOND.SheetLabels.Prereq"}}</label>
+          <label class="resource-label">{{localize "TC.SheetLabels.Prereq"}}</label>
           <input type="text" data-dtype="Text" name="system.prereq" value="{{system.prereq}}"><br>
         </div>
       </div>
@@ -49,8 +49,8 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.SheetLabels.Description"}}</a>
-    <a class='item' data-tab='attributes'>{{localize "TRINITY_SECOND.SheetLabels.Attributes"}}</a>
+    <a class='item' data-tab='description'>{{localize "TC.SheetLabels.Description"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TC.SheetLabels.Attributes"}}</a>
   </nav>
 
   {{! Sheet Body }}
@@ -70,7 +70,7 @@
 
     {{!-- Attributes Tab --}}
     <div class="tab attributes" data-group="primary" data-tab="attributes">
-      {{> "systems/trinity-2e/templates/item/parts/item-attributes.hbs"}}
+      {{> "systems/trinity-continuum/templates/item/parts/item-attributes.hbs"}}
     </div>
   </section>
 </form>

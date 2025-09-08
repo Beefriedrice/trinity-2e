@@ -15,7 +15,7 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource-text grid-span-2'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Assocperson"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Assocperson"}}</label>
           <input
             type='text'
             name='system.person'
@@ -24,7 +24,7 @@
           />
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Duration"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Duration"}}</label>
           <input
             type='text'
             name='system.duration'
@@ -33,7 +33,7 @@
           />
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Diceroll"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Diceroll"}}</label>
           <input
             type='text'
             name='system.diceroll'
@@ -42,7 +42,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TRINITY_SECOND.SheetLabels.Successes"}}</label>
+          <label class='resource-label'>{{localize "TC.SheetLabels.Successes"}}</label>
           <input
             type='text'
             class="text-3digit"
@@ -57,9 +57,9 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>{{localize "TRINITY_SECOND.SheetLabels.Feature"}}</a>
-    <a class='item' data-tab='drawback'>{{localize "TRINITY_SECOND.SheetLabels.Drawback"}}</a>
-    <a class='item' data-tab='attributes'>{{localize "TRINITY_SECOND.SheetLabels.Game"}}</a>
+    <a class='item' data-tab='description'>{{localize "TC.SheetLabels.Feature"}}</a>
+    <a class='item' data-tab='drawback'>{{localize "TC.SheetLabels.Drawback"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TC.SheetLabels.Game"}}</a>
   </nav>
 
   {{! Sheet Body }}
@@ -67,7 +67,7 @@
     {{! Feature Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
       <div class='resource-text'>
-        <h3 class=''>{{localize "TRINITY_SECOND.SheetLabels.Action"}}</h3>
+        <h3 class=''>{{localize "TC.SheetLabels.Action"}}</h3>
         <input
           type='text'
           name='system.action'
@@ -75,7 +75,7 @@
           data-dtype='String'
         />
       </div>
-      <h3 class="description added-segment">{{localize "TRINITY_SECOND.SheetLabels.Feature"}}</h3>
+      <h3 class="description added-segment">{{localize "TC.SheetLabels.Feature"}}</h3>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
@@ -89,7 +89,7 @@
 
     {{! Drawback Tab }}
     <div class='tab' data-group='primary' data-tab='drawback'>
-      <h3 class="description">{{localize "TRINITY_SECOND.SheetLabels.Drawback"}}</h3>
+      <h3 class="description">{{localize "TC.SheetLabels.Drawback"}}</h3>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
@@ -103,7 +103,7 @@
     {{! Attributes Tab }}
     <div class='tab attributes' data-group='primary' data-tab='attributes'>
       {{! As you add new fields, add them in here! }}
-      {{> "systems/trinity-2e/templates/item/parts/item-attributes.hbs"}}
+      {{> "systems/trinity-continuum/templates/item/parts/item-attributes.hbs"}}
     </div>
   </section>
 </form>
