@@ -15,7 +15,7 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.Rating"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.Rating"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -38,9 +38,9 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>{{localize "TC.SheetLabels.Description"}}</a>
-    <a class='item' data-tab='tags'>{{localize "TC.SheetLabels.Tags"}}</a>
-    <a class='item' data-tab='attributes'>{{localize "TC.SheetLabels.Attributes"}}</a>
+    <a class='item' data-tab='description'>{{localize "TC.Labels.Description"}}</a>
+    <a class='item' data-tab='tags'>{{localize "TC.Labels.Tags"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TC.Labels.Attributes"}}</a>
   </nav>
 
   {{! Sheet Body }}
@@ -49,7 +49,7 @@
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
       <div class='resource-text'>
-        <h3>{{localize "TC.SheetLabels.Prereq"}}</h3>
+        <h3>{{localize "TC.Labels.Prereq"}}</h3>
         <input
           type='text'
           name='system.prereq'
@@ -57,7 +57,7 @@
           data-dtype='String'
         />
       </div>
-      <h3 class="added-segment">{{localize "TC.SheetLabels.Description"}}</h3>
+      <h3 class="added-segment">{{localize "TC.Labels.Description"}}</h3>
       <div>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
@@ -72,7 +72,7 @@
 
     {{! Tags Tab }}
     <div class='tab' data-tab='tags'>  
-      <h3>{{localize "TC.SheetLabels.Tags"}}</h3>
+      <h3>{{localize "TC.Labels.Tags"}}</h3>
       <div class="resource-text">
         <input
           type='text'

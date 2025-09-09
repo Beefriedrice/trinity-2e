@@ -4,23 +4,7 @@ export const TC = {};
  * The set of Ability Scores used within the system.
  * @type {Object}
  */
-TC.abilities = {
-  str: 'TC.Ability.Str.long',
-  dex: 'TC.Ability.Dex.long',
-  con: 'TC.Ability.Con.long',
-  int: 'TC.Ability.Int.long',
-  wis: 'TC.Ability.Wis.long',
-  cha: 'TC.Ability.Cha.long',
-};
 
-TC.abilityAbbreviations = {
-  str: 'TC.Ability.Str.abbr',
-  dex: 'TC.Ability.Dex.abbr',
-  con: 'TC.Ability.Con.abbr',
-  int: 'TC.Ability.Int.abbr',
-  wis: 'TC.Ability.Wis.abbr',
-  cha: 'TC.Ability.Cha.abbr',
-};
 
 TC.attributes = {
   int: 'TC.Attribute.Int.long',
@@ -114,8 +98,8 @@ TC.sources = {
 };
 
 TC.terminology = {
-  hea: 'TC.SheetLabels.Health',
-  mom: 'Trinity_SECOND.Momentum',
+  hea: 'TC.Labels.Health',
+  mom: 'TC.Momentum',
   col: 'TC.Collateral',
 };
 

@@ -1,13 +1,5 @@
 {
   "TC": {
-    "Ability": {
-      "Str": { "long": "Strength", "abbr": "str" },
-      "Con": { "long": "Constitution", "abbr": "con" },
-      "Dex": { "long": "Dexterity", "abbr": "dex" },
-      "Int": { "long": "Intelligence", "abbr": "int" },
-      "Wis": { "long": "Wisdom", "abbr": "wis" },
-      "Cha": { "long": "Charisma", "abbr": "cha" }
-    },
     "Attribute": {
       "Int": { "long": "Intelligence", "abbr": "int" },
       "Cun": { "long": "Cunning", "abbr": "cun" },
@@ -48,7 +40,7 @@
       "Sur": { "long": "Survival", "abbr": "sur" },
       "Tec": { "long": "Technology", "abbr": "tec" }
     },
-    "SheetLabels": {
+    "Labels": {
       "Abilities": "Abilities",
       "Access": "Access",
       "Action": "Action",
@@ -167,16 +159,6 @@
       "Xpremaining": "XP Remaining",
       "Xpspent": "XP Spent",
       "Xptotal": "Total XP Earned"
-    },
-    "Item": {
-      "Spell": {
-        "SpellLVL": "Level {level} Spells",
-        "AddLVL": "Add LVL {level}"
-      },
-      "Power": {
-        "PowerSuite": "Suite {suite} Powers",
-        "AddPower": "Add {level}"
-      }
     },
     "Scale": {
       "Dur": "Durability",

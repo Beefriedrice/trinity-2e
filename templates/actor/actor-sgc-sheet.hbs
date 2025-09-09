@@ -12,11 +12,11 @@
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         {{!-- Default tab is specified in actor-sheet.mjs --}}
-        <a class="item" data-tab="stats">{{localize "TC.SheetLabels.Core"}}<BR>{{localize "TC.SheetLabels.Mechanics"}}</a>
-        <a class="item" data-tab="powers">{{localize "TC.SheetLabels.Special"}}<BR>{{localize "TC.SheetLabels.Abilities"}}</a>
-        <a class="item" data-tab="equipment">{{localize "TC.SheetLabels.Gear"}}</a>
-        <a class="item" data-tab="effects">{{localize "TC.SheetLabels.Status"}}</a>
-        <a class="item" data-tab="background">{{localize "TC.SheetLabels.Background"}}</a>
+        <a class="item" data-tab="stats">{{localize "TC.Labels.Core"}}<BR>{{localize "TC.Labels.Mechanics"}}</a>
+        <a class="item" data-tab="powers">{{localize "TC.Labels.Special"}}<BR>{{localize "TC.Labels.Abilities"}}</a>
+        <a class="item" data-tab="equipment">{{localize "TC.Labels.Gear"}}</a>
+        <a class="item" data-tab="effects">{{localize "TC.Labels.Status"}}</a>
+        <a class="item" data-tab="background">{{localize "TC.Labels.Background"}}</a>
     </nav>
 
     {{!-- Sheet Body --}}  
@@ -26,10 +26,10 @@
         <div class="tab stats" data-group="primary" data-tab="stats">
             <nav class="attribute-sheet-tabs sheet-tabs tabs" data-group="attributes">
                 {{!-- Default tab is specified in actor-sheet.mjs --}}
-                <a class="item" data-tab="attributes">{{localize "TC.SheetLabels.Attributes"}} & {{localize "TC.SheetLabels.Skills"}}</a>
-                <a class="item" data-tab="specialties">{{localize "TC.SheetLabels.Specialties"}}</a>
-                <a class="item" data-tab="edges">{{localize "TC.SheetLabels.Edges"}}</a>
-                <a class="item" data-tab="scale">{{localize "TC.SheetLabels.Scale"}}</a>
+                <a class="item" data-tab="attributes">{{localize "TC.Labels.Attributes"}} & {{localize "TC.Labels.Skills"}}</a>
+                <a class="item" data-tab="specialties">{{localize "TC.Labels.Specialties"}}</a>
+                <a class="item" data-tab="edges">{{localize "TC.Labels.Edges"}}</a>
+                <a class="item" data-tab="scale">{{localize "TC.Labels.Scale"}}</a>
             </nav>
             <div class="attribute-sheet-body">
                 {{> "systems/trinity-continuum/templates/actor/parts/actor-attributes.hbs"}}      
@@ -41,9 +41,9 @@
         <div class="tab background" data-group="primary" data-tab="background">
             <nav class="background-sheet-tabs sheet-tabs tabs" data-group="backgrounds">
                 {{!-- Default tab is specified in actor-sheet.mjs --}}
-                <a class="item" data-tab="paths">{{localize "TC.SheetLabels.Paths"}} & {{localize "TC.SheetLabels.Contacts"}}</a>
-                <a class="item" data-tab="background">{{localize "TC.SheetLabels.Background"}}</a>
-                <a class="item" data-tab="bonds">{{localize "TC.SheetLabels.Bonds"}}</a>
+                <a class="item" data-tab="paths">{{localize "TC.Labels.Paths"}} & {{localize "TC.Labels.Contacts"}}</a>
+                <a class="item" data-tab="background">{{localize "TC.Labels.Background"}}</a>
+                <a class="item" data-tab="bonds">{{localize "TC.Labels.Bonds"}}</a>
             </nav>
             <div class="background-sheet-body">
                 <div class="tab paths" data-group="backgrounds" data-tab="paths">
@@ -71,10 +71,10 @@
         <div class="tab equipment" data-group="primary" data-tab="equipment">
             <nav class="gear-sheet-tabs sheet-tabs tabs" data-group="gear">
                 {{!-- Default tab is specified in actor-sheet.mjs --}}
-                <a class="item" data-tab="weapons">{{localize "TC.SheetLabels.Weapons"}}</a>
-                <a class="item" data-tab="armor">{{localize "TC.SheetLabels.Armor"}}</a>
-                <a class="item" data-tab="vehicles">{{localize "TC.SheetLabels.Vehicles"}}</a>
-                <a class="item" data-tab="other">{{localize "TC.SheetLabels.Otheritems"}}</a>
+                <a class="item" data-tab="weapons">{{localize "TC.Labels.Weapons"}}</a>
+                <a class="item" data-tab="armor">{{localize "TC.Labels.Armor"}}</a>
+                <a class="item" data-tab="vehicles">{{localize "TC.Labels.Vehicles"}}</a>
+                <a class="item" data-tab="other">{{localize "TC.Labels.Otheritems"}}</a>
             </nav>
             <div class="gear-sheet-body">
                 {{> "systems/trinity-continuum/templates/actor/parts/actor-equipment.hbs"}}
@@ -85,10 +85,10 @@
         <div class="tab effects" data-group="primary" data-tab="effects">
             <nav class="status-sheet-tabs sheet-tabs tabs" data-group="status">
                 {{!-- Default tab is specified in actor-sheet.mjs --}}
-                <a class="item" data-tab="health">{{localize "TC.SheetLabels.Health"}}</a>
-                <a class="item" data-tab="status">{{localize "TC.SheetLabels.Statuses"}}</a>
-                <a class="item" data-tab="effects">{{localize "TC.SheetLabels.Effects"}}</a>
-                <a class="item" data-tab="options">{{localize "TC.SheetLabels.Options"}}</a>
+                <a class="item" data-tab="health">{{localize "TC.Labels.Health"}}</a>
+                <a class="item" data-tab="status">{{localize "TC.Labels.Statuses"}}</a>
+                <a class="item" data-tab="effects">{{localize "TC.Labels.Effects"}}</a>
+                <a class="item" data-tab="options">{{localize "TC.Labels.Options"}}</a>
             </nav>
             <div class="status-sheet-body">
                 {{> "systems/trinity-continuum/templates/actor/parts/actor-status.hbs"}}

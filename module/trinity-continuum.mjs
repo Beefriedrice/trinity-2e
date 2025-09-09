@@ -60,12 +60,12 @@ Hooks.once('init', function () {
   Actors.unregisterSheet('core', ActorSheet);
   Actors.registerSheet('trinity-continuum', TrinityContinuumActorSheet, {
     makeDefault: true,
-    label: 'TC.SheetLabels.Actor',
+    label: 'TC.Labels.Actor',
   });
   Items.unregisterSheet('core', ItemSheet);
   Items.registerSheet('trinity-continuum', TrinityContinuumItemSheet, {
     makeDefault: true,
-    label: 'TC.SheetLabels.Item',
+    label: 'TC.Labels.Item',
   });
 
   // Preload Handlebars templates.

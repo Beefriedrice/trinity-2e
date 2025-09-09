@@ -15,7 +15,7 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.Enhancement"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.Enhancement"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -35,7 +35,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.Size"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.Size"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -45,7 +45,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.Cost"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.Cost"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -55,7 +55,7 @@
           />
         </div>
          <div class='resource-text'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.ScienceType"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.ScienceType"}}</label>
           <input
             type='text'
             name='system.inventiontype'
@@ -79,7 +79,7 @@
           </datalist>
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.TechCat"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.TechCat"}}</label>
           <input
             type='text'
             name='system.category'
@@ -103,8 +103,8 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>{{localize "TC.SheetLabels.Description"}}</a>
-    <a class='item' data-tab='attributes'>{{localize "TC.SheetLabels.Game"}}</a>
+    <a class='item' data-tab='description'>{{localize "TC.Labels.Description"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TC.Labels.Game"}}</a>
   </nav>
 
   {{! Sheet Body }}
@@ -113,7 +113,7 @@
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
-      <h3>{{localize "TC.SheetLabels.Tags"}}</h3>
+      <h3>{{localize "TC.Labels.Tags"}}</h3>
       <div class='resource'>
         <input
           type='text'
@@ -122,7 +122,7 @@
           data-dtype='String'
         />
       </div>
-      <h3 class="description added-segment">{{localize "TC.SheetLabels.Description"}}</h3>
+      <h3 class="description added-segment">{{localize "TC.Labels.Description"}}</h3>
       {{editor
         enrichedDescription
         target='system.description'

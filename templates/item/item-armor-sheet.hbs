@@ -15,7 +15,7 @@
         /></h1>
       <div class='grid grid-2col'>
           <div class='resource'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.Soft.long"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.Soft.long"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -25,7 +25,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.Hard.long"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.Hard.long"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -35,7 +35,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.Enhancement"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.Enhancement"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -55,7 +55,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.Size"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.Size"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -65,7 +65,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.Cost"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.Cost"}}</label>
           <input
             type='text'
             class="text-2digit"
@@ -75,7 +75,7 @@
           />
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.ScienceType"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.ScienceType"}}</label>
           <input
             type='text'
             name='system.inventiontype'
@@ -99,7 +99,7 @@
           </datalist>
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.TechCat"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.TechCat"}}</label>
           <input
             type='text'
             name='system.category'
@@ -118,7 +118,7 @@
           </datalist>
         </div>
         <div class="resource">
-          <label class="resource-label">{{localize "TC.SheetLabels.Isequipped"}}</label>
+          <label class="resource-label">{{localize "TC.Labels.Isequipped"}}</label>
           {{#if system.isEquipped}}
             <input type="checkbox" class="medium-check" name="system.isEquipped" value="true" checked />
           {{else}}
@@ -126,7 +126,7 @@
           {{/if}}
         </div>
         <div class='resource-text grid-span-2'>
-          <label class="resource-label">{{localize "TC.SheetLabels.Tags"}}</label>
+          <label class="resource-label">{{localize "TC.Labels.Tags"}}</label>
           <input
             type='text'
             name='system.tags'
@@ -140,8 +140,8 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>{{localize "TC.SheetLabels.Description"}}</a>
-    <a class='item' data-tab='attributes'>{{localize "TC.SheetLabels.Game"}}</a>
+    <a class='item' data-tab='description'>{{localize "TC.Labels.Description"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TC.Labels.Game"}}</a>
   </nav>
 
   {{! Sheet Body }}

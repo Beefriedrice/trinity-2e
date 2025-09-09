@@ -4,47 +4,47 @@
   <section class="status-section">
     <div class="health-section">
       <div class="flex-group-center">
-          <h3 class="style-header">{{localize "TC.SheetLabels.Health"}}</h3>
+          <h3 class="style-header">{{localize "TC.Labels.Health"}}</h3>
       </div>
       {{!-- Hard Armor --}}
       <div class="health-type">
-        <div class="health-label">{{localize "TC.SheetLabels.Hard.long"}}</div>
+        <div class="health-label">{{localize "TC.Labels.Hard.long"}}</div>
         <div class="health-row">
           <div class="health-input">{{system.health.hard.value}}</div>
           <span class="math-label"> / </span>
           <div class="health-input">{{system.health.hard.max}}</div>
         </div>
-        <div class="health-row"><span class="mod-label">No {{localize "TC.SheetLabels.Mod"}}</span></div>
+        <div class="health-row"><span class="mod-label">No {{localize "TC.Labels.Mod"}}</span></div>
       </div>
       {{!-- Bruised --}}
       <div class="health-type">
-        <div class="health-label">{{localize "TC.SheetLabels.Bruised"}}</div>
+        <div class="health-label">{{localize "TC.Labels.Bruised"}}</div>
         <div class="health-row">
           <div class="health-input">{{system.health.bruised.value}}</div>
           <span class="math-label"> / </span>
           <div class="health-input">{{system.health.bruised.max}}</div>
         </div>
-        <div class="health-row"><span class="mod-label">{{localize "TC.SheetLabels.Mod"}}: +{{system.health.bruised.mod}}</span></div>
+        <div class="health-row"><span class="mod-label">{{localize "TC.Labels.Mod"}}: +{{system.health.bruised.mod}}</span></div>
       </div>
       {{!-- Injured --}}
       <div class="health-type">
-        <div class="health-label">{{localize "TC.SheetLabels.Injured"}}</div>
+        <div class="health-label">{{localize "TC.Labels.Injured"}}</div>
         <div class="health-row">
           <div class="health-input">{{system.health.injured.value}}</div>
           <span class="math-label"> / </span>
           <div class="health-input">{{system.health.injured.max}}</div>
         </div>
-        <div class="health-row"><span class="mod-label">{{localize "TC.SheetLabels.Mod"}}: +{{system.health.injured.mod}}</span></div>
+        <div class="health-row"><span class="mod-label">{{localize "TC.Labels.Mod"}}: +{{system.health.injured.mod}}</span></div>
       </div>
       {{!-- Maimed --}}
       <div class="health-type">
-        <div class="health-label">{{localize "TC.SheetLabels.Maimed"}}</div>
+        <div class="health-label">{{localize "TC.Labels.Maimed"}}</div>
         <div class="health-row">
           <div class="health-input">{{system.health.maimed.value}}</div>
           <span class="math-label"> / </span>
           <div class="health-input">{{system.health.maimed.max}}</div>
         </div>
-        <div class="health-row"><span class="mod-label">{{localize "TC.SheetLabels.Mod"}}: +{{system.health.maimed.mod}}</span></div>
+        <div class="health-row"><span class="mod-label">{{localize "TC.Labels.Mod"}}: +{{system.health.maimed.mod}}</span></div>
       </div>
       <div class="health-type">
         <div class="health-label"><label for="system.health.takenout.isfilled">Taken Out</label></div>
@@ -62,8 +62,8 @@
     <ol class='items-list'>
       <li class='item flexrow items-header'>
         <div class='item-name'>{{localize "TYPES.Item.injury"}}</div>
-        <div class="item-wound">{{localize "TC.SheetLabels.Wound"}}</div>
-        <div class="item-first">{{localize "TC.SheetLabels.Firstaidshort"}}</div>
+        <div class="item-wound">{{localize "TC.Labels.Wound"}}</div>
+        <div class="item-first">{{localize "TC.Labels.Firstaidshort"}}</div>
         <div class='item-controls'>
           <a
             class='item-control item-create'

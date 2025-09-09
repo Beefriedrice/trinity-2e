@@ -15,7 +15,7 @@
         /></h1>
       <div class='grid grid-2col'>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.Wound"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.Wound"}}</label>
           <input
             type='text'
             name='system.wound'
@@ -24,14 +24,14 @@
             data-dtype='String'
           />
           <datalist id="wound-type">
-            <option value="Armor">{{localize "TC.SheetLabels.Armor"}}</option>
-            <option value="Bruised">{{localize "TC.SheetLabels.Bruised"}}</option>
-            <option value="Injured">{{localize "TC.SheetLabels.Injured"}}</option>
-            <option value="Maimed">{{localize "TC.SheetLabels.Maimed"}}</option>
+            <option value="Armor">{{localize "TC.Labels.Armor"}}</option>
+            <option value="Bruised">{{localize "TC.Labels.Bruised"}}</option>
+            <option value="Injured">{{localize "TC.Labels.Injured"}}</option>
+            <option value="Maimed">{{localize "TC.Labels.Maimed"}}</option>
           </datalist>
         </div>
         <div class='resource-text'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.Woundsource"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.Woundsource"}}</label>
           <input
             type='text'
             name='system.source'
@@ -40,7 +40,7 @@
           />
         </div>
         <div class='resource'>
-          <label class='resource-label'>{{localize "TC.SheetLabels.Firstaid"}}</label>
+          <label class='resource-label'>{{localize "TC.Labels.Firstaid"}}</label>
           {{#if system.firstaid}}
             <input type="checkbox" class="medium-check" name="system.firstaid" value="true" checked data-dtype="Boolean"/>
           {{else}}
@@ -53,8 +53,8 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>{{localize "TC.SheetLabels.Description"}}</a>
-    <a class='item' data-tab='attributes'>{{localize "TC.SheetLabels.Attributes"}}</a>
+    <a class='item' data-tab='description'>{{localize "TC.Labels.Description"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TC.Labels.Attributes"}}</a>
   </nav>
 
   {{! Sheet Body }}
@@ -62,7 +62,7 @@
 
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
-      <h3 class="added-segment">{{localize "TC.SheetLabels.Effect"}}</h3>
+      <h3 class="added-segment">{{localize "TC.Labels.Effect"}}</h3>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription

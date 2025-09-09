@@ -15,9 +15,9 @@
   --}}
 <div class="tab qpowers" data-group="powers" data-tab="qpowers">
   <div class="stat-detail-row">              
-    <label class="resource-label" for="system.traits.quantum.value">{{localize "TC.SheetLabels.Quantum"}}</label>
+    <label class="resource-label" for="system.traits.quantum.value">{{localize "TC.Labels.Quantum"}}</label>
     <input class="text-2digit" type="text" name="system.traits.quantum.value" value="{{system.traits.quantum.value}}" data-dtype="Number"/>
-    <label class="resource-label" for="system.traits.quantumpoints.value">{{localize "TC.SheetLabels.Quantumpoints"}}</label>
+    <label class="resource-label" for="system.traits.quantumpoints.value">{{localize "TC.Labels.Quantumpoints"}}</label>
     <div>
       <input class="text-2digit" type="text" name="system.traits.quantumpoints.value" value="{{system.traits.quantumpoints.value}}" data-dtype="Number"/>
       <span class="math-label"> / </span>
@@ -98,8 +98,8 @@
   <ol class='items-list'>
     <li class='item flexrow items-header'>
       <div class='item-name'>{{localize "TYPES.Item.megaedge"}}</div>
-      <div class='item-rating'>{{localize 'TC.SheetLabels.Rating'}}</div>
-      <div class='item-tags-short'>{{localize 'TC.SheetLabels.Tags'}}</div>
+      <div class='item-rating'>{{localize 'TC.Labels.Rating'}}</div>
+      <div class='item-tags-short'>{{localize 'TC.Labels.Tags'}}</div>
       <div class='item-controls'>
         <a
           class='item-control item-create'
@@ -152,7 +152,7 @@
   <ol class='items-list'>
     <li class='item flexrow items-header'>
       <div class='item-name'>{{localize "TYPES.Item.skilltrick"}}</div>
-      <div class='item-skill'>{{localize 'TC.SheetLabels.Skill'}}</div>
+      <div class='item-skill'>{{localize 'TC.Labels.Skill'}}</div>
       <div class='item-formula'>{{localize 'Roll Formula'}}</div>
       <div class='item-controls'>
         <a
@@ -204,15 +204,15 @@
 {{!-- Transformations Section --}}
 <div class="tab transformations" data-group="powers" data-tab="transformations">
   <div class="stat-detail-row">
-    <label class="resource-label" for"system.traits.flux.value">{{localize "TC.SheetLabels.Flux"}}</label>
+    <label class="resource-label" for"system.traits.flux.value">{{localize "TC.Labels.Flux"}}</label>
     <input class="text-2digit" type="number" name="system.traits.flux.value" value="{{system.traits.flux.value}}" data-dtype="Number"/>  
-    <label class="resource-label" for"system.traits.transcendence.value">{{localize "TC.SheetLabels.Transcendence"}}</label>
+    <label class="resource-label" for"system.traits.transcendence.value">{{localize "TC.Labels.Transcendence"}}</label>
     <input class="text-2digit" type="number" name="system.traits.transcendence.value" value="{{system.traits.transcendence.value}}" data-dtype="Number"/>
   </div>
   <ol class='items-list'>
     <li class='item flexrow items-header'>
       <div class='item-name'>{{localize "TYPES.Item.transformation"}}</div>
-      <div class='item-level'>{{localize 'TC.SheetLabels.Level'}}</div>
+      <div class='item-level'>{{localize 'TC.Labels.Level'}}</div>
       <div class='item-controls'>
         <a
           class='item-control item-create'
@@ -261,30 +261,30 @@
 
 {{!-- Power Options Section.--}}
 <div class="tab paths" data-group="powers" data-tab="options">
-  <h3 class="style-header">{{localize "TC.SheetLabels.Powersuites"}}</h3>
+  <h3 class="style-header">{{localize "TC.Labels.Powersuites"}}</h3>
   <div class="stat-detail-row">
-    <div class="suite-column resource-label">{{localize "TC.SheetLabels.Nopowersuite"}}</div>
-    <label class="suite-name">{{localize "TC.SheetLabels.Name"}}: </label>
+    <div class="suite-column resource-label">{{localize "TC.Labels.Nopowersuite"}}</div>
+    <label class="suite-name">{{localize "TC.Labels.Name"}}: </label>
     <input class="suite-text" type="text" name="system.powersuite.none" value="{{system.powersuite.none}}" data-dtype="String"/>
   </div>
   <div class="stat-detail-row">
-    <div class="suite-column resource-label">{{localize "TC.SheetLabels.Suite1"}}</div>
-    <label class="suite-name">{{localize "TC.SheetLabels.Name"}}: </label>
+    <div class="suite-column resource-label">{{localize "TC.Labels.Suite1"}}</div>
+    <label class="suite-name">{{localize "TC.Labels.Name"}}: </label>
     <input class="suite-text" type="text" name="system.powersuite.one" value="{{system.powersuite.one}}" data-dtype="String"/>
   </div>
   <div class="stat-detail-row">
-    <div class="suite-column resource-label">{{localize "TC.SheetLabels.Suite2"}}</div>
-    <label class="suite-name">{{localize "TC.SheetLabels.Name"}}: </label>
+    <div class="suite-column resource-label">{{localize "TC.Labels.Suite2"}}</div>
+    <label class="suite-name">{{localize "TC.Labels.Name"}}: </label>
     <input class="suite-text" type="text" name="system.powersuite.two" value="{{system.powersuite.two}}" data-dtype="String"/>
   </div>
   <div class="stat-detail-row">
-    <div class="suite-column resource-label">{{localize "TC.SheetLabels.Suite3"}}</div>
-    <label class="suite-name">{{localize "TC.SheetLabels.Name"}}: </label>
+    <div class="suite-column resource-label">{{localize "TC.Labels.Suite3"}}</div>
+    <label class="suite-name">{{localize "TC.Labels.Name"}}: </label>
     <input class="suite-text" type="text" name="system.powersuite.three" value="{{system.powersuite.three}}" data-dtype="String"/>
   </div>
-  <h3 class="style-header">{{localize "TC.SheetLabels.Maxedtrack"}}</h3>
+  <h3 class="style-header">{{localize "TC.Labels.Maxedtrack"}}</h3>
   <div class="maxed-out-row">
-    <label class="maxed-out resource-label" for="system.quantum.maxedout">{{localize "TC.SheetLabels.Quantum"}} {{localize "TC.SheetLabels.Maxedout"}}?</label>
+    <label class="maxed-out resource-label" for="system.quantum.maxedout">{{localize "TC.Labels.Quantum"}} {{localize "TC.Labels.Maxedout"}}?</label>
     {{#if system.quantum.maxedout}} 
       <input class="align-boxes small-check" type="checkbox" name="system.quantum.maxedout" value="true" checked data-dtype="Boolean"/>
     {{else}}
@@ -293,7 +293,7 @@
   </div>
   {{#each system.attributes as |attribute key|}}
     <div class="maxed-out-row">
-      <label class="maxed-out resource-label" for="system.attributes.{{key}}.mega.maxedout">{{localize (lookup @root.config.megaattributes key)}} {{localize "TC.SheetLabels.Maxedout"}}?</label>
+      <label class="maxed-out resource-label" for="system.attributes.{{key}}.mega.maxedout">{{localize (lookup @root.config.megaattributes key)}} {{localize "TC.Labels.Maxedout"}}?</label>
       {{#if attribute.mega.maxedout}}
         <input class="align-boxes small-check" type="checkbox" name="system.attributes.{{key}}.mega.maxedout" value="true" data-dtype="Boolean" checked/>
       {{else}}

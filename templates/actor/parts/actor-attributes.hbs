@@ -1,15 +1,15 @@
 <div class="tab attributes" data-group="attributes" data-tab="attributes">
     {{!-- Attribute Section --}}
-    <h2 class="flex-group-center style-header">{{localize "TC.SheetLabels.Attributes"}}</h2>
+    <h2 class="flex-group-center style-header">{{localize "TC.Labels.Attributes"}}</h2>
     <section class="">
         {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
         use both the "grid" and "grid-Ncol" class where "N" can be any number
         from 1 to 12 and will create that number of columns.  --}}
         <div class="flex-group-center attribute-header">
             <div class="approach"></div>
-            <div class="attribute"><h3>{{localize "TC.SheetLabels.Mental"}}</h3></div>
-            <div class="attribute"><h3>{{localize "TC.SheetLabels.Physical"}}</h3></div>
-            <div class="attribute"><h3>{{localize "TC.SheetLabels.Social"}}</h3></div>
+            <div class="attribute"><h3>{{localize "TC.Labels.Mental"}}</h3></div>
+            <div class="attribute"><h3>{{localize "TC.Labels.Physical"}}</h3></div>
+            <div class="attribute"><h3>{{localize "TC.Labels.Social"}}</h3></div>
         {{#each system.attributes as |attribute key|}}
             {{#if (or (eq @index 0) (eq @index 3) (eq @index 6))}}
         </div>
@@ -39,7 +39,7 @@
     </section>
 
     {{!-- Skill Section --}}
-    <h2 class="flex-group-center style-header">{{localize "TC.SheetLabels.Skills"}}</h2>
+    <h2 class="flex-group-center style-header">{{localize "TC.Labels.Skills"}}</h2>
     <section class="grid grid-4col">
         {{#each system.skills as |skill key|}}
             <div class="skill flexrow flex-group-center" data-skill="{{key}}">
@@ -55,8 +55,8 @@
     <ol class='items-list'>
     <li class='item flexrow items-header'>
         <div class='item-name'>{{localize "TYPES.Item.specialty"}}</div>
-        <div class='item-skill'>{{localize 'TC.SheetLabels.Skill'}}</div>
-        <div class='item-rating'>{{localize 'TC.SheetLabels.Rating'}}</div>
+        <div class='item-skill'>{{localize 'TC.Labels.Skill'}}</div>
+        <div class='item-rating'>{{localize 'TC.Labels.Rating'}}</div>
         <div class='item-formula'>{{localize 'Roll Formula'}}</div>
         <div class='item-controls'>
         <a
@@ -112,8 +112,8 @@
     <ol class='items-list'>
     <li class='item flexrow items-header'>
         <div class='item-name'>{{localize "TYPES.Item.edge"}}</div>
-        <div class='item-category'>{{localize 'TC.SheetLabels.Category'}}</div>
-        <div class='item-rating'>{{localize 'TC.SheetLabels.Rating'}}</div>
+        <div class='item-category'>{{localize 'TC.Labels.Category'}}</div>
+        <div class='item-rating'>{{localize 'TC.Labels.Rating'}}</div>
         <div class='item-formula'>{{localize 'Roll Formula'}}</div>
         <div class='item-controls'>
         <a
@@ -165,7 +165,7 @@
 
 {{!-- Scale Section --}}
 <div class="tab scale" data-group="attributes" data-tab="scale">
-    <h2 class="flex-group-center style-header">{{localize "TC.SheetLabels.Scale"}}</h2>
+    <h2 class="flex-group-center style-header">{{localize "TC.Labels.Scale"}}</h2>
     <div class="scale grid grid-4col">
         {{#each system.scale as |scale key|}}
             <div class="scale-cell">
@@ -174,7 +174,7 @@
             </div>
         {{/each}}
     </div>
-    <h3 class="added-segment">{{localize "TC.SheetLabels.Circumstantialmod"}}</h3>
+    <h3 class="added-segment">{{localize "TC.Labels.Circumstantialmod"}}</h3>
     <div class="scale">
         <textarea class="scale-mods" rows="10" name="system.templates.scalemodifiers" data-dtype="String">{{system.templates.scalemodifiers}}</textarea>
     </div>

@@ -42,7 +42,7 @@
   "socket": false,
   "manifest": "https://raw.githubusercontent.com/beefriedrice/trinity-continuum/master/system.json",
   "download": "https://github.com/Beefriedrice/trinity-continuum/archive/refs/heads/master.zip",
-  "background": "systems/trinity-continuum/assets/anvil-impact.png",
+  "background": "systems/trinity-continuum/assets/TrinityContinuumLogo.png",
   "grid": {
     "distance": 1,
     "units": "Meter"
