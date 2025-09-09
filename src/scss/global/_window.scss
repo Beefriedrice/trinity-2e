@@ -1,3 +1,7 @@
+// Import utilities.
+@use '../utils' as *;
+
+
 .window-app {
   font-family: $font-primary;
 }

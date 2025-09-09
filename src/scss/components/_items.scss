@@ -1,148 +1,8 @@
-// Section Header
-.items-header {
-  height: 28px;
-  margin: 2px 0;
-  padding: 0;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.05);
-  border: $border-groove;
-  font-weight: bold;
-  > * {
-    font-size: 14px;
-    text-align: center;
-  }
-  .item-name {
-    font-weight: bold;
-    padding-left: 5px;
-    text-align: left;
-    display: flex;
-    // font-size: 16px;
-  }
-}
+// Import utilities.
+@use '../utils' as *;
 
-//h3 section titles
-.skilltrick-list {
-  margin-top: 10px;
-}
 
-.specialty-list {
-  margin-top: 10px;
-}
-
-// -----------------------------------------
-// Items Lists
-// -----------------------------------------
-
-.items-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  color: $c-tan;
-
-  // Child lists
-  .item-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  // Item Name
-  .item-name {
-    flex: 2;
-    margin: 0;
-    overflow: hidden;
-    font-size: 13px;
-    text-align: left;
-    align-items: center;
-    display: flex;
-    h3, h4 {
-      margin: 0;
-      white-space: nowrap;
-      overflow-x: hidden;
-    }
-  }
-
-  // Dice Roll Column
-  .item-formula {
-    flex: 0 0 90px;
-    padding: 0 8px;
-  }
-
-  // Control Buttons
-  .item-controls {
-    display: flex;
-    flex: 0 0 80px;
-    justify-content: flex-end;
-    a {
-      font-size: 12px;
-      text-align: center;
-      margin: 0 6px;
-    }
-  }
-
-  // Individual Item
-  .item {
-    align-items: center;
-    padding: 0 2px; // to align with the header border
-    border-bottom: 1px solid $c-faint;
-    &:last-child { border-bottom: none; }
-    .item-name {
-      flex: 2 1 200px;
-      color: $c-dark;
-      .item-image {
-        flex: 0 0 30px;
-        height: 30px;
-        background-size: 30px;
-        border: none;
-        margin-right: 5px;
-      }
-    }
-    //Columns for item tables on actor sheets.
-    .item-tscale, .item-size, .item-soft, .item-hard {
-      flex: 0 0 25px;
-    }
-    .item-rating, .item-tscale, .item-speed {
-      flex: 0 0 30px;
-    }
-    .item-prating {
-      flex: 0 0 45px;
-    }
-    .item-successes, .item-first {
-      flex: 0 0 50px;
-    }
-    .item-handling, .item-duration, .item-level {
-      flex: 0 0 60px;
-    }
-    .item-category, .item-skill, .item-ptype, .item-suspended, .item-path {
-      flex: 0 0 70px;
-    }
-    .item-enhancement, .item-wound {
-      flex: 0 0 85px;
-    }
-    .item-tags-short, .item-person {
-      flex: 0 0 120px;
-    }
-    .item-tags {
-      flex: 0 0 250px;
-    }
-    
-    //text styling and margins
-    .item-enhancement, .item-person, .item-level, .item-wound, .item-first, .item-successes, .item-duration, .item-path, .item-tags-short, .item-prating, .item-size, .item-tags, .item-category, .item-suspended, .item-ptype, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
-      text-align: center;
-      font-size: 12px;
-      margin: 0 5px;
-    }
-  }
-
-  .item-prop {
-    text-align: center;
-    border-left: 1px solid #c9c7b8;
-    border-right: 1px solid #c9c7b8;
-    font-size: 12px;
-  }
-
+@mixin items {
   // Section Header
   .items-header {
     height: 28px;
@@ -153,27 +13,172 @@
     border: $border-groove;
     font-weight: bold;
     > * {
-      font-size: 12px;
+      font-size: 14px;
       text-align: center;
     }
     .item-name {
+      font-weight: bold;
       padding-left: 5px;
       text-align: left;
+      display: flex;
       // font-size: 16px;
     }
   }
+
+  //h3 section titles
+  .skilltrick-list {
+    margin-top: 10px;
+  }
+
+  .specialty-list {
+    margin-top: 10px;
+  }
+
+  // -----------------------------------------
+  // Items Lists
+  // -----------------------------------------
+
+  .items-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    color: $c-tan;
+
+    // Child lists
+    .item-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    // Item Name
+    .item-name {
+      flex: 2;
+      margin: 0;
+      overflow: hidden;
+      font-size: 13px;
+      text-align: left;
+      align-items: center;
+      display: flex;
+      h3, h4 {
+        margin: 0;
+        white-space: nowrap;
+        overflow-x: hidden;
+      }
+    }
+
+    // Dice Roll Column
+    .item-formula {
+      flex: 0 0 90px;
+      padding: 0 8px;
+    }
+
+    // Control Buttons
+    .item-controls {
+      display: flex;
+      flex: 0 0 80px;
+      justify-content: flex-end;
+      a {
+        font-size: 12px;
+        text-align: center;
+        margin: 0 6px;
+      }
+    }
+
+    // Individual Item
+    .item {
+      align-items: center;
+      padding: 0 2px; // to align with the header border
+      border-bottom: 1px solid $c-faint;
+      &:last-child { border-bottom: none; }
+      .item-name {
+        flex: 2 1 200px;
+        color: $c-dark;
+        .item-image {
+          flex: 0 0 30px;
+          height: 30px;
+          background-size: 30px;
+          border: none;
+          margin-right: 5px;
+        }
+      }
+      //Columns for item tables on actor sheets.
+      .item-tscale, .item-size, .item-soft, .item-hard {
+        flex: 0 0 25px;
+      }
+      .item-rating, .item-tscale, .item-speed {
+        flex: 0 0 30px;
+      }
+      .item-prating {
+        flex: 0 0 45px;
+      }
+      .item-successes, .item-first {
+        flex: 0 0 50px;
+      }
+      .item-handling, .item-duration, .item-level {
+        flex: 0 0 60px;
+      }
+      .item-category, .item-skill, .item-ptype, .item-suspended, .item-path {
+        flex: 0 0 70px;
+      }
+      .item-enhancement, .item-wound {
+        flex: 0 0 85px;
+      }
+      .item-tags-short, .item-person {
+        flex: 0 0 120px;
+      }
+      .item-tags {
+        flex: 0 0 250px;
+      }
+      
+      //text styling and margins
+      .item-enhancement, .item-person, .item-level, .item-wound, .item-first, .item-successes, .item-duration, .item-path, .item-tags-short, .item-prating, .item-size, .item-tags, .item-category, .item-suspended, .item-ptype, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
+        text-align: center;
+        font-size: 12px;
+        margin: 0 5px;
+      }
+    }
+
+    .item-prop {
+      text-align: center;
+      border-left: 1px solid #c9c7b8;
+      border-right: 1px solid #c9c7b8;
+      font-size: 12px;
+    }
+
+    // Section Header
+    .items-header {
+      height: 28px;
+      margin: 2px 0;
+      padding: 0;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.05);
+      border: $border-groove;
+      font-weight: bold;
+      > * {
+        font-size: 12px;
+        text-align: center;
+      }
+      .item-name {
+        padding-left: 5px;
+        text-align: left;
+        // font-size: 16px;
+      }
+    }
+  }
+
+  // Nova Power Tab Power Suite Buttons
+
+  .suite-row {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .suite-text {
+    max-width: 350px;
+  }
+
 }
-
-// Nova Power Tab Power Suite Buttons
-
-.suite-row {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-
-.suite-text {
-  max-width: 350px;
-}
-
-//new styles

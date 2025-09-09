@@ -1,4 +1,9 @@
-//pre-made resource label group
-.resource-label {
-  font-weight: bold;
+// Import utilities.
+@use '../utils' as *;
+
+@mixin resource {
+  //pre-made resource label group
+  .resource-label {
+    font-weight: bold;
+  }
 }

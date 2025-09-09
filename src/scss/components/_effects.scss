@@ -1,30 +1,35 @@
-.effects .item {
-  .effect-source,
-  .effect-duration,
-  .effect-controls {
-    text-align: center;
-    border-left: 1px solid #c9c7b8;
-    border-right: 1px solid #c9c7b8;
-    font-size: 12px;
-  }
+// Import utilities.
+@use '../utils' as *;
 
-  .effect-controls {
-    border: none;
-  }
+@mixin effects {
+  .effects .item {
+    .effect-source,
+    .effect-duration,
+    .effect-controls {
+      text-align: center;
+      border-left: 1px solid #c9c7b8;
+      border-right: 1px solid #c9c7b8;
+      font-size: 12px;
+    }
 
-  .effect-duration {
-    flex: 0 0 50px;
-    margin: 0 5px;
-  }
+    .effect-controls {
+      border: none;
+    }
 
-  .effect-source {
-    flex: 0 0 50px;
-    margin: 0 5px;
-  }
+    .effect-duration {
+      flex: 0 0 50px;
+      margin: 0 5px;
+    }
 
-  .effect-controls {
-    flex: 0 0 100px;
-    margin: 0 5px;  
-  }
+    .effect-source {
+      flex: 0 0 50px;
+      margin: 0 5px;
+    }
 
+    .effect-controls {
+      flex: 0 0 100px;
+      margin: 0 5px;  
+    }
+
+  }
 }

@@ -1,306 +1,312 @@
-//Baseline Sheet theming
+// Import utilities.
+@use '../utils' as *;
 
-.baseline .sheet-tabs .active {
-  text-shadow: 0 0 10px $baseline-color !important;
-}
 
-.baseline .tabs .item:hover, .baseline .tabs .item:focus {
-  text-shadow: 0 0 10px $baseline-color;
-  color: $baseline-color;
-}
+@mixin character-sheets {
+  //Baseline Sheet theming
 
-.baseline .style-header, .baseline .items-list .items-header,  .baseline .items-list .items-header .item-name {
-  color: $baseline-color;
-  background-color: $baseline-background;
-}
-
-//Nova Sheet theming
-
-.nova .sheet-tabs .active {
-  text-shadow: 0 0 10px $nova-color !important;
-}
-
-.nova .tabs .item:hover, .nova .tabs .item:focus {
-  text-shadow: 0 0 10px $nova-color;
-  color: $nova-color;
-}
-
-.nova .style-header, .nova .items-list .items-header,  .nova .items-list .items-header .item-name {
-  color: $nova-color;
-  background-color: $nova-background;
-}
-
-//Psion Sheet theming
-
-.psion .sheet-tabs .active {
-  text-shadow: 0 0 10px $psion-color !important;
-}
-
-.psion .tabs .item:hover, .psion .tabs .item:focus {
-  text-shadow: 0 0 10px $psion-color;
-  color: $psion-color;
-}
-
-.psion .style-header, .psion .items-list .items-header,  .psion .items-list .items-header .item-name {
-  color: $psion-color;
-  background-color: $psion-background;
-}
-
-//SGC Sheet theming
-
-.sgc .sheet-tabs .active {
-  text-shadow: 0 0 10px $sgc-color !important;
-}
-
-.sgc .tabs .item:hover, .sgc .tabs .item:focus {
-  text-shadow: 0 0 10px $sgc-color;
-  color: $sgc-color;
-}
-
-.sgc .style-header, .sgc .items-list .items-header,  .sgc .items-list .items-header .item-name {
-  color: $sgc-color;
-  background-color: $sgc-background;
-}
-
-//Talent Sheet theming
-
-.talent .sheet-tabs .active {
-  text-shadow: 0 0 10px $talent-background !important;
-}
-
-.talent .tabs .item:hover, .talent .tabs .item:focus {
-  text-shadow: 0 0 10px $talent-background;
-  color: $talent-background;
-}
-
-.talent .style-header, .talent .items-list .items-header,  .talent .items-list .items-header .item-name {
-  color: $talent-color;
-  background-color: $talent-background;
-}
-
-//added padding to make the banners look balanced.
-h2.style-header, h3.style-header {
-  padding-top: 2px;
-}
-
-//character sheet digit displays.
-.text-2digit {
-  min-width: 25px;
-  max-width: 25px;
-  text-align: center;
-}
-
-.text-3digit {
-  min-width: 35px;
-  max-width: 35px;
-  text-align: center;
-}
-
-.math-label {
-  max-width: 25px;
-  text-align: center;
-}
-
-//layout
-
-//-resource section
-
-.resource {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 5px;
-}
-
-.resource-section {
-  display: flex;
-  justify-content: space-between;
-}
-
-//-- health subsection
-
-.health-section {
-  max-width: 90px;
-  min-width: 90px;
-  padding-top: 5px;
-  .health-type {
-    padding-top: 10px;
+  .baseline .sheet-tabs .active {
+    text-shadow: 0 0 10px $baseline-color !important;
   }
-  .health-row {
-    width: 100%;
+
+  .baseline .tabs .item:hover, .baseline .tabs .item:focus {
+    text-shadow: 0 0 10px $baseline-color;
+    color: $baseline-color;
+  }
+
+  .baseline .style-header, .baseline .items-list .items-header,  .baseline .items-list .items-header .item-name {
+    color: $baseline-color;
+    background-color: $baseline-background;
+  }
+
+  //Nova Sheet theming
+
+  .nova .sheet-tabs .active {
+    text-shadow: 0 0 10px $nova-color !important;
+  }
+
+  .nova .tabs .item:hover, .nova .tabs .item:focus {
+    text-shadow: 0 0 10px $nova-color;
+    color: $nova-color;
+  }
+
+  .nova .style-header, .nova .items-list .items-header,  .nova .items-list .items-header .item-name {
+    color: $nova-color;
+    background-color: $nova-background;
+  }
+
+  //Psion Sheet theming
+
+  .psion .sheet-tabs .active {
+    text-shadow: 0 0 10px $psion-color !important;
+  }
+
+  .psion .tabs .item:hover, .psion .tabs .item:focus {
+    text-shadow: 0 0 10px $psion-color;
+    color: $psion-color;
+  }
+
+  .psion .style-header, .psion .items-list .items-header,  .psion .items-list .items-header .item-name {
+    color: $psion-color;
+    background-color: $psion-background;
+  }
+
+  //SGC Sheet theming
+
+  .sgc .sheet-tabs .active {
+    text-shadow: 0 0 10px $sgc-color !important;
+  }
+
+  .sgc .tabs .item:hover, .sgc .tabs .item:focus {
+    text-shadow: 0 0 10px $sgc-color;
+    color: $sgc-color;
+  }
+
+  .sgc .style-header, .sgc .items-list .items-header,  .sgc .items-list .items-header .item-name {
+    color: $sgc-color;
+    background-color: $sgc-background;
+  }
+
+  //Talent Sheet theming
+
+  .talent .sheet-tabs .active {
+    text-shadow: 0 0 10px $talent-background !important;
+  }
+
+  .talent .tabs .item:hover, .talent .tabs .item:focus {
+    text-shadow: 0 0 10px $talent-background;
+    color: $talent-background;
+  }
+
+  .talent .style-header, .talent .items-list .items-header,  .talent .items-list .items-header .item-name {
+    color: $talent-color;
+    background-color: $talent-background;
+  }
+
+  //added padding to make the banners look balanced.
+  h2.style-header, h3.style-header {
+    padding-top: 2px;
+  }
+
+  //character sheet digit displays.
+  .text-2digit {
+    min-width: 25px;
+    max-width: 25px;
+    text-align: center;
+  }
+
+  .text-3digit {
+    min-width: 35px;
+    max-width: 35px;
+    text-align: center;
+  }
+
+  .math-label {
+    max-width: 25px;
+    text-align: center;
+  }
+
+  //layout
+
+  //-resource section
+
+  .resource {
     display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    padding-top: 5px;
-    text-align: center;
+    justify-content: space-between;
+    margin: 0 5px;
   }
-  .health-label {
+
+  .resource-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  //-- health subsection
+
+  .health-section {
+    max-width: 90px;
+    min-width: 90px;
+    padding-top: 5px;
+    .health-type {
+      padding-top: 10px;
+    }
+    .health-row {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      padding-top: 5px;
+      text-align: center;
+    }
+    .health-label {
+      width: 100%;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 5px;
+      font-size: 15px;
+    }
+  }
+
+
+
+  .mod-label {
+    margin-left: 5px;
+  }
+
+  .status-section {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+  }
+
+  //--source sub-section
+
+  .source-section {
+    max-width: 325px;
+    min-width: 275px;
+    flex: 1 1 300px;
+    padding-top: 5px;
+  }
+
+  .source-row {
+    display: flex;
     width: 100%;
-    font-weight: bold;
-    text-align: center;
+    justify-content: space-between;
     padding-top: 5px;
-    font-size: 15px;
   }
-}
 
+  //-attribute section
 
-
-.mod-label {
-  margin-left: 5px;
-}
-
-.status-section {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-}
-
-//--source sub-section
-
-.source-section {
-  max-width: 325px;
-  min-width: 275px;
-  flex: 1 1 300px;
-  padding-top: 5px;
-}
-
-.source-row {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  padding-top: 5px;
-}
-
-//-attribute section
-
-.attribute-header, .attribute-row {
-  display: flex; 
-  width: 100%; 
-  justify-content: space-between;
-}
-
-.attribute-row {   
-   margin-top: 10px;
-   margin-bottom: 10px;
-}
-
-.attribute {
-  flex: 5 1 160px;
-  max-width: 160px;
-  min-width: 120px;
-}
-
-.approach {
-  flex: 0 0 55px;
-  max-width: 55px;
-  min-width: 55px;
-  display: flex;
-  margin-right: 5px;
-  align-items: center;
-}
-
-.approach-label {
-  font-size: 15px;
-  font-weight: bold;
-}
-
-//-skill section
-
-.skill {
-  margin: 0px 15px;
-}
-
-//- Experience Section
-.xp-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.xp-spent, .xp-total, .xp-current {
-  flex: 1 1 40px;
-  text-align: center;
-}
-
-//-scale section
-.scale-cell {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 15px;
-}
-
-.scale-mods {
-  text-align: left;
-}
-
-.suite-column {
-  flex: 0 0 80px;
-}
-
-.radio-to-check {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 13px;
-  height: 13px;
-  border: 1px solid rgb(74, 74, 74);
-  border-radius: 2px;
-  content: none;
-  outline: none;
-  margin-bottom: 3px;
-  margin-right: 3px;
-  box-shadow: rgba(0,0,0, 0.24) 0px 3px 8px;
-  flex: 0 0 13px;
-}
-
-.radio-to-check:checked {
-  background-color: black;
-  border: 1px solid rgb(74, 74, 74);
-}
-
-.radio-to-check:checked::before {
-  position: absolute;
-  color: black !important;
-  background-color: rgb(74, 74, 74);
-  border: 1px solid rgb(74, 74, 74);
-  border-radius: 2px;
-}
-
-.align-boxes {
-  flex: 0 0 5px;
-}
-
-.maxed-out {
-  flex: 0 0 220px;
-}
-
-.maxed-out-row {
-  display: flex;
-  justify-content: start;
-  margin: 5px 0;
-}
-
-.stat-detail-row {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 10px 0;
-  .option-wound {
-    flex: 0 0 90px;
+  .attribute-header, .attribute-row {
+    display: flex; 
+    width: 100%; 
+    justify-content: space-between;
   }
-  .option-base {
-    flex: 0 0 40px;
+
+  .attribute-row {   
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-  .option-stamina {
-    flex: 0 0 45px;
+
+  .attribute {
+    flex: 5 1 160px;
+    max-width: 160px;
+    min-width: 120px;
   }
-  .option-add {
-    flex: 0 0 65px;
-  }
-  .option-mod {
+
+  .approach {
     flex: 0 0 55px;
+    max-width: 55px;
+    min-width: 55px;
+    display: flex;
+    margin-right: 5px;
+    align-items: center;
   }
-  .option-wound, .option-base, .option-stamina, .option-add, .option-mod {
+
+  .approach-label {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  //-skill section
+
+  .skill {
+    margin: 0px 15px;
+  }
+
+  //- Experience Section
+  .xp-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .xp-spent, .xp-total, .xp-current {
+    flex: 1 1 40px;
     text-align: center;
+  }
+
+  //-scale section
+  .scale-cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15px;
+  }
+
+  .scale-mods {
+    text-align: left;
+  }
+
+  .suite-column {
+    flex: 0 0 80px;
+  }
+
+  .radio-to-check {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    border: 1px solid rgb(74, 74, 74);
+    border-radius: 2px;
+    content: none;
+    outline: none;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    box-shadow: rgba(0,0,0, 0.24) 0px 3px 8px;
+    flex: 0 0 13px;
+  }
+
+  .radio-to-check:checked {
+    background-color: black;
+    border: 1px solid rgb(74, 74, 74);
+  }
+
+  .radio-to-check:checked::before {
+    position: absolute;
+    color: black !important;
+    background-color: rgb(74, 74, 74);
+    border: 1px solid rgb(74, 74, 74);
+    border-radius: 2px;
+  }
+
+  .align-boxes {
+    flex: 0 0 5px;
+  }
+
+  .maxed-out {
+    flex: 0 0 220px;
+  }
+
+  .maxed-out-row {
+    display: flex;
+    justify-content: start;
+    margin: 5px 0;
+  }
+
+  .stat-detail-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    .option-wound {
+      flex: 0 0 90px;
+    }
+    .option-base {
+      flex: 0 0 40px;
+    }
+    .option-stamina {
+      flex: 0 0 45px;
+    }
+    .option-add {
+      flex: 0 0 65px;
+    }
+    .option-mod {
+      flex: 0 0 55px;
+    }
+    .option-wound, .option-base, .option-stamina, .option-add, .option-mod {
+      text-align: center;
+    }
   }
 }
