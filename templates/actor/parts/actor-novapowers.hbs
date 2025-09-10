@@ -284,12 +284,8 @@
   </div>
   <h3 class="style-header">{{localize "TC.Labels.Maxedtrack"}}</h3>
   <div class="maxed-out-row">
-    <label class="maxed-out resource-label" for="system.quantum.maxedout">{{localize "TC.Labels.Quantum"}} {{localize "TC.Labels.Maxedout"}}?</label>
-    {{#if system.quantum.maxedout}} 
-      <input class="align-boxes small-check" type="checkbox" name="system.quantum.maxedout" value="true" checked data-dtype="Boolean"/>
-    {{else}}
-      <input class="align-boxes small-check" type="checkbox" name="system.quantum.maxedout" value="false" data-dtype="Boolean"/>
-    {{/if}}
+    <label class="maxed-out resource-label" for="system.quantum.maxedout">{{localize "TC.Labels.Times"}} {{localize "TC.Labels.Quantum"}} {{localize "TC.Labels.Maxedout"}}?</label>
+    <input class="align-boxes text-2digit" type="number" name="system.quantum.maxedout" value="{{system.quantum.maxedout}}" data-dtype="Number"/>
   </div>
   {{#each system.attributes as |attribute key|}}
     <div class="maxed-out-row">

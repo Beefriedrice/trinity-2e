@@ -30,6 +30,12 @@ TC.attributeAbbreviations = {
   com: 'TC.Attribute.Com.abbr',
 };
 
+TC.approaches = {
+  Force: 'TC.Approach.For',
+  Finesse: 'TC.Approach.Fin',
+  Resilience: 'TC.Approach.Res',
+}
+
 TC.megaattributes = {
   int: 'TC.MegaAttribute.Int.long',
   cun: 'TC.MegaAttribute.Cun.long',

@@ -22,6 +22,11 @@
       "Man": { "long": "Mega-Manipulation", "abbr": "m-man" },
       "Com": { "long": "Mega-Composure", "abbr": "m-com" }
     },
+    "Approach": {
+      "For": "Force",
+      "Fin": "Finesse",
+      "Res": "Resilience"
+    },
     "Skill": {
       "Aim": { "long": "Aim", "abbr": "aim" },
       "Ath": { "long": "Athletics", "abbr": "ath" },
@@ -149,6 +154,7 @@
       "Suspended": "Suspended",
       "Tags": "Tags",
       "TechCat": "Technology Category",
+      "Times": "Times",
       "Transcendence": "Transcendence",
       "Transformation": "Transformation",
       "Transformations": "Transformations",

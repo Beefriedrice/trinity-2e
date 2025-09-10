@@ -15,11 +15,11 @@
         </div>
         <div class="valign-center attribute-row">
             <div class="approach valign-center">
-                <input class="radio-to-check" type="radio" name="system.favoredapproach" value="{{attribute.approach}}"
+                <input class="radio-to-check" type="radio" name="system.favoredapproach" value="{{localize (lookup @root.config.approaches attribute.approach)}}"
                 {{#if (eq attribute.approach @root.system.favoredapproach)}}
                 checked
                 {{/if}}/> 
-                <label class="approach-label"> {{attribute.approach}}</label>
+                <label class="approach-label">{{localize (lookup @root.config.approaches attribute.approach)}}</label>
             </div>
             {{/if}}
             <div class="attribute">

@@ -183,68 +183,52 @@
         },
         "skills": {
           "aim": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "ath": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "clo": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "com": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "cul": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "emp": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "eni": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "hum": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "int": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "lar": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "med": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "per": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "pil": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "sci": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "sur": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           },
           "tec": {
-            "value": 0,
-            "specialty": []
+            "value": 0
           }
         }
       }
@@ -258,7 +242,7 @@
         "target": 7,
         "quantum": {
           "value": 1,
-          "maxedout": false
+          "maxedout": 0
         },
         "quantumpoints": {
           "value": 0,
