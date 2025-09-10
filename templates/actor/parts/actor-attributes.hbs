@@ -232,17 +232,27 @@
     {{!-- Scale Section --}}
     <div class="tab scale" data-group="attributes" data-tab="scale">
         <h2 class="flex-group-center style-header">{{localize "TC.Labels.Scale"}}</h2>
-        <div class="scale grid grid-4col">
-            {{#each system.scale as |scale key|}}
-                <div class="scale-cell">
-                    <label class="source-label source-element" for="system.scale.{{key}}.value">{{localize (lookup @root.config.scale key)}}</label>
-                    <input class="text-2digit source-element" type="text" name="system.scale.{{key}}.value" value="{{scale.value}}" data-dtype="Number"/>
-                </div>
-            {{/each}}
+        <div class="scale-section">
+            <div class="scale-main scale-header">{{localize "TC.Labels.Basescale"}}</div>
+            <div class="scale-conditions scale-header">{{localize "TC.Labels.Conditionalchanges"}}</div>
         </div>
+        {{#each system.scale as |scale key|}}
+            <div class="scale-section">
+                <div class="scale-main">
+                    <label class="scale-label" for="system.scale.{{key}}.value">{{localize (lookup @root.config.scale key)}}</label><br>
+                    <input class="text-2digit scale-value" type="text" name="system.scale.{{key}}.value" value="{{scale.value}}" data-dtype="Number"/>
+                </div>
+                <div class="scale-conditions">
+                    <textarea class="scale-mods scale-small-text" rows="4" name="system.scale.{{key}}.conditional" data-dtype="String">{{scale.conditional}}</textarea>
+                </div>
+            </div>
+        {{/each}}
+        
+        {{!--
         <h3 class="added-segment">{{localize "TC.Labels.Circumstantialmod"}}</h3>
         <div class="scale">
             <textarea class="scale-mods" rows="20" name="system.templates.scalemodifiers" data-dtype="String">{{system.templates.scalemodifiers}}</textarea>
         </div>
+        --}}
     </div>
 </div>

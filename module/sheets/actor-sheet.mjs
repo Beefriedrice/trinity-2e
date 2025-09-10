@@ -241,7 +241,7 @@ export class TrinityContinuumActorSheet extends ActorSheet {
       // Append to injury.  Track wounds by type of injury
       else if (i.type === 'injury') {
         injury.push(i);
-        totalWounds++;
+        totalWounds += 1;
         if (i.system.wound === 'Bruised' || i.system.wound === 'bruised') {
           bruised += 1;
         } else if (i.system.wound === 'Injured' || i.system.wound === 'injured') {
