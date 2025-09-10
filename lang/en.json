@@ -56,6 +56,7 @@
       "Aspirations": "Aspirations",
       "Assocperson": "Associated Person",
       "Atmosphere": "Atmosphere",
+      "Attitudes": "Attitudes",
       "Attributes": "Attributes",
       "Background": "Background",
       "Biography": "Biography",
@@ -257,10 +258,8 @@
       "talent": "Talent/ Daredevil/ Mesermist/ Stalwart"
     },
     "Item": {
-      "item": "Item",
-      "feature": "Feature",
-      "spell": "Spell",
       "armor": "Armor",
+      "attitude": "Attitude",
       "bond": "Bond",
       "contact": "Contact",
       "edge": "Edge",

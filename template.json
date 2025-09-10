@@ -311,6 +311,7 @@
   "Item": {
     "types": [ 
       "armor", 
+      "attitude",
       "bond",
       "contact", 
       "edge", 
@@ -345,6 +346,10 @@
       "inventiontype": "Mundane Tech",
       "isEquipped": false,
       "formula": ""
+    },
+    "attitude": {
+      "templates": ["base"],
+      "rating": 0
     },
     "bond":{
       "templates": ["base"],

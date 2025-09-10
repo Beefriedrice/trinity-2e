@@ -129,12 +129,15 @@
       .item-tags-short, .item-person {
         flex: 0 0 120px;
       }
+      .item-description {
+        flex: 2 0 240px;
+      }
       .item-tags {
         flex: 0 0 250px;
       }
       
       //text styling and margins
-      .item-enhancement, .item-person, .item-level, .item-wound, .item-first, .item-successes, .item-duration, .item-path, .item-tags-short, .item-prating, .item-size, .item-tags, .item-category, .item-suspended, .item-ptype, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
+      .item-description, .item-enhancement, .item-person, .item-level, .item-wound, .item-first, .item-successes, .item-duration, .item-path, .item-tags-short, .item-prating, .item-size, .item-tags, .item-category, .item-suspended, .item-ptype, .item-skill, .item-rating, .item-soft, .item-hard, .item-tscale, .item-handling, .item-speed {
         text-align: center;
         font-size: 12px;
         margin: 0 5px;

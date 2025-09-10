@@ -174,6 +174,7 @@ export class TrinityContinuumActorSheet extends ActorSheet {
   _prepareItems(context) {
     // Initialize containers.
     const armor = [];
+    const attitude = [];
     const bond = [];
     const contact = [];
     const edge = [];
@@ -200,6 +201,7 @@ export class TrinityContinuumActorSheet extends ActorSheet {
     let maimed = 0;
     let armorWound = 0;
     let hardArmor = 0;
+    let totalWounds = 0;
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -211,6 +213,10 @@ export class TrinityContinuumActorSheet extends ActorSheet {
         if (i.system.isEquipped) {
           hardArmor += i.system.hard;
         }
+      }
+      // Append to attitude.
+      else if (i.type === 'attitude') {
+        attitude.push(i);
       }
       //Append to bonds.
       else if (i.type === 'bond') {
@@ -235,6 +241,7 @@ export class TrinityContinuumActorSheet extends ActorSheet {
       // Append to injury.  Track wounds by type of injury
       else if (i.type === 'injury') {
         injury.push(i);
+        totalWounds++;
         if (i.system.wound === 'Bruised' || i.system.wound === 'bruised') {
           bruised += 1;
         } else if (i.system.wound === 'Injured' || i.system.wound === 'injured') {
@@ -293,8 +300,9 @@ export class TrinityContinuumActorSheet extends ActorSheet {
     context.system.health.bruised.value = bruised;
     context.system.health.injured.value = injured;
     context.system.health.maimed.value = maimed;
-    context.system.health.total.value = armorWound + bruised + injured + maimed;
+    context.system.health.total.value = totalWounds;
     context.armor = armor;
+    context.attitude = attitude;
     context.bond = bond;
     context.contact = contact;
     context.edge = edge;

@@ -18,6 +18,9 @@ export class TrinityContinuumItem extends Item {
       if(type === "armor"){
         img = 'icons/svg/statue.svg';
       }
+      else if(type === "attitude"){
+        img = 'icons/svg/daze.svg';
+      }
       else if(type === "bond"){
         img = 'icons/svg/heal.svg';
       }
