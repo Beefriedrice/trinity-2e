@@ -158,6 +158,10 @@
   grid-column-end: span 12;
 }
 
+.flexrow {
+  display: flex;
+}
+
 .flex-group-center,
 .flex-group-left,
 .flex-group-right {
@@ -558,6 +562,9 @@
   border-left: 1px solid #c9c7b8;
   border-right: 1px solid #c9c7b8;
   font-size: 12px;
+}
+.trinity-continuum .effects .item .effect {
+  display: flex;
 }
 .trinity-continuum .effects .item .effect-controls {
   border: none;

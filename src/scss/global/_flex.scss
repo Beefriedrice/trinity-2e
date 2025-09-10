@@ -1,7 +1,9 @@
 // Import utilities.
 @use '../utils' as *;
 
-
+.flexrow {
+  display: flex;
+}
 // Flexbox.
 .flex-group-center,
 .flex-group-left,
