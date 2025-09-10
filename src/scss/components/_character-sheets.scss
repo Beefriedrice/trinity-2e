@@ -275,8 +275,21 @@
     flex: 0 0 5px;
   }
 
+  //Nova Maxed Out Sub-section
   .maxed-out {
     flex: 0 0 220px;
+  }
+
+  .maxed-out-details {
+    display: flex;
+    justify-content: space-between;
+    .maxed-out-column1 {
+      flex: 0 0 300px;
+    }
+    .maxed-out-column2 {
+      flex: 1 0 300px;
+      margin-right: 5px;
+    }
   }
 
   .maxed-out-row {

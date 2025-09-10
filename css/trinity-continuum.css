@@ -780,6 +780,17 @@
 .trinity-continuum .maxed-out {
   flex: 0 0 220px;
 }
+.trinity-continuum .maxed-out-details {
+  display: flex;
+  justify-content: space-between;
+}
+.trinity-continuum .maxed-out-details .maxed-out-column1 {
+  flex: 0 0 300px;
+}
+.trinity-continuum .maxed-out-details .maxed-out-column2 {
+  flex: 1 0 300px;
+  margin-right: 5px;
+}
 .trinity-continuum .maxed-out-row {
   display: flex;
   justify-content: start;

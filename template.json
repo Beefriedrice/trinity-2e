@@ -264,7 +264,8 @@
         "one": "Power Suite 1", 
         "two": "Power Suite 2", 
         "three": "Power Suite 3"
-      } 
+      },
+      "newmaxedpowers": ""
     },
     "psion": {
       "templates": ["base"]

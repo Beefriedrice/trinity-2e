@@ -20,10 +20,10 @@
       "thumbnail": "systems/trinity-continuum/assets/TrinityContinuumLogo.png"
     }
   ],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "compatibility": {
     "minimum": 11,
-    "verified": "13.347"
+    "verified": "13.348"
   },
   "esmodules": [
     "module/trinity-continuum.mjs",
