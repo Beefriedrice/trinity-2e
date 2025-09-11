@@ -74,7 +74,7 @@
             data-dtype='Number'
           />
         </div>
-        <div class=''>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TC.Labels.ScienceType"}}</label>
           <input
             type='text'
@@ -98,7 +98,7 @@
             <option value="{{localize 'TC.Science.Mystic'}}">{{localize 'TC.Science.Mystic'}}</option>
           </datalist>
         </div>
-        <div class=''>
+        <div class='resource-text'>
           <label class='resource-label'>{{localize "TC.Labels.TechCat"}}</label>
           <input
             type='text'
@@ -117,6 +117,24 @@
             <option value="{{localize 'TC.TechCategory.Noetic'}}">{{localize 'TC.TechCategory.Noetic'}}</option>            
           </datalist>
         </div>
+        <div class='resource-text grid-span-2'>
+          <label>{{localize "TC.Labels.Tags"}}</label>
+          <input
+            type='text'
+            name='system.tags'
+            value='{{system.tags}}'
+            data-dtype='String'
+          />
+        </div>
+        <div class='resource-text grid-span-2'>
+          <label class="added-segment">{{localize "TC.Labels.Weapons"}}</label>
+          <input
+            type='text'
+            name='system.weapons'
+            value='{{system.weapons}}'
+            data-dtype='String'
+          />
+        </div>
       </div>
     </div>
   </header>
@@ -132,26 +150,6 @@
 
     {{! Description Tab }}
     <div class='tab' data-group='primary' data-tab='description'>
-      <h3>{{localize "TC.Labels.Tags"}}</h3>
-      <div class='resource'>
-        <input
-          type='text'
-          name='system.tags'
-          value='{{system.tags}}'
-          data-dtype='String'
-        />
-      </div>
-      <h3 class="added-segment">{{localize "TC.Labels.Weapons"}}</h3>
-      <div class='resource'>
-        <input
-          type='text'
-          name='system.weapons'
-          value='{{system.weapons}}'
-          data-dtype='String'
-        />
-      </div>
-
-      <h3 class="description added-segment">{{localize "TC.Labels.Description"}}</h3>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription

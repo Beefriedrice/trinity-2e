@@ -59,4 +59,34 @@
     "feature": {
       "templates": ["base"]
     },
+
+    //const skillValue = $(event.currentTarget).next.value
+      
+     //diceRoller(4, 3);
+      
+      /*const myDialogOptions = {
+        width: 200,
+        height: 200,
+        top: 500,
+        left: 500
+      }
+      let myContent = `<div>`;
+      myContent += test;
+      myContent += `</div><div>`;
+      myContent += `{{` + skillName + `}}`;
+      myContent += `</div>`;
+      const myDialog = new Dialog({
+        title: "test",
+        content: myContent,
+        buttons: {
+          button1: {
+            label: '1 die',
+            callback: () => {
+              
+            },
+            icon: `<i class="fas fa-dice-d6></i>`
+          }
+        }
+      }, myDialogOptions).render(true)
+
     */

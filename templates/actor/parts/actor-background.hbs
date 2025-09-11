@@ -1,7 +1,7 @@
 {{!-- Background Sub-Navigation --}}
 <nav class="background-sheet-tabs sheet-tabs tabs" data-group="backgrounds">
-    <a class="item" data-tab="paths">{{localize "TC.Labels.Paths"}} & {{localize "TC.Labels.Contacts"}}</a>
     <a class="item" data-tab="background">{{localize "TC.Labels.Background"}} & XP</a>
+    <a class="item" data-tab="paths">{{localize "TC.Labels.Paths"}} & {{localize "TC.Labels.Contacts"}}</a>
     <a class="item" data-tab="bonds">{{localize "TC.Labels.Bonds"}}</a>
     <a class="item" data-tab="attitudes">{{localize "TC.Labels.Attitudes"}}</a>
 </nav>
@@ -135,20 +135,20 @@
             </div>
             <h3 class="style-header added-segment">{{localize "TC.Labels.Characterbackground"}}</h3>
             <div>
-                <label class="" for"system.templates.concept">{{localize "TC.Labels.Concept"}}</label>
+                <label class="resource-label" for"system.templates.concept">{{localize "TC.Labels.Concept"}}</label>
                 <input class="" type="text" name="system.templates.concept" value="{{system.templates.concept}}" data-dtype="String"/>
             </div>
             <div class="">
-                <label class="" for"system.templates.momentofinsp">{{localize "TC.Labels.Momentofinsp"}}</label>
+                <label class="resource-label" for"system.templates.momentofinsp">{{localize "TC.Labels.Momentofinsp"}}</label>
                 <input class="" type="text" name="system.templates.momentofinsp" value="{{system.templates.momentofinsp}}" data-dtype="String"/>
             </div>
-            <div class="">
-                <label class="" for"system.templates.biography">{{localize "TC.Labels.Biography"}}</label>
-                <textarea class="" rows="10" name="system.templates.biography" data-dtype="String"/>{{system.templates.biography}}</textarea>
+            <div class="background-data">
+                <label class="resource-label">{{localize "TC.Labels.Background"}}</label>
+                {{editor system.templates.biography target="system.templates.biography" engine="prosemirror" button=false editable=true}}
             </div>
-            <div class="">
-                <label class="" for"system.templates.aspirations">{{localize "TC.Labels.Aspirations"}}</label>
-                <textarea class="" rows="10" name="system.templates.aspirations" data-dtype="String"/>{{system.templates.aspirations}}</textarea>
+            <div class="background-data">
+                <label class="resource-label" for"system.templates.aspirations">{{localize "TC.Labels.Aspirations"}}</label>
+                {{editor system.templates.aspirations target="system.templates.aspirations" engine="prosemirror" button=false editable=true}}
             </div>
     </div>
 

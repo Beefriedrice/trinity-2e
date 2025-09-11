@@ -766,6 +766,10 @@
 .trinity-continuum .scale-conditions {
   flex: 1 0 400px;
 }
+.trinity-continuum .scale-mods {
+  height: 20px;
+  resize: none;
+}
 .trinity-continuum .scale-small-text {
   font-size: 11px;
 }
@@ -775,6 +779,13 @@
 }
 .trinity-continuum .suite-column {
   flex: 0 0 80px;
+}
+.trinity-continuum .background-data .editor {
+  height: 200px;
+  min-height: 20rem;
+  resize: none;
+  border: 1px solid;
+  border-radius: 6px;
 }
 .trinity-continuum .radio-to-check {
   -webkit-appearance: none;

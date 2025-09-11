@@ -251,6 +251,11 @@
     flex: 1 0 400px;
   }
 
+  .scale-mods {
+    height: 20px;
+    resize: none;
+  }
+
   .scale-small-text {
     font-size: 11px;
   }
@@ -263,6 +268,15 @@
   
   .suite-column {
     flex: 0 0 80px;
+  }
+
+  //Background section
+  .background-data .editor {
+    height: 200px;
+    min-height: 20rem;
+    resize: none;
+    border: 1px solid;
+    border-radius: 6px;
   }
 
   //for making the favored approach radio buttons look like check boxes.

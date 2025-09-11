@@ -243,10 +243,16 @@
                     <input class="text-2digit scale-value" type="text" name="system.scale.{{key}}.value" value="{{scale.value}}" data-dtype="Number"/>
                 </div>
                 <div class="scale-conditions">
-                    <textarea class="scale-mods scale-small-text" rows="4" name="system.scale.{{key}}.conditional" data-dtype="String">{{scale.conditional}}</textarea>
+                    <textarea class="scale-mods scale-small-text" name="system.scale.{{key}}.conditional" placeholder="text">{{scale.conditional}}</textarea>
                 </div>
             </div>
         {{/each}}
+        <div class="scale-section">
+            <div class="scale-main"></div>
+            <div class="scale-conditions">
+                <textarea class="scale-small-text" name="system.momentofinspiration" placeholder="sometext">{{system.momentofinspiration}}</textarea>
+            </div>
+        </div>
         
         {{!--
         <h3 class="added-segment">{{localize "TC.Labels.Circumstantialmod"}}</h3>
