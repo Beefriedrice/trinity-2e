@@ -36,6 +36,13 @@ TC.approaches = {
   Resilience: 'TC.Approach.Res',
 }
 
+TC.injuries = {
+  Armor: 'TC.Labels.Hard.long',
+  Bruised: 'TC.Labels.Bruised',
+  Injured: 'TC.Labels.Injured',
+  Maimed: 'TC.Labels.Maimed'
+}
+
 TC.megaattributes = {
   int: 'TC.MegaAttribute.Int.long',
   cun: 'TC.MegaAttribute.Cun.long',

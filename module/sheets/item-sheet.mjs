@@ -89,5 +89,29 @@ export class TrinityContinuumItemSheet extends ItemSheet {
     html.on('click', '.effect-control', (ev) =>
       onManageActiveEffect(ev, this.item)
     );
+
+    html.on('change', '.injury-firstaid', () => {
+      //checks what the checkbox was BEFORE the click.
+      
+      /* Attempting to make injuries automatically downgrade wound conditions when first aid is checked.  Need more knowledge to implement.
+
+      if (this.item.system.firstaid === false) {
+        console.log("it worked");
+        if (this.item.system.wound === 'Maimed') {
+          console.log(this.item.system.wound);
+          console.log(this.item.id);
+          console.log(this.id);
+          const newInjury = [{system: {wound: 'Injured'}}];
+          const updated = this.item.update(newInjury);
+          console.log(this.item.system.wound);
+          console.log(this.item.wound);
+        } else if (this.item.system.wound === 'Injured') {
+          console.log(this.item.system.wound);
+          this.item.system.wound = 'Bruised';
+          this.getData();
+          console.log(this.item.system.wound);
+        }
+      } */
+    });
   }
 }

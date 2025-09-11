@@ -181,7 +181,12 @@ export class TrinityContinuumActorSheet extends ActorSheet {
     const equipment = [];
     const gear = [];
     const gift = [];
-    const injury = [];
+    const injury = {
+      'Armor': [],
+      'Bruised': [],
+      'Injured': [],
+      'Maimed': []
+    };
     const megaedge = [];
     const path = [];
     const quantumpower = {
@@ -240,15 +245,18 @@ export class TrinityContinuumActorSheet extends ActorSheet {
       }
       // Append to injury.  Track wounds by type of injury
       else if (i.type === 'injury') {
-        injury.push(i);
         totalWounds += 1;
         if (i.system.wound === 'Bruised' || i.system.wound === 'bruised') {
+          injury['Bruised'].push(i);
           bruised += 1;
         } else if (i.system.wound === 'Injured' || i.system.wound === 'injured') {
+          injury['Injured'].push(i);
           injured += 1;
         } else if (i.system.wound === 'Maimed' || i.system.wound === 'maimed') {
+          injury['Maimed'].push(i);
           maimed += 1;
         } else if (i.system.wound === 'Armor' || i.system.wound === 'armor' || i.system.wound === 'Hard Armor' || i.system.wound === 'hard armor') {
+          injury['Armor'].push(i);
           armorWound += 1;
         }
       }
