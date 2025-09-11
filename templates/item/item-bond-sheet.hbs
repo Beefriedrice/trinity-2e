@@ -41,6 +41,15 @@
             data-dtype='String'
           />
         </div>
+        <div class='resource-text grid-span-2'>
+          <label class='resource-label'>{{localize "TC.Labels.Action"}}</label>
+          <input
+            type='text'
+            name='system.action'
+            value='{{system.action}}'
+            data-dtype='String'
+          />
+        </div>
         <div class='resource'>
           <label class='resource-label'>{{localize "TC.Labels.Successes"}}</label>
           <input
@@ -65,38 +74,27 @@
   {{! Sheet Body }}
   <section class='sheet-body'>
     {{! Feature Tab }}
-    <div class='tab' data-group='primary' data-tab='description'>
-      <div class='resource-text'>
-        <h3 class=''>{{localize "TC.Labels.Action"}}</h3>
-        <input
-          type='text'
-          name='system.action'
-          value='{{system.action}}'
-          data-dtype='String'
-        />
-      </div>
-      <h3 class="description added-segment">{{localize "TC.Labels.Feature"}}</h3>
+    <div class='tab description' data-group='primary' data-tab='description'>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
         target='system.feature'
         engine='prosemirror'
-        button=true
-        editable=editable
+        button=false
+        editable=true
       }}
     </div>
     
 
     {{! Drawback Tab }}
-    <div class='tab' data-group='primary' data-tab='drawback'>
-      <h3 class="description">{{localize "TC.Labels.Drawback"}}</h3>
+    <div class='tab drawback' data-group='primary' data-tab='drawback'>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
         target='system.drawback'
         engine='prosemirror'
-        button=true
-        editable=editable
+        button=false
+        editable=true
       }}
     </div>
 

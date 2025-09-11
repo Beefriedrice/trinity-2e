@@ -36,19 +36,11 @@
         </div>
         <div class='resource'>
           <label class='resource-label'>{{localize "TC.Labels.Revoked"}}</label>    
-          {{#if system.revoked}}
-            <input type="checkbox" name="system.revoked" value="true" checked>
-          {{else}}
-            <input type="checkbox" name="system.revoked" value="false">
-          {{/if}}
+          <input type="checkbox" name="system.revoked" value="true" {{checked system.revoked}}>
         </div>
         <div class='resource'>
           <label class='resource-label'>{{localize "TC.Labels.Suspended"}}</label>    
-          {{#if system.suspended}}
-            <input type="checkbox" name="system.suspended" value="true" checked>
-          {{else}}
-            <input type="checkbox" name="system.suspended" value="false">
-          {{/if}}
+          <input type="checkbox" name="system.suspended" value="true" {{checked system.suspended}}>
         </div>
         <div class='resource-text'>
           <label class='resource-label'>{{localize "TC.Labels.Pathtype"}}</label>
@@ -99,15 +91,14 @@
   {{! Sheet Body }}
   <section class='sheet-body'>
     {{! Description Tab }}
-    <div class='tab' data-group='primary' data-tab='description'>
-      <h3 class="description">{{localize "TC.Labels.Description"}}</h3>
+    <div class='tab description' data-group='primary' data-tab='description'>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
         target='system.description'
         engine='prosemirror'
-        button=true
-        editable=editable
+        button=false
+        editable=true
       }}
     </div>
 

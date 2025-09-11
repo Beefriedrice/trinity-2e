@@ -41,11 +41,7 @@
         </div>
         <div class='resource'>
           <label class='resource-label'>{{localize "TC.Labels.Firstaid"}}</label>
-          {{#if system.firstaid}}
-            <input type="checkbox" class="medium-check" name="system.firstaid" value="true" checked data-dtype="Boolean"/>
-          {{else}}
-            <input type="checkbox" class="medium-check" name="system.firstaid" value="false" data-dtype="Boolean"/>
-          {{/if}}
+          <input type="checkbox" class="medium-check" name="system.firstaid" {{checked system.firstaid}}/>
         </div>
       </div>
     </div>
@@ -53,7 +49,7 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>{{localize "TC.Labels.Description"}}</a>
+    <a class='item' data-tab='description'>{{localize "TC.Labels.Effect"}}</a>
     <a class='item' data-tab='attributes'>{{localize "TC.Labels.Attributes"}}</a>
   </nav>
 
@@ -61,15 +57,15 @@
   <section class='sheet-body'>
 
     {{! Description Tab }}
-    <div class='tab' data-group='primary' data-tab='description'>
-      <h3 class="added-segment">{{localize "TC.Labels.Effect"}}</h3>
+    <div class='tab description' data-group='primary' data-tab='description'>
+      
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
-        target='system.contact.effect'
+        target='system.effect'
         engine='prosemirror'
-        button=true
-        editable=editable
+        button=false
+        editable=true
       }}
     </div>
 

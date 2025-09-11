@@ -100,13 +100,18 @@
             <option value="None">None</option>
           </datalist>
         </div>
+        <div class="resource-text grid-span-2">
+          <label class="resource-label">{{localize "TC.Power.Tags"}}</label><br>
+          <input
+            type='text'
+            name='system.tags'
+            value='{{system.tags}}'
+            data-dtype='String'
+          />
+        </div>
         <div class='resource'>
           <label class='resource-label'>{{localize "TC.Power.Maxed"}}</label>    
-          {{#if system.maxedout}}
-            <input type="checkbox" class='medium-check' name="system.maxedout" value="true" checked>
-          {{else}}
-            <input type="checkbox" class='medium-check' name="system.maxedout" value="false">
-          {{/if}}
+          <input type="checkbox" class='medium-check' name="system.maxedout" {{checked system.maxedout}}>
         </div>
       </div>
     </div>
@@ -122,38 +127,26 @@
   {{! Sheet Body }}
   <section class='sheet-body'>
     {{! Description Tab }}
-    <div class='tab' data-group='primary' data-tab='description'>  
-      <h3 class="description added-segment">{{localize "TC.Power.Description"}}</h3>
+    <div class='tab description' data-group='primary' data-tab='description'>  
         {{! Editors must receive enriched text data from getData to properly handle rolls }}
         {{editor
           enrichedDescription
           target='system.description'
           engine='prosemirror'
-          button=true
-          editable=editable
+          button=false
+          editable=true
         }}
-      </div>
     </div>
 
     {{! Tags Tab }}
-    <div class='tab' data-tab='tags'>  
-      <h3>{{localize "TC.Power.Tags"}}</h3>
-      <div class="resource">
-        <input
-          type='text'
-          name='system.tags'
-          value='{{system.tags}}'
-          data-dtype='String'
-        />
-      </div>
-      <h3 class="description">{{localize "TC.Power.TagD"}}</h3>
+    <div class='tab tags' data-tab='tags'>
         {{! Editors must receive enriched text data from getData to properly handle rolls }}
         {{editor
           enrichedDescription
           target='system.tagdescription'
           engine='prosemirror'
-          button=true
-          editable=editable
+          button=false
+          editable=true
         }}
     </div>
     

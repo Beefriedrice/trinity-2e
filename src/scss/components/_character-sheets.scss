@@ -271,9 +271,8 @@
   }
 
   //Background section
-  .background-data .editor {
+  .background-data .editor, .sheet-body .description .editor, .sheet-body .tags .editor, .sheet-body .drawback .editor {
     height: 200px;
-    min-height: 20rem;
     resize: none;
     border: 1px solid;
     border-radius: 6px;

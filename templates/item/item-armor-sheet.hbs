@@ -117,14 +117,6 @@
             <option value="{{localize 'TC.TechCategory.Noetic'}}">{{localize 'TC.TechCategory.Noetic'}}</option>            
           </datalist>
         </div>
-        <div class="resource">
-          <label class="resource-label">{{localize "TC.Labels.Isequipped"}}</label>
-          {{#if system.isEquipped}}
-            <input type="checkbox" class="medium-check" name="system.isEquipped" value="true" checked />
-          {{else}}
-            <input type="checkbox" class="medium-check" name="system.isEquipped" value="false" />
-          {{/if}}
-        </div>
         <div class='resource-text grid-span-2'>
           <label class="resource-label">{{localize "TC.Labels.Tags"}}</label>
           <input
@@ -133,6 +125,10 @@
             value='{{system.tags}}'
             data-dtype='String'
           />
+        </div>
+        <div class="resource">
+          <label class="resource-label">{{localize "TC.Labels.Isequipped"}}</label>
+          <input type="checkbox" class="medium-check" name="system.isEquipped" {{checked system.isEquipped}} />
         </div>
       </div>
     </div>
@@ -148,14 +144,14 @@
   <section class='sheet-body'>
 
     {{! Description Tab }}
-    <div class='tab' data-group='primary' data-tab='description'>
+    <div class='tab description' data-group='primary' data-tab='description'>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
         target='system.description'
         engine='prosemirror'
-        button=true
-        editable=editable
+        button=false
+        editable=true
       }}
     </div>
 

@@ -347,6 +347,15 @@
 }
 
 /* Styles limited to trinity-continuum sheets */
+.trinity-continuum {
+  /*
+    .sheet-body,
+    .sheet-body .tab,
+    .sheet-body .tab .editor {
+      height: 100%;
+    }
+      */
+}
 .trinity-continuum .item-form {
   font-family: "Roboto", sans-serif;
 }
@@ -380,11 +389,6 @@
 }
 .trinity-continuum .sheet-tabs {
   flex: 0;
-}
-.trinity-continuum .sheet-body,
-.trinity-continuum .sheet-body .tab,
-.trinity-continuum .sheet-body .tab .editor {
-  height: 100%;
 }
 .trinity-continuum .tox .tox-editor-container {
   background: #fff;
@@ -780,9 +784,8 @@
 .trinity-continuum .suite-column {
   flex: 0 0 80px;
 }
-.trinity-continuum .background-data .editor {
+.trinity-continuum .background-data .editor, .trinity-continuum .sheet-body .description .editor, .trinity-continuum .sheet-body .tags .editor, .trinity-continuum .sheet-body .drawback .editor {
   height: 200px;
-  min-height: 20rem;
   resize: none;
   border: 1px solid;
   border-radius: 6px;

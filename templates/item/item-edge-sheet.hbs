@@ -25,7 +25,7 @@
           />
         </div>
         <div class='resource-text grid-span-2'>
-          <label class='resource-label'>Category</label>
+          <label class='resource-label'>{{localize "TC.Label.Category"}}</label>
           <input type="text" list="edgeCategories" name="system.category" value="{{system.category}}" data-dtype="Text">
           <datalist id="edgeCategories">
             <option value="{{localize "TC.Edge.Type.Men"}}">{{localize "TC.Edge.Type.Men"}}</option>
@@ -57,14 +57,14 @@
   <section class='sheet-body'>
 
     {{! Description Tab }}
-    <div class='tab' data-group='primary' data-tab='description'>
+    <div class='tab description' data-group='primary' data-tab='description'>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
         target='system.description'
         engine='prosemirror'
-        button=true
-        editable=editable
+        button=false
+        editable=true
       }}
     </div>
 

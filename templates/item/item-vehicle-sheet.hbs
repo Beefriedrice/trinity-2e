@@ -118,7 +118,7 @@
           </datalist>
         </div>
         <div class='resource-text grid-span-2'>
-          <label>{{localize "TC.Labels.Tags"}}</label>
+          <label class="resource-label">{{localize "TC.Labels.Tags"}}</label>
           <input
             type='text'
             name='system.tags'
@@ -127,7 +127,7 @@
           />
         </div>
         <div class='resource-text grid-span-2'>
-          <label class="added-segment">{{localize "TC.Labels.Weapons"}}</label>
+          <label class="resource-label">{{localize "TC.Labels.Weapons"}}</label>
           <input
             type='text'
             name='system.weapons'
@@ -149,14 +149,14 @@
   <section class='sheet-body'>
 
     {{! Description Tab }}
-    <div class='tab' data-group='primary' data-tab='description'>
+    <div class='tab description' data-group='primary' data-tab='description'>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
         target='system.description'
         engine='prosemirror'
-        button=true
-        editable=editable
+        button=false
+        editable=true
       }}
     </div>
 
