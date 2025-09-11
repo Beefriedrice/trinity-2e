@@ -2,97 +2,186 @@
 
   {{!-- Sheet Header --}}
   <header class="sheet-header">
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-    <div class="header-fields">
-        <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-        <input class="charname" name="system.codename" type="text" value="{{system.codename}}" placeholder="Alias"/>        
+    <div class="character-main">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+            <input class="charname" name="system.codename" type="text" value="{{system.codename}}" placeholder="Alias"/>        
+        </div>
+    </div>
+    <div class="sgc-header-info grid grid-3col">
+        <div class="sgc-text">
+            <label class="resource-label sgc-label">Threat Level</label><br>
+            <input class="sgc-input" type="text" name="system.threat" value="{{system.threat}}" data-dtype="String"/>
+        </div>
+        <div class="sgc-text">
+            <label class="resource-label sgc-label">Type</label><br>
+            <input class="sgc-input" type="text" name="system.type" value="{{system.type}}" data-dtype="String"/>
+        </div>
+        <div class="sgc-text">
+            <label class="resource-label sgc-label">Concept</label><br>
+            <input class="sgc-input" type="text" name="system.concept" value="{{system.concept}}" data-dtype="String"/>
+        </div>
+        <div class="sgc-number">
+            <label class="resource-label sgc-label">Primary Pool</label>
+            <input class="sgc-input text-2digit" type="number" name="system.primary.value" value="{{system.primary.value}}" data-dtype="Number"/>
+        </div>
+        <div class="sgc-text grid-span-2">
+            <label class="resource-label sgc-label">Primary Suggestions</label><br>
+            <input class="sgc-input" type="text" name="system.primary.suggestions" value="{{system.primary.suggestions}}" data-dtype="String"/>
+        </div>
+        <div class="sgc-number">
+            <label class="resource-label sgc-label">Secondary Pool</label>
+            <input class="sgc-input text-2digit" type="number" name="system.secondary.value" value="{{system.secondary.value}}" data-dtype="Number"/>
+        </div>
+        <div class="sgc-text grid-span-2">
+            <label class="resource-label sgc-label">Secondary Suggestions</label><br>
+            <input class="sgc-input" type="text" name="system.secondary.suggestions" value="{{system.secondary.suggestions}}" data-dtype="String"/>
+        </div>
+        <div class="sgc-number">
+            <label class="resource-label sgc-label">Desperation Pool</label>
+            <input class="sgc-input text-2digit" type="number" name="system.desperation.value" value="{{system.desperation.value}}" data-dtype="Number"/>
+        </div>
+        <div class="sgc-number">
+            <label class="resource-label sgc-label">Enhancement</label>
+            <input class="sgc-input text-2digit" type="number" name="system.enhancement" value="{{system.enhancement}}" data-dtype="Number"/>
+        </div>
+        <div class="sgc-number">
+            <label class="resource-label sgc-label">Defense</label>
+            <input class="sgc-input text-2digit" type="number" name="system.defense" value="{{system.defense}}" data-dtype="Number"/>
+        </div>
+        <div class="sgc-number">
+            <label class="resource-label sgc-label">Health</label>
+            <div>
+                <input class="sgc-input text-2digit" type="number" name="system.health.total.value" value="{{system.health.total.value}}" data-dtype="Number"/>
+                <span class="math-label"> / </span>
+                <input class="sgc-input text-2digit" type="number" name="system.health.total.max" value="{{system.health.total.max}}" data-dtype="Number"/>
+            </div>
+        </div>
+        <div class="sgc-number">
+            <label class="resource-label sgc-label">Equipment</label>
+            <input class="sgc-input text-2digit" type="number" name="system.equipment" value="{{system.equipment}}" data-dtype="Number"/>
+        </div>
+        <div class="sgc-number">
+            <label class="resource-label sgc-label">Source</label>
+            <input class="sgc-input text-2digit" type="number" name="system.source" value="{{system.source}}" data-dtype="Number"/>
+        </div>   
     </div>
   </header>
 
     {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs tabs" data-group="primary">
+    <nav class="sheet-tabs tabs" data-group="sgc">
         {{!-- Default tab is specified in actor-sheet.mjs --}}
-        <a class="item" data-tab="stats">{{localize "TC.Labels.Core"}}<BR>{{localize "TC.Labels.Mechanics"}}</a>
-        <a class="item" data-tab="powers">{{localize "TC.Labels.Special"}}<BR>{{localize "TC.Labels.Abilities"}}</a>
-        <a class="item" data-tab="equipment">{{localize "TC.Labels.Gear"}}</a>
-        <a class="item" data-tab="effects">{{localize "TC.Labels.Status"}}</a>
-        <a class="item" data-tab="background">{{localize "TC.Labels.Background"}}</a>
+            <a class="item" data-tab="stats">Powers</a>
+            <a class="item" data-tab="edges">Edges</a>
+            <a class="item" data-tab="background">Background</a>
     </nav>
 
     {{!-- Sheet Body --}}  
     <section class="sheet-body">
 
-        {{!-- Core Mechanics Tab --}}
-        <div class="tab stats" data-group="primary" data-tab="stats">
-            <nav class="attribute-sheet-tabs sheet-tabs tabs" data-group="attributes">
-                {{!-- Default tab is specified in actor-sheet.mjs --}}
-                <a class="item" data-tab="attributes">{{localize "TC.Labels.Attributes"}} & {{localize "TC.Labels.Skills"}}</a>
-                <a class="item" data-tab="specialties">{{localize "TC.Labels.Specialties"}}</a>
-                <a class="item" data-tab="edges">{{localize "TC.Labels.Edges"}}</a>
-                <a class="item" data-tab="scale">{{localize "TC.Labels.Scale"}}</a>
-            </nav>
-            <div class="attribute-sheet-body">
-                {{> "systems/trinity-continuum/templates/actor/parts/actor-attributes.hbs"}}      
-            </div>
-        </div>
-
-        {{!-- Background Tab --}}
-        
-        <div class="tab background" data-group="primary" data-tab="background">
-            <nav class="background-sheet-tabs sheet-tabs tabs" data-group="backgrounds">
-                {{!-- Default tab is specified in actor-sheet.mjs --}}
-                <a class="item" data-tab="paths">{{localize "TC.Labels.Paths"}} & {{localize "TC.Labels.Contacts"}}</a>
-                <a class="item" data-tab="background">{{localize "TC.Labels.Background"}}</a>
-                <a class="item" data-tab="bonds">{{localize "TC.Labels.Bonds"}}</a>
-            </nav>
-            <div class="background-sheet-body">
-                <div class="tab paths" data-group="backgrounds" data-tab="paths">
-                    {{> "systems/trinity-continuum/templates/actor/parts/actor-paths.hbs"}}      
+        {{!-- Powers Tab --}}
+        <div class="tab stats" data-group="sgc" data-tab="stats">
+            <ol class='items-list'>
+            <li class='item flexrow items-header'>
+                <div class='item-name'>{{localize "TC.Labels.Powers"}}</div>
+                <div class='power-controls'>
+                <a
+                    class='item-control item-create'
+                    title='{{localize "DOCUMENT.Create" type='skilltrick'}}'
+                    data-type='skilltrick'
+                >
+                    <i class='fas fa-plus'></i>
+                    {{localize 'DOCUMENT.New' type='Skill Trick'}}
+                </a>
                 </div>
-                <div class="tab background" data-group="backgrounds" data-tab="background">
-                    {{> "systems/trinity-continuum/templates/actor/parts/actor-background.hbs"}}
+                <div class='power-controls'>
+                <a
+                    class='item-control item-create'
+                    title='{{localize "DOCUMENT.Create" type='megaedge'}}'
+                    data-type='megaedge'
+                >
+                    <i class='fas fa-plus'></i>
+                    {{localize 'DOCUMENT.New' type='Mega-Edge'}}
+                </a>
                 </div>
-                <div class="tab bonds" data-group="backgrounds" data-tab="bonds">
-                    {{> "systems/trinity-continuum/templates/actor/parts/actor-bonds.hbs"}}
+                <div class='power-controls'>
+                <a
+                    class='item-control item-create'
+                    title='{{localize "DOCUMENT.Create" type='quantumpower'}}'
+                    data-type='quantumpower'
+                >
+                    <i class='fas fa-plus'></i>
+                    {{localize 'DOCUMENT.New' type='Quantum Power'}}
+                </a>
                 </div>
-            </div>
-        
+            </li>
+            {{#each power as |item id|}}
+                {{> 'systems/trinity-continuum/templates/actor/parts/actor-basiclistitem.hbs' item=item}}
+            {{/each}}
+            </ol>    
         </div>
 
-        {{!-- Owned Powers Tab --}}
-        <div class="tab powers" data-group="primary" data-tab="powers">
-            {{!-- Default tab is specified in actor-sheet.mjs --}}
-            {{#if (eq this.document.type 'nova')}}
-                {{> "systems/trinity-continuum/templates/actor/parts/actor-novapowers.hbs"}}
-            {{/if}}
+        {{!-- Edge Section --}}
+        <div class="tab edges" data-group="sgc" data-tab="edges">
+            <ol class='items-list'>
+            <li class='item flexrow items-header'>
+                <div class='item-name'>{{localize "TYPES.Item.edge"}}</div>
+                <div class='item-category'>{{localize 'TC.Labels.Category'}}</div>
+                <div class='item-rating'>{{localize 'TC.Labels.Rating'}}</div>
+                <div class='item-formula'>{{localize 'Roll Formula'}}</div>
+                <div class='item-controls'>
+                <a
+                    class='item-control item-create'
+                    title='{{localize "DOCUMENT.Create" type='Edge'}}'
+                    data-type='edge'
+                >
+                    <i class='fas fa-plus'></i>
+                    {{localize 'DOCUMENT.New' type='edge'}}
+                </a>
+                </div>
+            </li>
+            {{#each edge as |item id|}}
+                <li class='item flexrow' data-item-id='{{item._id}}'>
+                <div class='item-name'>
+                    <div class='item-image'>
+                    <a class='rollable' data-roll-type='item'>
+                        <img
+                        src='{{item.img}}'
+                        title='{{item.name}}'
+                        width='24'
+                        height='24'
+                        />
+                    </a>
+                    </div>
+                    <h4>{{item.name}}</h4>
+                </div>
+                <div class="item-category">{{item.system.category}}</div>
+                <div class="item-rating">{{item.system.rating}}</div>
+                <div class='item-formula item-prop'>{{item.system.formula}}</div>
+                <div class='item-controls'>
+                    <a
+                    class='item-control item-edit'
+                    title='{{localize "DOCUMENT.Update" type='edge'}}'
+                    >
+                    <i class='fas fa-edit'></i>
+                    </a>
+                    <a
+                    class='item-control item-delete'
+                    title='{{localize "DOCUMENT.Delete" type='edge'}}'
+                    >
+                    <i class='fas fa-trash'></i>
+                    </a>
+                </div>
+                </li>
+            {{/each}}
+            </ol>            
         </div>
 
-        {{!-- Owned Equipment Tab --}}
-        <div class="tab equipment" data-group="primary" data-tab="equipment">
-            <nav class="gear-sheet-tabs sheet-tabs tabs" data-group="gear">
-                {{!-- Default tab is specified in actor-sheet.mjs --}}
-                <a class="item" data-tab="weapons">{{localize "TC.Labels.Weapons"}}</a>
-                <a class="item" data-tab="armor">{{localize "TC.Labels.Armor"}}</a>
-                <a class="item" data-tab="vehicles">{{localize "TC.Labels.Vehicles"}}</a>
-                <a class="item" data-tab="other">{{localize "TC.Labels.Otheritems"}}</a>
-            </nav>
-            <div class="gear-sheet-body">
-                {{> "systems/trinity-continuum/templates/actor/parts/actor-equipment.hbs"}}
-            </div>
+        {{!-- Background Section --}}
+        <div class="tab background" data-group="sgc" data-tab="background">
+            {{editor system.templates.biography target="system.templates.biography" engine="prosemirror" button=false editable=true}}
         </div>
 
-        {{!-- Active Effects Tab --}}
-        <div class="tab effects" data-group="primary" data-tab="effects">
-            <nav class="status-sheet-tabs sheet-tabs tabs" data-group="status">
-                {{!-- Default tab is specified in actor-sheet.mjs --}}
-                <a class="item" data-tab="health">{{localize "TC.Labels.Health"}}</a>
-                <a class="item" data-tab="status">{{localize "TC.Labels.Statuses"}}</a>
-                <a class="item" data-tab="effects">{{localize "TC.Labels.Effects"}}</a>
-                <a class="item" data-tab="options">{{localize "TC.Labels.Options"}}</a>
-            </nav>
-            <div class="status-sheet-body">
-                {{> "systems/trinity-continuum/templates/actor/parts/actor-status.hbs"}}
-            </div>
-        </div>
     </section>
 </form>

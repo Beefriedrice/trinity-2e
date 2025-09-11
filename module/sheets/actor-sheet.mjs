@@ -45,6 +45,11 @@ export class TrinityContinuumActorSheet extends ActorSheet {
           navSelector: '.status-sheet-tabs',
           contentSelector: '.status-sheet-body',
           intiial: 'health'
+        },
+        {
+          navSelector: '.sgc-tabs',
+          contentSelector: '.sgc-body',
+          intial: "powers"
         }
       ],
     });
@@ -52,7 +57,7 @@ export class TrinityContinuumActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    if (this.actor.type === "SGC") {
+    if (this.actor.type === "sgc") {
       return `systems/trinity-continuum/templates/actor/actor-sgc-sheet.hbs`;
     } else { 
       return `systems/trinity-continuum/templates/actor/actor-sheet.hbs`;
@@ -189,12 +194,14 @@ export class TrinityContinuumActorSheet extends ActorSheet {
     };
     const megaedge = [];
     const path = [];
+    let power = [];
     const quantumpower = {
       0: [],
       1: [],
       2: [],
       3: [],
     };
+    const quantumpower2 = [];
     const skilltrick = [];
     const specialty = [];
     const status = [];
@@ -271,10 +278,11 @@ export class TrinityContinuumActorSheet extends ActorSheet {
       // Append to quantum powers. Sub-sort by suite number (or assign to general list if not given a number 1, 2, or 3)
       else if (i.type === 'quantumpower') {
         if (i.system.suite >= 1 && i.system.suite <= 3) {
-          quantumpower[i.system.suite].push(i)
+          quantumpower[i.system.suite].push(i);
         } else {
-          quantumpower[0].push(i)
+          quantumpower[0].push(i);
         }
+        quantumpower2.push(i)
       }
       // Append to skill tricks.
       else if (i.type === 'skilltrick') {
@@ -302,6 +310,7 @@ export class TrinityContinuumActorSheet extends ActorSheet {
       }
     }
 
+    
     // Assign and return
     context.system.health.hard.max = hardArmor;
     context.system.health.hard.value = armorWound;
@@ -320,6 +329,13 @@ export class TrinityContinuumActorSheet extends ActorSheet {
     context.injury = injury;
     context.megaedge = megaedge;
     context.path = path;
+    if (context.actor.type === 'sgc') {
+      power = power.concat(gift);
+      power = power.concat(megaedge);
+      power = power.concat(quantumpower2);
+      power = power.concat(skilltrick);
+      context.power = power;
+    }
     context.quantumpower = quantumpower;
     context.skilltrick = skilltrick;
     context.specialty = specialty;

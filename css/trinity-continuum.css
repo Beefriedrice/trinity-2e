@@ -477,6 +477,16 @@
   text-align: center;
   margin: 0 6px;
 }
+.trinity-continuum .items-list .power-controls {
+  display: flex;
+  flex: 1 0 80px;
+  justify-content: flex-end;
+}
+.trinity-continuum .items-list .power-controls a {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 6px;
+}
 .trinity-continuum .items-list .item {
   align-items: center;
   padding: 0 2px;
@@ -514,7 +524,7 @@
 .trinity-continuum .items-list .item .item-category, .trinity-continuum .items-list .item .item-skill, .trinity-continuum .items-list .item .item-ptype, .trinity-continuum .items-list .item .item-suspended, .trinity-continuum .items-list .item .item-path {
   flex: 0 0 70px;
 }
-.trinity-continuum .items-list .item .item-enhancement, .trinity-continuum .items-list .item .item-wound {
+.trinity-continuum .items-list .item .item-enhancement {
   flex: 0 0 85px;
 }
 .trinity-continuum .items-list .item .item-tags-short, .trinity-continuum .items-list .item .item-person {
@@ -526,7 +536,7 @@
 .trinity-continuum .items-list .item .item-tags {
   flex: 0 0 250px;
 }
-.trinity-continuum .items-list .item .item-description, .trinity-continuum .items-list .item .item-enhancement, .trinity-continuum .items-list .item .item-person, .trinity-continuum .items-list .item .item-level, .trinity-continuum .items-list .item .item-wound, .trinity-continuum .items-list .item .item-first, .trinity-continuum .items-list .item .item-successes, .trinity-continuum .items-list .item .item-duration, .trinity-continuum .items-list .item .item-path, .trinity-continuum .items-list .item .item-tags-short, .trinity-continuum .items-list .item .item-prating, .trinity-continuum .items-list .item .item-size, .trinity-continuum .items-list .item .item-tags, .trinity-continuum .items-list .item .item-category, .trinity-continuum .items-list .item .item-suspended, .trinity-continuum .items-list .item .item-ptype, .trinity-continuum .items-list .item .item-skill, .trinity-continuum .items-list .item .item-rating, .trinity-continuum .items-list .item .item-soft, .trinity-continuum .items-list .item .item-hard, .trinity-continuum .items-list .item .item-tscale, .trinity-continuum .items-list .item .item-handling, .trinity-continuum .items-list .item .item-speed {
+.trinity-continuum .items-list .item .item-description, .trinity-continuum .items-list .item .item-enhancement, .trinity-continuum .items-list .item .item-person, .trinity-continuum .items-list .item .item-level, .trinity-continuum .items-list .item .item-first, .trinity-continuum .items-list .item .item-successes, .trinity-continuum .items-list .item .item-duration, .trinity-continuum .items-list .item .item-path, .trinity-continuum .items-list .item .item-tags-short, .trinity-continuum .items-list .item .item-prating, .trinity-continuum .items-list .item .item-size, .trinity-continuum .items-list .item .item-tags, .trinity-continuum .items-list .item .item-category, .trinity-continuum .items-list .item .item-suspended, .trinity-continuum .items-list .item .item-ptype, .trinity-continuum .items-list .item .item-skill, .trinity-continuum .items-list .item .item-rating, .trinity-continuum .items-list .item .item-soft, .trinity-continuum .items-list .item .item-hard, .trinity-continuum .items-list .item .item-tscale, .trinity-continuum .items-list .item .item-handling, .trinity-continuum .items-list .item .item-speed {
   text-align: center;
   font-size: 12px;
   margin: 0 5px;
@@ -589,10 +599,10 @@
   margin: 0 5px;
 }
 .trinity-continuum .baseline .sheet-tabs .active {
-  text-shadow: 0 0 10px white !important;
+  text-shadow: 0 0 10px navy !important;
 }
 .trinity-continuum .baseline .tabs .item:hover, .trinity-continuum .baseline .tabs .item:focus {
-  text-shadow: 0 0 10px white;
+  text-shadow: 0 0 10px navy;
   color: white;
 }
 .trinity-continuum .baseline .style-header, .trinity-continuum .baseline .items-list .items-header, .trinity-continuum .baseline .items-list .items-header .item-name {
@@ -611,10 +621,10 @@
   background-color: rgb(20, 20, 20);
 }
 .trinity-continuum .psion .sheet-tabs .active {
-  text-shadow: 0 0 10px white !important;
+  text-shadow: 0 0 10px maroon !important;
 }
 .trinity-continuum .psion .tabs .item:hover, .trinity-continuum .psion .tabs .item:focus {
-  text-shadow: 0 0 10px white;
+  text-shadow: 0 0 10px maroon;
   color: white;
 }
 .trinity-continuum .psion .style-header, .trinity-continuum .psion .items-list .items-header, .trinity-continuum .psion .items-list .items-header .item-name {
@@ -622,10 +632,10 @@
   background-color: maroon;
 }
 .trinity-continuum .sgc .sheet-tabs .active {
-  text-shadow: 0 0 10px white !important;
+  text-shadow: 0 0 10px navy !important;
 }
 .trinity-continuum .sgc .tabs .item:hover, .trinity-continuum .sgc .tabs .item:focus {
-  text-shadow: 0 0 10px white;
+  text-shadow: 0 0 10px navy;
   color: white;
 }
 .trinity-continuum .sgc .style-header, .trinity-continuum .sgc .items-list .items-header, .trinity-continuum .sgc .items-list .items-header .item-name {
@@ -789,6 +799,28 @@
   resize: none;
   border: 1px solid;
   border-radius: 6px;
+}
+.trinity-continuum .sgc .editor {
+  height: 400px;
+  resize: none;
+  border: 1px solid;
+  border-radius: 6px;
+}
+.trinity-continuum .character-main {
+  width: 100%;
+  display: flex;
+}
+.trinity-continuum .sgc-header-info {
+  width: 100%;
+}
+.trinity-continuum .sgc-text {
+  margin: 0 5px;
+}
+.trinity-continuum .sgc-number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5px;
 }
 .trinity-continuum .radio-to-check {
   -webkit-appearance: none;

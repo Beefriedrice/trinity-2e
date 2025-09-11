@@ -8,6 +8,7 @@ export const preloadHandlebarsTemplates = async function () {
     // Actor partials.
     'systems/trinity-continuum/templates/actor/parts/actor-attributes.hbs',
     'systems/trinity-continuum/templates/actor/parts/actor-background.hbs',
+    'systems/trinity-continuum/templates/actor/parts/actor-basiclistitem.hbs',
     'systems/trinity-continuum/templates/actor/parts/actor-equipment.hbs',
     'systems/trinity-continuum/templates/actor/parts/actor-novapowers.hbs',
     'systems/trinity-continuum/templates/actor/parts/actor-status.hbs',

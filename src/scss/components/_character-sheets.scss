@@ -3,14 +3,15 @@
 
 
 @mixin character-sheets {
+  
   //Baseline Sheet theming
 
   .baseline .sheet-tabs .active {
-    text-shadow: 0 0 10px $baseline-color !important;
+    text-shadow: 0 0 10px $baseline-background !important;
   }
 
   .baseline .tabs .item:hover, .baseline .tabs .item:focus {
-    text-shadow: 0 0 10px $baseline-color;
+    text-shadow: 0 0 10px $baseline-background;
     color: $baseline-color;
   }
 
@@ -38,11 +39,11 @@
   //Psion Sheet theming
 
   .psion .sheet-tabs .active {
-    text-shadow: 0 0 10px $psion-color !important;
+    text-shadow: 0 0 10px $psion-background !important;
   }
 
   .psion .tabs .item:hover, .psion .tabs .item:focus {
-    text-shadow: 0 0 10px $psion-color;
+    text-shadow: 0 0 10px $psion-background;
     color: $psion-color;
   }
 
@@ -54,11 +55,11 @@
   //SGC Sheet theming
 
   .sgc .sheet-tabs .active {
-    text-shadow: 0 0 10px $sgc-color !important;
+    text-shadow: 0 0 10px $sgc-background !important;
   }
 
   .sgc .tabs .item:hover, .sgc .tabs .item:focus {
-    text-shadow: 0 0 10px $sgc-color;
+    text-shadow: 0 0 10px $sgc-background;
     color: $sgc-color;
   }
 
@@ -270,12 +271,40 @@
     flex: 0 0 80px;
   }
 
-  //Background section
+  //Editors section
   .background-data .editor, .sheet-body .description .editor, .sheet-body .tags .editor, .sheet-body .drawback .editor {
     height: 200px;
     resize: none;
     border: 1px solid;
     border-radius: 6px;
+  }
+
+  .sgc .editor {
+    height: 400px;
+    resize: none;
+    border: 1px solid;
+    border-radius: 6px;
+  }
+
+  //SGC Sheet
+  .character-main {
+    width: 100%;
+    display: flex;
+  }
+
+  .sgc-header-info {
+    width: 100%;
+  }
+
+  .sgc-text {
+    margin: 0 5px;
+  }
+
+  .sgc-number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5px;
   }
 
   //for making the favored approach radio buttons look like check boxes.
