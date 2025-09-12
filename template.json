@@ -344,6 +344,8 @@
       "size": 0,
       "cost": 0,
       "inventiontype": "Mundane Tech",
+      "category": "Device",
+      "armortype": "",
       "isEquipped": false,
       "formula": ""
     },
@@ -478,7 +480,8 @@
       "size": 0,
       "cost": 0,
       "inventiontype": "Mundane Tech",
-      "category": "Device"
+      "category": "Device",
+      "damagetype": ""
     }
   }
 }

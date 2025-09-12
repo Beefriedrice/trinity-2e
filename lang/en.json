@@ -53,6 +53,7 @@
       "Additional1": "Additional Path 1",
       "Additional2": "Additional Path 2",
       "Armor": "Armor",
+      "Armortype": "Armor Type",
       "Aspirations": "Aspirations",
       "Assocperson": "Associated Person",
       "Atmosphere": "Atmosphere",
@@ -74,6 +75,7 @@
       "Core": "Core",
       "Cost": "Cost",
       "Currentrating": "Current Rating",
+      "Damagetype": "Damage Type",
       "Description": "Description",
       "Diceroll": "Dice Roll",
       "Drawback": "Drawback",
@@ -180,7 +182,7 @@
       "Siz": "Size",
       "Spe": "Speed",
       "Tec": "Technology",
-      "Tecscale": "Technology Scale"
+      "Tecscale": "Tech Scale"
     },
     "Effect": {
       "Duration": "Duration",

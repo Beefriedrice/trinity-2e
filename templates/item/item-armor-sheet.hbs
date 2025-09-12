@@ -13,7 +13,7 @@
           value='{{item.name}}'
           placeholder='Name'
         /></h1>
-      <div class='grid grid-2col'>
+        <div class="grid grid-3col">
           <div class='resource'>
           <label class='resource-label'>{{localize "TC.Labels.Soft.long"}}</label>
           <input
@@ -74,6 +74,8 @@
             data-dtype='Number'
           />
         </div>
+      </div>
+      <div class='grid grid-2col'>
         <div class='resource-text'>
           <label class='resource-label'>{{localize "TC.Labels.ScienceType"}}</label>
           <input
@@ -123,6 +125,15 @@
             type='text'
             name='system.tags'
             value='{{system.tags}}'
+            data-dtype='String'
+          />
+        </div>
+        <div class='resource-text'>
+          <label class="resource-label">{{localize "TC.Labels.Armortype"}}</label><br>
+          <input
+            type='text'
+            name='system.armortype'
+            value='{{system.armortype}}'
             data-dtype='String'
           />
         </div>
