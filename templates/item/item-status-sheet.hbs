@@ -15,11 +15,11 @@
         /></h1>
       
       <div class="resource-text">
-          <label>{{localize "TC.Labels.Resolution"}}</label><br>
+          <label>{{localize "TC.Labels.Description"}}</label><br>
             <input
               type='text'
-              name='system.resolution'
-              value='{{system.resolution}}'
+              name='system.description'
+              value='{{system.description}}'
               data-dtype='String'
             />
       </div>
@@ -29,6 +29,7 @@
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
     <a class='item' data-tab='description'>{{localize "TC.Effect.Effect"}}</a>
+    <a class='item' data-tab='resolution'>{{localize "TC.Labels.Resolution"}}</a>
     <a class='item' data-tab='attributes'>{{localize "TC.Labels.Attributes"}}</a>
   </nav>
 
@@ -41,6 +42,18 @@
       {{editor
         enrichedDescription
         target='system.effect'
+        engine='prosemirror'
+        button=false
+        editable=true
+      }}
+    </div>
+
+    {{! Resolution Tab }}
+    <div class='tab resolution' data-group='primary' data-tab='resolution'>
+      {{! Editors must receive enriched text data from getData to properly handle rolls }}
+      {{editor
+        enrichedDescription
+        target='system.resolution'
         engine='prosemirror'
         button=false
         editable=true

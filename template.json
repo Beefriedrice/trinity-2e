@@ -402,7 +402,7 @@
     },
     "megaedge": {
       "templates": ["base"],
-      "rating": 1,
+      "rating": "",
       "prereq": "",
       "tags": "",
       "tagsdescription": "",
