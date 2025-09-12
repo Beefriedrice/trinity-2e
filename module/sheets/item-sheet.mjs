@@ -12,7 +12,7 @@ export class TrinityContinuumItemSheet extends ItemSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['trinity-continuum', 'sheet', 'item'],
-      width: 540,
+      width: 560,
       height: 'auto',
       tabs: [
         {

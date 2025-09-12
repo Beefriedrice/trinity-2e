@@ -13,7 +13,7 @@
           value='{{item.name}}'
           placeholder='Name'
         /></h1>
-      <div class='grid grid-2col'>
+      <div class="grid grid-3col">
         <div class='resource'>
           <label class='resource-label'>{{localize "TC.Power.Rating"}}</label>
           <input
@@ -28,12 +28,17 @@
           <label class='resource-label'>{{localize "TC.Power.Cost"}}</label>
           <input
             type='text'
-            class='text-2digit'
+            class='text-5digit'
             name='system.cost'
             value='{{system.cost}}'
-            data-dtype='Number'
           />
         </div>
+        <div class='resource'>
+          <label class='resource-label'>{{localize "TC.Power.Maxed"}}</label>    
+          <input type="checkbox" class='medium-check' name="system.maxedout" {{checked system.maxedout}}>
+        </div>
+      </div>
+      <div class='grid grid-2col'>
         <div class='resource-text'>
           <label class='resource-label'>{{localize "TC.Power.QMin"}}</label>
           <input
@@ -53,8 +58,8 @@
             data-dtype='String'
           />
           <datalist id="action-type">
-            <option value="Ordinary">{{localize "TC.Labels.Ordinary"}}</option>
-            <option value="Reflexive">{{localize "TC.Labels.Reflexive"}}</option>
+            <option value="{{localize "TC.Labels.Ordinary"}}">{{localize "TC.Labels.Ordinary"}}</option>
+            <option value="{{localize "TC.Labels.Reflexive"}}">{{localize "TC.Labels.Reflexive"}}</option>
           </datalist>
         </div>
         <div class='resource-text'>
@@ -72,8 +77,17 @@
             type='text'
             name='system.range'
             value='{{system.range}}'
+            list="range-scale"
             data-dtype='String'
           />
+          <datalist id="range-scale">
+            <option value="Personal">Personal</option>
+            <option value="Close">Close</option>
+            <option value="Short">Short</option>
+            <option value="Medium">Medium</option>
+            <option value="Long">Long</option>
+            <option value="Extreme">Extreme</option>
+          </datalist>
         </div>
         <div class='resource-text'>
           <label class='resource-label'>{{localize "TC.Power.Duration"}}</label>
@@ -81,8 +95,18 @@
             type='text'
             name='system.duration'
             value='{{system.duration}}'
+            list="duration-scale"
             data-dtype='String'
           />
+          <datalist id="duration-scale">
+            <option value="Instant">Instant</option>
+            <option value="Concentration">Concentration</option>
+            <option value="Maintained">Maintained</option>
+            <option value="Continuous (Rounds)">Continuous (Rounds)</option>
+            <option value="Continuous (Minutes)">Continuous (Minutes)</option>
+            <option value="Continuous (Hours)">Continuous (Hours)</option>
+            <option value="Continuous (Days)">Continuous (Days)</option>
+          </datalist>
         </div>
         <div class='resource-text'>
           <label class='resource-label'>{{localize "TC.Power.Suite"}}</label>
@@ -109,10 +133,6 @@
             data-dtype='String'
           />
         </div>
-        <div class='resource'>
-          <label class='resource-label'>{{localize "TC.Power.Maxed"}}</label>    
-          <input type="checkbox" class='medium-check' name="system.maxedout" {{checked system.maxedout}}>
-        </div>
       </div>
     </div>
   </header>
@@ -127,7 +147,7 @@
   {{! Sheet Body }}
   <section class='sheet-body'>
     {{! Description Tab }}
-    <div class='tab description' data-group='primary' data-tab='description'>  
+    <div class='tab description quantum-description' data-group='primary' data-tab='description'>  
         {{! Editors must receive enriched text data from getData to properly handle rolls }}
         {{editor
           enrichedDescription

@@ -47,6 +47,6 @@
     "distance": 1,
     "units": "Meter"
   },
-  "primaryTokenAttribute": "health",
+  "primaryTokenAttribute": "system.health.total",
   "secondaryTokenAttribute": "power"
 }

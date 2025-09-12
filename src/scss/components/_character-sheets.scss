@@ -102,6 +102,12 @@
     text-align: center;
   }
 
+  .text-5digit {
+    min-width: 65px;
+    max-width: 65px;
+    text-align: center;
+  }
+
   .math-label {
     max-width: 25px;
     text-align: center;
@@ -279,7 +285,7 @@
     border-radius: 6px;
   }
 
-  .sgc .editor {
+  .sgc .editor, .sheet-body .description.quantum-description .editor {
     height: 400px;
     resize: none;
     border: 1px solid;
