@@ -799,7 +799,7 @@
 .trinity-continuum .suite-column {
   flex: 0 0 80px;
 }
-.trinity-continuum .background-data .editor, .trinity-continuum .sheet-body .description .editor, .trinity-continuum .sheet-body .tags .editor, .trinity-continuum .sheet-body .drawback .editor, .trinity-continuum .sheet-body .resolution .editor {
+.trinity-continuum .background-data .editor, .trinity-continuum .sheet-body .description .editor, .trinity-continuum .sheet-body .tags .editor, .trinity-continuum .sheet-body .drawback .editor, .trinity-continuum .sheet-body .resolution .editor, .trinity-continuum .sheet-body .feature .editor {
   height: 200px;
   resize: none;
   border: 1px solid;
