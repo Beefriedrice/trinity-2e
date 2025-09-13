@@ -100,8 +100,10 @@
       "Injuries": "Injuries",
       "Isequipped": "Equipped?",
       "Item": "Trinity Continuum Item Sheet",
+      "Keywords": "Keywords",
       "Level": "Level",
       "Lowl": "Low-Level",
+      "Luck": "Luck",
       "Maimed": "Maimed",
       "Maxedout": "Maxed Out",
       "Maxedtrack": "Maxed Out Tracking",
@@ -164,6 +166,8 @@
       "Transcendence": "Transcendence",
       "Transformation": "Transformation",
       "Transformations": "Transformations",
+      "Type": "Type",
+      "Types": "Types",
       "Unacquiredpower": "Maxed Out Unacquired Powers and Mega-Edges",
       "Vehicles": "Vehicles",
       "Weapons": "Weapons",
@@ -263,6 +267,7 @@
       "talent": "Talent/ Daredevil/ Mesermist/ Stalwart"
     },
     "Item": {
+      "anomaly": "Anomaly Power",
       "armor": "Armor",
       "attitude": "Attitude",
       "bond": "Bond",

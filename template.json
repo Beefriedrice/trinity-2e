@@ -310,6 +310,7 @@
   },
   "Item": {
     "types": [ 
+      "anomaly",
       "armor", 
       "attitude",
       "bond",
@@ -332,6 +333,9 @@
       "base": {
         "description": ""
       }
+    },
+    "anomaly": {
+      "templates": ["base"]
     },
     "armor": {
       "templates": ["base"],

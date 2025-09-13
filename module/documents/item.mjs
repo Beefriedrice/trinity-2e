@@ -15,7 +15,10 @@ export class TrinityContinuumItem extends Item {
       let type = this.type;
       let img = 'icons/svg/item-bag.svg';
       
-      if(type === "armor"){
+      if(type === "anomaly") {
+        img = 'icons/svg/burrow.svg';
+      }
+      else if(type === "armor"){
         img = 'icons/svg/statue.svg';
       }
       else if(type === "attitude"){

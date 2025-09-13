@@ -14,23 +14,53 @@
           placeholder='Name'
         /></h1>
       <div class='grid grid-2col'>
-        <div class='resource'>
-          <label class='resource-label'>Quantity</label>
+        <div class='resource-text grid-span-2'>
+          <label class='resource-label'>{{localize "TC.Labels.Keywords"}}</label>
           <input
             type='text'
-            name='system.quantity'
-            value='{{system.quantity}}'
-            data-dtype='Number'
+            name='system.keywords'
+            value='{{system.keywords}}'
+            data-dtype='String'
           />
         </div>
-        <div class='resource'>
-          <label class='resource-label'>Weight</label>
+        <div class='resource-text grid-span-2'>
+          <label class='resource-label'>{{localize "TC.Labels.Types"}}</label>
           <input
             type='text'
-            name='system.weight'
-            value='{{system.weight}}'
-            data-dtype='Number'
+            name='system.type'
+            value='{{system.type}}'
+            data-dtype='String'
+            list="type-list"
           />
+          <datalist id='type-list'>
+            <option value="{{localize 'TC.Labels.Luck'}}">{{localize 'TC.Labels.Luck'}}</option>
+            <option value="{{localize 'TC.Labels.Path'}}">{{localize 'TC.Labels.Path'}}</option>
+            <option value="{{localize 'TC.Attribute.Com.long'}}">{{localize 'TC.Attribute.Com.long'}}</option>
+            <option value="{{localize 'TC.Attribute.Cun.long'}}">{{localize 'TC.Attribute.Cun.long'}}</option>
+            <option value="{{localize 'TC.Attribute.Dex.long'}}">{{localize 'TC.Attribute.Dex.long'}}</option>
+            <option value="{{localize 'TC.Attribute.Int.long'}}">{{localize 'TC.Attribute.Int.long'}}</option>
+            <option value="{{localize 'TC.Attribute.Man.long'}}">{{localize 'TC.Attribute.Man.long'}}</option>
+            <option value="{{localize 'TC.Attribute.Mig.long'}}">{{localize 'TC.Attribute.Mig.long'}}</option>
+            <option value="{{localize 'TC.Attribute.Pre.long'}}">{{localize 'TC.Attribute.Pre.long'}}</option>
+            <option value="{{localize 'TC.Attribute.Res.long'}}">{{localize 'TC.Attribute.Res.long'}}</option>
+            <option value="{{localize 'TC.Attribute.Sta.long'}}">{{localize 'TC.Attribute.Sta.long'}}</option>
+            <option value="{{localize 'TC.Skill.Aim.long'}}">{{localize 'TC.Skill.Aim.long'}}</option>
+            <option value="{{localize 'TC.Skill.Ath.long'}}">{{localize 'TC.Skill.Ath.long'}}</option>
+            <option value="{{localize 'TC.Skill.Clo.long'}}">{{localize 'TC.Skill.Clo.long'}}</option>
+            <option value="{{localize 'TC.Skill.Com.long'}}">{{localize 'TC.Skill.Com.long'}}</option>
+            <option value="{{localize 'TC.Skill.Cul.long'}}">{{localize 'TC.Skill.Cul.long'}}</option>
+            <option value="{{localize 'TC.Skill.Emp.long'}}">{{localize 'TC.Skill.Emp.long'}}</option>
+            <option value="{{localize 'TC.Skill.Eni.long'}}">{{localize 'TC.Skill.Eni.long'}}</option>
+            <option value="{{localize 'TC.Skill.Hum.long'}}">{{localize 'TC.Skill.Hum.long'}}</option>
+            <option value="{{localize 'TC.Skill.Int.long'}}">{{localize 'TC.Skill.Int.long'}}</option>
+            <option value="{{localize 'TC.Skill.Lar.long'}}">{{localize 'TC.Skill.Lar.long'}}</option>
+            <option value="{{localize 'TC.Skill.Med.long'}}">{{localize 'TC.Skill.Med.long'}}</option>
+            <option value="{{localize 'TC.Skill.Per.long'}}">{{localize 'TC.Skill.Per.long'}}</option>
+            <option value="{{localize 'TC.Skill.Pil.long'}}">{{localize 'TC.Skill.Pil.long'}}</option>
+            <option value="{{localize 'TC.Skill.Sci.long'}}">{{localize 'TC.Skill.Sci.long'}}</option>
+            <option value="{{localize 'TC.Skill.Sur.long'}}">{{localize 'TC.Skill.Sur.long'}}</option>
+            <option value="{{localize 'TC.Skill.Tec.long'}}">{{localize 'TC.Skill.Tec.long'}}</option>
+          </datalist>
         </div>
       </div>
     </div>
@@ -38,22 +68,22 @@
 
   {{! Sheet Tab Navigation }}
   <nav class='sheet-tabs tabs' data-group='primary'>
-    <a class='item' data-tab='description'>Description</a>
-    <a class='item' data-tab='attributes'>Attributes</a>
+    <a class='item' data-tab='description'>{{localize "TC.Labels.Description"}}</a>
+    <a class='item' data-tab='attributes'>{{localize "TC.Labels.Game"}}</a>
   </nav>
 
   {{! Sheet Body }}
   <section class='sheet-body'>
 
     {{! Description Tab }}
-    <div class='tab' data-group='primary' data-tab='description'>
+    <div class='tab description' data-group='primary' data-tab='description'>
       {{! Editors must receive enriched text data from getData to properly handle rolls }}
       {{editor
         enrichedDescription
         target='system.description'
         engine='prosemirror'
-        button=true
-        editable=editable
+        button=false
+        editable=true
       }}
     </div>
 

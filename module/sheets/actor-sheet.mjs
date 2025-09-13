@@ -178,6 +178,7 @@ export class TrinityContinuumActorSheet extends ActorSheet {
    */
   _prepareItems(context) {
     // Initialize containers.
+    const anomaly = [];
     const armor = [];
     const attitude = [];
     const bond = [];
@@ -219,8 +220,12 @@ export class TrinityContinuumActorSheet extends ActorSheet {
     for (let i of context.items) {
       i.img = i.img || Item.DEFAULT_ICON;
       
+      // Append to anomaly
+      if (i.type === 'anomaly') {
+        anomaly.push(i);
+      }
       // Append to armor. If equipped add hard armor to health total.
-      if (i.type === 'armor') {
+      else if (i.type === 'armor') {
         armor.push(i);
         if (i.system.isEquipped) {
           hardArmor += i.system.hard;
@@ -312,12 +317,16 @@ export class TrinityContinuumActorSheet extends ActorSheet {
 
     
     // Assign and return
+
+    //Health
     context.system.health.hard.max = hardArmor;
     context.system.health.hard.value = armorWound;
     context.system.health.bruised.value = bruised;
     context.system.health.injured.value = injured;
     context.system.health.maimed.value = maimed;
     context.system.health.total.value = totalWounds;
+
+    //Items
     context.armor = armor;
     context.attitude = attitude;
     context.bond = bond;
@@ -330,6 +339,7 @@ export class TrinityContinuumActorSheet extends ActorSheet {
     context.megaedge = megaedge;
     context.path = path;
     if (context.actor.type === 'sgc') {
+      power = power.concat(anomaly);
       power = power.concat(gift);
       power = power.concat(megaedge);
       power = power.concat(quantumpower2);
