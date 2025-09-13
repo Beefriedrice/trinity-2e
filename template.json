@@ -335,7 +335,8 @@
       }
     },
     "anomaly": {
-      "templates": ["base"]
+      "templates": ["base"],
+      "prereq": ""
     },
     "armor": {
       "templates": ["base"],
