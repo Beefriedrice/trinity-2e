@@ -49,7 +49,9 @@ export class TrinityContinuumActor extends Actor {
     systemData.health.maimed.max = systemData.health.maimed.base + systemData.health.maimed.stamina + systemData.health.maimed.added;
 
     //create a total health for token usage.
-    systemData.health.total.max = systemData.health.bruised.max + systemData.health.injured.max + systemData.health.maimed.max + systemData.health.hard.max;
+    if (actorData.type !== 'sgc') {
+      systemData.health.total.max = systemData.health.bruised.max + systemData.health.injured.max + systemData.health.maimed.max + systemData.health.hard.max;
+    }
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.

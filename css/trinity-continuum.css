@@ -564,6 +564,9 @@
   padding-left: 5px;
   text-align: left;
 }
+.trinity-continuum .items-list .sgc-powers-header {
+  height: 35px;
+}
 .trinity-continuum .suite-row {
   display: flex;
   justify-content: start;

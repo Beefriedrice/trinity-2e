@@ -324,7 +324,9 @@ export class TrinityContinuumActorSheet extends ActorSheet {
     context.system.health.bruised.value = bruised;
     context.system.health.injured.value = injured;
     context.system.health.maimed.value = maimed;
-    context.system.health.total.value = totalWounds;
+    if (context.actor.type !== 'sgc') {
+      context.system.health.total.value = totalWounds;
+    }
 
     //Items
     context.armor = armor;

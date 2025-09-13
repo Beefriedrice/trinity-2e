@@ -9,49 +9,37 @@
             <input class="charname" name="system.codename" type="text" value="{{system.codename}}" placeholder="Alias"/>        
         </div>
     </div>
-    <div class="sgc-header-info grid grid-3col">
-        <div class="sgc-text">
-            <label class="resource-label sgc-label">Threat Level</label><br>
-            <input class="sgc-input" type="text" name="system.threat" value="{{system.threat}}" data-dtype="String"/>
-        </div>
-        <div class="sgc-text">
-            <label class="resource-label sgc-label">Type</label><br>
-            <input class="sgc-input" type="text" name="system.type" value="{{system.type}}" data-dtype="String"/>
-        </div>
-        <div class="sgc-text">
-            <label class="resource-label sgc-label">Concept</label><br>
-            <input class="sgc-input" type="text" name="system.concept" value="{{system.concept}}" data-dtype="String"/>
-        </div>
+    <div class="sgc-header-info grid grid-5col">
         <div class="sgc-number">
-            <label class="resource-label sgc-label">Primary Pool</label>
+            <label class="resource-label sgc-label">{{localize "TC.Labels.Primarypool"}}</label>
             <input class="sgc-input text-2digit" type="number" name="system.primary.value" value="{{system.primary.value}}" data-dtype="Number"/>
         </div>
-        <div class="sgc-text grid-span-2">
-            <label class="resource-label sgc-label">Primary Suggestions</label><br>
+        <div class="sgc-text grid-span-4">
+            <label class="resource-label sgc-label">{{localize "TC.Labels.Primarysuggestions"}}</label><br>
             <input class="sgc-input" type="text" name="system.primary.suggestions" value="{{system.primary.suggestions}}" data-dtype="String"/>
         </div>
         <div class="sgc-number">
-            <label class="resource-label sgc-label">Secondary Pool</label>
+            <label class="resource-label sgc-label">{{localize "TC.Labels.Secondarypool"}}</label>
             <input class="sgc-input text-2digit" type="number" name="system.secondary.value" value="{{system.secondary.value}}" data-dtype="Number"/>
         </div>
-        <div class="sgc-text grid-span-2">
-            <label class="resource-label sgc-label">Secondary Suggestions</label><br>
+        <div class="sgc-text grid-span-4">
+            <label class="resource-label sgc-label">{{localize "TC.Labels.Secondarysuggestions"}}</label><br>
             <input class="sgc-input" type="text" name="system.secondary.suggestions" value="{{system.secondary.suggestions}}" data-dtype="String"/>
         </div>
         <div class="sgc-number">
-            <label class="resource-label sgc-label">Desperation Pool</label>
+            <label class="resource-label sgc-label">{{localize "TC.Labels.Desperationpool"}}</label>
             <input class="sgc-input text-2digit" type="number" name="system.desperation.value" value="{{system.desperation.value}}" data-dtype="Number"/>
         </div>
         <div class="sgc-number">
-            <label class="resource-label sgc-label">Enhancement</label>
+            <label class="resource-label sgc-label">{{localize "TC.Labels.Enhancement"}}</label>
             <input class="sgc-input text-2digit" type="number" name="system.enhancement" value="{{system.enhancement}}" data-dtype="Number"/>
         </div>
         <div class="sgc-number">
-            <label class="resource-label sgc-label">Defense</label>
+            <label class="resource-label sgc-label">{{localize "TC.Labels.Defense"}}</label>
             <input class="sgc-input text-2digit" type="number" name="system.defense" value="{{system.defense}}" data-dtype="Number"/>
         </div>
         <div class="sgc-number">
-            <label class="resource-label sgc-label">Health</label>
+            <label class="resource-label sgc-label">{{localize "TC.Labels.Health"}}</label>
             <div>
                 <input class="sgc-input text-2digit" type="number" name="system.health.total.value" value="{{system.health.total.value}}" data-dtype="Number"/>
                 <span class="math-label"> / </span>
@@ -59,11 +47,7 @@
             </div>
         </div>
         <div class="sgc-number">
-            <label class="resource-label sgc-label">Equipment</label>
-            <input class="sgc-input text-2digit" type="number" name="system.equipment" value="{{system.equipment}}" data-dtype="Number"/>
-        </div>
-        <div class="sgc-number">
-            <label class="resource-label sgc-label">Source</label>
+            <label class="resource-label sgc-label">{{localize "TC.Labels.Source"}}</label>
             <input class="sgc-input text-2digit" type="number" name="system.source" value="{{system.source}}" data-dtype="Number"/>
         </div>   
     </div>
@@ -72,9 +56,9 @@
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="sgc">
         {{!-- Default tab is specified in actor-sheet.mjs --}}
-            <a class="item" data-tab="stats">Powers</a>
-            <a class="item" data-tab="edges">Edges</a>
-            <a class="item" data-tab="background">Background</a>
+            <a class="item" data-tab="stats">{{localize "TC.Labels.Powers"}}</a>
+            <a class="item" data-tab="edges">{{localize "TC.Labels.Edges"}}</a>
+            <a class="item" data-tab="background">{{localize "TC.Labels.Background"}}</a>
     </nav>
 
     {{!-- Sheet Body --}}  
@@ -83,8 +67,28 @@
         {{!-- Powers Tab --}}
         <div class="tab stats" data-group="sgc" data-tab="stats">
             <ol class='items-list'>
-            <li class='item flexrow items-header'>
+            <li class='item flexrow items-header sgc-powers-header'>
                 <div class='item-name'>{{localize "TC.Labels.Powers"}}</div>
+                <div class='power-controls'>
+                <a
+                    class='item-control item-create'
+                    title='{{localize "DOCUMENT.Create" type='anomaly'}}'
+                    data-type='anomaly'
+                >
+                    <i class='fas fa-plus'></i>
+                    {{localize 'DOCUMENT.New' type='Anomaly'}}
+                </a>
+                </div>
+                <div class='power-controls'>
+                <a
+                    class='item-control item-create'
+                    title='{{localize "DOCUMENT.Create" type='gift'}}'
+                    data-type='gift'
+                >
+                    <i class='fas fa-plus'></i>
+                    {{localize 'DOCUMENT.New' type='Gift'}}
+                </a>
+                </div>
                 <div class='power-controls'>
                 <a
                     class='item-control item-create'
@@ -180,7 +184,19 @@
 
         {{!-- Background Section --}}
         <div class="tab background" data-group="sgc" data-tab="background">
-            {{editor system.templates.biography target="system.templates.biography" engine="prosemirror" button=false editable=true}}
+            <div class="sgc-header-info grid grid-2col">
+                <div class="sgc-text">
+                    <label class="resource-label sgc-label">Type</label><br>
+                    <input class="sgc-input" type="text" name="system.type" value="{{system.type}}" data-dtype="String"/>
+                </div>
+                <div class="sgc-text">
+                    <label class="resource-label sgc-label">Concept</label><br>
+                    <input class="sgc-input" type="text" name="system.concept" value="{{system.concept}}" data-dtype="String"/>
+                </div>
+            </div>
+            <div class="grid-span-2">
+                {{editor system.templates.biography target="system.templates.biography" engine="prosemirror" button=false editable=true}}
+            </div>
         </div>
 
     </section>
