@@ -193,7 +193,11 @@ export class TrinityContinuumActorSheet extends ActorSheet {
       'Injured': [],
       'Maimed': []
     };
-    const megaedge = [];
+    const megaedge = {
+      0: [],
+      1: []
+    };
+    const megaedgeSGC = [];
     const path = [];
     let power = [];
     const quantumpower = {
@@ -202,7 +206,7 @@ export class TrinityContinuumActorSheet extends ActorSheet {
       2: [],
       3: [],
     };
-    const quantumpower2 = [];
+    const quantumpowerSGC = [];
     const skilltrick = [];
     const specialty = [];
     const status = [];
@@ -274,7 +278,12 @@ export class TrinityContinuumActorSheet extends ActorSheet {
       }
       // Append to mega-edges.
       else if (i.type === 'megaedge') {
-        megaedge.push(i);
+        if (i.system.permanent === true) {
+          megaedge[0].push(i);
+        } else {
+          megaedge[1].push(i);
+        }
+        megaedgeSGC.push(i);
       }
       // Append to paths.
       else if (i.type === 'path') {
@@ -287,7 +296,7 @@ export class TrinityContinuumActorSheet extends ActorSheet {
         } else {
           quantumpower[0].push(i);
         }
-        quantumpower2.push(i)
+        quantumpowerSGC.push(i)
       }
       // Append to skill tricks.
       else if (i.type === 'skilltrick') {
@@ -343,8 +352,8 @@ export class TrinityContinuumActorSheet extends ActorSheet {
     if (context.actor.type === 'sgc') {
       power = power.concat(anomaly);
       power = power.concat(gift);
-      power = power.concat(megaedge);
-      power = power.concat(quantumpower2);
+      power = power.concat(megaedgeSGC);
+      power = power.concat(quantumpowerSGC);
       power = power.concat(skilltrick);
       context.power = power;
     }

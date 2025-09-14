@@ -413,7 +413,8 @@
       "prereq": "",
       "tags": "",
       "tagsdescription": "",
-      "maxedout": false
+      "maxedout": false,
+      "permanent": true
     },
     "path": {
       "templates": ["base"],
@@ -450,7 +451,7 @@
     },
     "specialty": {
       "templates": ["base"],
-      "skill": "aim",
+      "skill": "",
       "rating": 1
     },
     "status": {

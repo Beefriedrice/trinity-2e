@@ -97,7 +97,12 @@
                       />
                     </a>
                   </div>
+                  <a
+                    class='item-control item-edit'
+                    title='{{localize "DOCUMENT.Update" type='Item'}}'
+                  >
                   <h4>{{item.name}}</h4>
+                  </a>
                 </div>
                 <div class="item-first">{{#if item.system.firstaid}}Yes{{else}}No{{/if}}</div>
                 <div class='item-controls'>
@@ -152,7 +157,12 @@
                 />
               </a>
             </div>
+            <a
+              class='item-control item-edit'
+              title='{{localize "DOCUMENT.Update" type='Item'}}'
+            >
             <h4>{{item.name}}</h4>
+            </a>
           </div>
           <div class='item-formula item-prop'>{{item.system.formula}}</div>
           <div class='item-controls'>
@@ -175,12 +185,12 @@
   </div>
 
   <div class="tab effects" data-group="status" data-tab="effects">
-    <ol class="items-list effects-list">
+    <ol class="items-list">
       {{#each effects as |section sid|}}
-        <li class="effect-header items-header flexrow" data-effect-type="{{section.type}}" data-parent-id="{{@root.actor.id}}" >
-          <h3 class="item-name effect-name flexrow">{{localize section.label}}</h3>
-          <div class="effect-source">{{localize "TC.Effect.Source"}}</div>
-          <div class="effect-duration">{{localize "TC.Effect.Duration"}}</div>
+        <li class="item items-header flexrow" data-effect-type="{{section.type}}" data-parent-id="{{@root.actor.id}}" >
+          <h3 class="item-name flexrow">{{localize section.label}}</h3>
+          <div class="item-source">{{localize "TC.Effect.Source"}}</div>
+          <div class="item-duration">{{localize "TC.Effect.Duration"}}</div>
           <div class="item-controls effect-controls flexrow">
             <a class="effect-control" data-action="create" title="{{localize 'DOCUMENT.Create' type="Effect"}}">
               <i class="fas fa-plus"></i> {{localize "DOCUMENT.New" type=""}}
@@ -190,13 +200,13 @@
 
         <ol class="item-list">
         {{#each section.effects as |effect|}}
-          <li class="item effect flexrow" data-effect-id="{{effect.id}}" data-parent-id="{{effect.parent.id}}">
-            <div class="item-name effect-name flexrow">
+          <li class="item flexrow" data-effect-id="{{effect.id}}" data-parent-id="{{effect.parent.id}}">
+            <div class="item-name effect-name">
               <img class="item-image" src="{{effect.icon}}"/>
               <h4>{{effect.name}}</h4>
             </div>
-            <div class="effect-source">{{effect.sourceName}}</div>
-            <div class="effect-duration">{{effect.duration.label}}</div>
+            <div class="item-source">{{effect.sourceName}}</div>
+            <div class="item-duration">{{effect.duration.label}}</div>
             <div class="item-controls effect-controls flexrow">
               <a class="effect-control" data-action="toggle" title="{{localize 'TC.Effect.Toggle'}}">
                 <i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i>

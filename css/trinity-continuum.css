@@ -524,7 +524,7 @@
 .trinity-continuum .items-list .item .item-category, .trinity-continuum .items-list .item .item-skill, .trinity-continuum .items-list .item .item-ptype, .trinity-continuum .items-list .item .item-suspended, .trinity-continuum .items-list .item .item-path {
   flex: 0 0 70px;
 }
-.trinity-continuum .items-list .item .item-enhancement {
+.trinity-continuum .items-list .item .item-source, .trinity-continuum .items-list .item .item-enhancement {
   flex: 0 0 85px;
 }
 .trinity-continuum .items-list .item .item-tags-short, .trinity-continuum .items-list .item .item-person {
@@ -536,7 +536,7 @@
 .trinity-continuum .items-list .item .item-tags {
   flex: 0 0 250px;
 }
-.trinity-continuum .items-list .item .item-description, .trinity-continuum .items-list .item .item-enhancement, .trinity-continuum .items-list .item .item-person, .trinity-continuum .items-list .item .item-level, .trinity-continuum .items-list .item .item-first, .trinity-continuum .items-list .item .item-successes, .trinity-continuum .items-list .item .item-duration, .trinity-continuum .items-list .item .item-path, .trinity-continuum .items-list .item .item-tags-short, .trinity-continuum .items-list .item .item-prating, .trinity-continuum .items-list .item .item-size, .trinity-continuum .items-list .item .item-tags, .trinity-continuum .items-list .item .item-category, .trinity-continuum .items-list .item .item-suspended, .trinity-continuum .items-list .item .item-ptype, .trinity-continuum .items-list .item .item-skill, .trinity-continuum .items-list .item .item-rating, .trinity-continuum .items-list .item .item-soft, .trinity-continuum .items-list .item .item-hard, .trinity-continuum .items-list .item .item-tscale, .trinity-continuum .items-list .item .item-handling, .trinity-continuum .items-list .item .item-speed {
+.trinity-continuum .items-list .item .item-source, .trinity-continuum .items-list .item .item-description, .trinity-continuum .items-list .item .item-enhancement, .trinity-continuum .items-list .item .item-person, .trinity-continuum .items-list .item .item-level, .trinity-continuum .items-list .item .item-first, .trinity-continuum .items-list .item .item-successes, .trinity-continuum .items-list .item .item-duration, .trinity-continuum .items-list .item .item-path, .trinity-continuum .items-list .item .item-tags-short, .trinity-continuum .items-list .item .item-prating, .trinity-continuum .items-list .item .item-size, .trinity-continuum .items-list .item .item-tags, .trinity-continuum .items-list .item .item-category, .trinity-continuum .items-list .item .item-suspended, .trinity-continuum .items-list .item .item-ptype, .trinity-continuum .items-list .item .item-skill, .trinity-continuum .items-list .item .item-rating, .trinity-continuum .items-list .item .item-soft, .trinity-continuum .items-list .item .item-hard, .trinity-continuum .items-list .item .item-tscale, .trinity-continuum .items-list .item .item-handling, .trinity-continuum .items-list .item .item-speed {
   text-align: center;
   font-size: 12px;
   margin: 0 5px;
@@ -575,6 +575,9 @@
 .trinity-continuum .suite-text {
   max-width: 350px;
 }
+.trinity-continuum .effects .item {
+  display: flex;
+}
 .trinity-continuum .effects .item .effect-source,
 .trinity-continuum .effects .item .effect-duration,
 .trinity-continuum .effects .item .effect-controls {
@@ -582,9 +585,6 @@
   border-left: 1px solid #c9c7b8;
   border-right: 1px solid #c9c7b8;
   font-size: 12px;
-}
-.trinity-continuum .effects .item .effect {
-  display: flex;
 }
 .trinity-continuum .effects .item .effect-controls {
   border: none;

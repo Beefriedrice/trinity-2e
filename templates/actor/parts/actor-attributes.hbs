@@ -95,7 +95,12 @@
                     />
                 </a>
                 </div>
+                <a
+                    class='item-control item-edit'
+                    title='{{localize "DOCUMENT.Update" type='Item'}}'
+                >
                 <h4>{{item.name}}</h4>
+                </a>
             </div>
             <div class='item-skill'>{{item.system.skill}}</div>
             <div class='item-rating'>{{item.system.rating}}</div>
@@ -150,7 +155,12 @@
                     />
                 </a>
                 </div>
+                <a
+                    class='item-control item-edit'
+                    title='{{localize "DOCUMENT.Update" type='Item'}}'
+                >
                 <h4>{{item.name}}</h4>
+                </a>
             </div>
             <div class='item-skill'>{{item.system.skill}}</div>
             <div class='item-formula item-prop'>{{item.system.formula}}</div>
@@ -205,7 +215,12 @@
                     />
                 </a>
                 </div>
+                <a
+                    class='item-control item-edit'
+                    title='{{localize "DOCUMENT.Update" type='Item'}}'
+                >
                 <h4>{{item.name}}</h4>
+                </a>
             </div>
             <div class="item-category">{{item.system.category}}</div>
             <div class="item-rating">{{item.system.rating}}</div>
@@ -243,7 +258,7 @@
                     <input class="text-2digit scale-value" type="text" name="system.scale.{{key}}.value" value="{{scale.value}}" data-dtype="Number"/>
                 </div>
                 <div class="scale-conditions">
-                    <textarea class="scale-mods scale-small-text" name="system.scale.{{key}}.conditional" placeholder="Temporary or conditional modifiers to scale go here.  For some reason extra spaces get added after line breaks.">{{scale.conditional}}</textarea>
+                    <textarea class="scale-mods scale-small-text" name="system.scale.{{key}}.conditional" placeholder="List temporary or conditional modifiers.">{{scale.conditional}}</textarea>
                 </div>
             </div>
         {{/each}}

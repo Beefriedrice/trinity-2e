@@ -69,7 +69,12 @@
                     height='24'
                   /></a>
               </div>
-              <h4>{{item.name}}</h4>
+              <a
+                class='item-control item-edit'
+                title='{{localize "DOCUMENT.Edit" type='quantumpower'}}'
+              >
+                <h4>{{item.name}}</h4>
+              </a>
             </div>
             <div class='item-rating'>{{item.system.rating}}</div>
             <div class='item-tags'>{{item.system.tags}}</div>
@@ -96,9 +101,10 @@
 
   {{!-- Mega Edge Section --}}
   <div class="tab megaedges" data-group="powers" data-tab="megaedges">
-    <ol class='items-list'>
+    {{#each megaedge as |megaedge type|}}
+    <ol class='items-list{{#if (eq @index 1)}} added-segment{{/if}}'>
       <li class='item flexrow items-header'>
-        <div class='item-name'>{{localize "TYPES.Item.megaedge"}}</div>
+        <div class='item-name'>{{#if (eq @index 0)}}{{localize "TC.Labels.Permanentmegaedge"}}{{else}}{{localize "TC.Labels.Temporarymegaedge"}}{{/if}}</div>
         <div class='item-rating'>{{localize 'TC.Labels.Rating'}}</div>
         <div class='item-tags-short'>{{localize 'TC.Labels.Tags'}}</div>
         <div class='item-controls'>
@@ -125,7 +131,12 @@
                 />
               </a>
             </div>
+            <a
+              class='item-control item-edit'
+              title='{{localize "DOCUMENT.Update" type='Item'}}'
+            >
             <h4>{{item.name}}</h4>
+            </a>
           </div>
           <div class='item-rating'>{{item.system.rating}}</div>
           <div class='item-tags-short'>{{item.system.tags}}</div>
@@ -146,6 +157,7 @@
         </li>
       {{/each}}
     </ol>
+    {{/each}}
   </div>
 
   {{!-- Transformations Section --}}
@@ -184,7 +196,12 @@
                 />
               </a>
             </div>
+            <a
+              class='item-control item-edit'
+              title='{{localize "DOCUMENT.Update" type='Item'}}'
+            >
             <h4>{{item.name}}</h4>
+            </a>
           </div>
           <div class='item-level'>{{item.system.level}}</div>
           <div class='item-controls'>
